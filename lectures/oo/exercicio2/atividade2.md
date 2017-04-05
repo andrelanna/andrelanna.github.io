@@ -12,7 +12,7 @@ Atividade para realizar em dupla e entregar via GitHub. Uma entrega por dupla.
 Prazo para entrega: ~~4/4/2017~~ 10/04/2017, 23:59:59.
 
 **Questão 1:** Os termos abaixo estão relacionados ao paradigma de *Orientação por Objetos*. Defina cada um dos termos com base no livro-texto (Eck, David J. Introduction to Programming Using Java, 6th ed. 2011).
-* classe
+* classe : Estrutura definida pelo programador contendo atributos e metodos.
 * objeto
 * elementos de classe
 * atributos
