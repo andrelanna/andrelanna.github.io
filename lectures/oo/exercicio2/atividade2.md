@@ -13,14 +13,23 @@ Prazo para entrega: 4/4/2017, 23:59:59.
 
 **Questão 1:** Os termos abaixo estão relacionados ao paradigma de *Orientação por Objetos*. Defina cada um dos termos com base no livro-texto (Eck, David J. Introduction to Programming Using Java, 6th ed. 2011).
 * classe
+    Classe pode ser definida como um gabarito para a definição de objetos, as classes são compostas de atributos e métodos.
 * objeto
+    Objeto é uma instância de uma classe e por sua vez também contém métodos e atributos, o estado de um objeto vai depender dos valores de seus atributos.
 * elementos de classe
+    Elementos de classe são as suas características, como métodos e atributos.
 * atributos
+    Atributos são os elementos que definem a estrutura de uma classe, e podem ser divididos em dois tipos básicos: atributos de instância e de classe. Os valores dos atributos de instância determinam o estado de cada objeto.
 * métodos
+    Os métodos são ações ou procedimentos, onde podem interagir e se comunicarem com outros objetos.
 * método construtor padrão
+    O método construtor padrão de um objeto é um método especial, pois inicializa seus atributos com valores predefinidos toda vez que é instanciado.
 * método construtor alternativo
+    O método construtor alternativo tem a função de instanciar o objeto com os valores dos atributos definidos, através da passagem de parâmetros.
 * estado de um objeto
+    Estado de um objeto se refere aos valores dos atributos em um determinado momento.
 * retenção de estado
+    A retenção de estados é caracterizada pelo armazenamento dos valores dos atributos até ele receber algum estímulo internamente.
 
 
 **Questão 2:** Julgue as seguintes frases como verdadeiras ou falsas e explique o motivo delas estarem certas ou erradas. Nos casos em que julgar uma sentença como errada, altere-a de modo a corrigi-la.
