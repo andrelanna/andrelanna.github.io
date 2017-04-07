@@ -12,37 +12,38 @@ Atividade para realizar em dupla e entregar via GitHub. Uma entrega por dupla.
 Prazo para entrega: ~~4/4/2017~~ 10/04/2017, 23:59:59.
 
 **Questão 1:** Os termos abaixo estão relacionados ao paradigma de *Orientação por Objetos*. Defina cada um dos termos com base no livro-texto (Eck, David J. Introduction to Programming Using Java, 6th ed. 2011).
-* classe : A unidade básica da programação em Java. Uma classe é a coleção de métodos estáticos e não estáticos e atributos. Membros estáticos de uma classe são parte da própria classe; Os não estáticos ou “instância”, são membros que constituem um modelo para criação de objetos, os quais dizemos que pertencem a classe. Ou seja, podemos definir uma classe como um forma/modelo para criação de objetos.
-
-* objeto : Uma entidade em um programa de computador que pode ter dados e comportamentos. Um objeto em Java deve ser criado usando alguma classe com molde. A classe de um objeto determina quais atributos e métodos ela irá conter.
-
-* elementos de classe : os elementos de uma classe são seus atributos, métodos e objetos.
-
-* atributos : são os elementos que definem a estrutura de uma classe. Os atributos também são conhecidos como variáveis de classe, e podem ser divididos em dois tipos básicos: atributos de instância e de classe. Os valores dos atributos de instância determinam o estado de cada objeto.
-
-* métodos : são uma sequência de instruções do programa que foram agrupadas e atribuídas um nome. O nome pode então ser usado para "chamar" a sub-rotina.
-
-* método construtor padrão :  Um tipo especial de sub-rotina em uma classe cujo propósito é construir objetos pertencentes a essa classe. Um construtor é chamado usando o novo operador e não é considerado um "método". Um construtor padrão, que não recebe argumentos, é incluído para a classe pelo compilador.
-
-* método construtor alternativo : Parecido com o construtor padrão porém este recebe argumentos.
-
-* estado de um objeto :  é definido pelo conjunto de atributos em um dado instante.
-
-* retenção de estado :  é a capacidade do objeto reter seu estado, ou seja, ele mantém o conjunto de valores de seus atributos, até que sejam alterados, ou o objeto seja destruído.
+* classe
+* objeto
+* elementos de classe
+* atributos
+* métodos
+* método construtor padrão
+* método construtor alternativo
+* estado de um objeto
+* retenção de estado
 
 
 **Questão 2:** Julgue as seguintes frases como verdadeiras ou falsas e explique o motivo delas estarem certas ou erradas. Nos casos em que julgar uma sentença como errada, altere-a de modo a corrigi-la.
 
 a) Dois objetos instanciados através do método construtor padrão terão o mesmo estado e, portanto, suas referências serão iguais. 
 
+  Falso → Dois objetos instanciados através do método construtor padrão terão o mesmo estado e, portanto, suas referências serão diferentes.
+
 b) Uma classe pode ter apenas um método construtor alternativo para instanciação de seus objetos. 
+
+  Falso → Uma classe pode ter, além de um método construtor padrão, um método construtor alternativo para instanciação de seus objetos. Caso um construtor alternativo seja definido, o construtor padrão também deve ser definido.
 
 c) Retenção de estados é uma propriedade do paradigma OO que permite aos objetos manterem os valores de seus atributos até o momento em que um estímulo externo ao objeto solicite uma alteração no valor de algum atributo.
 
+  Verdadeiro
+
 d) Em Java, o operador . (ponto) serve para acessar somente os métodos de um objeto. 
+
+  Falso → Em Java, o operador . (ponto) serve para acessar os métodos e os atributos de um objeto.
 
 e) Métodos destrutores são aqueles métodos que são chamados explicitamente pelo algoritmo para destruir objetos e liberar os espaços que eles ocupam em memória. Em Java métodos destrutores são implementos com o nome **finalize()** e definidos em cada classe.
 
+   Falso →  Métodos destrutores são chamados implicitamente pelo algoritmo, momentos antes do objeto ser destruído. Em java não há método destrutor, o objeto é destruído quando não há referências apontando para ele, porém podemos utilizar o método finalize() para executar algumas ações antes do objeto ser destruído.
 
 **Questão 3:**  Considere o seguinte cenário:
 
