@@ -298,7 +298,7 @@ public class Principal {
 		Curso.nome = "Ciência da computação"; //Curso é um tipo e não um objeto.
 		c1.codigo = 21; //c1 não foi instanciado.
 		Aluno.obterDetalhes(); //Aluno é um tipo e não um objeto.
-		a3.cargaHoraria() = 220; //cargaHoraria é um atributo e não um método.
+		a3.cargaHoraria() = 220; //a3 não está instanciado, cargaHoraria é um atributo e não um método e é da classe Curso.
 	}
 }
 {% endhighlight %}
