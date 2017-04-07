@@ -22,6 +22,7 @@ Prazo para entrega: ~~4/4/2017~~ 10/04/2017, 23:59:59.
 * estado de um objeto
 * retenção de estado
 
+Classe é a estrutura definida pelo programador, contendo atributos e métodos (comportamento) comuns a um conjunto de objetos.
 
 **Questão 2:** Julgue as seguintes frases como verdadeiras ou falsas e explique o motivo delas estarem certas ou erradas. Nos casos em que julgar uma sentença como errada, altere-a de modo a corrigi-la.
 
@@ -130,16 +131,181 @@ System.out.println(q3 == q2);
 
 
 **Questão 7:**
+Seja o seguinte código em Java. Apresente o que será impresso ao final da execução do método **main** definido na classe **Principal**.
+
+{% highlight java %}
+package questao7;
+public class Principal {
+  public static void main(String[] args) {
+    Curso c1, c2;
+    Aluno a1, a2, a3;
+    c1 = new Curso(1, "Engenharia de Software", 240);
+    c2 = new Curso(2, "Engenharia Eletrônica", 257);
+    
+    a1 = new Aluno("Andre", c1, 13, 23, 02, 1983);
+    a2 = new Aluno("Maria", c2, 5, 27, 5, 1994);
+    a3 = new Aluno("Junior", c1, 70, 16, 11, 1995);
+    
+    System.out.println(a1.obterDetalhes());
+    System.out.println(a2.obterDetalhes());
+    System.out.println(a3.obterDetalhes());
+    a3 = a2;
+    System.out.println(a1 == a2);
+    System.out.println(a1 == a3);
+    System.out.println(a2 == a3);
+  }
+}
+{% endhighlight %}
 
 
-**Questão 8:**
+{% highlight java %}
+package questao7;
+public class Aluno {
+  String nome; 
+  Curso curso;
+  int matricula;
+  int diaNascimento, 
+      mesNascimento, 
+      anoNascimento;
+  
+  public Aluno(String nom, Curso cur, int mat, int dNasc, int mNasc, int aNasc) {
+    nome = nom;
+    curso = cur;
+    matricula = mat;
+    diaNascimento = dNasc; 
+    mesNascimento = mNasc;
+    anoNascimento = aNasc;
+  }
+  
+  public String obterDetalhes() {
+    String resposta = "";
+    resposta += "Nome: " + nome + '\n';
+    resposta += "Curso: " + curso + '\n';
+    resposta += "Data de nascimento: " + diaNascimento + '/' + 
+                                     mesNascimento + '/' + 
+                                     anoNascimento;
+    return resposta; 
+  }
+  
+  protected void finalize() {
+    System.out.println("Esse objeto ALUNO vai ser destruido.");
+    System.out.println("Detalhes do objeto: " + '\n');
+    System.out.println(obterDetalhes());
+  }
+}
+{% endhighlight  %}
+
+{% highlight java %}
+package questao7;
+public class Curso {
+  int codigo;
+  String nomeCurso; 
+  int cargaHoraria;
+  
+  Curso (int cod, String nome, int ch) {
+    codigo = cod;
+    nomeCurso = nome; 
+    cargaHoraria = ch;
+  }
+  
+  public String obterDetalhes() {
+    String resposta = "";
+    resposta += "Nome do curso: " + nomeCurso + '\n';
+    resposta += "Codigo: " + codigo + '\n';
+    resposta += "Carga horaria: " + cargaHoraria;
+    return resposta; 
+  }
+  
+  protected void finalize() {
+    System.out.println("Esse objeto CURSO vai ser destruido.");
+    System.out.println("Detalhes do objeto: " + '\n');
+    System.out.println(obterDetalhes());
+  }
+}
+{% endhighlight  %}
 
 
-**Questão 9:**
+**Questão 8:** Considerando as classes **Aluno** e **Curso** definidas na questão 7, o que será impresso quando o *garbagge collector* de Java executar momentos antes do método **main()** da classe abaixo terminar sua execução?
+
+{% highlight java %}
+package questao8;
+public class Principal {
+  public static void main(String[] args) {
+    Curso c1, c2;
+    Aluno a1, a2, a3;
+    
+    c1 = new Curso(1, "Engenharia de Software", 240);
+    c2 = new Curso(2, "Engenharia Eletrônica", 257);
+    
+    a1 = new Aluno("Andre", c1, 13, 23, 02, 1983);
+    a2 = new Aluno("Maria", c2, 5, 27, 5, 1994);
+    a3 = new Aluno("Junior", c1, 70, 16, 11, 1995);
+    
+    a3 = a2; 
+    a2 = null;
+    c2 = c1; 
+    c1 = null;
+    c1 = a3.curso;
+    a3 = a1;
+    a1 = nul;
+    
+    //---> GARBAGGE COLLECTOR executa nesse instante
+  }
+}
+{% endhighlight %}
 
 
-**Questão 10:**
+**Questão 9:** as cinco instruções listadas abaixo estão definidas no método **main()** da classe **Principal** e apresentam erros em suas sintaxes. Apresente quais são os erros, justifique-os e altere as instruções de modo a consertá-los. Considere os códigos das classes **Aluno** e **Turma** como sendo os códigos apresentados na questão 7. 
 
+{% highlight java %}
+package questao9;
+public class Principal {
+	public static void main(String[] args) {
+		Curso c1, c2;
+		Aluno a1, a2, a3;
+		
+		c2 = new Curso(2, "Engenharia Eletrônica", 257);
+		
+		a1 = new Aluno("Andre", c1, 13, 23, 02, 1983);
+		a2 = new Aluno("Maria", c2, 5, 27, 5, 1994);
+		
+		Curso.obterDetalhes();
+		c2.matricula = 20; 
+		Curso.nome = "Ciência da computação";
+		c1.codigo = 21;
+		Aluno.obterDetalhes();
+		a3.cargaHoraria() = 220;
+	}
+}
+{% endhighlight %}
+**Questão 10:** sabe-se que um curso em é formado por um conjunto de disciplinas, para as quais são definidas as seguintes características: 
+
+* um código da disciplina;
+* um nome;
+* uma carga horária, e
+* um departamento responsável por lecionar tal disciplina.
+
+Sabe-se ainda que para cada disciplina são criadas diversas turmas. Cada turma é descrita através das seguintes características:
+
+* um código da turma; 
+* um número total de vagas; 
+* um número de vagas livres; 
+* um número de vagas ocupadas, e
+* dias/horarios em que ela ocorre.
+
+Além disso, é necessário que os alunos se matriculem nessas turmas. Tal procedimento consiste em associar os alunos em uma turma específica (caso haja vagas) e aumentar o número de vagas ocupadas. 
+
+Considerando o contexto formado pelas classes **Aluno** e **Curso** (vide implementação na questão 7) e a descrição acima, pede-se: 
+
+a) em Java, crie uma classe que seja capaz de representar as características e o comportamento de uma turma.
+
+b) Crie as seguintes turmas: 
+   * turma 1 de Orientação por objetos, com 46 vagas livres, que ocorre todas as 4as e 6as feiras, das 12:00 às 16:00 horas;
+   * turma 1 de Desenvolvimento Avançado de software, com 30 vagas livres, que ocorre todas as 4as. e 6as. feiras, das 16:00 às 18:00 horas.
+
+c) associe ambas turmas recem-criadas ao curso de Engenharia de Software,
+
+d) matricule Andre e Maria na turma de orientação por objetos, e Junior na turma de desenvolvimento avançado de software.
 
 ## Referências:
 \[[OPEN ACCESS][eckDavid]\] Eck, David J. Introduction to Programming Using Java, 6th ed. 2011
@@ -147,7 +313,7 @@ System.out.println(q3 == q2);
 
 
 ---
-*Última modificação: 3 de abril de 2017, 22:52.*
+*Última modificação: 7 de abril de 2017, 05:12.*
 
 
 
