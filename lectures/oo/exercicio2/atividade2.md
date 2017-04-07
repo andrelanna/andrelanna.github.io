@@ -293,12 +293,12 @@ public class Principal {
 		a1 = new Aluno("Andre", c1, 13, 23, 02, 1983);
 		a2 = new Aluno("Maria", c2, 5, 27, 5, 1994);
 		
-		Curso.obterDetalhes();
-		c2.matricula = 20; 
-		Curso.nome = "Ciência da computação";
-		c1.codigo = 21;
-		Aluno.obterDetalhes();
-		a3.cargaHoraria() = 220;
+		Curso.obterDetalhes(); //Curso é um tipo e não um objeto. 
+		c2.matricula = 20; //O atributo matrícula é do tipo aluno.
+		Curso.nome = "Ciência da computação"; //Curso é um tipo e não um objeto.
+		c1.codigo = 21; //c1 não foi instanciado.
+		Aluno.obterDetalhes(); //Aluno é um tipo e não um objeto.
+		a3.cargaHoraria() = 220; //cargaHoraria é um atributo e não um método.
 	}
 }
 {% endhighlight %}
