@@ -259,7 +259,19 @@ public class Principal {
     c1 = null;
     c1 = a3.curso;
     a3 = a1;
-    a1 = nul;
+    a1 = null;
+    
+    ////Esse objeto ALUNO vai ser destruido.
+    //Detalhes do objeto:
+    //Nome: Junior
+    //Curso: Engenharia de Software
+    //Data de nasciento: 16/11/1995
+     
+    //Esse objeto ALUNO vai ser destruido.
+    //Detalhes do objeto:
+    //Nome: Maria
+    //Curso: Engenharia Eletrônica
+    //Data de nasciento: 27/5/1994 
     
     //---> GARBAGGE COLLECTOR executa nesse instante
   }
