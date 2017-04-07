@@ -264,13 +264,13 @@ public class Principal {
     ////Esse objeto ALUNO vai ser destruido.
     //Detalhes do objeto:
     //Nome: Junior
-    //Curso: Engenharia de Software
+    //Curso:  #endereço de c1
     //Data de nasciento: 16/11/1995
      
     //Esse objeto ALUNO vai ser destruido.
     //Detalhes do objeto:
     //Nome: Maria
-    //Curso: Engenharia Eletrônica
+    //Curso:  #endereço de c2
     //Data de nasciento: 27/5/1994 
     
     //---> GARBAGGE COLLECTOR executa nesse instante
