@@ -147,12 +147,24 @@ public class Principal {
     a3 = new Aluno("Junior", c1, 70, 16, 11, 1995);
     
     System.out.println(a1.obterDetalhes());
+    //Nome: Andre
+    //Curso: Engenharia de Software
+    //Data de nascimento: 23/02/1983
     System.out.println(a2.obterDetalhes());
+    //Nome: Maria
+    //Curso: Engenharia Eletrônica
+    //Data de nascimento: 27/5/1994
     System.out.println(a3.obterDetalhes());
+    //Nome: Junior
+    //Curso: Engenharia de Software
+    //Data de nascimento: 16/11/1995
     a3 = a2;
     System.out.println(a1 == a2);
+    //false
     System.out.println(a1 == a3);
+    //false
     System.out.println(a2 == a3);
+    //true
   }
 }
 {% endhighlight %}
