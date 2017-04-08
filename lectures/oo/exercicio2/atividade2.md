@@ -55,8 +55,24 @@ Além dessas características, drones possuem as seguintes funções básicas: a
 
 Dado esse cenário, pede-se aos alunos que representem (inicialmente) as características e comportamentos de um drone através de um diagrama de classes e, posteriormente, apresente a implementação dessa classe na linguagem Java. 
 
+**Questão 4:** Considerando a classe definida e implementada na questão 5, pede-se que os seguintes objetos sejam criados a partir do programa principal: 
+
+| Característica   | drone1         | drone2         | drone3            | drone4            |
+|:-----------------|:---------------|:---------------|:------------------|:------------------|
+| Marca            | Hubsan         | Hubsan         | DJI               | DJI               |
+| Modelo           | X4 mini        | H501S X4 FPV   | Mavic Pro         | Spreading Wings   |
+| N. de hélices    | 4              | 4              | 4                 | 8                 |
+| Câmera           | SD             | HD             | UHD               | SUHD              |
+| Vel. vert. max.  | 10 m/s         | 12 m/s         | 16 m/s            | 16 m/s            |
+| Vel. hor. max.   | 10 m/s         | 12 m/s         | 16 m/s            | 16 m/s            |
+| Autonomia bateria| 7 minutos      | 20 minutos     | 27 minutos        | 15 minutos        |
+| Distância máxima | até 150 metros | até 1 kilometro| até 13 kilometros | até 13 kilometros |
+
+
 |       Drone              |
 |:-------------------------|
+| marca : String           |
+| modelo : String          |
 | numHelices : int         | 
 | camera : String          |
 | velVertMax : int         | 
@@ -74,9 +90,29 @@ Dado esse cenário, pede-se aos alunos que representem (inicialmente) as caracte
 |:-------------------------|
 
 {% highlight java %}
+
+//Principal.java
+
+public class Principal {
+
+    public static void main(String[] args) {
+        Drone     drone1,drone2,drone3,drone4;
+        drone1 = new Drone("Hubsan","X4 mini", 4, "SD",10,10,7,150);
+        drone2 = new Drone("Hubsan","H501S X4 FPV", 4, "HD",12,12,20,1000);
+        drone3 = new Drone("DJI","Mavic Pro", 4, "UHD",16,16,27,13000);
+        drone4 = new Drone("DJI","Spreading Wings", 8, "SUHD",16,16,15,13000);
+        
+    }
+}
+{% endhighlight%}
+
+{% highlight java %}
+
 //Drone.java
 
 public class Drone {
+    String marca;
+    String modelo;
     int numHelices;
     String camera;
     int velVertMax;
@@ -88,7 +124,9 @@ public class Drone {
         this.camera = "";
     }
     
-    public Drone(int numH, String cam, int velVMax, int velHMax, int autoBat, int distMax){
+    public Drone(String ma, String mo, int numH, String cam, int velVMax, int velHMax, int autoBat, int distMax){
+        this.marca = ma;
+        this.modelo = mo;
         this.numHelices = numH;
         this.camera = cam;
         this.velVertMax = velVMax;
@@ -112,11 +150,9 @@ public class Drone {
     
     public void iniciarGrav(){
         this.camera += " Gravando...";
-        System.out.println(this.camera);
     }
     public void pararGrav(){
         this.camera = this.camera.substring(0, this.camera.length() - 12);
-        System.out.println(this.camera);
     }
     
     public void economizarBateria(){
@@ -127,21 +163,8 @@ public class Drone {
     }
 }
 
+
 {% endhighlight%}
-
-**Questão 4:** Considerando a classe definida e implementada na questão 5, pede-se que os seguintes objetos sejam criados a partir do programa principal: 
-
-| Característica   | drone1         | drone2         | drone3            | drone4            |
-|:-----------------|:---------------|:---------------|:------------------|:------------------|
-| Marca            | Hubsan         | Hubsan         | DJI               | DJI               |
-| Modelo           | X4 mini        | H501S X4 FPV   | Mavic Pro         | Spreading Wings   |
-| N. de hélices    | 4              | 4              | 4                 | 8                 |
-| Câmera           | SD             | HD             | UHD               | SUHD              |
-| Vel. vert. max.  | 10 m/s         | 12 m/s         | 16 m/s            | 16 m/s            |
-| Vel. hor. max.   | 10 m/s         | 12 m/s         | 16 m/s            | 16 m/s            |
-| Autonomia bateria| 7 minutos      | 20 minutos     | 27 minutos        | 15 minutos        |
-| Distância máxima | até 150 metros | até 1 kilometro| até 13 kilometros | até 13 kilometros |
-
 
 **Questão 5:** Ainda levando em consideração o cenário descrito nas questões 3 e 4, é necessário fazer com que os comandos realizados pelo usuário no controle remoto sejam enviados ao drone. Para isso, é necessário que o controle remoto estabeleça uma conexão com o drone. A partir desse momento é possível enviar os seguintes comandos ao drone: a) aumentar ou diminuir a velocidade vertical em passos de 1 m/s; b) aumentar ou diminuir a velocidade horizontal em passos de 1m/s e, c) ativar ou desativar a câmera. É importante ressaltar que um controle remoto só pode estar conectado a um drone apenas. Por fim, controles remotos possuem baterias com autonomia entre 60 e 90 minutos e alcance entre 20 metros e 20 kilometros.  
 
