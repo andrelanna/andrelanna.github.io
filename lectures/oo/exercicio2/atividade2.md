@@ -68,42 +68,30 @@ Dado esse cenário, pede-se aos alunos que representem (inicialmente) as caracte
 | Autonomia bateria| 7 minutos      | 20 minutos     | 27 minutos        | 15 minutos        |
 | Distância máxima | até 150 metros | até 1 kilometro| até 13 kilometros | até 13 kilometros |
 
+**Questão 5:** Ainda levando em consideração o cenário descrito nas questões 3 e 4, é necessário fazer com que os comandos realizados pelo usuário no controle remoto sejam enviados ao drone. Para isso, é necessário que o controle remoto estabeleça uma conexão com o drone. A partir desse momento é possível enviar os seguintes comandos ao drone: a) aumentar ou diminuir a velocidade vertical em passos de 1 m/s; b) aumentar ou diminuir a velocidade horizontal em passos de 1m/s e, c) ativar ou desativar a câmera. É importante ressaltar que um controle remoto só pode estar conectado a um drone apenas. Por fim, controles remotos possuem baterias com autonomia entre 60 e 90 minutos e alcance entre 20 metros e 20 kilometros.  
 
-|       Drone              |
-|:-------------------------|
-| marca : String           |
-| modelo : String          |
-| numHelices : int         | 
-| camera : String          |
-| velVertMax : int         | 
-| velHorMax :int           | 
-| autoBateria : int        | 
-| distMax : int            |
-|:-------------------------|
-|aumentarVelVert() : void  |
-|diminuirVelVert() : void  |
-|aumentarVelHort() : void  |
-|diminuirVelHort() : void  |
-|iniciarGrav() : void      |
-|pararGrav() : void        |
-|economizarBateria() : void|
-|:-------------------------|
+Desse modo, pede-se nessa questão que seja modelada e implementada em Java a classe que representa as características e o comportamento de um controle remoto, de modo que o drone possa ser comandado a partir do comandos enviados pelo controle remoto.
 
 {% highlight java %}
 
 //Principal.java
-
 public class Principal {
 
     public static void main(String[] args) {
         Drone     drone1,drone2,drone3,drone4;
+        Controle c1,c2,c3,c4;
         drone1 = new Drone("Hubsan","X4 mini", 4, "SD",10,10,7,150);
         drone2 = new Drone("Hubsan","H501S X4 FPV", 4, "HD",12,12,20,1000);
         drone3 = new Drone("DJI","Mavic Pro", 4, "UHD",16,16,27,13000);
         drone4 = new Drone("DJI","Spreading Wings", 8, "SUHD",16,16,15,13000);
-        
+        c1 = new Controle(drone1);
+        c2 = new Controle(drone2);
+        c3 = new Controle(drone3);
+        c4 = new Controle(drone4);
     }
+
 }
+
 {% endhighlight%}
 
 {% highlight java %}
@@ -163,12 +151,50 @@ public class Drone {
     }
 }
 
-
 {% endhighlight%}
 
-**Questão 5:** Ainda levando em consideração o cenário descrito nas questões 3 e 4, é necessário fazer com que os comandos realizados pelo usuário no controle remoto sejam enviados ao drone. Para isso, é necessário que o controle remoto estabeleça uma conexão com o drone. A partir desse momento é possível enviar os seguintes comandos ao drone: a) aumentar ou diminuir a velocidade vertical em passos de 1 m/s; b) aumentar ou diminuir a velocidade horizontal em passos de 1m/s e, c) ativar ou desativar a câmera. É importante ressaltar que um controle remoto só pode estar conectado a um drone apenas. Por fim, controles remotos possuem baterias com autonomia entre 60 e 90 minutos e alcance entre 20 metros e 20 kilometros.  
+{% highlight java %}
 
-Desse modo, pede-se nessa questão que seja modelada e implementada em Java a classe que representa as características e o comportamento de um controle remoto, de modo que o drone possa ser comandado a partir do comandos enviados pelo controle remoto.
+//Controle.java
+
+public class Controle {
+    Drone drone;
+    int bateria;
+    int alcance;
+    
+    Controle(){
+    }
+    Controle(Drone dr){
+        this.drone = dr;
+        this.bateria = this.drone.autBateria;
+        this.alcance = this.drone.distMax;
+    }
+    public void acelerarVelVert(){
+        this.drone.aumentarVelVert();
+    }
+    public void frearVelVert(){
+        this.drone.diminuirVelVert();
+    }
+    public void acelerarVelHor(){
+        this.drone.aumentarVelHor();
+    }
+    public void frearVelHor(){
+        this.drone.diminuirVelHor();
+    }
+    
+    public void gravar(){
+        this.drone.iniciarGrav();
+    }
+    public void pararGrav(){
+        this.drone.pararGrav();
+    }
+    
+    public void economizarBateria(){
+        this.drone.economizarBateria();
+    }
+}
+
+{% endhighlight%}
 
 
 **Questão 6:** Sejam os seguintes códigos da *ClasseA* e da aplicação principal escritas em JAVA. 
