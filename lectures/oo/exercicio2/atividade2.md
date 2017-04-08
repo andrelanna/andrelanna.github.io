@@ -27,23 +27,14 @@ Prazo para entrega: ~~4/4/2017~~ 10/04/2017, 23:59:59.
 
 a) Dois objetos instanciados através do método construtor padrão terão o mesmo estado e, portanto, suas referências serão iguais. 
 
-  Falso → Dois objetos instanciados através do método construtor padrão terão o mesmo estado e, portanto, suas referências serão diferentes.
-
 b) Uma classe pode ter apenas um método construtor alternativo para instanciação de seus objetos. 
-
-  Falso → Uma classe pode ter, além de um método construtor padrão, um método construtor alternativo para instanciação de seus objetos. Caso um construtor alternativo seja definido, o construtor padrão também deve ser definido.
 
 c) Retenção de estados é uma propriedade do paradigma OO que permite aos objetos manterem os valores de seus atributos até o momento em que um estímulo externo ao objeto solicite uma alteração no valor de algum atributo.
 
-  Verdadeiro
-
 d) Em Java, o operador . (ponto) serve para acessar somente os métodos de um objeto. 
-
-  Falso → Em Java, o operador . (ponto) serve para acessar os métodos e os atributos de um objeto.
 
 e) Métodos destrutores são aqueles métodos que são chamados explicitamente pelo algoritmo para destruir objetos e liberar os espaços que eles ocupam em memória. Em Java métodos destrutores são implementos com o nome **finalize()** e definidos em cada classe.
 
-   Falso →  Métodos destrutores são chamados implicitamente pelo algoritmo, momentos antes do objeto ser destruído. Em java não há método destrutor, o objeto é destruído quando não há referências apontando para ele, porém podemos utilizar o método finalize() para executar algumas ações antes do objeto ser destruído.
 
 **Questão 3:**  Considere o seguinte cenário:
 
@@ -64,6 +55,79 @@ Além dessas características, drones possuem as seguintes funções básicas: a
 
 Dado esse cenário, pede-se aos alunos que representem (inicialmente) as características e comportamentos de um drone através de um diagrama de classes e, posteriormente, apresente a implementação dessa classe na linguagem Java. 
 
+|       Drone              |
+|:-------------------------|
+| numHelices : int         | 
+| camera : String          |
+| velVertMax : int         | 
+| velHorMax :int           | 
+| autoBateria : int        | 
+| distMax : int            |
+|:-------------------------|
+|aumentarVelVert() : void  |
+|diminuirVelVert() : void  |
+|aumentarVelHort() : void  |
+|diminuirVelHort() : void  |
+|iniciarGrav() : void      |
+|pararGrav() : void        |
+|economizarBateria() : void|
+|:-------------------------|
+
+{% highlight java %}
+//Drone.java
+
+public class Drone {
+    int numHelices;
+    String camera;
+    int velVertMax;
+    int velHorMax;
+    int autBateria;
+    int distMax;
+
+    public Drone(){
+        this.camera = "";
+    }
+    
+    public Drone(int numH, String cam, int velVMax, int velHMax, int autoBat, int distMax){
+        this.numHelices = numH;
+        this.camera = cam;
+        this.velVertMax = velVMax;
+        this.velHorMax = velHMax;
+        this.autBateria = autoBat;
+        this.distMax = distMax;
+    }
+    
+    public void aumentarVelVert(){
+        this.velVertMax +=1;
+    }
+    public void diminuirVelVert(){
+        this.velVertMax -=1;
+    }
+    public void aumentarVelHor(){
+        this.velHorMax +=1;
+    }
+    public void diminuirVelHor(){
+        this.velHorMax -=1;
+    }
+    
+    public void iniciarGrav(){
+        this.camera += " Gravando...";
+        System.out.println(this.camera);
+    }
+    public void pararGrav(){
+        this.camera = this.camera.substring(0, this.camera.length() - 12);
+        System.out.println(this.camera);
+    }
+    
+    public void economizarBateria(){
+        if(this.autBateria < 5){
+            this.velHorMax = this.velHorMax/2;
+            this.velVertMax = this.velVertMax/2;
+        }
+    }
+}
+
+{% endhighlight%}
 
 **Questão 4:** Considerando a classe definida e implementada na questão 5, pede-se que os seguintes objetos sejam criados a partir do programa principal: 
 
