@@ -483,26 +483,10 @@ System.out.println(q3 == q2);
 
 
 **Questão 7:**
-**
-Nome: André
-Curso: &c1
-Data de nascimento: 23/2/1983
-**
-**
-Nome: Maria
-Curso: &c2
-Data de nascimento: 27/5/1994
-**
-**
-Nome: Junior
-Curso: &c1
-Data de nascimento: 16/11/1995
-**
-**
-False
-False
-True
-**
+**Nome: André<p>Curso: &c1<p>Data de nascimento: 23/2/1983<p>**
+**Nome: Maria<p>Curso: &c2<p>Data de nascimento: 27/5/1994<p>**
+**Nome: Junior<p>Curso: &c1<p>Data de nascimento: 16/11/1995**
+**False<p>False<p>True<p>**
 
 
 **Questão 8:**
