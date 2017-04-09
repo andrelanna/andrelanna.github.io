@@ -432,6 +432,69 @@ public classe Disciplina {
 
 d) matricule Andre e Maria na turma de orientação por objetos, e Junior na turma de desenvolvimento avançado de software.
 
+{% highlight java %}
+public class Principal {
+	public static void main(String[] args) {
+		public Curso es;
+		public Disciplina oo, das;
+		public Turma ooUm, dasUm;
+		public Aluno a1, a2, a3;
+
+		es = new Curso(1, "Engenharia de Software", 240);
+
+		oo = new Disciplina(10, "Orientação por objetos", 4, "FGA - Engenharia de Software", es);
+
+		das = new Disciplina(11, "Desenvolvimento avançado de software", 4, "FGA - Engenharia de Software", es);
+
+		ooUm = new Turma(1, 46, 0, "4as e 6as, 12h as 16h");
+		ooUm.disciplina = oo;
+
+		dasUm = new Turma(1, 30, 0, "4as e 6as, 16h as 18h");
+		dasUm.disciplina = das;		
+
+		a1 = new Aluno("Andre", c1, 13, 23, 02, 1983);
+		a2 = new Aluno("Maria", c2, 5, 27, 5, 1994);
+		a3 = new Aluno("Junior", c3, 70, 16, 11, 1995);
+
+		ooUm.vagas(); // Mostra o número de vagas livres;
+		ooUm.matricula(); // Se tiver vagas livres, matricula;
+		a1.turma = ooUm;
+		
+		ooUm.vagas(); // Mostra o número de vagas livres;
+		ooUm.matricula(); // Se tiver vagas livres, matricula;
+		a2.turma = ooUm;
+		
+		dasUm.vagas(); // Mostra o número de vagas livres;
+		dasUm.matricula(); // Se tiver vagas livres, matricula;
+		a3.turma = dasUm;
+	}
+}
+{% endhighlight %}
+
+{% highlight java %}
+public class Aluno {
+	public String nome; 
+	public int matricula;
+	public int diaNascimento; 
+	public int mesNascimento;
+	public int anoNascimento;
+	public Turma turma;
+
+	public Aluno() {
+	}
+
+	public Aluno(String nome, int matricula, int diaNasciment, int mesNascimento, int anoNascimento) {
+		this.nome = nome;
+		this.curso = curso;
+		this.matricula = matricula;
+		this.diaNascimento = dNasc; 
+		this.mesNascimento = mesNascimento;
+		this.anoNascimento = anoNascimento;
+	}
+
+}
+{% endhighlight %}
+
 ## Referências:
 \[[OPEN ACCESS][eckDavid]\] Eck, David J. Introduction to Programming Using Java, 6th ed. 2011
 
