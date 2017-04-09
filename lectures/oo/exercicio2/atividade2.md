@@ -241,6 +241,115 @@ public class Drone {
 
 Desse modo, pede-se nessa questão que seja modelada e implementada em Java a classe que representa as características e o comportamento de um controle remoto, de modo que o drone possa ser comandado a partir do comandos enviados pelo controle remoto.
 
+{% highlight java %}
+public class Drone {
+	public String marca;
+	public String modelo;
+	public int nHelices;
+	public String tipoCamera;
+	public double velVertMax;
+	public double velHorMax;
+	public int autonomiaBateria;
+	public int distanciaMax;
+	public int velVert;
+	public int velHor;
+	public boolean cameraAtiva;
+	public boolean cameraGravando;
+	
+	Drone() {
+	}
+
+	Drone(String marca, String modelo, int nHelices, String tipoCamera, double velVertMax, double velHorMax, int autonomiaBateria, int distanciaMax) {
+                this.marca = marca;
+                this.modelo = modelo;
+                this.nHelices = nHelices;
+                this.tipoCamera = tipoCamera;
+                this.velVertMax = velVertMax;
+                this.velHorMax = velHorMax;
+                this.autonomiaBateria = autonomiaBateria;
+                this.distanciaMax = distanciaMax;
+        }
+
+	public void aumentaVelVert(int velVert) {
+		this.velVert += velVert;
+		
+		if (velVert > velVertMax) {
+			this.velVert = velVertMax;
+		}
+	}
+	
+	public void diminueVelVert(int velVert) {
+		this.velVert -= velVert;
+
+		if (velVert < 0) {
+			this.velVert = 0;
+		}
+	}
+
+	public void aumentaVelHor(int velHor) {
+		this.velHor += velHor;
+	
+		if (velHor > velHorMax) {
+			this.velHor = velHorMax;
+		}
+	}
+
+	public void diminueVelHor(int velHor) {
+		this.velHor -= velHor;
+		
+		if (velHor < 0) {
+			this.velHor = 0;
+		}
+	}
+
+	public void gravaCamera(boolean cameraGravando) {
+		this.cameraGravando = cameraGravando;
+	}
+
+	public void autonomiaBaixa() {
+		velVertMax = velVertMax * 0.5;
+		velHorMax = velHorMax * 0.5;
+	}
+}
+{% endhighlight%}
+
+{% highlight java %}
+public class ControleRemoto {
+	public int alcance;
+	public int autonomia;
+	public Drone drone;
+
+	public ControleRemoto() {
+	}
+	
+	public ControleRemoto(int alcance, int autonomia, Drone drone) {
+		this.alcance = alcance;
+		this.autonomia = autonomia;
+		this.drone = drone;
+	}
+
+	public void aumentaVelVertUm() {
+		drone.aumentaVelVert(1);
+	}
+	
+	public void diminuiVelVertUm() {
+		drone.diminueVelVert(1);
+	}
+	
+	public void aumentaVelHorUm() {
+		drone.aumentaVelHor(1);
+	}
+	
+	public void diminuiVelHorUm() {
+		drone.diminueVelHor(1);
+	}
+
+	public void ativaCamera(boolean cameraAtiva) {
+		drone.cameraAtiva = cameraAtiva;
+	}
+
+}
+{% endhighlight%}
 
 **Questão 6:** Sejam os seguintes códigos da *ClasseA* e da aplicação principal escritas em JAVA. 
 
