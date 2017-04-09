@@ -358,6 +358,16 @@ b) Crie as seguintes turmas:
    * turma 1 de Orientação por objetos, com 46 vagas livres, que ocorre todas as 4as e 6as feiras, das 12:00 às 16:00 horas;
    * turma 1 de Desenvolvimento Avançado de software, com 30 vagas livres, que ocorre todas as 4as. e 6as. feiras, das 16:00 às 18:00 horas.
 
+{% highlight java %}
+public class Principal {
+	public static void main(String[] args) {
+		public Turma ooUm, dasUm;
+		ooUm = new Turma(1, 46, 0, "4as e 6as, 12h as 16h");
+		dasUm = new Turma(1, 30, 0, "4as e 6as, 16h as 18h");
+	}
+}
+{% endhighlight %}
+
 c) associe ambas turmas recem-criadas ao curso de Engenharia de Software,
 
 d) matricule Andre e Maria na turma de orientação por objetos, e Junior na turma de desenvolvimento avançado de software.
