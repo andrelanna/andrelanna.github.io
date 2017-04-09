@@ -157,6 +157,87 @@ public class Drone {
 | Autonomia bateria| 7 minutos      | 20 minutos     | 27 minutos        | 15 minutos        |
 | Distância máxima | até 150 metros | até 1 kilometro| até 13 kilometros | até 13 kilometros |
 
+{% highlight java %}
+public class Principal {
+	public static void main(String[] args) {
+		Drone drone1 = new Drone("Hubsan", "X4 mini", 4, "SD", 10, 10, 7, 150);
+		Drone drone2 = new Drone("Hubsan", "H501S X4 FPV", 4, "HD", 12, 12, 20, 1000);
+		Drone drone3 = new Drone("DJI", "Mavic Pro", 4, "UHD", 16, 16, 27, 13000);
+		Drone drone4 = new Drone("DJI", "Spreading Wings", 8, "SUHD", 16, 16, 15, 13000);
+	}
+}
+{% endhighlight%}
+
+{% highlight java %}
+public class Drone {
+	public String marca;
+	public String modelo;
+	public int nHelices;
+	public String tipoCamera;
+	public double velVertMax;
+	public double velHorMax;
+	public int autonomiaBateria;
+	public int distanciaMax;
+	public int velVert;
+	public int velHor;
+	public boolean cameraGravando;
+	
+	Drone() {
+	}
+
+	Drone(String marca, String modelo, int nHelices, String tipoCamera, double velVertMax, double velHorMax, int autonomiaBateria, int distanciaMax) {
+                this.marca = marca;
+                this.modelo = modelo;
+                this.nHelices = nHelices;
+                this.tipoCamera = tipoCamera;
+                this.velVertMax = velVertMax;
+                this.velHorMax = velHorMax;
+                this.autonomiaBateria = autonomiaBateria;
+                this.distanciaMax = distanciaMax;
+        }
+
+	public void aumentaVelVert(int velVert) {
+		this.velVert += velVert;
+		
+		if (velVert > velVertMax) {
+			this.velVert = velVertMax;
+		}
+	}
+	
+	public void diminueVelVert(int velVert) {
+		this.velVert -= velVert;
+
+		if (velVert < 0) {
+			this.velVert = 0;
+		}
+	}
+
+	public void aumentaVelHor(int velHor) {
+		this.velHor += velHor;
+	
+		if (velHor > velHorMax) {
+			this.velHor = velHorMax;
+		}
+	}
+
+	public void diminueVelHor(int velHor) {
+		this.velHor -= velHor;
+		
+		if (velHor < 0) {
+			this.velHor = 0;
+		}
+	}
+
+	public void gravaCamera(boolean cameraGravando) {
+		this.cameraGravando = cameraGravando;
+	}
+
+	public void autonomiaBaixa() {
+		velVertMax = velVertMax * 0.5;
+		velHorMax = velHorMax * 0.5;
+	}
+}
+{% endhighlight%}
 
 **Questão 5:** Ainda levando em consideração o cenário descrito nas questões 3 e 4, é necessário fazer com que os comandos realizados pelo usuário no controle remoto sejam enviados ao drone. Para isso, é necessário que o controle remoto estabeleça uma conexão com o drone. A partir desse momento é possível enviar os seguintes comandos ao drone: a) aumentar ou diminuir a velocidade vertical em passos de 1 m/s; b) aumentar ou diminuir a velocidade horizontal em passos de 1m/s e, c) ativar ou desativar a câmera. É importante ressaltar que um controle remoto só pode estar conectado a um drone apenas. Por fim, controles remotos possuem baterias com autonomia entre 60 e 90 minutos e alcance entre 20 metros e 20 kilometros.  
 
