@@ -452,9 +452,9 @@ public class Principal {
 		dasUm = new Turma(1, 30, 0, "4as e 6as, 16h as 18h");
 		dasUm.disciplina = das;		
 
-		a1 = new Aluno("Andre", c1, 13, 23, 02, 1983);
-		a2 = new Aluno("Maria", c2, 5, 27, 5, 1994);
-		a3 = new Aluno("Junior", c3, 70, 16, 11, 1995);
+		a1 = new Aluno("Andre", 13, 23, 02, 1983);
+		a2 = new Aluno("Maria", 5, 27, 5, 1994);
+		a3 = new Aluno("Junior", 70, 16, 11, 1995);
 
 		ooUm.vagas(); // Mostra o número de vagas livres;
 		ooUm.matricula(); // Se tiver vagas livres, matricula;
