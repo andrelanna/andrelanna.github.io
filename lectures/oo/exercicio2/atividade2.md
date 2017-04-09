@@ -283,18 +283,26 @@ public class Principal {
 {% endhighlight %}
 Responda as seguintes questões com base nos códigos acima: 
 
-a) As referências a1 e a2 para objetos de *ClasseA* são iguais?
+a) As referências q1 e q2 para objetos de *Questao6* são iguais?
+Não. q1 e q2 referenciam objetos diferentes.
 
 b) Qual o estado de cada dos objetos de cada referência? 
+Os objetos q1 e q2 tem o estado padrão e q3 tem o estado alterado.
 
 c) O que será impresso pela função *main* da classe *Principal* se a linha número *11* for igual a: 
 {% highlight java%}
 System.out.println(q1 == q2);
+// False. A referência do objeto q1 é diferente da referência do objeto q2.
 System.out.println(q1.a1 == q2.a1);
+// True. O atributo a1 dos objetos q1 e q2 tem o mesmo valor.
 System.out.println(q2.a3 == q3.a3);
+// False. O atributo a3 dos objetos q2 e q3 tem valores diferentes.
 System.out.println(q1.a2 == q2.a2);
+// True. O atributo a2 dos objetos q1 e q2 tem o mesmo valor.
 System.out.println(q1.a4 == q3.a4);
+// True. O atributo a4 dos objetos q1 e q3 tem o mesmo valor.
 System.out.println(q3 == q2);
+// False. A referência do objeto q3 é diferente da referência do objeto q2.
 {% endhighlight %}
 
 
