@@ -3,12 +3,6 @@ title: Exercício prático
 layout: default
 ---
 
-```ruby
-def index
-  puts "hello world"
-end
-``` 
-
 ### UnB - Universidade de Brasilia
 ### FGA - Faculdade do Gama
 ### OO - Orientação por objetos
@@ -78,7 +72,7 @@ Dado esse cenário, pede-se aos alunos que representem (inicialmente) as caracte
 
 **Questão 5:** 
 
-*.java
+```java
 /*MAIN*/
 package drone;
 public class Main {
@@ -113,7 +107,7 @@ public class Main {
     }
     
 }
-*.java
+```
 
 **Questão 6:** Sejam os seguintes códigos da *ClasseA* e da aplicação principal escritas em JAVA. 
 
