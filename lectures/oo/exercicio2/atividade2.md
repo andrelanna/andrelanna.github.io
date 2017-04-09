@@ -72,12 +72,11 @@ Dado esse cenário, pede-se aos alunos que representem (inicialmente) as caracte
 
 **Questão 5:** 
 
-{% highlight java %}
-/*MAIN*/
+% highlight java %
 
+/*MAIN*/
 package drone;
 public class Main {
-
     public static void main(String[] args) {
         Drone drone1;
         ControleRemoto controle1;
@@ -109,7 +108,8 @@ public class Main {
     }
     
 }
-{% endhighlight java %}
+
+% endhighlight java %
 
 **Questão 6:** Sejam os seguintes códigos da *ClasseA* e da aplicação principal escritas em JAVA. 
 
