@@ -491,25 +491,25 @@ False<p>False<p>True<p>
 
 **Questão 8:**
 
-Impressão do Garbage collector:
-Esse objeto ALUNO vai ser destruido.
-Detalhes do objeto: 
-
-Nome: Maria
-Curso: &c2
-Data de nascimento: 27/5/1994
-Esse CURSO vai ser destruido.
-Detalhes do objeto:
-
-Nome do curso: Engenharia de Software
-Codigo: 1
-Carga horaria: 240
-Esse objeto ALUNO vai ser destruido.
-Detalhes do objeto: 
-
-Nome: Andre
-Curso: &c1
-Data de nascimento: 23/2/1983
+<p>Impressão do Garbage collector:<p>
+Esse objeto ALUNO vai ser destruido.<p>
+Detalhes do objeto: <p>
+<p>
+Nome: Maria<p>
+Curso: &c2<p>
+Data de nascimento: 27/5/1994<p>
+Esse CURSO vai ser destruido.<p>
+Detalhes do objeto:<p>
+<p>
+Nome do curso: Engenharia de Software<p>
+Codigo: 1<p>
+Carga horaria: 240<p>
+Esse objeto ALUNO vai ser destruido.<p>
+Detalhes do objeto: <p>
+<p>
+Nome: Andre<p>
+Curso: &c1<p>
+Data de nascimento: 23/2/1983<p>
 
 **Questão 9:**
 
