@@ -3,6 +3,12 @@ title: Exercício prático
 layout: default
 ---
 
+```ruby
+def index
+  puts "hello world"
+end
+``` 
+
 ### UnB - Universidade de Brasilia
 ### FGA - Faculdade do Gama
 ### OO - Orientação por objetos
