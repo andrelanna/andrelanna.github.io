@@ -21,6 +21,7 @@ Prazo para entrega: ~~4/4/2017~~ 10/04/2017, 23:59:59.
 * método construtor alternativo
 * estado de um objeto
 * retenção de estado
+
 <br><br>
 Classe: A classe contém atributos e métodos, que são responsáveis por descrever objetos ou mais precisamente para criar objetos. Ela é um tipo de fábrica para a construção de objetos.
 <br>
@@ -32,8 +33,8 @@ Atributos: Atributos nada mais são do que as variáveis contidas em uma classe 
 <br>
 Método construtor padrão: O construtor padrão também é uma subrotina, porém é uma subrotina especial, com o papel de alocar memória para o objeto e inicializar os atributos, retornando a referência para o objeto. Toda classe tem um contrutor padrão assim que ela é criada, mesmo se o programador não declarar ela o sistema irá providenciar um método construtor padrão.
 <br><br>
-**Questão 2:** Julgue as seguintes frases como verdadeiras ou falsas e explique o motivo delas estarem certas ou erradas. Nos casos em que julgar uma sentença como errada, altere-a de modo a corrigi-la.
-
+**Questão 2:** 
+<br><br>
 a) Falso. Dois objetos podem sim ter o mesmo estador, porém não necesariamente as suas referências serão iguais
 
 b) Falso. Você pode ter mais de um método construtor padrão em sua classe
@@ -43,7 +44,7 @@ c) Verdadeiro. A retenção de estado é a propriedade que permite aos objetivo 
 d) Falso. Também serve para acessar os atributos.
 
 e) Falso. Não existem métodos destrutores em java. O que existe é o método finalize que é responsável por realizar as últimas operações antes do garbage collector eliminar o objeto da memória.
-
+<br><br>
 
 **Questão 3:**  
 ```java
