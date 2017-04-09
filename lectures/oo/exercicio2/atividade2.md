@@ -370,6 +370,66 @@ public class Principal {
 
 c) associe ambas turmas recem-criadas ao curso de Engenharia de Software,
 
+{% highlight java %}
+public class Principal {
+	public static void main(String[] args) {
+		public Curso es;
+		public Disciplina oo, das;
+		public Turma ooUm, dasUm;
+
+		es = new Curso(1, "Engenharia de Software", 240);
+
+		oo = new Disciplina(10, "Orientação por objetos", 4, "FGA - Engenharia de Software", es);
+
+		das = new Disciplina(11, "Desenvolvimento avançado de software", 4, "FGA - Engenharia de Software", es);
+
+		ooUm = new Turma(1, 46, 0, "4as e 6as, 12h as 16h");
+		ooUm.disciplina = oo;
+
+		dasUm = new Turma(1, 30, 0, "4as e 6as, 16h as 18h");
+		dasUm.disciplina = das;		
+	}
+}
+{% endhighlight %}
+
+{% highlight java %}
+public class Curso {
+	public int codigo;
+	public String nomeCurso; 
+	public int cargaHoraria;
+
+	public Curso() {
+	}
+
+	public Curso (int cod, String nome, int ch) {
+		this.codigo = codigo;
+		this.nomeCurso = nomeCurso; 
+		this.cargaHoraria = cargaHoraria;
+	}
+}
+{% endhighlight %}
+
+{% highlight java %}
+public classe Disciplina {
+        public int codDisciplina;
+        public String nomeDisciplina;
+        public int cargaHoraria;
+        public String departamento;
+	public Curso curso;
+
+        public Disciplina() {
+        }
+
+        public Disciplina(int codDisciplina, String nomeDisciplina, int cargaHoraria, String departamento, Curso curso) {
+                this.codDisciplina = codDisciplina;
+                this.nomeDisciplina = nomeDisciplina;
+                this.cargaHoraria = cargaHoraria;
+                this.departamento = departament;
+                this.curso = curso;
+        }
+}
+{% endhighlight %}
+
 d) matricule Andre e Maria na turma de orientação por objetos, e Junior na turma de desenvolvimento avançado de software.
 
 ## Referências:
