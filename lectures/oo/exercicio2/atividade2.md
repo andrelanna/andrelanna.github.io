@@ -56,9 +56,8 @@ Além dessas características, drones possuem as seguintes funções básicas: a
 
 Dado esse cenário, pede-se aos alunos que representem (inicialmente) as características e comportamentos de um drone através de um diagrama de classes e, posteriormente, apresente a implementação dessa classe na linguagem Java. 
 
---------------------------------------
 |		DRONE		     |
---------------------------------------
+:-------------------------------------
 | - nHelices:int		     |
 | - tipoCamera:String		     |
 | - velVertMax:double		     |
@@ -68,14 +67,13 @@ Dado esse cenário, pede-se aos alunos que representem (inicialmente) as caracte
 | - velVert:int			     |
 | - velHor:int			     |
 | - cameraGravando:boolean	     |
---------------------------------------
+|				     |
 | + aumentaVelVert(int):void	     |
 | + diminueVelVert(int):void	     |
 | + aumentaVelHor(int):void	     |
 | + diminueVelHor(int):void	     |
 | + gravaCamera(boolean):void	     |
 | + autonomiaBaixa():void	     |
---------------------------------------
 
 {% highlight java %}
 public class Drone {
