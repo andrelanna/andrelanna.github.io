@@ -323,6 +323,37 @@ Considerando o contexto formado pelas classes **Aluno** e **Curso** (vide implem
 
 a) em Java, crie uma classe que seja capaz de representar as características e o comportamento de uma turma.
 
+{% highlight java %}
+public class Turma {
+	public int codTurma;
+	public int nTotalVagas;
+	public int nVagasLivres;
+	public int nVagasOcupadas;
+	public String diasHorarios;
+	public Disciplina disciplina;
+
+	public Turma() {
+	}
+
+	public Turma(int codTurma, int nTotalVagas, int nVagasOcupadas, String diasHorarios) {
+		this.codTurma = codTurma;
+		this.nTotalVagas = nTotalVagas;
+		this.nVagasOcupadas = nVagasOcupadas;
+		this.diasHorarios = diasHorarios;
+		nVagasLivres = nTotalVagas - nVagasOcupadas;
+	}
+
+	public void vagas() {
+		System.out.println("Vagas = " + nVagasLivres);
+	}
+
+	public void matricula() {
+		nVagasOcupadas++;
+		nVagasLivres = nTotalVagas - nVagasOcupadas;
+	}
+}
+{% endhighlight %}
+
 b) Crie as seguintes turmas: 
    * turma 1 de Orientação por objetos, com 46 vagas livres, que ocorre todas as 4as e 6as feiras, das 12:00 às 16:00 horas;
    * turma 1 de Desenvolvimento Avançado de software, com 30 vagas livres, que ocorre todas as 4as. e 6as. feiras, das 16:00 às 18:00 horas.
