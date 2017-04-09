@@ -483,14 +483,16 @@ System.out.println(q3 == q2);
 
 
 **Questão 7:**
-<p>Nome: André<p>Curso: &c1<p>Data de nascimento: 23/2/1983<p>
-Nome: Maria<p>Curso: &c2<p>Data de nascimento: 27/5/1994<p>
-Nome: Junior<p>Curso: &c1<p>Data de nascimento: 16/11/1995<p>
-False<p>False<p>True<p>
-
+<br><br>
+Nome: André<br>Curso: &c1<br>Data de nascimento: 23/2/1983<br>
+Nome: Maria<br>Curso: &c2<br>Data de nascimento: 27/5/1994<br>
+Nome: Junior<br>Curso: &c1<br>Data de nascimento: 16/11/1995<br>
+False<br>False<br>True
+<br><br>
 
 **Questão 8:**
-<br>Impressão do Garbage collector:<br>
+<br><br>
+Impressão do Garbage collector:<br>
 Esse objeto ALUNO vai ser destruido.<br>
 Detalhes do objeto: <br>
 <br>
@@ -509,6 +511,7 @@ Detalhes do objeto: <br>
 Nome: Andre<br>
 Curso: &c1<br>
 Data de nascimento: 23/2/1983<br>
+<br><br>
 **Questão 9:**
 
 
