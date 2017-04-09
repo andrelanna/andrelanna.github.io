@@ -21,19 +21,28 @@ Prazo para entrega: ~~4/4/2017~~ 10/04/2017, 23:59:59.
 * método construtor alternativo
 * estado de um objeto
 * retenção de estado
-
-
+<br><br>
+Classe: A classe contém atributos e métodos, que são responsáveis por descrever objetos ou mais precisamente para criar objetos. Ela é um tipo de fábrica para a construção de objetos.
+<br>
+Objetos: Objetos podem ser criados e destruídos do programa, e podem ser criados vários objetos com a mesma estrutura, se eles forem da mesma classe. Objeto é uma instância da classe, ou seja, a classe é uma forma para o objeto. Tratando de um bolo, a classe é a forma do bolo e o bolo é um objeto que pode ser de chocolate, laranja ou do que quer que você queira, e cada bolo que é feito é um novo objeto. 
+<br>
+Métodos: Os metódos estão dentro de uma classe e fazem parte dos objetos. Métodos são subrotinas que tem como estrutura o modificador, o tipo de retorno e a lista de parâmetros. Os métodos são responsáveis por executar mudanças nos valores dos atributos apenas com a chamada do mesmo, não sendo necessário que a main repita várias vezes o mesmo passo. 
+<br>
+Atributos: Atributos nada mais são do que as variáveis contidas em uma classe ou em um objeto. Como são variáveis esses valores podem ser alterados sem preocupações.
+<br>
+Método construtor padrão: O construtor padrão também é uma subrotina, porém é uma subrotina especial, com o papel de alocar memória para o objeto e inicializar os atributos, retornando a referência para o objeto. Toda classe tem um contrutor padrão assim que ela é criada, mesmo se o programador não declarar ela o sistema irá providenciar um método construtor padrão.
+<br><br>
 **Questão 2:** Julgue as seguintes frases como verdadeiras ou falsas e explique o motivo delas estarem certas ou erradas. Nos casos em que julgar uma sentença como errada, altere-a de modo a corrigi-la.
 
-a) Dois objetos instanciados através do método construtor padrão terão o mesmo estado e, portanto, suas referências serão iguais. 
+a) Falso. Dois objetos podem sim ter o mesmo estador, porém não necesariamente as suas referências serão iguais
 
-b) Uma classe pode ter apenas um método construtor alternativo para instanciação de seus objetos. 
+b) Falso. Você pode ter mais de um método construtor padrão em sua classe
 
-c) Retenção de estados é uma propriedade do paradigma OO que permite aos objetos manterem os valores de seus atributos até o momento em que um estímulo externo ao objeto solicite uma alteração no valor de algum atributo.
+c) Verdadeiro. A retenção de estado é a propriedade que permite aos objetivo guardarem os seus respectivos estados, porém não tenho como afirmar se existe outros paradigmas com a retenção de estado.
 
-d) Em Java, o operador . (ponto) serve para acessar somente os métodos de um objeto. 
+d) Falso. Também serve para acessar os atributos.
 
-e) Métodos destrutores são aqueles métodos que são chamados explicitamente pelo algoritmo para destruir objetos e liberar os espaços que eles ocupam em memória. Em Java métodos destrutores são implementos com o nome **finalize()** e definidos em cada classe.
+e) Falso. Não existem métodos destrutores em java. O que existe é o método finalize que é responsável por realizar as últimas operações antes do garbage collector eliminar o objeto da memória.
 
 
 **Questão 3:**  
