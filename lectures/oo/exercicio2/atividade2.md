@@ -56,6 +56,93 @@ Além dessas características, drones possuem as seguintes funções básicas: a
 
 Dado esse cenário, pede-se aos alunos que representem (inicialmente) as características e comportamentos de um drone através de um diagrama de classes e, posteriormente, apresente a implementação dessa classe na linguagem Java. 
 
+--------------------------------------
+|		DRONE		     |
+--------------------------------------
+| - nHelices:int		     |
+| - tipoCamera:String		     |
+| - velVertMax:double		     |
+| - velHorMax:double		     |
+| - autonomiaBateria:int	     |
+| - distanciaMax:int		     |
+| - velVert:int			     |
+| - velHor:int			     |
+| - cameraGravando:boolean	     |
+--------------------------------------
+| + aumentaVelVert(int):void	     |
+| + diminueVelVert(int):void	     |
+| + aumentaVelHor(int):void	     |
+| + diminueVelHor(int):void	     |
+| + gravaCamera(boolean):void	     |
+| + autonomiaBaixa():void	     |
+--------------------------------------
+
+{% highlight java %}
+public class Drone {
+	public int nHelices;
+	public String tipoCamera;
+	public double velVertMax;
+	public double velHorMax;
+	public int autonomiaBateria;
+	public int distanciaMax;
+	public int velVert;
+	public int velHor;
+	public boolean cameraGravando;
+	
+	Drone() {
+	}
+
+	Drone(int nHelices, String tipoCamera, double velVertMax, double velHorMax, int autonomiaBateria, int distanciaMax) {
+                this.nHelices = nHelices;
+                this.tipoCamera = tipoCamera;
+                this.velVertMax = velVertMax;
+                this.velHorMax = velHorMax;
+                this.autonomiaBateria = autonomiaBateria;
+                this.distanciaMax = distanciaMax;
+        }
+
+	public void aumentaVelVert(int velVert) {
+		this.velVert += velVert;
+		
+		if (velVert > velVertMax) {
+			this.velVert = velVertMax;
+		}
+	}
+	
+	public void diminueVelVert(int velVert) {
+		this.velVert -= velVert;
+
+		if (velVert < 0) {
+			this.velVert = 0;
+		}
+	}
+
+	public void aumentaVelHor(int velHor) {
+		this.velHor += velHor;
+	
+		if (velHor > velHorMax) {
+			this.velHor = velHorMax;
+		}
+	}
+
+	public void diminueVelHor(int velHor) {
+		this.velHor -= velHor;
+		
+		if (velHor < 0) {
+			this.velHor = 0;
+		}
+	}
+
+	public void gravaCamera(boolean cameraGravando) {
+		this.cameraGravando = cameraGravando;
+	}
+
+	public void autonomiaBaixa() {
+		velVertMax = velVertMax * 0.5;
+		velHorMax = velHorMax * 0.5;
+	}
+}
+{% endhighlight%}
 
 **Questão 4:** Considerando a classe definida e implementada na questão 5, pede-se que os seguintes objetos sejam criados a partir do programa principal: 
 
