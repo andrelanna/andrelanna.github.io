@@ -428,58 +428,31 @@ public class ControleRemoto {
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
 ```
 
-**Questão 6:** Sejam os seguintes códigos da *ClasseA* e da aplicação principal escritas em JAVA. 
+**Questão 6:** 
 
-Questao6.java
-{% highlight java %}
-public class Questao6 {
-  int   a1; 
-  float   a2; 
-  String  a3;
-  boolean a4;
-  
-  public Questao6() {}
-  
-  public Questao6(int a, float b, String c, boolean d){
-    a1 = a;
-    a2 = b;
-    a3 = c;
-    a4 = d;
-  }
-}
-{% endhighlight%}
+<br><br>
+*a)* <br>
+Errado! a1 e a2 nem se quer são referências, são atributos da classe Questao6<br>
+<br>
+*b)* <br>
+Estados de q1:<br>
+a1= 0  a2 = 0 a3 = Null a4 = False<br>
+Estados de q2:<br>
+a1= 0  a2 = 0 a3 = Null a4 = False<br>
+Estados de q3:<br>
+a1= 1  a2 = 1.0 a3 = null(A palavra null de fato) a4 = False<br>
+<br>
+*c)*<br>
+False<br>
+True<br>
+False<br>
+True<br>
+True<br>
+False<br>
+<br><br>
 
-Principal.java
-{% highlight java%}
-public class Principal {
-  public static void main (String[] args) {
-    Questao6 q1, 
-             q2,
-             q3;
-    
-    q1 = new Questao6();
-    q2 = new Questao6(0, 0.0f, null, false);
-    q3 = new Questao6(1, 1.0f, "null", false);
-    
-    //---> local onde a instrução do item c) será inserida.
-  }
-}
-{% endhighlight %}
-Responda as seguintes questões com base nos códigos acima: 
 
-a) As referências a1 e a2 para objetos de *ClasseA* são iguais?
 
-b) Qual o estado de cada dos objetos de cada referência? 
-
-c) O que será impresso pela função *main* da classe *Principal* se a linha número *11* for igual a: 
-{% highlight java%}
-System.out.println(q1 == q2);
-System.out.println(q1.a1 == q2.a1);
-System.out.println(q2.a3 == q3.a3);
-System.out.println(q1.a2 == q2.a2);
-System.out.println(q1.a4 == q3.a4);
-System.out.println(q3 == q2);
-{% endhighlight %}
 
 
 **Questão 7:**
