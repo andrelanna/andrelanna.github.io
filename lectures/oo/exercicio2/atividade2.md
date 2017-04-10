@@ -54,6 +54,21 @@ d) Em Java, o operador . (ponto) serve para acessar somente os métodos de um ob
 
 e) Métodos destrutores são aqueles métodos que são chamados explicitamente pelo algoritmo para destruir objetos e liberar os espaços que eles ocupam em memória. Em Java métodos destrutores são implementos com o nome **finalize()** e definidos em cada classe.
 
+Respostas:
+
+a) A sentença está incorreta, já que quando objetos são criados; mesmo que com o mesmo método e com o mesmo estado, não podem possuir a mesma referência, por se tratarem de objetos distintos.  
+Sentença correta: “Dois objetos instanciados através do método construtor padrão terão o mesmo estado, porém, referências distintas.”
+
+b) A sentença está incorreta, pois podemos criar diferentes construtores alternativos em uma mesma classe, alterando apenas os atributos que tal recebe como parâmetro.  
+Sentença correta: “Uma classe pode ter mais de um método construtor alternativo para instanciação de seus objetos, desde que apresentem atributos diferentes.”
+
+c) A sentença está correta. Como o objeto tem a capacidade de reter o seu estado, a única forma dos valores de seus atributos serem alterados é por um estímulo externo.
+
+d) A sentença está incorreta, visto que o operador . (ponto) também pode ser usado para acessar atributos que um objeto apresenta.  
+Sentença correta: “Em Java, o operador . (ponto) serve para acessar tanto métodos, quanto atributos de um objeto.”
+
+e) A alternativa está correta, visto que o método destrutor, que é definido em cada classe, destrói objetos criados na mesma.  
+
 
 **Questão 3:**  Considere o seguinte cenário:
 
