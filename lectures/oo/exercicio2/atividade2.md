@@ -89,7 +89,7 @@ class Drone{
      double max_distance;
      boolean cameraGravando;
 
-     //essas são padroes o resto vai ser mudado com os métodos do programa
+     /*essas são padroes o resto vai ser mudado com os métodos do programa*/
      public Drone(String a, String b, int c, String d,double e, double f, int g, int h){
         marca=a;
         modelo=b;
