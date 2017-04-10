@@ -275,13 +275,13 @@ System.out.println(q3 == q2);
 ```
 
 * **Resp:**
-
 <p>
 1º: false</br>
 2º: true</br>
 3º: false</br>
 4º: true</br>
-5º: false</br>
+5º: true</br>
+6º: false</br>
 </p>
 
 16/0049733 - Felipe Borges de Souza Chaves</br>
