@@ -50,20 +50,25 @@ O estado de um objeto é o valor dado a cada um dos atributos de um objeto em um
 
 **Questão 2:** Julgue as seguintes frases como verdadeiras ou falsas e explique o motivo delas estarem certas ou erradas. Nos casos em que julgar uma sentença como errada, altere-a de modo a corrigi-la.
 
-a) Dois objetos instanciados através do método construtor padrão terão o mesmo estado e, portanto, suas referências serão iguais. 
+a) Dois objetos instanciados através do método construtor padrão terão o mesmo estado e, portanto, suas referências serão iguais
+. 
   Falso, pois são instâncias diferentes de objetos diferentes. O fato de seus estados serem iguais não faz com que tenham as mesma referências.
 
 b) Uma classe pode ter apenas um método construtor alternativo para instanciação de seus objetos. 
+
   Falso. Uma classe pode ter quantos construtores alternativos quanto quem a cria quiser, inclusive com o mesmo nome(nesse caso, cada qual com parâmetros diferentes).	
   
 c) Retenção de estados é uma propriedade do paradigma OO que permite aos objetos manterem os valores de seus atributos até o momento em que um estímulo externo ao objeto solicite uma alteração no valor de algum atributo.
+
   Verdadeiro. Um objeto não irá mudar o valor de seus atributos espontaneamente, pois possui a característica de retenção de estado.
 
 
 d) Em Java, o operador . (ponto) serve para acessar somente os métodos de um objeto. 
+
   Errado. O operador “.” também pode ser usado para acessar atributos de um objeto.
   
 e) Métodos destrutores são aqueles métodos que são chamados explicitamente pelo algoritmo para destruir objetos e liberar os espaços que eles ocupam em memória. Em Java métodos destrutores são implementos com o nome **finalize()** e definidos em cada classe.
+
   A função finalize() não é destrutora, ela somente é executada imediatamente antes de o garbage collector ser acionado.
 
 
