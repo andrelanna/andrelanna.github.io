@@ -41,17 +41,6 @@ Ao conjunto de valores que os atributos de um objeto armazena em um instante, d�
 
 Retenção de estados é uma propriedade do paradigma OO que permite aos objetos manterem os valores de seus atributos até o momento em que um estímulo externo ao objeto solicite uma alteração no valor de algum atributo.
 
-<br><br>
-Classe: A classe contém atributos e métodos, que são responsáveis por descrever objetos ou mais precisamente para criar objetos. Ela é um tipo de fábrica para a construção de objetos.
-<br><br>
-Objetos: Objetos podem ser criados e destruídos do programa, e podem ser criados vários objetos com a mesma estrutura, se eles forem da mesma classe. Objeto é uma instância da classe, ou seja, a classe é uma forma para o objeto. Tratando de um bolo, a classe é a forma do bolo e o bolo é um objeto que pode ser de chocolate, laranja ou do que quer que você queira, e cada bolo que é feito é um novo objeto. 
-<br><br>
-Métodos: Os metódos estão dentro de uma classe e fazem parte dos objetos. Métodos são subrotinas que tem como estrutura o modificador, o tipo de retorno e a lista de parâmetros. Os métodos são responsáveis por executar mudanças nos valores dos atributos apenas com a chamada do mesmo, não sendo necessário que a main repita várias vezes o mesmo passo. 
-<br><br>
-Atributos: Atributos nada mais são do que as variáveis contidas em uma classe ou em um objeto. Como são variáveis esses valores podem ser alterados sem preocupações.
-<br><br>
-Método construtor padrão: O construtor padrão também é uma subrotina, porém é uma subrotina especial, com o papel de alocar memória para o objeto e inicializar os atributos, retornando a referência para o objeto. Toda classe tem um contrutor padrão assim que ela é criada, mesmo se o programador não declarar ela o sistema irá providenciar um método construtor padrão.
-<br><br>
 **Questão 2:** 
 <br><br>
 a) Falso. Dois objetos podem sim ter o mesmo estador, porém não necesariamente as suas referências serão iguais
