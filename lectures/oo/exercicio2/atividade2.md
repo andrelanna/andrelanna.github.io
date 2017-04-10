@@ -316,21 +316,21 @@ Não, pois são diferentes atributos de uma mesma classe, inclusive com tipos di
 
 b) Qual o estado de cada dos objetos de cada referência? 
 
-   O estado de q1é:
+O estado de q1é:
    
         a1 = 0;
         a2  = 0.0;
         a3 = null;
         a4 = false;
         
-	q2:
+q2:
   
 		  	a1 = 0;
         a2  = 0.0;
         a3 = null;
         a4 = false;
         
-  q3:
+q3:
   
 			a1 = 1;
       a2  = 1.0;
@@ -350,12 +350,12 @@ System.out.println(q3 == q2);
 
 Resposta:
 
-    False;
-    True;
-    False;
-    True;
-    True;
-    False.
+   False;
+   True;
+   False;
+   True;
+   True;
+   False.
 
 
 **Questão 7:**
