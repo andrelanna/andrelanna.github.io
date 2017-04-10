@@ -13,14 +13,44 @@ Prazo para entrega: ~~4/4/2017~~ 10/04/2017, 23:59:59.
 
 **Questão 1:** Os termos abaixo estão relacionados ao paradigma de *Orientação por Objetos*. Defina cada um dos termos com base no livro-texto (Eck, David J. Introduction to Programming Using Java, 6th ed. 2011).
 * classe
+	 De um ponto de vista claro na programação, classes são usadas para criar os objetos.
+	 Uma classe é um tipo de modelo para criar objetos.
+	 A parte nao estatica de uma classe especifica, descreve quais variaveis ou metodos os objetos vão conter.
+		
+		(Eck, David J. ,Hobart and William Smith Colleges Introduction to Programming Using Java, 7th ed. 2014) 
+
+	 Uma classe é uma estrutura que abstrai um conjunto de objetos com caracteristicas similares. Uma classe define o comportamento de seus 
+	 objetos através de metodos e os estados possiveis destes objetos, através de atributos.		
+
 * objeto
+	  Objeto é um tipo de módulo contendo dados e sub-rotinas.
+	  Objeto é um tipo de entidade auto-suficiente que tem um estado interno(dados) e que possa responder a mensagens(chamadas para sub-rotinas).
+
+		(Eck, David J. ,Hobart and William Smith Colleges Introduction to Programming Using Java, 7th ed. 2014)
+
+	  Um objeto é uma instancia de uma classe.
+
 * elementos de classe
+	 Existem dois elementos de classe, um definido como atributos e outro definido como metodo.
+
 * atributos
+	São variaveis que estarão dentro de cada um dos objetos desta classe e podem ser de qualquer tipo.
+	
 * métodos
+	Serão as ações que a classe podera realizar.
+
 * método construtor padrão
+	Um construtor padrão é um metodo que não recebe nenhum parametro e é public, ele é inicializado automaticamente aplicando valores padrões para as variaveis usadas na classe.
+	
 * método construtor alternativo
+	Um contrutor alternativo é um metodo que recebe parametros.
+	
 * estado de um objeto
+	Conjunto de valores que os atributos de um objeto armazena em um instante.
+
 * retenção de estado
+	Chama-se retenção de estado a capacidade que um objeto tem de manter os valores de seus atributos até a proxima alteração.
+
 
 
 **Questão 2:** Julgue as seguintes frases como verdadeiras ou falsas e explique o motivo delas estarem certas ou erradas. Nos casos em que julgar uma sentença como errada, altere-a de modo a corrigi-la.
