@@ -83,6 +83,17 @@ public class Drone {
             
     public Drone(){};
     
+    public Drone(String m, String model, int n_hel, String cam, int vel_vert, int vel_hor, int auton, int d){
+        marca = m;
+        modelo = model;
+        n_de_helices = n_hel;
+        camera = cam;
+        vel_vert_max = vel_vert;
+        vel_hor_max = vel_hor;
+        autonomia_bateria = auton;
+        distancia_max = d;
+    }
+    
     public void aumentar_vel_vertical(){
         if(vel_vert<vel_vert_max){
             vel_vert++;
@@ -139,16 +150,6 @@ public class Drone {
         System.out.println("");
     }
     
-    public Drone(String m, String model, int n_hel, String cam, int vel_vert, int vel_hor, int auton, int d){
-        marca = m;
-        modelo = model;
-        n_de_helices = n_hel;
-        camera = cam;
-        vel_vert_max = vel_vert;
-        vel_hor_max = vel_hor;
-        autonomia_bateria = auton;
-        distancia_max = d;
-    }
 }
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
 ```
@@ -162,8 +163,7 @@ package drone;
 
 public class Main {
     public static void main(String[] args) {
-        Drone drone1;
-        Drone drone2, drone3, drone4;
+        Drone drone1, drone2, drone3, drone4;
         drone1 = new Drone("Hubsan", "X4 mini", 4, "SD", 10, 10, 7, 150); 
         drone2 = new Drone("Hubsan", "H501S X4 FPV", 4, "HD", 12, 12, 20, 1000); 
         drone3 = new Drone("DJI", "Mavic Pro", 4, "UHD", 16, 16, 27, 13000); 
@@ -455,8 +455,7 @@ public class ControleRemoto {
 ```
 
 **Questão 6:** 
-
-<br><br>
+<br/><br/>
 *a)* <br>
 Errado! a1 e a2 nem se quer são referências, são atributos da classe Questao6<br>
 <br>
@@ -476,10 +475,6 @@ True<br>
 True<br>
 False<br>
 <br><br>
-
-
-
-
 
 **Questão 7:**
 <br><br>
