@@ -50,8 +50,8 @@ O estado de um objeto é o valor dado a cada um dos atributos de um objeto em um
 
 **Questão 2:** Julgue as seguintes frases como verdadeiras ou falsas e explique o motivo delas estarem certas ou erradas. Nos casos em que julgar uma sentença como errada, altere-a de modo a corrigi-la.
 
-a) Dois objetos instanciados através do método construtor padrão terão o mesmo estado e, portanto, suas referências serão iguais
-. 
+a) Dois objetos instanciados através do método construtor padrão terão o mesmo estado e, portanto, suas referências serão iguais. 
+
   Falso, pois são instâncias diferentes de objetos diferentes. O fato de seus estados serem iguais não faz com que tenham as mesma referências.
 
 b) Uma classe pode ter apenas um método construtor alternativo para instanciação de seus objetos. 
