@@ -88,7 +88,7 @@ class Drone{
      double max_distance;
      boolean cameraGravando;
 
-public Drone(String a, String b, int c, String d,double e, double f, int g, int h){
+    public Drone(String a, String b, int c, String d,double e, double f, int g, int h){
         marca=a;
         modelo=b;
         n_helices=c;
@@ -98,12 +98,12 @@ public Drone(String a, String b, int c, String d,double e, double f, int g, int 
         bateria_autonomia=g;
         max_distance=h;
      }
-
-
+     
      void aumentarVelocidadeHorizontal(double add){
         if(vel_ho_atual+add<vel_ho_max)vel_ho_atual+=add;
         else System.out.println("Você excedeu o limite de velocidade, tente novamente!");   
      }
+     
      void aumentarVelocidadeVertical(double add){
         if(vel_vert_atual+add<vel_vert_max)vel_vert_atual+=add;
         else System.out.println("Você excedeu o limite de velocidade, tente novamente!");   
@@ -124,6 +124,7 @@ public Drone(String a, String b, int c, String d,double e, double f, int g, int 
              vel_ho_max*=0.5;
          }
      }
+     
      void ligarDesligarCamera(){
          cameraGravando=(!cameraGravando);
      }
