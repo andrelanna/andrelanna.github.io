@@ -73,7 +73,6 @@ Dado esse cenário, pede-se aos alunos que representem (inicialmente) as caracte
 
 **Código resposta:**
 
-'''
 package drone;
 class Drone{
      String cam_type;
@@ -89,8 +88,7 @@ class Drone{
      double max_distance;
      boolean cameraGravando;
 
-     /*essas são padroes o resto vai ser mudado com os métodos do programa*/
-     public Drone(String a, String b, int c, String d,double e, double f, int g, int h){
+public Drone(String a, String b, int c, String d,double e, double f, int g, int h){
         marca=a;
         modelo=b;
         n_helices=c;
@@ -130,7 +128,7 @@ class Drone{
          cameraGravando=(!cameraGravando);
      }
 }
-'''
+
 
 **Questão 4:** Considerando a classe definida e implementada na questão 5, pede-se que os seguintes objetos sejam criados a partir do programa principal:
 
