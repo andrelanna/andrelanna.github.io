@@ -26,7 +26,7 @@ parâmetro e irá preencher os atributos do objeto com valores pré-determinados
 atributos, os quais foram definidos pela classe. Os valores atribuı́dos aos atributos de um objeto são o que definem o seu estado.
 * **retenção de estado:** É a habilidade que o objeto possui de reter o conjunto de valores de seus atributos de operações que foram executadas previamente.
 
-16/0049733 - Felipe Borges de Souza Chaves
+16/0049733 - Felipe Borges de Souza Chaves</br>
 16/0047013 - Max Henrique Barbosa
 
 **Questão 2:** Julgue as seguintes frases como verdadeiras ou falsas e explique o motivo delas estarem certas ou erradas. Nos casos em que julgar uma sentença como errada, altere-a de modo a corrigi-la.
@@ -44,7 +44,7 @@ d) Em Java, o operador . (ponto) serve para acessar somente os métodos de um ob
 e) Métodos destrutores são aqueles métodos que são chamados explicitamente pelo algoritmo para destruir objetos e liberar os espaços que eles ocupam em memória. Em Java métodos destrutores são implementos com o nome **finalize()** e definidos em cada classe.
   * **Resp:** Falso, finalize não é um método destrutos (apesar de destruir os objetos) pois quem o chama é a Máquina Virtual do Java e não o usuário.
 
-16/0049733 - Felipe Borges de Souza Chaves
+16/0049733 - Felipe Borges de Souza Chaves</br>
 16/0047013 - Max Henrique Barbosa
 
 **Questão 3:**  Considere o seguinte cenário:
@@ -132,7 +132,7 @@ class Drone{
 }
 ```
 
-16/0049733 - Felipe Borges de Souza Chaves
+16/0049733 - Felipe Borges de Souza Chaves</br>
 16/0047013 - Max Henrique Barbosa
 
 **Questão 4:** Considerando a classe definida e implementada na questão 5, pede-se que os seguintes objetos sejam criados a partir do programa principal:
@@ -165,7 +165,7 @@ public class Centro{
 }
 ```
 
-16/0049733 - Felipe Borges de Souza Chaves
+16/0049733 - Felipe Borges de Souza Chaves</br>
 16/0047013 - Max Henrique Barbosa
 
 **Questão 5:** Ainda levando em consideração o cenário descrito nas questões 3 e 4, é necessário fazer com que os comandos realizados pelo usuário no controle remoto sejam enviados ao drone. Para isso, é necessário que o controle remoto estabeleça uma conexão com o drone. A partir desse momento é possível enviar os seguintes comandos ao drone: a) aumentar ou diminuir a velocidade vertical em passos de 1 m/s; b) aumentar ou diminuir a velocidade horizontal em passos de 1m/s e, c) ativar ou desativar a câmera. É importante ressaltar que um controle remoto só pode estar conectado a um drone apenas. Por fim, controles remotos possuem baterias com autonomia entre 60 e 90 minutos e alcance entre 20 metros e 20 kilometros.  
@@ -210,7 +210,7 @@ class Controle{
 }
 ```
 
-16/0049733 - Felipe Borges de Souza Chaves
+16/0049733 - Felipe Borges de Souza Chaves</br>
 16/0047013 - Max Henrique Barbosa
 
 **Questão 6:**
@@ -284,7 +284,7 @@ System.out.println(q3 == q2);
 5º: false</br>
 </p>
 
-16/0049733 - Felipe Borges de Souza Chaves
+16/0049733 - Felipe Borges de Souza Chaves</br>
 16/0047013 - Max Henrique Barbosa
 
 **Questão 7:**
@@ -403,7 +403,7 @@ false</br>
 true</br>
 </p>
 
-16/0049733 - Felipe Borges de Souza Chaves
+16/0049733 - Felipe Borges de Souza Chaves</br>
 16/0047013 - Max Henrique Barbosa
 
 **Questão 8:** Considerando as classes **Aluno** e **Curso** definidas na questão 7, o que será impresso quando o *garbagge collector* de Java executar momentos antes do método **main()** da classe abaixo terminar sua execução?
@@ -451,7 +451,7 @@ Curso: (endereço)
 Data de nascimento: 16/11/1995</br>
 </p>
 
-16/0049733 - Felipe Borges de Souza Chaves
+16/0049733 - Felipe Borges de Souza Chaves</br>
 16/0047013 - Max Henrique Barbosa
 
 **Questão 9:** as cinco instruções listadas abaixo estão definidas no método **main()** da classe **Principal** e apresentam erros em suas sintaxes. Apresente quais são os erros, justifique-os e altere as instruções de modo a consertá-los. Considere os códigos das classes **Aluno** e **Turma** como sendo os códigos apresentados na questão 7.
@@ -483,7 +483,7 @@ public class Principal {
 }
 ```
 
-16/0049733 - Felipe Borges de Souza Chaves
+16/0049733 - Felipe Borges de Souza Chaves</br>
 16/0047013 - Max Henrique Barbosa
 
 **Questão 10:** sabe-se que um curso em é formado por um conjunto de disciplinas, para as quais são definidas as seguintes características:
@@ -618,7 +618,7 @@ public class MyMain{
 }
 ```
 
-16/0049733 - Felipe Borges de Souza Chaves
+16/0049733 - Felipe Borges de Souza Chaves</br>
 16/0047013 - Max Henrique Barbosa
 
 ## Referências:
