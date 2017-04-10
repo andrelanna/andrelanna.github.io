@@ -73,8 +73,8 @@ Dado esse cenário, pede-se aos alunos que representem (inicialmente) as caracte
 
 **Código resposta:**
 
-package drone;
-class Drone{
+{% highlight java %}
+public class Drone{
      String cam_type;
      String modelo;
      String marca;
@@ -129,7 +129,7 @@ class Drone{
          cameraGravando=(!cameraGravando);
      }
 }
-
+{% endhighlight%}
 
 **Questão 4:** Considerando a classe definida e implementada na questão 5, pede-se que os seguintes objetos sejam criados a partir do programa principal:
 
