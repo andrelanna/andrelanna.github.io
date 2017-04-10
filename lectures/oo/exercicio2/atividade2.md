@@ -653,7 +653,6 @@ public class Questão10 {
 }
 ```
 
-
 ## Referências:
 \[[OPEN ACCESS][eckDavid]\] Eck, David J. Introduction to Programming Using Java, 6th ed. 2011
 
