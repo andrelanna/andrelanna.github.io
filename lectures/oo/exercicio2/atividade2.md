@@ -207,6 +207,50 @@ Drone drone1, drone2, drone3, drone4;
 
 Desse modo, pede-se nessa questão que seja modelada e implementada em Java a classe que representa as características e o comportamento de um controle remoto, de modo que o drone possa ser comandado a partir do comandos enviados pelo controle remoto.
 
+Resposta:
+
+```java
+//QUESTÃO 5: Na classe principal, cada controle é conectado apenas a um drone
+ c1.dr = drone1;
+ c2.dr = drone2;
+ c3.dr = drone3;
+ c4.dr = drone4;
+```
+
+```java
+//QUESTÃO 5: Criar uma classe com as características e comportamentos de um controle remoto.
+public class Controle {
+int alcance;
+int autonomia;
+Drone dr;
+
+Controle(){
+ 
+}
+//a)
+public void aumentar_velocidade_vert(){
+ dr.velocidade_vert += 1;
+}
+public void diminuir_velocidade_vert(){
+ dr.velocidade_vert -= 1;
+//b)
+}
+public void aumentar_velocidade_hor(){
+ dr.velocidade_hor += 1;
+}
+public void diminuir_velocidade_hor(){
+ dr.velocidade_hor -= 1;
+}
+//c)
+public void ativar_camera(){
+ System.out.println("Câmera ativada");
+}
+public void desativar_camera(){
+ System.out.println("Câmera desativada");
+}
+}
+```
+
 
 **Questão 6:** Sejam os seguintes códigos da *ClasseA* e da aplicação principal escritas em JAVA. 
 
