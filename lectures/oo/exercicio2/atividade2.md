@@ -564,13 +564,73 @@ Considerando o contexto formado pelas classes **Aluno** e **Curso** (vide implem
 
 a) em Java, crie uma classe que seja capaz de representar as características e o comportamento de uma turma.
 
+Resposta:
+
+{% highlight java %}
+
+	public class Turma {
+	    int codTurma;
+	    int totalVagas;
+	    int vagasLivres;
+	    int vagasOcupadas;
+	    String dias;
+	    String horarios;
+	    Curso curso;
+
+	    public Turma(){
+
+	    }
+
+	    public Turma(int cod, int totalV, String dia, String h){
+		codTurma = cod;
+		totalVagas = totalV;
+		vagasLivres = totalV;
+		vagasOcupadas = 0;
+		dias = dia;
+		horarios = h;
+	    }
+
+	    public void MatriculaAluno(){
+		vagasOcupadas++;
+		vagasLivres--;
+	    }
+	}
+{% endhighlight  %}
+
 b) Crie as seguintes turmas: 
    * turma 1 de Orientação por objetos, com 46 vagas livres, que ocorre todas as 4as e 6as feiras, das 12:00 às 16:00 horas;
    * turma 1 de Desenvolvimento Avançado de software, com 30 vagas livres, que ocorre todas as 4as. e 6as. feiras, das 16:00 às 18:00 horas.
 
+Resposta:
+{% highlight java %}
+
+	Turma turma1oo, turma1das;
+	
+	turma1oo = new Turma(1, 46, "Quartas e Sextas", "12:00 às 16:00 horas");
+	turma1das = new Turma(1, 30, "Quartas e Sextas", "16:00 às 18:00 horas");
+	
+{% endhighlight  %}
 c) associe ambas turmas recem-criadas ao curso de Engenharia de Software,
 
+Resposta:
+
+{% highlight java %}
+
+	turma1oo.curso = c1;
+	turma1das.curso = c1;
+	
+{% endhighlight  %}
+
 d) matricule Andre e Maria na turma de orientação por objetos, e Junior na turma de desenvolvimento avançado de software.
+
+Resposta:
+{% highlight java %}
+
+	turma1oo.MatriculaAluno();
+	turma1oo.MatriculaAluno();
+	turma1das.MatriculaAluno();
+	
+{% endhighlight  %}
 
 ## Referências:
 \[[OPEN ACCESS][eckDavid]\] Eck, David J. Introduction to Programming Using Java, 6th ed. 2011
