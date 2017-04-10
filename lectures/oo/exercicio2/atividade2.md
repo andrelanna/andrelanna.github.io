@@ -165,9 +165,8 @@ public class Centro{
 Desse modo, pede-se nessa questão que seja modelada e implementada em Java a classe que representa as características e o comportamento de um controle remoto, de modo que o drone possa ser comandado a partir do comandos enviados pelo controle remoto.
 *Código Resposta*
 {% highlight java%}
-package drone;
 
-class Controle{
+public class Controle{
         Drone conexao;
         int autonomia;
         double distancia;
