@@ -461,11 +461,11 @@ Errado! a1 e a2 nem se quer são referências, são atributos da classe Questao6
 <br>
 *b)* <br>
 Estados de q1:<br>
-a1= 0  a2 = 0 a3 = Null a4 = False<br>
+a1= 0  a2 = 0.0 a3 = null a4 = false<br>
 Estados de q2:<br>
-a1= 0  a2 = 0 a3 = Null a4 = False<br>
+a1= 0  a2 = 0.0 a3 = null a4 = false<br>
 Estados de q3:<br>
-a1= 1  a2 = 1.0 a3 = null(A palavra null de fato) a4 = False<br>
+a1= 1  a2 = 1.0 a3 = "null" a4 = false<br>
 <br>
 *c)*<br>
 False<br>
