@@ -549,7 +549,7 @@ class Turma{
 }
 {%endhighlight%}
 *Classe Main*
-{%highlight java%}
+{% highlight java %}
 package questao10;
 
 public class MyMain{
@@ -571,7 +571,7 @@ public class MyMain{
 
      }
 }
-{%endhighlight%}
+{% endhighlight %}
 ## Referências:
 \[[OPEN ACCESS][eckDavid]\] Eck, David J. Introduction to Programming Using Java, 6th ed. 2011
 
