@@ -228,12 +228,15 @@ public class Curso {
 Nome: André
 Curso: endereço(c1)
 Data de nascimento: 23/02/1983
+
 Nome: Maria
 Curso: endereço(c2)
 Data de nascimento: 27/5/1994
+
 Nome: Junior
 Curso:  endereço(c1)
 Data de nascimento: 16/11/1995
+
 false
 false
 true
