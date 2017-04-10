@@ -1,3 +1,4 @@
+
 ---
 title: Exercício prático
 layout: default
@@ -24,6 +25,22 @@ Prazo para entrega: ~~4/4/2017~~ 10/04/2017, 23:59:59.
 * retenção de estado
 
 Classe é a estrutura definida pelo programador, contendo atributos e métodos (comportamento) comuns a um conjunto de objetos.
+
+Objeto é o conceito central de programação orientada a objeto, que é um tipo de módulo contendo dados e métodos.
+
+Elementos de Classe são elementos que compõem uma classe, como por exemplo: objetos, métodos, atributos.
+
+Atributos em um Objeto, são suas propriedades, conhecidas também por variáveis ou campos.
+
+Métodos são instruções para executar uma determinada tarefa (ações ou procedimentos).
+
+Método construtor alternativo é um método cujos parâmetros são pré estabelecidos.
+
+Método construtor padrão: Caso não seja dada uma definição do construtor em uma classe, o sistema irá providenciar um construtor padrão para a classe. Esse construtor irá alocar a memória e inicializar as variáveis com valores padrões (null ou 0). 
+
+Estado de um objeto são valores, atributos e características que um objeto apresenta em um determinado tempo.
+
+Retenção de estado é quando o objeto tem a capacidade de guardar os conjuntos de valores de seus atributos.
 
 **Questão 2:** Julgue as seguintes frases como verdadeiras ou falsas e explique o motivo delas estarem certas ou erradas. Nos casos em que julgar uma sentença como errada, altere-a de modo a corrigi-la.
 
