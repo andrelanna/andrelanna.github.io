@@ -89,6 +89,91 @@ Além dessas características, drones possuem as seguintes funções básicas: a
 
 Dado esse cenário, pede-se aos alunos que representem (inicialmente) as características e comportamentos de um drone através de um diagrama de classes e, posteriormente, apresente a implementação dessa classe na linguagem Java. 
 
+Resposta:
+
+|Drone                              |
+|:---------------------------------:|
+|helices : int                      |
+|camera : String                    |
+|velocidade_vert : int              |
+|velocidade_hor : int               |
+|bateria : int                      |
+|distancia_max : int                |
+|-----------------------------------|
+|aumentar_velocidade_vert() : void  |
+|diminuir_velocidade_vert() :void   |
+|aumentar_velocidade_ho() : void    |
+|diminuir_velocidade_hor() : void   |
+|ativar_camera() : boolean          |
+|desativar_camera() : boolean       |
+|diminuir_velocidade_max_vert : void|
+|diminuir_velocidade_max_hor: void  |
+
+```java
+// QUESTÃO 3: Criar uma clase com as características de um drone
+public class Drone {
+String marca;
+String modelo;
+int helices;
+String camera;
+int velocidade_vert;
+int velocidade_hor;
+int velocidade_vertMax;
+int velocidade_horMax;
+int bateria;
+int distancia_max;
+ 
+ Drone(String m, String mm, int h, String c, int vv,
+   int vh, int b, int d){
+  marca = m;
+  modelo = mm;
+  helices = h;
+  camera = c;
+  velocidade_vertMax = vv;
+  velocidade_vert = 0;
+  velocidade_horMax = vh;
+  velocidade_hor = 0;
+  bateria = b;
+  distancia_max = d; 
+ }
+ //a)
+ public void aumentar_velocidade_vert(){
+  this.velocidade_vert += 1;
+ }
+ public void diminuir_velocidade_vert(){
+  this.velocidade_vert -= 1;
+ }
+ //b)
+ public void aumentar_velocidade_hor(){
+  this.velocidade_hor += 1;
+ }
+ public void diminuir_velocidade_hor(){
+  this.velocidade_hor -= 1;
+ }
+ //c)
+ public String ativar_camera(){
+  return "Câmera ativada";
+ }
+ public String desativar_camera(){
+  return "Câmera desativada";
+ }
+ //d)
+ public void aumentar_velocidade_maxHor(){
+  this.velocidade_horMax += 1;
+ }
+ public void diminuir_velocidade_maxHor(){
+  this.velocidade_horMax -= 1;
+ }
+ public void aumentar_velocidade_maxVert(){
+  this.velocidade_vertMax += 1;
+ }
+ public void diminuir_velocidade_maxVert(){
+  this.velocidade_vertMax -= 1;
+ }
+}
+
+```
+
 
 **Questão 4:** Considerando a classe definida e implementada na questão 5, pede-se que os seguintes objetos sejam criados a partir do programa principal: 
 
