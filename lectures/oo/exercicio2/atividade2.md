@@ -12,7 +12,7 @@ Atividade para realizar em dupla e entregar via GitHub. Uma entrega por dupla.
 Prazo para entrega: ~~4/4/2017~~ 10/04/2017, 23:59:59.
 
 **Questão 1:** Os termos abaixo estão relacionados ao paradigma de *Orientação por Objetos*. Defina cada um dos termos com base no livro-texto (Eck, David J. Introduction to Programming Using Java, 6th ed. 2011).
-* classe: É uma estrutura que possui a finalidade de gerir um conjunto de objetos com caracterı́sticas similares,
+* **classe**: É uma estrutura que possui a finalidade de gerir um conjunto de objetos com caracterı́sticas similares,
 por sua vez a classe define o comportamento de seus objetos utilizando de métodos e os estados possı́veis de seus
 objetos através de atributos.
 * objeto: Também chamado de Instância de uma classe, o objeto possui seu comportamento e estado definidos pela
