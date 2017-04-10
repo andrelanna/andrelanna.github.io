@@ -92,79 +92,78 @@ Além dessas características, drones possuem as seguintes funções básicas: a
 Dado esse cenário, pede-se aos alunos que representem (inicialmente) as características e comportamentos de um drone através de um diagrama de classes e, posteriormente, apresente a implementação dessa classe na linguagem Java. 
 
 Resposta:   
-{% highlight java %}
-public class Drone{
-    String marca;
-    String modelo;
-    int numHelices;
-    String camera;
-    double velVertMax;
-    double velHorMax;
-    int autoBateria;
-    double distanciaMax;
-    boolean gravando;
-    double velVertAtual;
-    double velHorAtual;
-    
-    public Drone(){
-        
-    }
-    
-    public Drone(int numH, String cam, double velVMax, double velHMax, int bat, float distMax){
-        numHelices = numH;
-        camera = cam;
-        velVertMax = velVMax;
-        velHorMax = velHMax;
-        autoBateria = bat;
-        distanciaMax = distMax;
-    }
-    
-    public void AumentarVelVert(double aumento){
-        if((velVertAtual + aumento) >= velVertMax){
-            velVertAtual += aumento;
-        }else{
-            System.out.println("Limite de velocidade Excedido");
-        }
-    }
-    
-    public void DiminuirVelVert(double diminuicao){
-        if((velVertAtual - diminuicao) >= 0){
-            velVertAtual -= diminuicao;
-        }else{
-            System.out.println("Velocidade abaixo de zero não é permitida");
-   	}
 
-    }
-    
-    public void AumentarVelHor(double aumento){
-        if((velHorAtual + aumento) >= velHorMax){
-            velHorAtual += aumento;
-        }else{
-            System.out.println("Limite de velocidade Excedido");
-        }
-    }
-    
-    public void DiminuirVelHor(double diminuicao){
-        if((velHorAtual - diminuicao) >= 0){
-            velHorAtual -= diminuicao;
-        }else{
-            System.out.println("Velocidade abaixo de zero não é permitida");
-   	}
+	public class Drone{
+	    String marca;
+	    String modelo;
+	    int numHelices;
+	    String camera;
+	    double velVertMax;
+	    double velHorMax;
+	    int autoBateria;
+	    double distanciaMax;
+	    boolean gravando;
+	    double velVertAtual;
+	    double velHorAtual;
 
-    }
-    
-    public void IniciarInterromperGravacao(){
-        gravando = !gravando;
-    }
-    
-    public void BateriaFraca(){
-        if(autoBateria < 5){
-            velVertMax -= velVertMax/2;
-            velHorMax -= velHorMax/2;
-        }
-    }
-}
-{% endhighlight%}
+	    public Drone(){
+
+	    }
+
+	    public Drone(int numH, String cam, double velVMax, double velHMax, int bat, float distMax){
+		numHelices = numH;
+		camera = cam;
+		velVertMax = velVMax;
+		velHorMax = velHMax;
+		autoBateria = bat;
+		distanciaMax = distMax;
+	    }
+
+	    public void AumentarVelVert(double aumento){
+		if((velVertAtual + aumento) >= velVertMax){
+		    velVertAtual += aumento;
+		}else{
+		    System.out.println("Limite de velocidade Excedido");
+		}
+	    }
+
+	    public void DiminuirVelVert(double diminuicao){
+		if((velVertAtual - diminuicao) >= 0){
+		    velVertAtual -= diminuicao;
+		}else{
+		    System.out.println("Velocidade abaixo de zero não é permitida");
+		}
+
+	    }
+
+	    public void AumentarVelHor(double aumento){
+		if((velHorAtual + aumento) >= velHorMax){
+		    velHorAtual += aumento;
+		}else{
+		    System.out.println("Limite de velocidade Excedido");
+		}
+	    }
+
+	    public void DiminuirVelHor(double diminuicao){
+		if((velHorAtual - diminuicao) >= 0){
+		    velHorAtual -= diminuicao;
+		}else{
+		    System.out.println("Velocidade abaixo de zero não é permitida");
+		}
+
+	    }
+
+	    public void IniciarInterromperGravacao(){
+		gravando = !gravando;
+	    }
+
+	    public void BateriaFraca(){
+		if(autoBateria < 5){
+		    velVertMax -= velVertMax/2;
+		    velHorMax -= velHorMax/2;
+		}
+	    }
+	}
 
 **Questão 4:** Considerando a classe definida e implementada na questão 5, pede-se que os seguintes objetos sejam criados a partir do programa principal: 
 
@@ -180,95 +179,94 @@ public class Drone{
 | Distância máxima | até 150 metros | até 1 kilometro| até 13 kilometros | até 13 kilometros |
 
 Resposta: 
-{% highlight java %}
-public class atividade {
-    public static void main(String[] args) {
-        Drone drone1, drone2, drone3, drone4;
-     
-        drone1 = new Drone();
-        drone1.marca = "Hubsan";
-        drone1.modelo = "X4 mini";
-        drone1.numHelices = 4;
-        drone1.camera = "SD";
-        drone1.velVertMax = 10;
-        drone1.velHorMax = 10;
-        drone1.autoBateria = 7;
-        drone1.distanciaMax = 150;
-        
-        drone2 = new Drone();
-        drone2.marca = "Hubsan";
-        drone2.modelo = "H501S X4 FPV";
-        drone2.numHelices = 4;
-        drone2.camera = "HD";
-        drone2.velVertMax = 12;
-        drone2.velHorMax = 12;
-        drone2.autoBateria = 20;
-        drone2.distanciaMax = 1000;
-        
-        drone3 = new Drone();
-        drone3.marca = "DjI";
-        drone3.modelo = "Mavic Pro";
-        drone3.numHelices = 4;
-        drone3.camera = "UHD";
-        drone3.velVertMax = 16;
-        drone3.velHorMax = 16;
-        drone3.autoBateria = 27;
-        drone3.distanciaMax = 13000;
-        
-        drone4 = new Drone();
-        drone1.marca = "DjI";
-        drone1.modelo = "Spreading Wings";
-        drone1.numHelices = 8;
-        drone1.camera = "SUHD";
-        drone1.velVertMax = 16;
-        drone1.velHorMax = 16;
-        drone1.autoBateria = 15;
-        drone1.distanciaMax = 13000;
-    } 
-}
-{% endhighlight%}
+
+	public class atividade {
+	    public static void main(String[] args) {
+		Drone drone1, drone2, drone3, drone4;
+
+		drone1 = new Drone();
+		drone1.marca = "Hubsan";
+		drone1.modelo = "X4 mini";
+		drone1.numHelices = 4;
+		drone1.camera = "SD";
+		drone1.velVertMax = 10;
+		drone1.velHorMax = 10;
+		drone1.autoBateria = 7;
+		drone1.distanciaMax = 150;
+
+		drone2 = new Drone();
+		drone2.marca = "Hubsan";
+		drone2.modelo = "H501S X4 FPV";
+		drone2.numHelices = 4;
+		drone2.camera = "HD";
+		drone2.velVertMax = 12;
+		drone2.velHorMax = 12;
+		drone2.autoBateria = 20;
+		drone2.distanciaMax = 1000;
+
+		drone3 = new Drone();
+		drone3.marca = "DjI";
+		drone3.modelo = "Mavic Pro";
+		drone3.numHelices = 4;
+		drone3.camera = "UHD";
+		drone3.velVertMax = 16;
+		drone3.velHorMax = 16;
+		drone3.autoBateria = 27;
+		drone3.distanciaMax = 13000;
+
+		drone4 = new Drone();
+		drone1.marca = "DjI";
+		drone1.modelo = "Spreading Wings";
+		drone1.numHelices = 8;
+		drone1.camera = "SUHD";
+		drone1.velVertMax = 16;
+		drone1.velHorMax = 16;
+		drone1.autoBateria = 15;
+		drone1.distanciaMax = 13000;
+	    } 
+	}
 
 **Questão 5:** Ainda levando em consideração o cenário descrito nas questões 3 e 4, é necessário fazer com que os comandos realizados pelo usuário no controle remoto sejam enviados ao drone. Para isso, é necessário que o controle remoto estabeleça uma conexão com o drone. A partir desse momento é possível enviar os seguintes comandos ao drone: a) aumentar ou diminuir a velocidade vertical em passos de 1 m/s; b) aumentar ou diminuir a velocidade horizontal em passos de 1m/s e, c) ativar ou desativar a câmera. É importante ressaltar que um controle remoto só pode estar conectado a um drone apenas. Por fim, controles remotos possuem baterias com autonomia entre 60 e 90 minutos e alcance entre 20 metros e 20 kilometros.  
 
 Desse modo, pede-se nessa questão que seja modelada e implementada em Java a classe que representa as características e o comportamento de um controle remoto, de modo que o drone possa ser comandado a partir do comandos enviados pelo controle remoto.
 
 Resposta:
-{% highlight java %}
-public class ControleRemoto{
-    Drone drone;
-    double distancia;
-    int autonomia;
 
-    public ControleRemoto(){
-        
-    }
-    
-    public ControleRemoto(Drone d, double dist, int a){
-        drone = d ;
-        distancia = dist;
-        autonomia = a;
-    }
-    void AumentarVelVert(){
-        drone.AumentarVelVert(1);
-    }
-   
-    void DiminuirVelVert(){
-        drone.DiminuirVelVert(1);
-    }
-    
-    void AumentarVelHor(){
-        drone.AumentarVelHor(1);
-    }
-    
-    void DiminuirVelHor(){
-        drone.DiminuirVelHor(1);
-    }
-    
-    void IniciarInterromperGravacao(){
-        drone.IniciarInterromperGravacao();
-    }
-}
-{% endhighlight%}
+	public class ControleRemoto{
+	    Drone drone;
+	    double distancia;
+	    int autonomia;
+
+	    public ControleRemoto(){
+
+	    }
+
+	    public ControleRemoto(Drone d, double dist, int a){
+		drone = d ;
+		distancia = dist;
+		autonomia = a;
+	    }
+	    void AumentarVelVert(){
+		drone.AumentarVelVert(1);
+	    }
+
+	    void DiminuirVelVert(){
+		drone.DiminuirVelVert(1);
+	    }
+
+	    void AumentarVelHor(){
+		drone.AumentarVelHor(1);
+	    }
+
+	    void DiminuirVelHor(){
+		drone.DiminuirVelHor(1);
+	    }
+
+	    void IniciarInterromperGravacao(){
+		drone.IniciarInterromperGravacao();
+	    }
+	}
+
 
 **Questão 6:** Sejam os seguintes códigos da *ClasseA* e da aplicação principal escritas em JAVA. 
 
@@ -325,17 +323,16 @@ O estado de q1é:
         
 q2:
   
-		  	a1 = 0;
+	a1 = 0;
         a2  = 0.0;
         a3 = null;
         a4 = false;
-        
+	
 q3:
-  
-			a1 = 1;
-      a2  = 1.0;
-      a3 = “null”;
-      a4 = false;
+	a1 = 1;
+	a2  = 1.0;
+	a3 = “null”;
+	a4 = false;
 
 
 c) O que será impresso pela função *main* da classe *Principal* se a linha número *11* for igual a: 
@@ -350,12 +347,12 @@ System.out.println(q3 == q2);
 
 Resposta:
 
-   False;
-   True;
-   False;
-   True;
-   True;
-   False.
+	   False;
+	   True;
+	   False;
+	   True;
+	   True;
+	   False.
 
 
 **Questão 7:**
@@ -522,27 +519,25 @@ Resposta:
 
 **Questão 9:** as cinco instruções listadas abaixo estão definidas no método **main()** da classe **Principal** e apresentam erros em suas sintaxes. Apresente quais são os erros, justifique-os e altere as instruções de modo a consertá-los. Considere os códigos das classes **Aluno** e **Turma** como sendo os códigos apresentados na questão 7. 
 
-{% highlight java %}
-package questao9;
-public class Principal {
-	public static void main(String[] args) {
-		Curso c1, c2;
-		Aluno a1, a2, a3;
-		
-		c2 = new Curso(2, "Engenharia Eletrônica", 257);
-		
-		a1 = new Aluno("Andre", c1, 13, 23, 02, 1983);
-		a2 = new Aluno("Maria", c2, 5, 27, 5, 1994);
-		
-		Curso.obterDetalhes();
-		c2.matricula = 20; 
-		Curso.nome = "Ciência da computação";
-		c1.codigo = 21;
-		Aluno.obterDetalhes();
-		a3.cargaHoraria() = 220;
+	public class Principal {
+		public static void main(String[] args) {
+			Curso c1, c2;
+			Aluno a1, a2, a3;
+
+			c2 = new Curso(2, "Engenharia Eletrônica", 257);
+
+			a1 = new Aluno("Andre", c1, 13, 23, 02, 1983);
+			a2 = new Aluno("Maria", c2, 5, 27, 5, 1994);
+
+			Curso.obterDetalhes();
+			c2.matricula = 20; 
+			Curso.nome = "Ciência da computação";
+			c1.codigo = 21;
+			Aluno.obterDetalhes();
+			a3.cargaHoraria() = 220;
+		}
 	}
-}
-{% endhighlight %}
+
 **Questão 10:** sabe-se que um curso em é formado por um conjunto de disciplinas, para as quais são definidas as seguintes características: 
 
 * um código da disciplina;
@@ -565,8 +560,6 @@ Considerando o contexto formado pelas classes **Aluno** e **Curso** (vide implem
 a) em Java, crie uma classe que seja capaz de representar as características e o comportamento de uma turma.
 
 Resposta:
-
-{% highlight java %}
 
 	public class Turma {
 	    int codTurma;
@@ -595,42 +588,42 @@ Resposta:
 		vagasLivres--;
 	    }
 	}
-{% endhighlight  %}
+
 
 b) Crie as seguintes turmas: 
    * turma 1 de Orientação por objetos, com 46 vagas livres, que ocorre todas as 4as e 6as feiras, das 12:00 às 16:00 horas;
    * turma 1 de Desenvolvimento Avançado de software, com 30 vagas livres, que ocorre todas as 4as. e 6as. feiras, das 16:00 às 18:00 horas.
 
 Resposta:
-{% highlight java %}
+
 
 	Turma turma1oo, turma1das;
 	
 	turma1oo = new Turma(1, 46, "Quartas e Sextas", "12:00 às 16:00 horas");
 	turma1das = new Turma(1, 30, "Quartas e Sextas", "16:00 às 18:00 horas");
 	
-{% endhighlight  %}
+
 c) associe ambas turmas recem-criadas ao curso de Engenharia de Software,
 
 Resposta:
 
-{% highlight java %}
+
 
 	turma1oo.curso = c1;
 	turma1das.curso = c1;
 	
-{% endhighlight  %}
+
 
 d) matricule Andre e Maria na turma de orientação por objetos, e Junior na turma de desenvolvimento avançado de software.
 
 Resposta:
-{% highlight java %}
+
 
 	turma1oo.MatriculaAluno();
 	turma1oo.MatriculaAluno();
 	turma1das.MatriculaAluno();
 	
-{% endhighlight  %}
+
 
 ## Referências:
 \[[OPEN ACCESS][eckDavid]\] Eck, David J. Introduction to Programming Using Java, 6th ed. 2011
