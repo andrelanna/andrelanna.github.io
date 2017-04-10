@@ -91,6 +91,80 @@ Além dessas características, drones possuem as seguintes funções básicas: a
 
 Dado esse cenário, pede-se aos alunos que representem (inicialmente) as características e comportamentos de um drone através de um diagrama de classes e, posteriormente, apresente a implementação dessa classe na linguagem Java. 
 
+Resposta:   
+
+public class Drone{
+    String marca;
+    String modelo;
+    int numHelices;
+    String camera;
+    double velVertMax;
+    double velHorMax;
+    int autoBateria;
+    double distanciaMax;
+    boolean gravando;
+    double velVertAtual;
+    double velHorAtual;
+    
+    public Drone(){
+        
+    }
+    
+    public Drone(int numH, String cam, double velVMax, double velHMax, int bat, float distMax){
+        numHelices = numH;
+        camera = cam;
+        velVertMax = velVMax;
+        velHorMax = velHMax;
+        autoBateria = bat;
+        distanciaMax = distMax;
+    }
+    
+    public void AumentarVelVert(double aumento){
+        if((velVertAtual + aumento) >= velVertMax){
+            velVertAtual += aumento;
+        }else{
+            System.out.println("Limite de velocidade Excedido");
+        }
+    }
+    
+    public void DiminuirVelVert(double diminuicao){
+        if((velVertAtual - diminuicao) >= 0){
+            velVertAtual -= diminuicao;
+        }else{
+            System.out.println("Velocidade abaixo de zero não é permitida");
+   	}
+
+    }
+    
+    public void AumentarVelHor(double aumento){
+        if((velHorAtual + aumento) >= velHorMax){
+            velHorAtual += aumento;
+        }else{
+            System.out.println("Limite de velocidade Excedido");
+        }
+    }
+    
+    public void DiminuirVelHor(double diminuicao){
+        if((velHorAtual - diminuicao) >= 0){
+            velHorAtual -= diminuicao;
+        }else{
+            System.out.println("Velocidade abaixo de zero não é permitida");
+   	}
+
+    }
+    
+    public void IniciarInterromperGravacao(){
+        gravando = !gravando;
+    }
+    
+    public void BateriaFraca(){
+        if(autoBateria < 5){
+            velVertMax -= velVertMax/2;
+            velHorMax -= velHorMax/2;
+        }
+    }
+}
+
 
 **Questão 4:** Considerando a classe definida e implementada na questão 5, pede-se que os seguintes objetos sejam criados a partir do programa principal: 
 
