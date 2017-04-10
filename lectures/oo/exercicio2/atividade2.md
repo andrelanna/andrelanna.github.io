@@ -63,10 +63,13 @@ Dado esse cenário, pede-se aos alunos que representem (inicialmente) as caracte
 
 ![Diagrama](img.png)
 
-*Código resposta:*
-{% highlight java %}
+**Código resposta:**
+
+
+```
 package drone;
 class Drone{
+
      String cam_type;
      String modelo;
      String marca;
@@ -81,6 +84,7 @@ class Drone{
      boolean cameraGravando;
 
      //essas são padroes o resto vai ser mudado com os métodos do programa
+
      public Drone(String a, String b, int c, String d,double e, double f, int g, int h){
         marca=a;
         modelo=b;
@@ -92,9 +96,8 @@ class Drone{
         max_distance=h;
      }
 
-
      void aumentarVelocidadeHorizontal(double add){
-        if(vel_ho_atual+add<vel_ho_max)vel_ho_atual+=add;
+        if(vel_ho_atual+add<vel_ho_max)vel_ho_atual=add;
         else System.out.println("Você excedeu o limite de velocidade, tente novamente!");   
      }
      void aumentarVelocidadeVertical(double add){
@@ -121,8 +124,7 @@ class Drone{
          cameraGravando=(!cameraGravando);
      }
 }
-{% endhighlight %}
-
+```
 **Questão 4:** Considerando a classe definida e implementada na questão 5, pede-se que os seguintes objetos sejam criados a partir do programa principal:
 
 | Característica   | drone1         | drone2         | drone3            | drone4            |
@@ -137,7 +139,8 @@ class Drone{
 | Distância máxima | até 150 metros | até 1 kilometro| até 13 kilometros | até 13 kilometros |
 
 *Código resposta*
-{% highlight java %}
+```
+
 package drone;
 
 public class Centro{
@@ -150,13 +153,15 @@ public class Centro{
         Drone d = new Drone("DJI","Spreading Wings",8,"SUHD",16,16,15,13);
     }
 }
-{%endhighlight%}
+```
 
 **Questão 5:** Ainda levando em consideração o cenário descrito nas questões 3 e 4, é necessário fazer com que os comandos realizados pelo usuário no controle remoto sejam enviados ao drone. Para isso, é necessário que o controle remoto estabeleça uma conexão com o drone. A partir desse momento é possível enviar os seguintes comandos ao drone: a) aumentar ou diminuir a velocidade vertical em passos de 1 m/s; b) aumentar ou diminuir a velocidade horizontal em passos de 1m/s e, c) ativar ou desativar a câmera. É importante ressaltar que um controle remoto só pode estar conectado a um drone apenas. Por fim, controles remotos possuem baterias com autonomia entre 60 e 90 minutos e alcance entre 20 metros e 20 kilometros.  
 
 Desse modo, pede-se nessa questão que seja modelada e implementada em Java a classe que representa as características e o comportamento de um controle remoto, de modo que o drone possa ser comandado a partir do comandos enviados pelo controle remoto.
-*Código Resposta*
-{% highlight java%}
+
+**Código Resposta**
+
+```
 package drone;
 
 class Controle{
@@ -190,12 +195,14 @@ class Controle{
         }
 
 }
-{%endhighlight%}
+```
 
-**Questão 6:** Sejam os seguintes códigos da *ClasseA* e da aplicação principal escritas em JAVA.
+**Questão 6:**
 
-Questao6.java
-{% highlight java %}
+Sejam os seguintes códigos da *ClasseA* e da aplicação principal escritas em JAVA.
+
+**Questao6.java**
+```
 public class Questao6 {
   int   a1;
   float   a2;
@@ -211,10 +218,9 @@ public class Questao6 {
     a4 = d;
   }
 }
-{% endhighlight%}
-
+```
 Principal.java
-{% highlight java%}
+```
 public class Principal {
   public static void main (String[] args) {
     Questao6 q1,
@@ -228,11 +234,12 @@ public class Principal {
     //---> local onde a instrução do item c) será inserida.
   }
 }
-{% endhighlight %}
+```
 Responda as seguintes questões com base nos códigos acima:
 
 a) As referências a1 e a2 para objetos de *ClasseA* são iguais?
 * **Resp:** Não, as atribuições de ”a1”e ”a2”são os valores passados pelo construtor referentes a ”a”e ”b”respectivamente.
+
 b) Qual o estado de cada dos objetos de cada referência?
 * **Resp:**
 q1: tem os atributos do construtor padrão (a1=0, a2=0.0, a3=null e a4=false), valores padrões do java.
@@ -242,26 +249,29 @@ q3: também usa o construtor especı́fico e os valores são inseridos por ele (
 
 c) O que será impresso pela função *main* da classe *Principal* se a linha número *11* for igual a:
 
-{% highlight java%}
+```
 System.out.println(q1 == q2);
 System.out.println(q1.a1 == q2.a1);
 System.out.println(q2.a3 == q3.a3);
 System.out.println(q1.a2 == q2.a2);
 System.out.println(q1.a4 == q3.a4);
 System.out.println(q3 == q2);
-{% endhighlight %}
+```
 
 * **Resp:**
-1º:false
-2º:true
-3º:false
-4º:true
-5º:false
+
+<p>
+1º: false</br>
+2º: true</br>
+3º: false</br>
+4º: true</br>
+5º: false</br>
+</p>
 
 **Questão 7:**
 Seja o seguinte código em Java. Apresente o que será impresso ao final da execução do método **main** definido na classe **Principal**.
 
-{% highlight java %}
+```
 package questao7;
 public class Principal {
   public static void main(String[] args) {
@@ -283,10 +293,10 @@ public class Principal {
     System.out.println(a2 == a3);
   }
 }
-{% endhighlight %}
+```
 
 
-{% highlight java %}
+```
 package questao7;
 public class Aluno {
   String nome;
@@ -321,9 +331,8 @@ public class Aluno {
     System.out.println(obterDetalhes());
   }
 }
-{% endhighlight  %}
-
-{% highlight java %}
+```
+```
 package questao7;
 public class Curso {
   int codigo;
@@ -350,32 +359,34 @@ public class Curso {
     System.out.println(obterDetalhes());
   }
 }
-{% endhighlight  %}
+```
+
 
 **Resposta**
+<p>
+Nome: Andre</br>
+Curso: (endereço)</br>
+Data de nascimento: 23/2/1983</br>
+Nome: Maria</br>
+Curso: (endereço)</br>
+Data de nascimento: 27/5/1994</br>
+Nome: Junior</br>
+Curso: (endereço)</br>
+Data de nascimento: 16/11/1995</br>
+Esse objeto ALUNO vai ser destruido.</br>
+Detalhes do objeto:</br></br>
 
-Nome: Andre
-Curso: (endereço)
-Data de nascimento: 23/2/1983
-Nome: Maria
-Curso: (endereço)
-Data de nascimento: 27/5/1994
-Nome: Junior
-Curso: (endereço)
-Data de nascimento: 16/11/1995
-Esse objeto ALUNO vai ser destruido.
-Detalhes do objeto:
-
-Nome: Junior
-Curso: (endereço)
-Data de nascimento: 16/11/1995
-false
-false
-true
+Nome: Junior</br>
+Curso: (endereço)</br>
+Data de nascimento: 16/11/1995</br>
+false</br>
+false</br>
+true</br>
+</p>
 
 **Questão 8:** Considerando as classes **Aluno** e **Curso** definidas na questão 7, o que será impresso quando o *garbagge collector* de Java executar momentos antes do método **main()** da classe abaixo terminar sua execução?
 
-{% highlight java %}
+```
 package questao8;
 public class Principal {
   public static void main(String[] args) {
@@ -400,30 +411,30 @@ public class Principal {
     //---> GARBAGGE COLLECTOR executa nesse instante
   }
 }
-{% endhighlight %}
+```
 
 **Reposta:**
+
 Somente os objetos referentes a a2 e a3 morrem, portanto a saída será:
-
-Esse objeto ALUNO vai ser destruido.
-Detalhes do objeto:
-
-Nome: Maria
+<p>
+Esse objeto ALUNO vai ser destruido.</br>
+Detalhes do objeto:</br></br>
+Nome: Maria</br>
+Curso: (endereço)</br>
+Data de nascimento: 27/5/1994.</br>
+Esse objeto ALUNO vai ser destruido.</br>
+Detalhes do objeto:</br></br>
+Nome: Junior</br>
 Curso: (endereço)
-Data de nascimento: 27/5/1994.
-Esse objeto ALUNO vai ser destruido.
-Detalhes do objeto:
-
-Nome: Junior
-Curso: (endereço)
-Data de nascimento: 16/11/1995
+Data de nascimento: 16/11/1995</br>
+</p>
 
 
 **Questão 9:** as cinco instruções listadas abaixo estão definidas no método **main()** da classe **Principal** e apresentam erros em suas sintaxes. Apresente quais são os erros, justifique-os e altere as instruções de modo a consertá-los. Considere os códigos das classes **Aluno** e **Turma** como sendo os códigos apresentados na questão 7.
 
 **Reposta (comentário no código)**
 
-{% highlight java %}
+```
 package questao9;
 public class Principal {
 	public static void main(String[] args) {
@@ -446,7 +457,7 @@ public class Principal {
 		a3.cargaHoraria() = 220;
     //a3.cargaHorario=220; -- cargaHoraria é um atributo de um objeto aluno não um método.
 }
-{% endhighlight %}
+```
 
 **Questão 10:** sabe-se que um curso em é formado por um conjunto de disciplinas, para as quais são definidas as seguintes características:
 
@@ -476,11 +487,14 @@ b) Crie as seguintes turmas:
 c) associe ambas turmas recem-criadas ao curso de Engenharia de Software,
 
 d) matricule Andre e Maria na turma de orientação por objetos, e Junior na turma de desenvolvimento avançado de software.
+
 **Código Resposta**
+
+Os primeiros códigos são as definições da classe o último é a classe que contém o método main e onde o código roda realmente.
 
 **Classe Aluno**
 
-{%highlight java%}
+```
 package questao10;
 public class Aluno {
   String nome;
@@ -498,11 +512,11 @@ public class Aluno {
     anoNascimento = aNasc;
   }
 }
-{%endhighlight%}
+```
 
 **Classe Curso**
 
-{%highlight java%}
+```
 package questao10;
 public class Curso {
   int codigo;
@@ -517,11 +531,11 @@ public class Curso {
     departamento=dp;
   }
 }
-{%endhighlight%}
+```
 
 **Classe Turma**
 
-{%highlight java%}
+```
 package questao10;
 
 class Turma{
@@ -549,11 +563,11 @@ class Turma{
 
     }
 }
-{%endhighlight%}
+```
 
 **Classe Main**
 
-{%highlight java%}
+```
 package questao10;
 
 public class MyMain{
@@ -575,7 +589,7 @@ public class MyMain{
 
      }
 }
-{%endhighlight%}
+```
 ## Referências:
 \[[OPEN ACCESS][eckDavid]\] Eck, David J. Introduction to Programming Using Java, 6th ed. 2011
 
