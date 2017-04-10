@@ -152,8 +152,6 @@ package drone;
 
 public class Centro{
     public static void main(String []args){
-
-        //tipo camera,marca, modelo, helices,vert_maxx, ho_max,autonomia, distancia
         Drone a = new Drone("Hubsan","X4 mini",4,"SD",10,10,7,150/1000);
         Drone b = new Drone("Hubsan","H501S X4 FPV",4,"HD",12,12,20,1);
         Drone c = new Drone("DJI","Mavic Pro",4,"UHD",16,16,27,13);
