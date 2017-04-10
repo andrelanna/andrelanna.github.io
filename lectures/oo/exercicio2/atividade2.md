@@ -144,7 +144,8 @@ class Drone{
 | Autonomia bateria| 7 minutos      | 20 minutos     | 27 minutos        | 15 minutos        |
 | Distância máxima | até 150 metros | até 1 kilometro| até 13 kilometros | até 13 kilometros |
 
-*Código resposta*
+Código resposta
+
 {% highlight java %}
 package drone;
 
@@ -158,6 +159,7 @@ public class Centro{
         Drone d = new Drone("DJI","Spreading Wings",8,"SUHD",16,16,15,13);
     }
 }
+
 {%endhighlight%}
 
 **Questão 5:** Ainda levando em consideração o cenário descrito nas questões 3 e 4, é necessário fazer com que os comandos realizados pelo usuário no controle remoto sejam enviados ao drone. Para isso, é necessário que o controle remoto estabeleça uma conexão com o drone. A partir desse momento é possível enviar os seguintes comandos ao drone: a) aumentar ou diminuir a velocidade vertical em passos de 1 m/s; b) aumentar ou diminuir a velocidade horizontal em passos de 1m/s e, c) ativar ou desativar a câmera. É importante ressaltar que um controle remoto só pode estar conectado a um drone apenas. Por fim, controles remotos possuem baterias com autonomia entre 60 e 90 minutos e alcance entre 20 metros e 20 kilometros.  
