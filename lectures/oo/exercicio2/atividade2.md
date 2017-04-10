@@ -42,17 +42,23 @@ Ao conjunto de valores que os atributos de um objeto armazena em um instante, d�
 Retenção de estados é uma propriedade do paradigma OO que permite aos objetos manterem os valores de seus atributos até o momento em que um estímulo externo ao objeto solicite uma alteração no valor de algum atributo.
 
 **Questão 2:** 
-<br><br>
-a) Falso. Dois objetos podem sim ter o mesmo estador, porém não necesariamente as suas referências serão iguais
-
-b) Falso. Você pode ter mais de um método construtor padrão em sua classe
-
-c) Verdadeiro. A retenção de estado é a propriedade que permite aos objetivo guardarem os seus respectivos estados, porém não tenho como afirmar se existe outros paradigmas com a retenção de estado.
-
-d) Falso. Também serve para acessar os atributos.
-
-e) Falso. Não existem métodos destrutores em java. O que existe é o método finalize que é responsável por realizar as últimas operações antes do garbage collector eliminar o objeto da memória.
-<br><br>
+a)F
+	"Dois objetos instanciados através do método construtor padrão terão o mesmo estado, entretanto, suas referências não serão iguais."
+	Os objetos serem estanciados através do mesmo método construtor apenas implica em terem o mesmo estado, mas não em referenciarem o mesmo objeto.
+		
+	b)F
+	"Uma classe pode ter vários métodos construtores alternativos para instanciação de seus objetos."
+	Uma Classe pode ter quantos métodos construtores alternativos quiser.	
+	
+	c)V
+	"Retenção de estados é uma propriedade do paradigma OO que permite aos objetos manterem os valores de seus atributos até o momento em que um estímulo externo ao objeto solicite uma alteração no valor de algum atributo."
+	
+	d)F
+	"Em Java, o operador .(ponto) serve para acessar os métodos e os atributos de um objeto".
+	A sentença é auto explicativa. 
+	
+	e)F
+	"Métodos destrutores são aqueles métodos que são chamados explicitamente pelo algoritmo para destruir objetos e liberar os espaços que eles ocupam em memória. Em Java não existe métodos destrutores, e sim o que acontece é o desreferenciamento de um objeto, e depois o Garbage Collector passa avaliando a memória e é executado, destruindo esse objeto. O método finalize() é implementado em cada Classe e é chamado assim que o GC está quase destruindo o objeto, ai ele executa as ultimas instruções antes de destrui-lo."
 
 **Questão 3:**  
 ```java
