@@ -92,7 +92,7 @@ Além dessas características, drones possuem as seguintes funções básicas: a
 Dado esse cenário, pede-se aos alunos que representem (inicialmente) as características e comportamentos de um drone através de um diagrama de classes e, posteriormente, apresente a implementação dessa classe na linguagem Java. 
 
 Resposta:   
-
+{% highlight java %}
 public class Drone{
     String marca;
     String modelo;
@@ -164,7 +164,7 @@ public class Drone{
         }
     }
 }
-
+{% endhighlight%}
 
 **Questão 4:** Considerando a classe definida e implementada na questão 5, pede-se que os seguintes objetos sejam criados a partir do programa principal: 
 
@@ -180,11 +180,11 @@ public class Drone{
 | Distância máxima | até 150 metros | até 1 kilometro| até 13 kilometros | até 13 kilometros |
 
 Resposta: 
-
+{% highlight java %}
 public class atividade {
     public static void main(String[] args) {
         Drone drone1, drone2, drone3, drone4;
-        
+     
         drone1 = new Drone();
         drone1.marca = "Hubsan";
         drone1.modelo = "X4 mini";
@@ -224,16 +224,16 @@ public class atividade {
         drone1.velHorMax = 16;
         drone1.autoBateria = 15;
         drone1.distanciaMax = 13000;
-    }
-    
+    } 
 }
-
+{% endhighlight%}
 
 **Questão 5:** Ainda levando em consideração o cenário descrito nas questões 3 e 4, é necessário fazer com que os comandos realizados pelo usuário no controle remoto sejam enviados ao drone. Para isso, é necessário que o controle remoto estabeleça uma conexão com o drone. A partir desse momento é possível enviar os seguintes comandos ao drone: a) aumentar ou diminuir a velocidade vertical em passos de 1 m/s; b) aumentar ou diminuir a velocidade horizontal em passos de 1m/s e, c) ativar ou desativar a câmera. É importante ressaltar que um controle remoto só pode estar conectado a um drone apenas. Por fim, controles remotos possuem baterias com autonomia entre 60 e 90 minutos e alcance entre 20 metros e 20 kilometros.  
 
 Desse modo, pede-se nessa questão que seja modelada e implementada em Java a classe que representa as características e o comportamento de um controle remoto, de modo que o drone possa ser comandado a partir do comandos enviados pelo controle remoto.
 
 Resposta:
+{% highlight java %}
 public class ControleRemoto{
     Drone drone;
     double distancia;
@@ -268,7 +268,7 @@ public class ControleRemoto{
         drone.IniciarInterromperGravacao();
     }
 }
-
+{% endhighlight%}
 
 **Questão 6:** Sejam os seguintes códigos da *ClasseA* e da aplicação principal escritas em JAVA. 
 
@@ -311,7 +311,32 @@ Responda as seguintes questões com base nos códigos acima:
 
 a) As referências a1 e a2 para objetos de *ClasseA* são iguais?
 
+Não, pois são diferentes atributos de uma mesma classe, inclusive com tipos diferentes (int e float).
+
+
 b) Qual o estado de cada dos objetos de cada referência? 
+
+   O estado de q1é:
+   
+        a1 = 0;
+        a2  = 0.0;
+        a3 = null;
+        a4 = false;
+        
+	q2:
+  
+		  	a1 = 0;
+        a2  = 0.0;
+        a3 = null;
+        a4 = false;
+        
+  q3:
+  
+			a1 = 1;
+      a2  = 1.0;
+      a3 = “null”;
+      a4 = false;
+
 
 c) O que será impresso pela função *main* da classe *Principal* se a linha número *11* for igual a: 
 {% highlight java%}
@@ -322,6 +347,15 @@ System.out.println(q1.a2 == q2.a2);
 System.out.println(q1.a4 == q3.a4);
 System.out.println(q3 == q2);
 {% endhighlight %}
+
+Resposta:
+
+    False;
+    True;
+    False;
+    True;
+    True;
+    False.
 
 
 **Questão 7:**
