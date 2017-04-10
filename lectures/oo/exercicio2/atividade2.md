@@ -252,24 +252,53 @@ public class Principal {
 }
 {% endhighlight %}
 
-Esse objeto ALUNO vai ser destruído.
-Detalhes do Objeto:
-Nome: Junior
-Curso:  endereço(c1)
-Data de nascimento: 16/11/1995
+**Questão 9:** as cinco instruções listadas abaixo estão definidas no método **main()** da classe **Principal** e apresentam erros em suas sintaxes. Apresente quais são os erros, justifique-os e altere as instruções de modo a consertá-los. Considere os códigos das classes **Aluno** e **Turma** como sendo os códigos apresentados na questão 7.
 
-Esse objeto CURSO vai ser destruído.
-Detalhes do objeto:
-Nome do curso: Engenharia Eletrônica
-Código: 2
-Carga horária: 257
+{% highlight java %}
+package questao9;
+public class Principal {
+   public static void main(String[] args) {
+       Curso c1, c2;
+       Aluno a1, a2, a3;
+       
+       c2 = new Curso(2, "Engenharia Eletrônica", 257);
+       
+       a1 = new Aluno("Andre", c1, 13, 23, 02, 1983);
+       a2 = new Aluno("Maria", c2, 5, 27, 5, 1994);
+       
+       Curso.obterDetalhes();
+       c2.matricula = 20; 
+       Curso.nome = "Ciência da computação";
+       c1.codigo = 21;
+       Aluno.obterDetalhes();
+       a3.cargaHoraria() = 220;
+   }
+}
+{% endhighlight %}
 
-Nome: Maria
-Curso: endereço(c2)
-Data de nascimento: 27/5/19
+(Curso.obterDetalhes();) 
+    Não é possível chamar o método obterDetalhes(), pois Curso é uma classe. O correto seria chamar o método de um objeto.
+Forma correta: c2.obterDetalhes();
 
-**Questão 9:**
+(c2.matricula = 20; )
+    O objeto c2 não possui atributo matricula, este atributo pertence aos objetos da classe Aluno.
+Forma correta: a1.matricula = 20;
 
+(Curso.nome = "Ciência da computação";)
+    Além de Curso não possuir o atributo nome, não é permitido definir o valor para o atributo a partir de uma classe, para isso seria necessário a instanciação de um objeto do tipo Curso e corrigir o nome do atributo.
+Forma correta: c2.nomeCurso = "Ciência da computação";
+
+(c1.codigo = 21;)
+    O objeto c1 não foi instânciado, portanto não é possível definir valor para atributos de c1.
+Forma correta: c2.codigo = 21;
+
+(Aluno.obterDetalhes();)
+    Não é possível chamar o método obterDetalhes(), pois Aluno é uma classe. O correto seria chamar o método de um objeto.
+Forma correta: a1.obterDetalhes();
+
+(a3.cargaHoraria() = 220;)
+    a3 é um objeto da classe Aluno e não pode chamar o método cargaHoraria(), pois não possui um método cargaHoraria definido. Por outro lado existe um atributo cargaHoraria na classe Curso, porém mesmo que fosse alterado de a3 por c2, o codigo ainda estaria errado, pois atributo cargaHoraria está representado como um método. 
+Forma correta: c2.cargaHoraria = 220;
 
 **Questão 10:**
 
