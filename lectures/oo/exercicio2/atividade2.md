@@ -613,11 +613,13 @@ public class Questão10 {
     
 }
 ```
+
 <br/>
 c)O código usado aqui é o mesmo do item anterior, pois, para haver uma Turma, precisa de uma Disciplina relacionada à esta Turma. E do mesmo modo, se precisa de um Curso relacionado à disciplina. Assim, não haveria como instanciar um objeto do tipo Turma sem que antes houvesse um do tipo Disciplina e do tipo Curso. Logo, ambos os itens geram a mesma resposta.
 <br/>
 
 d)<br/>
+
 ```java
 package questão.pkg10;
 
