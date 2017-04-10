@@ -71,10 +71,10 @@ Dado esse cenário, pede-se aos alunos que representem (inicialmente) as caracte
 
 ![Diagrama](img.png)
 
-**Código resposta:**
-
+*Código resposta:*
 {% highlight java %}
-public class Drone{
+package drone;
+class Drone{
      String cam_type;
      String modelo;
      String marca;
@@ -88,7 +88,8 @@ public class Drone{
      double max_distance;
      boolean cameraGravando;
 
-    public Drone(String a, String b, int c, String d,double e, double f, int g, int h){
+     //essas são padroes o resto vai ser mudado com os métodos do programa
+     public Drone(String a, String b, int c, String d,double e, double f, int g, int h){
         marca=a;
         modelo=b;
         n_helices=c;
@@ -98,12 +99,12 @@ public class Drone{
         bateria_autonomia=g;
         max_distance=h;
      }
-     
+
+
      void aumentarVelocidadeHorizontal(double add){
         if(vel_ho_atual+add<vel_ho_max)vel_ho_atual+=add;
         else System.out.println("Você excedeu o limite de velocidade, tente novamente!");   
      }
-     
      void aumentarVelocidadeVertical(double add){
         if(vel_vert_atual+add<vel_vert_max)vel_vert_atual+=add;
         else System.out.println("Você excedeu o limite de velocidade, tente novamente!");   
@@ -124,12 +125,11 @@ public class Drone{
              vel_ho_max*=0.5;
          }
      }
-     
      void ligarDesligarCamera(){
          cameraGravando=(!cameraGravando);
      }
 }
-{% endhighlight%}
+{% endhighlight %}
 
 **Questão 4:** Considerando a classe definida e implementada na questão 5, pede-se que os seguintes objetos sejam criados a partir do programa principal:
 
@@ -144,20 +144,20 @@ public class Drone{
 | Autonomia bateria| 7 minutos      | 20 minutos     | 27 minutos        | 15 minutos        |
 | Distância máxima | até 150 metros | até 1 kilometro| até 13 kilometros | até 13 kilometros |
 
-Código resposta
-
+*Código resposta*
 {% highlight java %}
 package drone;
 
 public class Centro{
     public static void main(String []args){
+
+        //tipo camera,marca, modelo, helices,vert_maxx, ho_max,autonomia, distancia
         Drone a = new Drone("Hubsan","X4 mini",4,"SD",10,10,7,150/1000);
         Drone b = new Drone("Hubsan","H501S X4 FPV",4,"HD",12,12,20,1);
         Drone c = new Drone("DJI","Mavic Pro",4,"UHD",16,16,27,13);
         Drone d = new Drone("DJI","Spreading Wings",8,"SUHD",16,16,15,13);
     }
 }
-
 {%endhighlight%}
 
 **Questão 5:** Ainda levando em consideração o cenário descrito nas questões 3 e 4, é necessário fazer com que os comandos realizados pelo usuário no controle remoto sejam enviados ao drone. Para isso, é necessário que o controle remoto estabeleça uma conexão com o drone. A partir desse momento é possível enviar os seguintes comandos ao drone: a) aumentar ou diminuir a velocidade vertical em passos de 1 m/s; b) aumentar ou diminuir a velocidade horizontal em passos de 1m/s e, c) ativar ou desativar a câmera. É importante ressaltar que um controle remoto só pode estar conectado a um drone apenas. Por fim, controles remotos possuem baterias com autonomia entre 60 e 90 minutos e alcance entre 20 metros e 20 kilometros.  
@@ -165,8 +165,9 @@ public class Centro{
 Desse modo, pede-se nessa questão que seja modelada e implementada em Java a classe que representa as características e o comportamento de um controle remoto, de modo que o drone possa ser comandado a partir do comandos enviados pelo controle remoto.
 *Código Resposta*
 {% highlight java%}
+package drone;
 
-public class Controle{
+class Controle{
         Drone conexao;
         int autonomia;
         double distancia;
@@ -548,7 +549,7 @@ class Turma{
 }
 {%endhighlight%}
 *Classe Main*
-{% highlight java %}
+{%highlight java%}
 package questao10;
 
 public class MyMain{
@@ -570,7 +571,7 @@ public class MyMain{
 
      }
 }
-{% endhighlight %}
+{%endhighlight%}
 ## Referências:
 \[[OPEN ACCESS][eckDavid]\] Eck, David J. Introduction to Programming Using Java, 6th ed. 2011
 
