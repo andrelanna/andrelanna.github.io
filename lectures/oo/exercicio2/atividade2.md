@@ -12,23 +12,38 @@ Atividade para realizar em dupla e entregar via GitHub. Uma entrega por dupla.
 Prazo para entrega: ~~4/4/2017~~ 10/04/2017, 23:59:59.
 
 **Questão 1:** Os termos abaixo estão relacionados ao paradigma de *Orientação por Objetos*. Defina cada um dos termos com base no livro-texto (Eck, David J. Introduction to Programming Using Java, 6th ed. 2011).
-* classe
+
+* Classe: 
+
 Classes podem ser utilizadas tanto para conter variáveis estáticas quanto para descrever métodos. As classes estão para objetos da mesma forma que um número inteiro qualquer está para um int, ou seja, elas podem ser usadas para declarar variáveis que referenciam a um objeto com as mesmas características descritas pela classe.  
-* objeto
+
+* Objeto:
+
 Objetos pertencem às classes. Pode-se dizer que as classes são usadas para criar os objetos, podendo ser chamados de instâncias da classe que foi usada para criá-los.	
-* elementos de classe
+* Elementos de classe:
+
 Os elementos de uma classe são seus atributos - que são suas características - e seus métodos - que especificam características dinâmicas que atuam sobre os atributos.
-* atributos
+
+* Atributos:
 Os atributos são as características que uma classe possui para caracterizar um objeto. E é através deles que são definidos os estados de um objeto.
-* métodos
+
+* Métodos:
+
 Também chamados de subrotinas, ou seja, são um conjunto de instruções do programa que foram agrupadas e receberam um nome específico. A execução dos métodos se dão através de mensagens, e é onde se pode interagir e se comunicarem com outros objetos.
-* método construtor padrão
+
+* Método construtor padrão:
 O método construtor padrão é o método construtor oferecido à todas as classes que ainda não possuem um. Suas funções são de alocar a memória para objeto e inicializa as variáveis do mesmo.
-* método construtor alternativo
+
+* Método construtor alternativo:
+
 Assim como o método construtor padrão, aloca espaço na memória e inicializa as variáveis, porém recebe parâmetros que irão interagir com os atributos da classe.
-* estado de um objeto
+
+* Estado de um objeto:
+
 O estado de um objeto é o valor dado a cada um dos atributos de um objeto em um dado momento.
-* retenção de estado
+
+* Retenção de estado:
+
 É a característica do objeto de reter o seu estado(valores de seus atributos) enquanto não está sendo usado no programa.
 
 
