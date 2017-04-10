@@ -12,42 +12,34 @@ Atividade para realizar em dupla e entregar via GitHub. Uma entrega por dupla.
 Prazo para entrega: ~~4/4/2017~~ 10/04/2017, 23:59:59.
 
 **Questão 1:** Os termos abaixo estão relacionados ao paradigma de *Orientação por Objetos*. Defina cada um dos termos com base no livro-texto (Eck, David J. Introduction to Programming Using Java, 6th ed. 2011).
-* classe: É uma estrutura que possui a finalidade de gerir um conjunto de objetos com caracterı́sticas similares,
-por sua vez a classe define o comportamento de seus objetos utilizando de métodos e os estados possı́veis de seus
-objetos através de atributos.
-* objeto: Também chamado de Instância de uma classe, o objeto possui seu comportamento e estado definidos pela
-classe que o gerou.
-* elementos de classe: A classe vai possuir um nome, sua visibilidade, métodos e parâmetros que serão atribuı́dos às carac-
-terı́sticas do objeto.
-* atributos: Os atributos são propriedades nas quais serão atribuı́das ao objeto, essas propriedades vão definir o estado de um objeto, fazendo com que esses valores sofram qualquer alteração.
-* métodos: são o que definem o que a classe vai fazer (as operações que todos os objetos instanciados por essa classe
-vão ter).Os métodos são ações ou procedimentos, onde se pode interagir e se comunicarem com outros objetos. A
-execução dessas ações se dá através de mensagens, tendo como função o envio de uma solicitação ao objeto para
-que seja efetuada a rotina desejada.
-* método construtor padrão: O construtor de um objeto é um método especial, pois inicializam seus atributos
+* **classe:** Classe é uma estrutura reutilizável que tem como propósito colocar em apenas um componente (encapsulamento) os atributos e métodos de parte do seu programa.
+
+* **objeto:** Objeto é uma instância de uma classe que tem seus próprios atributos e herda o comportamento (métodos) da classe.
+* **elementos de classe:** A classe vai possuir um nome, sua visibilidade, métodos e parâmetros que serão atribuı́dos às caracterı́sticas do objeto
+* **atributos:** Os atributos são os valores do objeto, o conjunto de atributos definem o estado do objeto.
+* **métodos:** são o que definem as interaçẽos que a class tem (as operações que todos os objetos instanciados por essa classe vão ter).Os métodos são açõe, onde se pode interagir e se comunicarem com outros objetos. A execução dessas ações se dá através de mensagens, tendo como função o envio de uma solicitação ao objeto para que seja efetuada a rotina desejada.
+* **método construtor padrão:** O construtor de um objeto é um método especial, pois inicializam seus atributos
 toda vez que é executado, utilizando a palavra reservada new. Como construtor padrão ele não vai receber nenhum
 parâmetro e irá preencher os atributos do objeto com valores pré-determinados pela linguagem.
-* método construtor alternativo: como o construtor padrão é um método para iniciar um objeto, porém ele vai receber parâmetros que vão fazer parte dos atributos do objeto.
-* estado de um objeto: um termo relativo aos atributos da classe, pois cada objeto têm seu próprio conjunto de
+* **método construtor alternativo:** como o construtor padrão é um método para iniciar um objeto, porém ele vai receber parâmetros que vão fazer parte dos atributos do objeto.
+* **estado de um objeto:** um termo relativo aos atributos da classe, pois cada objeto têm seu próprio conjunto de
 atributos, os quais foram definidos pela classe. Os valores atribuı́dos aos atributos de um objeto são o que definem o seu estado.
-* retenção de estado: É a habilidade que o objeto possui de reter o conjunto de valores de seus atributos de operações que foram executadas previamente.
-
-Classe é a estrutura definida pelo programador, contendo atributos e métodos (comportamento) comuns a um conjunto de objetos.
+* **retenção de estado:** É a habilidade que o objeto possui de reter o conjunto de valores de seus atributos de operações que foram executadas previamente.
 
 **Questão 2:** Julgue as seguintes frases como verdadeiras ou falsas e explique o motivo delas estarem certas ou erradas. Nos casos em que julgar uma sentença como errada, altere-a de modo a corrigi-la.
 
   a) Dois objetos instanciados através do método construtor padrão terão o mesmo estado e, portanto, suas referências serão iguais.
-  * Resp: Falso, eles terão o mesmo estado (variáveis que descrevem o estado do objeto), porém, serão dois objetos diferentes
+  * **Resp:** Falso, eles terão o mesmo estado (variáveis que descrevem o estado do objeto), porém, serão dois objetos diferentes
 alocados em espaços diferentes na memória.
 
 b) Uma classe pode ter apenas um método construtor alternativo para instanciação de seus objetos.
-  * Resp:Falso, ela pode ter construtores especificos pelo usuário para atender necessidades especı́ficas na criação da classe.
+  * **Resp:** Falso, ela pode ter construtores especificados pelo usuário para atender necessidades dinâmicas na criação da classe.
 c) Retenção de estados é uma propriedade do paradigma OO que permite aos objetos manterem os valores de seus atributos até o momento em que um estímulo externo ao objeto solicite uma alteração no valor de algum atributo.
-  * Resp: Retenção de estados é uma propriedade do paradigma OO que permite aos objetos manterem os valores de seus atributos até o momento em que um estı́mulo externo ao objeto solicite uma alteração no valor de algum atributo.
+  * **Resp:** Retenção de estado é uma propriedade do paradigma OO que permite aos objetos manterem os valores de seus atributos até o momento em que um estı́mulo externo ao objeto solicite uma alteração no valor de algum atributo.
 d) Em Java, o operador . (ponto) serve para acessar somente os métodos de um objeto.
-  * Resp: Não, também serve para acessa atributos da classe.
+  * **Resp:** Não, também serve para acessa atributos da classe.
 e) Métodos destrutores são aqueles métodos que são chamados explicitamente pelo algoritmo para destruir objetos e liberar os espaços que eles ocupam em memória. Em Java métodos destrutores são implementos com o nome **finalize()** e definidos em cada classe.
-  * Resp: Verdadeiro, vale lembrar que o destrutor não é chamado pelo usuário.
+  * **Resp:** Falso, finalize não é um método destrutos (apesar de destruir os objetos) pois quem o chama é a Máquina Virtual do Java e não o usuário.
 
 **Questão 3:**  Considere o seguinte cenário:
 
@@ -240,21 +232,15 @@ public class Principal {
 Responda as seguintes questões com base nos códigos acima:
 
 a) As referências a1 e a2 para objetos de *ClasseA* são iguais?
-* Resp: Não, as atribuições de ”a1”e ”a2”são os valores passados pelo construtor referentes a ”a”e ”b”respectivamente.
+* **Resp:** Não, as atribuições de ”a1”e ”a2”são os valores passados pelo construtor referentes a ”a”e ”b”respectivamente.
 b) Qual o estado de cada dos objetos de cada referência?
-* Resp:
+* **Resp:**
 q1: tem os atributos do construtor padrão (a1=0, a2=0.0, a3=null e a4=false), valores padrões do java.
 q2: tem os valores inicializados pelo construtor especifico (a1=0, a2=0.0f, a3=null, a4=false), apesar de ter os
 mesmos valores de q1 os construtores usados são diferentes.
 q3: também usa o construtor especı́fico e os valores são inseridos por ele (a1=1, a2=1.0f, a3=”null”, a4=false), o valor de a3 é diferentes dos valores de q1 e q2, nesse caso a3 é uma string com 4 caracteres.
 
 c) O que será impresso pela função *main* da classe *Principal* se a linha número *11* for igual a:
-* Resp:
-1º:false
-2º:true
-3º:false
-4º:true
-5º:false
 
 {% highlight java%}
 System.out.println(q1 == q2);
@@ -265,6 +251,12 @@ System.out.println(q1.a4 == q3.a4);
 System.out.println(q3 == q2);
 {% endhighlight %}
 
+* **Resp:**
+1º:false
+2º:true
+3º:false
+4º:true
+5º:false
 
 **Questão 7:**
 Seja o seguinte código em Java. Apresente o que será impresso ao final da execução do método **main** definido na classe **Principal**.
@@ -359,7 +351,9 @@ public class Curso {
   }
 }
 {% endhighlight  %}
-*Resposta*
+
+**Resposta**
+
 Nome: Andre
 Curso: (endereço)
 Data de nascimento: 23/2/1983
@@ -378,7 +372,6 @@ Data de nascimento: 16/11/1995
 false
 false
 true
-
 
 **Questão 8:** Considerando as classes **Aluno** e **Curso** definidas na questão 7, o que será impresso quando o *garbagge collector* de Java executar momentos antes do método **main()** da classe abaixo terminar sua execução?
 
@@ -409,7 +402,8 @@ public class Principal {
 }
 {% endhighlight %}
 
-*Reposta:* Somente os objetos referentes a a2 e a3 morrem, portanto a saída será:
+**Reposta:**
+Somente os objetos referentes a a2 e a3 morrem, portanto a saída será:
 
 Esse objeto ALUNO vai ser destruido.
 Detalhes do objeto:
@@ -426,7 +420,9 @@ Data de nascimento: 16/11/1995
 
 
 **Questão 9:** as cinco instruções listadas abaixo estão definidas no método **main()** da classe **Principal** e apresentam erros em suas sintaxes. Apresente quais são os erros, justifique-os e altere as instruções de modo a consertá-los. Considere os códigos das classes **Aluno** e **Turma** como sendo os códigos apresentados na questão 7.
-*Reposta (comentário no código)*
+
+**Reposta (comentário no código)**
+
 {% highlight java %}
 package questao9;
 public class Principal {
@@ -451,6 +447,7 @@ public class Principal {
     //a3.cargaHorario=220; -- cargaHoraria é um atributo de um objeto aluno não um método.
 }
 {% endhighlight %}
+
 **Questão 10:** sabe-se que um curso em é formado por um conjunto de disciplinas, para as quais são definidas as seguintes características:
 
 * um código da disciplina;
@@ -479,9 +476,10 @@ b) Crie as seguintes turmas:
 c) associe ambas turmas recem-criadas ao curso de Engenharia de Software,
 
 d) matricule Andre e Maria na turma de orientação por objetos, e Junior na turma de desenvolvimento avançado de software.
-*Código Resposta*
+**Código Resposta**
 
-*Classe Aluno*
+**Classe Aluno**
+
 {%highlight java%}
 package questao10;
 public class Aluno {
@@ -501,7 +499,9 @@ public class Aluno {
   }
 }
 {%endhighlight%}
-*Classe Curso*
+
+**Classe Curso**
+
 {%highlight java%}
 package questao10;
 public class Curso {
@@ -518,7 +518,9 @@ public class Curso {
   }
 }
 {%endhighlight%}
-*Classe Turma*
+
+**Classe Turma**
+
 {%highlight java%}
 package questao10;
 
@@ -548,7 +550,9 @@ class Turma{
     }
 }
 {%endhighlight%}
-*Classe Main*
+
+**Classe Main**
+
 {%highlight java%}
 package questao10;
 
