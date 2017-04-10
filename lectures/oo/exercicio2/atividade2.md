@@ -71,7 +71,8 @@ Dado esse cenário, pede-se aos alunos que representem (inicialmente) as caracte
 
 ![Diagrama](img.png)
 
-*Código resposta:*
+**Código resposta:**
+
 {% highlight java %}
 package drone;
 class Drone{
