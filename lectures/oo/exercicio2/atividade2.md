@@ -28,7 +28,7 @@ com a mesma estrutura se forem criados utilizando a mesma classe.
 Em java, nenhuma variável pode conter um objeto, e sim, a referência de um objeto.
 
 * elementos de classe
-Variáveis estáticas e subrotinas (métodos) que definem o estado e comportamento do objeto.
+Atributos, métodos e estado.
 
 * atributos
 São as variáveis de um objeto, podem ser atribuídas com valores iniciais em sua declaração. Caso não seja necessário
@@ -51,9 +51,10 @@ chamar o método construtor naturalmente e definir os atributos como parâmetro 
 do método dentro da classe.
 
 * estado de um objeto
-
+Maneira em que o objeto está em um exato momento.
 
 * retenção de estado
+Capacidade do objeto manter suas características até receber novas instruções.
 
 Classe é a estrutura definida pelo programador, contendo atributos e métodos (comportamento) comuns a um conjunto de objetos.
 
