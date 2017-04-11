@@ -418,6 +418,25 @@ public class Curso {
 }
 {% endhighlight  %}
 
+Resposta:
+
+```
+Nome: Andre
+Curso: endereço de c1 na memória
+Data de nascimento: 23/2/1983
+
+Nome: Maria
+Curso: endereço de c2 na memória
+Data de nascimento: 27/5/1994
+Nome: Junior
+
+Curso: endereço de c1 na memória
+Data de nascimento: 16/11/1995
+
+false
+false
+true
+```
 
 **Questão 8:** Considerando as classes **Aluno** e **Curso** definidas na questão 7, o que será impresso quando o *garbagge collector* de Java executar momentos antes do método **main()** da classe abaixo terminar sua execução?
 
