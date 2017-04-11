@@ -28,14 +28,22 @@ Prazo para entrega: ~~4/4/2017~~ 10/04/2017, 23:59:59.
 **Questão 2:** Julgue as seguintes frases como verdadeiras ou falsas e explique o motivo delas estarem certas ou erradas. Nos casos em que julgar uma sentença como errada, altere-a de modo a corrigi-la.
 
 a) Dois objetos instanciados através do método construtor padrão terão o mesmo estado e, portanto, suas referências serão iguais. 
+(FALSA) Resposta: É falsa pois objetos diferentes não possuem a mesma referência.
 
 b) Uma classe pode ter apenas um método construtor alternativo para instanciação de seus objetos. 
+(FALSA) Resposta: Uma classe pode ter mais de um método construtor alternativo. Um método em java pode possuir o mesmo nome mas tipo de retorno e parâmetros diferentes. Com isso pode-se ter mais de um construtor alternativo recebendo mais ou menos atributos como parâmetros.
 
 c) Retenção de estados é uma propriedade do paradigma OO que permite aos objetos manterem os valores de seus atributos até o momento em que um estímulo externo ao objeto solicite uma alteração no valor de algum atributo.
+(VERDADEIRA) Resposta: Isso acontece pois a linguagem orientada a objetos não pode perder dados ao longo da sua execução, pois a qualquer momento o objeto pode receber uma chamada para exercer a sua função. 
 
 d) Em Java, o operador . (ponto) serve para acessar somente os métodos de um objeto. 
+(FALSA) Resposta: o operador . (ponto) serve para acessar métodos e atributos de um objeto.
 
 e) Métodos destrutores são aqueles métodos que são chamados explicitamente pelo algoritmo para destruir objetos e liberar os espaços que eles ocupam em memória. Em Java métodos destrutores são implementos com o nome **finalize()** e definidos em cada classe.
+(FALSA) Resposta: Não existe método destrutor em java. O método finalize() é chamado pelo garbage collector.
+
+13/0121801 - Lucas de Castro Bezerra
+13/0028240 - Igor Guimarães Veludo
 
 **Questão 3:**  Considere o seguinte cenário:
 
