@@ -426,7 +426,82 @@ Linha 17:
 	Correção: c2.cargaHoraria() = 220;
 
 **Questão 10:**
+a)
+R.:
+{% highlight java%}
+public class Turma {
+    int codigoTurma;
+    int vagasTotal;
+    int vagasLivres;
+    int vagasOcupadas;
+    String dias;
+    String horarios;
+    Curso curso;
 
+    public Turma(){}
+
+	public Turma(int codigo, int totalVagas, String d, String h){
+		codigoTurma = codigo;
+		vagasTotal = totalVagas;
+		vagasLivres = totalVagas;
+		vagasOcupadas = 0;
+		dias = d;
+		horarios = h;
+	}
+
+	public void MatriculaAluno(){
+		vagasOcupadas += 1;
+		vagasLivres -+ 1;
+	}
+}
+{% endhighlight %}
+
+b)
+R.:
+{% highlight java%}
+public class Principal {
+ 	public static void main(String[] args){
+ 		Disciplina disciplina1 = new Disciplina(1, "Orientação por Objetos", 0, "não informado");
+ 		Disciplina disciplina2 = new Disciplina(2, "Desenvolvimento Avançado de software", 0, "não informado");
+ 		Turma turma1oo = new Turma(1, 46, "4as e 6as feiras", "das 12:00 às 16:00", disciplina1);
+ 		Turma turma1das = new Turma(2, 30,"4as e 6as feiras", "das 16:00 às 18:00", disciplina2);
+ 	}
+}
+{% endhighlight %}
+
+c)
+R.:
+{% highlight java%}
+public class Principal {
+ 	public static void main(String[] args){
+ 		Disciplina disciplina1 = new Disciplina(1, "Orientação por Objetos", 0, "não informado");
+ 		Disciplina disciplina2 = new Disciplina(2, "Desenvolvimento Avançado de software", 0, "não informado");
+ 		Turma turma1oo = new Turma(1, 46, "4as e 6as feiras", "das 12:00 às 16:00", disciplina1);
+ 		Turma turma1das = new Turma(2, 30,"4as e 6as feiras", "das 16:00 às 18:00", disciplina2);
+ 		Curso c1 = new Curso(1, "Engenharia de Software", 240);
+		turma1oo.curso = c1;
+ 		turma1das.curso = c1;
+ 	}
+}
+{% endhighlight %}
+
+d)
+R.:
+{% highlight java%}
+public class Principal {
+    public static void main(String[] args){
+ 		Curso c1 = new Curso(1, "Engenharia de Software", 240);
+ 		turma1oo.curso = c1;
+ 		turma1das.curso = c1;
+		Aluno aluno1 = new Aluno("Andre", c1, 13, 23, 02, 1983);
+		Aluno aluno2 = new Aluno("Maria", c1, 5, 27, 5, 1994);
+		Aluno aluno3 = new Aluno("Junior", c1, 70, 16, 11, 1995); 		  
+	    aluno1.matriculaAluno(turma1oo);
+		aluno2.matriculaAluno(turma1oo);
+		aluno3.matriculaAluno(turma1das);
+   }
+}
+{% endhighlight %}
 
 ## Referências:
 \[[OPEN ACCESS][eckDavid]\] Eck, David J. Introduction to Programming Using Java, 6th ed. 2011
