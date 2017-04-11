@@ -1,5 +1,8 @@
 Matheus Roberto 13/0126721
 <br>Pedro Kelvin 13/0129674
+
+Atividade para realizar em dupla e entregar via GitHub. Uma entrega por dupla.
+Prazo para entrega: ~~4/4/2017~~ 10/04/2017, 23:59:59.
 ---
 title: Exercício prático
 layout: default
