@@ -6,10 +6,19 @@ layout: default
 ### UnB - Universidade de Brasilia
 ### FGA - Faculdade do Gama
 ### OO - Orientação por objetos
+
 ------
 
 Atividade para realizar em dupla e entregar via GitHub. Uma entrega por dupla.
 Prazo para entrega: ~~4/4/2017~~ 10/04/2017, 23:59:59.
+
+---
+# Resolvido por:
+    Gustavo Soares Inácio - 160123771
+    Lucas Kishima dos Santos - 160133581
+    Natália Maria Rodrigues Queiroz - 160015839
+
+---
 
 **Questão 1:** Os termos abaixo estão relacionados ao paradigma de *Orientação por Objetos*. Defina cada um dos termos com base no livro-texto (Eck, David J. Introduction to Programming Using Java, 6th ed. 2011).
 * classe
@@ -64,7 +73,6 @@ Prazo para entrega: ~~4/4/2017~~ 10/04/2017, 23:59:59.
       Capacidade de um objeto ficar na memória enquanto algo referenciá-lo
 
 
-
 **Questão 2:** Julgue as seguintes frases como verdadeiras ou falsas e explique o motivo delas estarem certas ou erradas. Nos casos em que julgar uma sentença como errada, altere-a de modo a corrigi-la.
 
 a) Dois objetos instanciados através do método construtor padrão terão o mesmo estado e, portanto, suas referências serão iguais. 
@@ -77,6 +85,30 @@ d) Em Java, o operador . (ponto) serve para acessar somente os métodos de um ob
 
 e) Métodos destrutores são aqueles métodos que são chamados explicitamente pelo algoritmo para destruir objetos e liberar os espaços que eles ocupam em memória. Em Java métodos destrutores são implementos com o nome **finalize()** e definidos em cada classe.
 
+### RESPOSTAS Q2
+
+
+* ### **(a)**
+
+    Errado. Os objetos terão o mesmo estado, mas não terão a mesma referência. Uma referência só pode atribuída a um objeto.
+
+* ### **(b)**
+
+    Errado. Uma classe pode ter tantos construtores alternativos quanto forem necessários, porém só pode ter um construtor padrão.
+
+* ### **(c)**
+
+    Verdadeiro.
+
+* ### **(d)**
+
+    Errado. O ponto serve para acessar tanto métodos quanto atributos de um objeto.
+
+* ### **(e)**
+
+    Errado. Métodos destrutores não são explicitamente chamados pelo algorítimo. Eles são chamados automaticamente pelo garbagge Collector.
+    
+---
 
 **Questão 3:**  Considere o seguinte cenário:
 
