@@ -426,6 +426,14 @@ Data de nascimento: 16/11/1995
 
 **Questão 9:**
 
+c2.matricula = 20; - Não existe matrícula dentro de curso
+Curso.nome = "Ciência da computação"; - Chamada em cima de uma classe
+c1.codigo = 21; - c1 não foi instanciado
+Aluno.obterDetalhes(); - Chamada em cima de uma classe
+a3.cargaHoraria() = 220; - cargaHoraria é atributo (não coloca parênteses). Atributo não definido para aluno. a3 não está instanciado.
+
+13/0121801 - Lucas de Castro Bezerra
+13/0028240 - Igor Guimarães Veludo
 
 **Questão 10:**
 
