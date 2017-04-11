@@ -592,6 +592,36 @@ public class Principal {
 	}
 }
 {% endhighlight %}
+
+---
+### RESPOSTAS Q9
+
+{% highlight java %}
+
+    public class Principal {
+        public static void main(String[] args) {
+            Curso c1, c2;
+            Aluno a1, a2, a3;
+
+            c2 = new Curso(2, "Engenharia Eletrônica", 257);
+
+            a1 = new Aluno("Andre", c1, 13, 23, 02, 1983);
+            a2 = new Aluno("Maria", c2, 5, 27, 5, 1994);
+
+            Curso.obterDetalhes(); // Método obter detalhes sendo chamado de uma classe, quando deveria ser chamado de um objeto
+            c2.matricula = 20; // c2 é um objeto curso que não possui atributo 'matricula'
+            Curso.nome = "Ciência da computação"; // Novamente, algo (um atributo nesse caso) sendo chamado direto de classe ao invés de um de seus objetos
+            c1.codigo = 21; // Objeto c1 não foi instanciado
+            Aluno.obterDetalhes(); // Método sendo chamado da Classe ao invés de um de seus objetos
+            a3.cargaHoraria() = 220; // Objeto a3 não foi instanciado e a classe Aluno não possui método 'cargaHoraria()'
+        }
+    }
+
+{% endhighlight %}
+
+---
+
+
 **Questão 10:** sabe-se que um curso em é formado por um conjunto de disciplinas, para as quais são definidas as seguintes características: 
 
 * um código da disciplina;
