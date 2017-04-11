@@ -305,6 +305,24 @@ System.out.println(q1.a4 == q3.a4);
 System.out.println(q3 == q2);
 {% endhighlight %}
 
+Resposta:
+
+a) Não. “a1” e “a2” não são referências, e sim variáveis do tipo int e float, respectivamente. Se tratando de referências, podemos considerar “q1”, “q2” e “q3”. Onde “q1”  tem referência a um objeto e “q2” e “q3” a outros dos objetos. Ou seja, são referências para objetos distintos.
+
+b)  
+Objeto referenciado por q1:    a1: 0    a2: 0.0    a3: null    a4: false
+
+Objeto referenciado por q2:    a1: 0    a2: 0.0    a3: null    a4: false
+
+Objeto referenciado por q3:    a1: 1    a2: 1.0    a3: “null”  a4: false
+
+c)  
+false  
+true  
+false  
+true  
+true  
+false  
 
 **Questão 7:**
 Seja o seguinte código em Java. Apresente o que será impresso ao final da execução do método **main** definido na classe **Principal**.
