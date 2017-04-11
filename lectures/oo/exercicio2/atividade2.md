@@ -557,6 +557,56 @@ public class Principal {
 	}
 }		
 {% endhighlight %}
+
+(RESPOSTA)
+Questao 9:
+
+
+package questao9;
+public class Principal {
+	public static void main(String[] args) {
+		Curso c1, c2;
+		Aluno a1, a2, a3;
+		
+		c2 = new Curso(2, "Engenharia Eletrônica", 257);
+		
+		a1 = new Aluno("Andre", c1, 13, 23, 02, 1983);
+		a2 = new Aluno("Maria", c2, 5, 27, 5, 1994);
+		
+		Curso.obterDetalhes(); //1º erro (A forma com que o metodo está sendo chamado está errada por usar a classe Curso e não o objeto c2 que foi criado)
+
+		c2.matricula = 20; //2º erro (Não existe o campo "matricula em c2", logo ele não vai ser acessado) 
+		Curso.nome = "Ciência da computação";//3º erro(Aqui temos 2 erros, está sendo usada a classe Classe para tentar acessar o atribbuto, e tambem esse atributo não existe em Curso, ele é de aluno)
+		c1.codigo = 21; //4º erro (o objeto c1 ainda não foi alocado ou instanciado, impossivel acessar a aréa codigo)
+		Aluno.obterDetalhes(); //5º erro(Novamente está usando uma classe e não o objeto para acessar o metodo)
+		a3.cargaHoraria() = 220; //6ª erro (a3 não foi instanciado, carga horaria não faz parte de Aluno e carga horaria não é um metodo, então não poderia ter parenteses)
+	}
+}
+
+CORREÇÕES
+
+package questao9;
+public class Principal {
+	public static void main(String[] args) {
+		Curso c1, c2;
+		Aluno a1, a2, a3;
+		
+		c1 = new Curso(1, "Engenharia de Software", 240);	
+		c2 = new Curso(2, "Engenharia Eletrônica", 257);
+		
+		a1 = new Aluno("Andre", c1, 13, 23, 02, 1983);
+		a2 = new Aluno("Maria", c2, 5, 27, 5, 1994);
+		a3 = new Aluno("Junior", c1, 70, 16, 11, 1995);
+		
+		(c1 ou c2).obterDetalhes();
+		a2.matricula = 20; 
+		(c1 ou c2).nomeCurso = "Ciência da computação";
+		c1.codigo = 21;
+		(a1, a2 ou a3).obterDetalhes();
+		(c1 ou c2).cargaHoraria = 220;
+	}
+}
+
 **Questão 10:**
 sabe-se que um curso em é formado por um conjunto de disciplinas, para as quais são definidas as seguintes características:
 
