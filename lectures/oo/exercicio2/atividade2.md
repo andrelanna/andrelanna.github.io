@@ -58,6 +58,16 @@ d) Em Java, o operador . (ponto) serve para acessar somente os métodos de um ob
 
 e) Métodos destrutores são aqueles métodos que são chamados explicitamente pelo algoritmo para destruir objetos e liberar os espaços que eles ocupam em memória. Em Java métodos destrutores são implementos com o nome **finalize()** e definidos em cada classe.
 
+Resposta:
+a-Verdadeiro.
+b-Falso.
+  Uma classe pode ter vários métodos construtores alternativos para instanciação de seus objetos.
+  Podem existir metodos construtores alternativos com diferentes parametros e funções.
+c-Verdadeiro.
+d-Falso.
+  O ponto(.) em java serve para acessar metodos e atributos de um objeto.
+e-Verdadeiro.
+
 
 **Questão 3:**  Considere o seguinte cenário:
 
