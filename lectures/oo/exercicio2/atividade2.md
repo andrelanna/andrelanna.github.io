@@ -651,6 +651,65 @@ c) associe ambas turmas recem-criadas ao curso de Engenharia de Software,
 
 d) matricule Andre e Maria na turma de orientação por objetos, e Junior na turma de desenvolvimento avançado de software.
 
+---
+### RESPOSTA Q10
+
+### **a)**
+
+        public class Turma {
+        int codigo,
+            totalVagas,
+            vagasLivres,
+            vagasOcupadas;
+        String nome, diaHora;
+        Curso curso;
+
+        Turma(String n, int cod, int vl, int vo, String dh, Curso c){
+            nome = n;
+            codigo = cod;
+            totalVagas = vl + vo;
+            vagasLivres = vl;
+            vagasOcupadas = vo;
+            diaHora = dh;
+            curso = c;
+        }
+
+        void matricular(Aluno aluno){
+            vagasLivres -= 1;
+            vagasOcupadas += 1;
+            System.out.println("-------------------------------------------------");
+
+            System.out.println("| " + aluno.nome + " matriculado(a) em " + this.nome + "\t|");
+            System.out.println("| Vagas ocupadas: " + vagasOcupadas + "\t\t\t\t|");
+            System.out.println("| Vagas livres: " + vagasLivres + "\t\t\t\t|");
+            System.out.println("-------------------------------------------------");
+        }
+
+    }
+
+### **b), c), d)**
+
+        public class Questao10 {
+            public static void main(String[] args){
+                Curso c1;
+                Turma t1, t2;
+                Aluno a1, a2, a3;
+
+                c1 = new Curso(1, "Engenharia de Software", 240);
+
+                t1 = new Turma("Orientacao a Objetos", 1, 46, 0, "Quarta/Sexta, 14h-16h", c1);
+                t2 = new Turma("Desen. Avancado Soft", 2, 30, 0, "Quarta/Sexta, 16h-18h", c1);
+
+                a1 = new Aluno("Andre ", c1, 13, 23, 02, 1983);
+                a2 = new Aluno("Maria ", c1, 05, 27, 05, 1994);
+                a3 = new Aluno("Junior", c1, 16, 27, 02, 1994);
+
+                t1.matricular(a1);
+                t1.matricular(a2);
+                t2.matricular(a3);
+            }
+        }
+
 ## Referências:
 \[[OPEN ACCESS][eckDavid]\] Eck, David J. Introduction to Programming Using Java, 6th ed. 2011
 
