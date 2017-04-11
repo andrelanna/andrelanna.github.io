@@ -488,6 +488,28 @@ Nome: Junior<br>Curso: &c1<br>Data de nascimento: 16/11/1995<br><br>
 False<br>False<br>True
 <br><br>
 
+**Questão 8:**
+<br><br>
+Impressão do Garbage collector:<br>
+Esse objeto ALUNO vai ser destruido.<br>
+Detalhes do objeto: <br>
+<br>
+Nome: Maria<br>
+Curso: &c2<br>
+Data de nascimento: 27/5/1994<br>
+Esse CURSO vai ser destruido.<br>
+Detalhes do objeto:<br>
+<br>
+Nome do curso: Engenharia de Software<br>
+Codigo: 1<br>
+Carga horaria: 240<br>
+Esse objeto ALUNO vai ser destruido.<br>
+Detalhes do objeto: <br>
+<br>
+Nome: Andre<br>
+Curso: &c1<br>
+Data de nascimento: 23/2/1983<br>
+<br><br>
 ## Referências:
 \[[OPEN ACCESS][eckDavid]\] Eck, David J. Introduction to Programming Using Java, 6th ed. 2011
 
