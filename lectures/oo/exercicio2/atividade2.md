@@ -390,7 +390,19 @@ false
 true
 
 **Questão 8:**
+R.:
+Esse objeto ALUNO vai ser destruido.
+Detalhes do objeto: 
 
+ Nome: Maria
+Curso: @”endereço do objeto na memória”
+Data de nascimento: 27/5/1994
+Esse objeto ALUNO vai ser destruido.
+Detalhes do objeto: 
+
+ Nome: Andre
+Curso: @”endereço do objeto na memória”
+Data de nascimento:23/02/1983
 
 **Questão 9:**
 
