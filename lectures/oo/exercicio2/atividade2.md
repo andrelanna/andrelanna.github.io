@@ -46,6 +46,9 @@ já recebendo alguns valores para os atributos ou apenas definir padroes de valo
 
 9-Retenção de estado: É o fato de um objeto permanecer "parado" ou sem uso na memoria até que ele receba um estimulo para alterar algum valor.
 
+150023375 - Vítor Cardoso Xoteslem
+150142218 - Miguel Siqueira Santos
+
 **Questão 2:** Julgue as seguintes frases como verdadeiras ou falsas e explique o motivo delas estarem certas ou erradas. Nos casos em que julgar uma sentença como errada, altere-a de modo a corrigi-la.
 
 a) Dois objetos instanciados através do método construtor padrão terão o mesmo estado e, portanto, suas referências serão iguais. 
@@ -58,15 +61,6 @@ d) Em Java, o operador . (ponto) serve para acessar somente os métodos de um ob
 
 e) Métodos destrutores são aqueles métodos que são chamados explicitamente pelo algoritmo para destruir objetos e liberar os espaços que eles ocupam em memória. Em Java métodos destrutores são implementos com o nome **finalize()** e definidos em cada classe.
 
-Resposta:
-a-Verdadeiro.
-b-Falso.
-  Uma classe pode ter vários métodos construtores alternativos para instanciação de seus objetos.
-  Podem existir metodos construtores alternativos com diferentes parametros e funções.
-c-Verdadeiro.
-d-Falso.
-  O ponto(.) em java serve para acessar metodos e atributos de um objeto.
-e-Verdadeiro.
 
 
 **Questão 3:**  Considere o seguinte cenário:
