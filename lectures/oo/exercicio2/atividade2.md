@@ -437,6 +437,78 @@ a3.cargaHoraria() = 220; - cargaHoraria é atributo (não coloca parênteses). A
 
 **Questão 10:**
 
+public class Principal {
+	public static void main(String[] args){
+		Turmas oo, das;
+		
+		oo = new Turmas(1, 50, 46, 4, "4as e 6as feiras das 12:00 as 16:00");
+		das = new Turmas(2,50, 30, 20, "4as e 6as feiras das 16:00 as 18:00");
+		
+		Curso t1 = new Curso(1, "Orientacao a Objetos", "40 horas", "departamento 1",
+					oo);
+		
+		Curso t2 = new Curso(2, "DAS", "40 horas", "departamento 2",
+				das);
+		
+		Aluno andre = new Aluno("Andre", "13/0028240", 18, 8, 1992, oo);
+		Aluno maria = new Aluno("Maria", "12/1023580", 8, 11, 1997, oo);
+		Aluno junior = new Aluno("Junior", "14/1033599", 21, 2, 1994, das);
+	}
+}
+
+public class Turmas {
+	int codigo;
+	int numeroVagas;
+	int vagasLivres;
+	int vagasOcupadas;
+	String diaEhorario;
+	
+	Turmas(int c, int n, int v, int ocu, String diaEh){
+		codigo = c;
+		numeroVagas = n;
+		vagasLivres = v;
+		vagasOcupadas = ocu;
+		diaEhorario = diaEh;	
+	}
+}
+
+public class Curso {
+	String nomeCurso = "Engenharia de Software";
+	int codigo;
+	String nomeDisciplina;
+	String cargaHoraria;
+	String departamentoResponsavel;
+	Turmas tur;
+	
+	Curso(int codigo, String nomeDisc, String carga, String depart, Turmas tur){
+		this.codigo = codigo;
+		nomeDisciplina = nomeDisc;
+		cargaHoraria = carga;
+		departamentoResponsavel = depart;
+		this.tur = tur;
+	}
+}
+
+public class Aluno {
+	String nome;
+	String matricula;
+	int diaNascimento, mesNascimento, anoNascimento;
+	Turmas t;
+	
+	public Aluno(String nome, String mat, int dNasc, int mNasc, int aNasc,
+			Turmas t){
+		nome = nome;
+		matricula = mat;
+		diaNascimento = dNasc;
+		mesNascimento = mNasc;
+		anoNascimento = aNasc;
+		this.t = t;
+	}
+		
+}
+
+13/0121801 - Lucas de Castro Bezerra
+13/0028240 - Igor Guimarães Veludo
 
 ## Referências:
 \[[OPEN ACCESS][eckDavid]\] Eck, David J. Introduction to Programming Using Java, 6th ed. 2011
