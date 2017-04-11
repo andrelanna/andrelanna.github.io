@@ -181,7 +181,10 @@ Desse modo, pede-se nessa questão que seja modelada e implementada em Java a cl
 
 15/0016131 - Luciana Ribeiro Lins de Albuquerque
 
+*Obs: a classe Drone (questão 3) completa a lista de códigos.
+
 {% highlight java %}
+
 public class Controle {
 
 	int controleAutonomiaBateria;
@@ -217,6 +220,7 @@ public class Controle {
 {% endhighlight %}
 
 {% highlight java %}
+
 import java.util.Scanner;
 
 public class Ler {
@@ -262,6 +266,7 @@ public class Ler {
 
 
 {% highlight java %}
+
 import java.util.Scanner;
 
 public class Principal {
@@ -639,6 +644,56 @@ public class Principal {
 		a3.cargaHoraria() = 220;
 	}
 }
+{% endhighlight %}
+
+15/0007182 - Byron Kamal Barreto Correa
+
+15/0016131 - Luciana Ribeiro Lins de Albuquerque
+
+
+*Erros:
+
+
+Erro 1: a3.cargaHoraria() = 220;
+Justificativa: cargaHoraria é um atributo e está sendo declarado como método, um método não pode ser igualado a um valor.
+
+
+Erro 2: Nao instanciaram o objeto que a3 aponta.
+
+
+Erro 3: Não instanciaram o objeto que c1 aponta.
+
+
+Erro 4: Curso.obterDetalhes();
+Justificativa: O correto seria c1.obterDetalhes(), por que o curso deve ser especificado.
+
+
+Erro 5: Aluno.obterDetalhes();
+Justificativa: O correto seria a3.obterDetalhes(), por que o aluno deve ser especificado.
+
+*Código corrigido:
+{% highlight java %}
+public class Principal {
+	public static void main(String[] args) {
+		Curso c1, c2;
+		Aluno a1, a2, a3;
+		
+		c1 = new Curso(1, "Engenharia de Software", 240);
+		c2 = new Curso(2, "Engenharia EletrÃ´nica", 257);
+		
+		a1 = new Aluno("Andre", c1, 13, 23, 02, 1983);
+		a2 = new Aluno("Maria", c2, 5, 27, 5, 1994);
+		a3 = new Aluno("Junior",c1, 70, 16, 11, 1995);
+		
+		c1.obterDetalhes();
+		c2.matricula = 20; 
+		Curso.nome = "CiÃªncia da computaÃ§Ã£o";
+		c1.codigo = 21;
+		a3.obterDetalhes();
+		a3.cargaHoraria();
+	}
+}
+
 {% endhighlight %}
 **Questão 10:** sabe-se que um curso em é formado por um conjunto de disciplinas, para as quais são definidas as seguintes características: 
 
