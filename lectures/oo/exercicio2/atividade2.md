@@ -449,6 +449,18 @@ public class Principal {
 }
 {% endhighlight %}
 
+Resposta:
+Esse objeto ALUNO vai ser destruido.
+Detalhes do objeto: 
+Nome:Junior
+Curso:endereço de c1
+Data de nascimento:16/11/1995
+Esse objeto ALUNO vai ser destruido.
+Detalhes do objeto: 
+Nome:Maria
+Curso:endereço de c2
+Data de nascimento:27/5/1994
+
 
 **Questão 9:** as cinco instruções listadas abaixo estão definidas no método **main()** da classe **Principal** e apresentam erros em suas sintaxes. Apresente quais são os erros, justifique-os e altere as instruções de modo a consertá-los. Considere os códigos das classes **Aluno** e **Turma** como sendo os códigos apresentados na questão 7. 
 
