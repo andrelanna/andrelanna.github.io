@@ -360,8 +360,12 @@ public class Principal {
 Responda as seguintes questões com base nos códigos acima: 
 
 a) As referências a1 e a2 para objetos de *ClasseA* são iguais?
+Não. São diferentes.
 
 b) Qual o estado de cada dos objetos de cada referência? 
+O estado do objeto referenciado por q1 é: a1 = 0; a2 = 0.0; a3 = null; a4 = false.
+O estado do objeto referenciado por q2 é: a1 = 0; a2 = 0.0; a3 = null; a4 = false.
+O estado do objeto referenciado por q3 é: a1 = 1; a2 = 1.0; a3 = “null”; a4 = false.
 
 c) O que será impresso pela função *main* da classe *Principal* se a linha número *11* for igual a: 
 {% highlight java%}
@@ -373,6 +377,16 @@ System.out.println(q1.a4 == q3.a4);
 System.out.println(q3 == q2);
 {% endhighlight %}
 
+Com a mudança feita na linha 11, a função main imprimiu o seguinte:
+false
+true
+false
+true
+true
+false
+
+13/0121801 - Lucas de Castro Bezerra
+13/0028240 - Igor Guimarães Veludo
 
 **Questão 7:**
 
