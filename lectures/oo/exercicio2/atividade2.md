@@ -485,6 +485,34 @@ public class Principal {
   }
 }
 {% endhighlight %}
+
+Resposta:
+
+Erro: Curso.obterDetalhes() 
+Motivo: Um metodo de uma classe deve ser chamado por uma referencia de um objeto da classe, não pela classe em si.
+Possível Correção: c2.obterDetalhes()
+
+Erro: c2.matricula = 20;
+Motivo: c2 é uma referencia de um objeto da classe Curso, que nao possui o atributo matrícula.
+Possível Correção: a2.matricula = 20;
+
+Erro: Curso.nome = "Ciência da computação";
+Motivo: novamente um atributo está tentando ser acessado pela classe e não por uma referencia de um objeto da classe. E a classe curso nao possui atributo "nome".
+Possível Correção: c2.nomeCurso = "Ciência da computação";
+
+Erro: c1.codigo = 21;
+Motivo: c1 foi declarado mas não foi instanciado, por isso não há memória alocada para armazenar o codigo 21.
+Possível Correção: c1 = new Curso();
+
+Erro: Aluno.obterDetalhes();
+Motivo: novamente um metodo da está sendo acessado pela classe, não por um objeto dela.
+Possível Correção: a1.obterDetalhes();
+
+Erro: a3.cargaHoraria() = 220;
+Motivo: cargaHoraria é um atributo, não um metodo, logo não tem parenteses. a3 tambem não foi instanciado, e a classe Aluno não possui atributo chamado cargaHoraria.
+Possível Correção: a3.cargaHoraria = 220;
+
+
 **Questão 10:** sabe-se que um curso em é formado por um conjunto de disciplinas, para as quais são definidas as seguintes características: 
 
 * um código da disciplina;
