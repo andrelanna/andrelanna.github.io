@@ -458,6 +458,27 @@ public class ControleRemoto {
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
 ```
 
+**Questão 6:** 
+<br/><br/>
+*a)* <br>
+Errado! a1 e a2 nem se quer são referências, são atributos da classe Questao6<br>
+<br>
+*b)* <br>
+Estados de q1:<br>
+a1= 0  a2 = 0.0 a3 = null a4 = false<br>
+Estados de q2:<br>
+a1= 0  a2 = 0.0 a3 = null a4 = false<br>
+Estados de q3:<br>
+a1= 1  a2 = 1.0 a3 = "null" a4 = false<br>
+<br>
+*c)*<br>
+False<br>
+True<br>
+False<br>
+True<br>
+True<br>
+False<br>
+<br><br>
 ## Referências:
 \[[OPEN ACCESS][eckDavid]\] Eck, David J. Introduction to Programming Using Java, 6th ed. 2011
 
