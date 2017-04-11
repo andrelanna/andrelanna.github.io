@@ -546,6 +546,205 @@ c) associe ambas turmas recem-criadas ao curso de Engenharia de Software,
 
 d) matricule Andre e Maria na turma de orientação por objetos, e Junior na turma de desenvolvimento avançado de software.
 
+Resposta:
+
+Principal.java
+```java
+package questao10;
+public class Principal {
+
+public static void main(String[] args) {
+    Curso c1;
+    Disciplinas d1, d2;
+    Aluno a1, a2, a3;
+    
+    Turma t1OO; //declara uma variável do tipo Turma para se referência para turma 1 de Orienção por Objeto
+    Turma t1DAS; //declara uma variável do tipo Turma para ser referência para turma 1 de Desesnvolvimento Avançado de Software
+    c1 = new Curso(1, "Engenharia de Software", 240);
+    
+    d1 = new Disciplinas(1, "Orientação por Objeto", 4, "Engenharia");
+    d2 = new Disciplinas(2, "Desenvolvimento Avançado de Software", 4, "Engenharia");
+    
+    //b)
+    t1OO = new Turma(1, 46, "4as e 6as/ 12:00 às 16:00");
+       
+    t1DAS = new Turma(1, 30, "4as e 6as/ 16:00 às 18:00");
+    
+    //c)
+    d1.cur = c1; //associa d1 (Orientação por Obejeto) ao curso c1 (Engenharia de Software)
+    t1OO.dis = d1; //associa t1OO (turma 1 de Orientação por Objeto) à disciplina d1 (Orientação por Objeto);
+    
+    d2.cur = c1; //associa d2 (Desenvolvimento Avançado de Software) ao curso c1 (Engenharia de Software)
+    t1DAS.dis = d2; //associa t1OO (turma 1 de Desenvolvimento Avançado de Software) à disciplina d1 (Desenvolvimento Avançado de Software);
+    
+    
+    a1 = new Aluno("Andre", 13, 23, 02, 1983);
+    a2 = new Aluno("Maria", 5, 27, 5, 1994);
+    a3 = new Aluno("Junior", 70, 16, 11, 1995);
+       
+    
+    System.out.println("Detalhes dos alunos antes da matrícula: \n");
+    System.out.println(a1.obterDetalhes());
+    System.out.println(a2.obterDetalhes());
+    System.out.println(a3.obterDetalhes());
+    
+    System.out.println("\nRealiza a matrícula dos alunos: \n");
+    
+    //d)
+    t1OO.matricular(a1);
+    t1OO.matricular(a2);
+    t1DAS.matricular(a3);
+    
+    System.out.println("\nDetalhes dos alunos depois da matrícula: \n");
+    System.out.println(a1.obterDetalhes());
+    System.out.println(a2.obterDetalhes());
+    System.out.println(a3.obterDetalhes());
+    
+ }
+}
+```
+
+Aluno.java
+```java
+package questao10;
+public class Aluno {
+ String nome;
+ String curso;
+ String disciplina;
+ int turma;
+ int matricula;
+ int diaNascimento,
+     mesNascimento,
+     anoNascimento;
+ Turma tr;
+
+ public Aluno(String nom, int mat, int dNasc, int mNasc, int aNasc) {
+    nome = nom;
+    matricula = mat;
+    diaNascimento = dNasc;
+    mesNascimento = mNasc;
+    anoNascimento = aNasc;
+ }
+
+ public String obterDetalhes() {
+    String resposta = "";
+    resposta += "Nome: " + nome + '\n';
+    resposta += "Curso: " + curso + '\n';
+    resposta += "Turma/Disciplina: " + turma + " de " + disciplina+ '\n';
+    resposta += "Data de nascimento: " + diaNascimento + '/' +
+                                    mesNascimento + '/' +
+                                    anoNascimento + '\n';
+    return resposta;
+ }
+    
+}
+```
+
+Turma.java
+```java
+//a)
+package questao10;
+public class Turma {
+int codigoTurma;
+int totalVagas;
+int vagasOcupadas;
+int vagasLivres;
+String diaHorario; 
+Disciplinas dis;
+Aluno al;
+
+Turma(int cod, int vL, String dH){
+ codigoTurma = cod;
+ totalVagas = vL; //Como ao criar uma turma não há alunos matriculados o total de vagas é igual às vagas livres
+ vagasLivres = vL;
+ vagasOcupadas = 0; //Como ao criar uma turma não há alunos matriculados então não há vagas ocupadas;
+ diaHorario = dH;
+}
+
+/*
+O método matricular, matricula um aluno (que deve ser passado como parâmetro) e caso haja vaga na turma,
+entra na primeira condição e caso não haja vaga entra na segunda
+*/
+public void matricular(Aluno al){
+ 
+ if (this.vagasLivres > 0) {
+  this.vagasOcupadas +=1; //O número de vagas ocupadas é incrementado em 1
+  this.vagasLivres -=1; //O número de vagas livres é decrementado em 1
+  al.tr = this; //Faz a associação de um aluno com a turma correspondente
+  al.turma = this.codigoTurma; //Preenche o atributo turma de aluno com a turma correspondente
+  al.disciplina = this.dis.nomeDisciplina; //Preenche o atributo disciplina de aluno com a disciplina correspondente
+  al.curso = this.dis.cur.nomeCurso; //Preenche o atributo curso com o curso correspondente
+  
+  System.out.println("Matrícula de " + al.nome + " realizada com sucesso na turma " + this.codigoTurma +
+  " de " + this.dis.nomeDisciplina + " do curso de " + this.dis.cur.nomeCurso + ".\n");
+ }
+ 
+ else
+  System.out.println("Erro ao matricular " + al.nome + ". Não há vagas na turma " + this.codigoTurma + " de " +
+  this.dis.nomeDisciplina + ".\n");
+   
+ 
+}
+
+ public String obterDetalhes() {
+     String resposta = "";
+     resposta += "Codigo da turma: " + codigoTurma + '\n';
+     resposta += "Total de vagas: " + totalVagas + '\n';
+     resposta += "Vagas livres: " + vagasLivres + '\n';
+     resposta += "Vagas ocupadas: " + vagasOcupadas + '\n';
+     resposta += "Dia e Horario: " + diaHorario + '\n';
+     return resposta;
+    }
+}
+```
+
+Disciplina.java
+```java
+package questao10;
+public class Disciplinas {
+
+int codigoDisciplina;
+String nomeDisciplina;
+int carga_hor;
+String depart_resp; //departamento responsável pela disciplina
+Curso cur;
+
+Disciplinas(int cod, String nome, int carg, String dr) {
+ codigoDisciplina = cod;
+ nomeDisciplina = nome;
+ carga_hor = carg;
+ depart_resp = dr;
+}
+
+}
+```
+
+Curso.java
+```java
+package questao10;
+public class Curso {
+ int codigo;
+ String nomeCurso;
+ int cargaHoraria;
+
+
+ Curso (int cod, String nome, int ch) {
+    codigo = cod;
+    nomeCurso = nome;
+    cargaHoraria = ch;
+ }
+
+ public String obterDetalhes() {
+    String resposta = "";
+    resposta += "Nome do curso: " + nomeCurso + '\n';
+    resposta += "Codigo: " + codigo + '\n';
+    resposta += "Carga horaria: " + cargaHoraria;
+    return resposta;
+ }
+ 
+}
+```
+
 ## Referências:
 \[[OPEN ACCESS][eckDavid]\] Eck, David J. Introduction to Programming Using Java, 6th ed. 2011
 
