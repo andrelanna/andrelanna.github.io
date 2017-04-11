@@ -30,12 +30,7 @@ com a mesma estrutura se forem criados utilizando a mesma classe.
 Em java, nenhuma variável pode conter um objeto, e sim, a referência de um objeto.
 
 * elementos de classe
-<<<<<<< HEAD
 Atributos, métodos e estado.
-=======
-
-Variáveis estáticas e subrotinas (métodos) que definem o estado e comportamento do objeto.
->>>>>>> 515977bd5f886c226cac8d307207affc4e2107ed
 
 * atributos
 
