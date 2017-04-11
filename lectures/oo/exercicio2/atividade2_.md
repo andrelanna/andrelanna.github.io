@@ -534,6 +534,138 @@ public class Principal {
 ```
 
 
+**Questão 10:**
+<br/><br/>
+a)<br/>
+```java
+package questão.pkg10;
+
+
+public class Turma {
+    
+    int codTurma;
+    int numVagasTotal;
+    int numVagasLivres;
+    int numVagasOcupadas;
+    String diasOcorrencia;
+    String horariosOcorrencia;
+    Disciplina disc;
+    
+    Turma(){
+        
+    }
+    
+    Turma(int c, int nT, String d, String h, Disciplina D){
+        codTurma = c;
+        numVagasTotal = nT;
+        diasOcorrencia = d;
+        horariosOcorrencia = h;
+        disc = D;
+        numVagasOcupadas = 0;
+        numVagasLivres = numVagasTotal;
+    }
+    
+    public void Matricula(){
+        if(numVagasLivres > numVagasOcupadas){
+            numVagasLivres--;
+            numVagasOcupadas++;
+        }
+    }
+    
+    public String obterDetalhes(){
+        String resposta = "";
+        resposta += "Turma " + codTurma + " da disciplina de " + disc.nome + '\n';
+        resposta += "Numero total de vagas: " + numVagasTotal + '\n';
+        resposta += "Numero de vagas livres: " + numVagasLivres + '\n';
+        resposta += "Numero de vagas ocupadas: " + numVagasOcupadas + '\n';
+        resposta += "Dias de ocorrencias: " + diasOcorrencia + '\n';
+        resposta += "Horarios de ocorrencia: " + horariosOcorrencia + '\n';
+             
+        return resposta;
+    }
+}
+
+```
+
+<br/>
+b)<br/>
+
+```java
+
+package questão.pkg10;
+
+
+public class Questão10 {
+    public static void main(String[] args) {
+        Curso c1;
+        Disciplina d1,d2;
+        Turma t1, t2;
+      
+        String resposta;
+        
+        c1 = new Curso(1, "Engenharia de Software", 240);
+        
+        d1 = new Disciplina(1,4, "Orientação a Objetos","FGA", c1);
+        d2 = new Disciplina(2,4, "Desenvolvimento Avançado de Software","FGA", c1);
+        
+        t1 = new Turma(1, 46, "Quartas e Sextas", "12:00 - 16:00", d1);
+        t2 = new Turma(1, 30, "Quartas e Sextas", "16:00 - 18:00", d2);
+ 	
+	resposta = t1.obterDetalhes();
+        System.out.println(resposta);
+	
+	resposta = t2.obterDetalhes();
+        System.out.println(resposta);
+	
+    }
+    
+}
+
+```
+
+<br/>
+<br>
+c)O código usado aqui é o mesmo do item anterior, pois, para haver uma Turma, precisa de uma Disciplina relacionada à esta Turma. E do mesmo modo, se precisa de um Curso relacionado à disciplina. Assim, não haveria como instanciar um objeto do tipo Turma sem que antes houvesse um do tipo Disciplina e do tipo Curso. Logo, ambos os itens geram a mesma resposta.
+<br/>
+<br>
+d)<br/>
+
+```java
+package questão.pkg10;
+
+public class Questão10 {  
+    public static void main(String[] args) {
+        Curso c1,c2;
+        Disciplina d1,d2;
+        Turma t1, t2;
+        Aluno a1, a2, a3;
+        
+        String resposta;
+        
+        c1 = new Curso(1, "Engenharia de Software", 240);
+        c2 = new Curso(2, "Engenharia Eletrônica", 257);
+        
+        d1 = new Disciplina(1,4, "Orientação a Objetos","FGA", c1);
+        d2 = new Disciplina(2,4, "Desenvolvimento Avançado de Software","FGA", c1);
+        
+        t1 = new Turma(1, 46, "Quartas e Sextas", "12:00 - 16:00", d1);
+        t2 = new Turma(1, 30, "Quartas e Sextas", "16:00 - 18:00", d2);
+   
+        a1 = new Aluno("Andre", c1, 13, 23, 02, 1983);
+        a2 = new Aluno("Maria", c2, 5, 27, 5, 1994);
+        a3 = new Aluno("Junior", c1, 70, 16, 11, 1995);
+        
+	/* Aqui as vagas das turmas estão sendo diminuidas, logo, os alunos estão sendo matriculados */
+        a1.Matricula(t1);
+        a2.Matricula(t1);
+        a3.Matricula(t2);    
+        
+           
+    }
+}
+
+```
+
 ## Referências:
 \[[OPEN ACCESS][eckDavid]\] Eck, David J. Introduction to Programming Using Java, 6th ed. 2011
 
