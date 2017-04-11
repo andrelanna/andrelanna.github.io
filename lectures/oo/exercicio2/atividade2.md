@@ -1,4 +1,4 @@
----
+﻿---
 title: Exercício prático
 layout: default
 ---
@@ -12,16 +12,18 @@ Atividade para realizar em dupla e entregar via GitHub. Uma entrega por dupla.
 Prazo para entrega: ~~4/4/2017~~ 10/04/2017, 23:59:59.
 
 **Questão 1:** Os termos abaixo estão relacionados ao paradigma de *Orientação por Objetos*. Defina cada um dos termos com base no livro-texto (Eck, David J. Introduction to Programming Using Java, 6th ed. 2011).
-* classe
-* objeto
-* elementos de classe
-* atributos
-* métodos
-* método construtor padrão
-* método construtor alternativo
-* estado de um objeto
-* retenção de estado
+* classe: Uma classe contém campos e métodos que descrevem um determinado objeto e  podem ser utilizadas como um molde para produzi-los.
+* objeto: Um objeto é uma coleção de variáveis e subrotinas. Cada objeto tem uma classe associada que diz que tipo de objeto ele é.
+* elementos de classe: Os atributos de uma classe podem ser os atributos e métodos.
+* atributos: Atributos são as características de um objeto. Um atributo em java pode conter tipos de dados primitivos ou referências a objetos.
+* métodos: Também chamados de subrotinas, consiste em um conjunto de instruções do programa que foram agrupados e dado um nome para que resolva um problema específico.
+* método construtor padrão: Serve para criar (instanciar) um objeto. Neste método, não é necessário receber parâmetros e se inicia os atributos com valores padrão java.
+* método construtor alternativo: Ao contrário do método construtor padrão, esse método pode ser desenvolvido pelo programador a fim de inicializar certos atributos com determinado valor.
+* estado de um objeto: O estado de um objeto é o conjunto de valores que aquele objeto possui em um determinado momento.
+* retenção de estado: Um objeto tende a manter seus valores a menos que receba um estímulo que os modifique.
 
+13/0121801 - Lucas de Castro Bezerra
+13/0028240 - Igor Guimarães Veludo
 
 **Questão 2:** Julgue as seguintes frases como verdadeiras ou falsas e explique o motivo delas estarem certas ou erradas. Nos casos em que julgar uma sentença como errada, altere-a de modo a corrigi-la.
 
@@ -34,7 +36,6 @@ c) Retenção de estados é uma propriedade do paradigma OO que permite aos obje
 d) Em Java, o operador . (ponto) serve para acessar somente os métodos de um objeto. 
 
 e) Métodos destrutores são aqueles métodos que são chamados explicitamente pelo algoritmo para destruir objetos e liberar os espaços que eles ocupam em memória. Em Java métodos destrutores são implementos com o nome **finalize()** e definidos em cada classe.
-
 
 **Questão 3:**  Considere o seguinte cenário:
 
