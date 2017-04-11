@@ -517,6 +517,21 @@ public class Principal {
 
 {%endhighlight%}
 
+(RESPOSTA)
+c1 c2 a3, nao serão destruidos 
+
+c1 -> c2
+c2 -> c1
+
+a3 -> a1
+
+a2 é finalizado
+conteudo anterior de a3 é finalizado
+ 
+a1 e a3 nao serao finalizados 
+
+
+
 
 **Questão 9:**
 as cinco instruções listadas abaixo estão definidas no método main() da classe Principal e apresentam erros em suas sintaxes. Apresente quais são os erros, justifique-os e altere as instruções de modo a consertá-los. Considere os códigos das classes Aluno e Turma como sendo os códigos apresentados na questão 7.
