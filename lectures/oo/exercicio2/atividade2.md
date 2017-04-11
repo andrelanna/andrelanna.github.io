@@ -374,9 +374,20 @@ true
 true
 false
 
-
 **Questão 7:**
-
+R.:
+ Nome: Andre
+Curso: @”endereço do objeto na memória”
+Data de nascimento:23/02/1983
+ Nome: Maria
+Curso: @”endereço do objeto na memória”
+Data de nascimento: 27/5/1994
+ Nome: Junior
+Curso: @”endereço do objeto na memória”
+Data de nascimento: 16/11/1995
+false
+false
+true
 
 **Questão 8:**
 
