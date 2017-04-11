@@ -223,7 +223,36 @@ Dado esse cenário, pede-se aos alunos que representem (inicialmente) as caracte
 
 Desse modo, pede-se nessa questão que seja modelada e implementada em Java a classe que representa as características e o comportamento de um controle remoto, de modo que o drone possa ser comandado a partir do comandos enviados pelo controle remoto.
 
+---
+### Respostas Q5
 
+{% highligh java %}
+
+    public class Questao5{
+      public static void main(String[] args){
+          ControleRemoto cr1, cr2, cr3, cr4;
+          Drone drone1, drone2, drone3, drone4;
+
+          cr1 = new ControleRemoto(20000, 90);
+          cr2 = new ControleRemoto(20000, 90);
+          cr3 = new ControleRemoto(20000, 90);
+          cr4 = new ControleRemoto(20000, 90);
+
+          drone1 = new Drone("Hubsan", "X4 mini", 4, "SD", 10, 10, 7, 150);
+          drone2 = new Drone("Hubsan", "H501S X4 FPV", 4, "HD", 12, 12, 20, 1000);
+          drone3 = new Drone("DJI", "Mavic Pro", 4, "UHD", 16, 16, 27, 13000);
+          drone4 = new Drone("DJI", "Spreading Wings", 8, "SUHD", 16, 16, 15, 13000);
+
+          cr1.drone = drone1;
+          cr2.drone = drone2;
+          cr3.drone = drone3;
+          cr4.drone = drone4;
+      }
+    }
+
+{% endhighlight %}
+
+---
 **Questão 6:** Sejam os seguintes códigos da *ClasseA* e da aplicação principal escritas em JAVA. 
 
 Questao6.java
