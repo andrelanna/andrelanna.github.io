@@ -605,6 +605,17 @@ public class Principal {
 }
 {% endhighlight %}
 
+15/0007182 - Byron Kamal Barreto Correa
+
+15/0016131 - Luciana Ribeiro Lins de Albuquerque
+
+
+Resposta:
+Quando executado o Garbagge Collector, a saída é:
+Esse objeto ALUNO vai ser destruido.
+Detalhes do objeto: 
+
+
 
 **Questão 9:** as cinco instruções listadas abaixo estão definidas no método **main()** da classe **Principal** e apresentam erros em suas sintaxes. Apresente quais são os erros, justifique-os e altere as instruções de modo a consertá-los. Considere os códigos das classes **Aluno** e **Turma** como sendo os códigos apresentados na questão 7. 
 
