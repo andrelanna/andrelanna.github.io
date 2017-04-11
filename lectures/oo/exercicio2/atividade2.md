@@ -137,6 +137,65 @@ public class Vant{
 | Autonomia bateria| 7 minutos      | 20 minutos     | 27 minutos        | 15 minutos        |
 | Distância máxima | até 150 metros | até 1 kilometro| até 13 kilometros | até 13 kilometros |
 
+  **-Principal.java**
+  
+{% highlight java %}
+public class Principal{
+ 	public static void main(String []args){
+    	Vant drone1 = new Vant("Hubsan", "X4 mini", 4, "SD", 10, 10, 7, 150);
+    	Vant drone2 = new Vant("Hubsan", "H501S X4 FPV", 4, "HD", 12, 12, 20, 1000);
+    	Vant drone3 = new Vant("DJI", "Mavic Pro", 4, "UHD", 16, 16, 27, 13000);
+    	vant drone4 = new Vant("DJI", "Spreading Wings", 8, "SUHD", 16, 16, 15, 13000);
+ 	}
+}
+{% endhighlight%} 
+
+  **-Vant.java**
+  
+{% highlight java %}
+public class Vant{
+	int n_helices;
+	String marca;
+	String modelo;
+	String camera;
+	double vel_vert;
+	double ver_hori;
+	double autonomia;
+	double distancia;
+    
+	public Vant(){}
+    
+	public Vant(String ma, String mo, int hl, String cam, double vt, double hr, double auto, double dist){
+    	marca = ma;
+    	modelo = mo;
+    	n_helices = hl;
+    	camera = cam;
+    	vel_vert = vt;
+    	vel_hori = hr;
+    	autonomia = auto;
+    	distancia = dist;
+	}
+    
+	public aumentar_vertical(){}
+    
+	public diminuir_vertical(){}
+    
+	public aumentar_horizontal(){}
+    
+	public diminuir_horizontal(){}
+    
+	public iniciar_gravacao(){}
+    
+	public interromper_gravacao(){}
+    
+	public diminuir_geral(){
+    	if(autonomia <= 5){
+        		vel_vert /= 2;
+        		vel_hori /= 2;
+    	}
+	}
+}
+{% endhighlight%} 
 
 **Questão 5:** Ainda levando em consideração o cenário descrito nas questões 3 e 4, é necessário fazer com que os comandos realizados pelo usuário no controle remoto sejam enviados ao drone. Para isso, é necessário que o controle remoto estabeleça uma conexão com o drone. A partir desse momento é possível enviar os seguintes comandos ao drone: a) aumentar ou diminuir a velocidade vertical em passos de 1 m/s; b) aumentar ou diminuir a velocidade horizontal em passos de 1m/s e, c) ativar ou desativar a câmera. É importante ressaltar que um controle remoto só pode estar conectado a um drone apenas. Por fim, controles remotos possuem baterias com autonomia entre 60 e 90 minutos e alcance entre 20 metros e 20 kilometros.  
 
