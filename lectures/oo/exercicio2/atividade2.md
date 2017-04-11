@@ -8,6 +8,9 @@ layout: default
 ### OO - Orientação por objetos
 ------
 
+14/0169695 - Luis Bruno Fidelis Gomes
+14/0165169 - Vinícius de Castro Cantuária
+
 Atividade para realizar em dupla e entregar via GitHub. Uma entrega por dupla.
 Prazo para entrega: ~~4/4/2017~~ 10/04/2017, 23:59:59.
 
