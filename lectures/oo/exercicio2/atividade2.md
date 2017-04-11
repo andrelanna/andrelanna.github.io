@@ -507,6 +507,16 @@ public class Principal {
 	}
 }
 {% endhighlight %}
+
+Resposta:
+
+- Nesse caso deve-se usar um objeto do lado esquerdo do “.” ao invés de uma classe. Deve-se fazer “c2.obterDetalhes();”
+- “matricula” é atributo de Aluno e não de Curso;. Deve-se fazer "a1.matricula = 20;"
+- Nesse caso deve-se usar um objeto do lado esquerdo do “.” ao invés de uma classe e “nome” não é atributo de curso. Deve-se fazer "c2.nomeCurso = "Ciência da computação";
+- c1 não está instanciado. Deve-se instanciar c1.
+- Nesse caso deve-se usar um objeto do lado esquerdo do “.” ao invés de uma classe. Por exemplo “a1.obterDetalhes()”;
+- “cargaHoraria()” não é método e sim atributo de Curso. Deve-se fazer "c2.cargaHoraria = 220;"
+
 **Questão 10:** sabe-se que um curso em é formado por um conjunto de disciplinas, para as quais são definidas as seguintes características: 
 
 * um código da disciplina;
