@@ -614,10 +614,15 @@ Resposta:
 
 	public class Principal {
 		public static void main(String[] args){
-			Turma turma1oo, turma1das;
+			//Criar disciplinas  antes para poder associar as turmas
+			Disciplina d1, d2;
+			d1 = new Disciplina(1, "Orientação por Objetos", 0, "não informado");
+			d2 = new Disciplina(2, "Desenvolvimento Avançado de software", 0, "não informado");
 
-			turma1oo = new Turma(1, 46, "Quartas e Sextas", "12:00 às 16:00 horas");
-			turma1das = new Turma(1, 30, "Quartas e Sextas", "16:00 às 18:00 horas");
+
+			Turma t1, t2;
+			t1 = new Turma(1, 46, "4as e 6as feiras", "das 12:00 às 16:00", d1);
+			t2 = new Turma(2, 30,"4as e 6as feiras", "das 16:00 às 18:00", d2);
 			}
 		}
 	
