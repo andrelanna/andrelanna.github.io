@@ -408,6 +408,21 @@ True
 
 **Questão 8:**
 
+Objeto Maria e Junior morrem
+
+Esse objeto ALUNO vai ser destruido:
+Detalhes do objeto:
+Nome: Maria
+Curso: endereço de memória de c2
+Data de nascimento: 16/11/1995
+Esse objeto ALUNO vai ser destruido:
+Detalhes do objeto:
+Nome: Junior
+Curso: endereço de memória de c1
+Data de nascimento: 16/11/1995
+
+13/0121801 - Lucas de Castro Bezerra
+13/0028240 - Igor Guimarães Veludo
 
 **Questão 9:**
 
