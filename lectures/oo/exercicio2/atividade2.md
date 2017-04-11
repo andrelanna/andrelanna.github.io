@@ -68,6 +68,61 @@ Além dessas características, drones possuem as seguintes funções básicas: a
 
 Dado esse cenário, pede-se aos alunos que representem (inicialmente) as características e comportamentos de um drone através de um diagrama de classes e, posteriormente, apresente a implementação dessa classe na linguagem Java. 
 
+  **-Diagrama de Classe**
+
+|:------------------------------|
+|             Vant              | 
+|:------------------------------|
+| +n_helices:int                |
+| +camera:String                |
+| +vel_vert:double              | 
+| +vel_hori:double              |
+| +autonomia:double             |
+| +distancia:double             |
+|:------------------------------|
+| +aumentar_vertical():void     |
+| +diminuir_vertical():void     |
+| +aumentar_horizontal():void   |
+| +diminuir_horizontal():void   |
+| +iniciar_gravacao():void      |
+| +interromper_gravacao():void  |
+| +diminuir_geral():void        |
+|:------------------------------|
+
+  **-Implementação em Java**
+  
+{% highlight java %}
+public class Vant{
+	int n_helices;
+	String camera;
+	double vel_vert;
+	double ver_hori;
+	double autonomia;
+	double distancia;
+    
+	public Vant(){}
+    
+	public aumentar_vertical(){}
+    
+	public diminuir_vertical(){}
+    
+	public aumentar_horizontal(){}
+    
+	public diminuir_horizontal(){}
+    
+	public iniciar_gravacao(){}
+    
+	public interromper_gravacao(){}
+    
+	public diminuir_geral(){
+    	if(autonomia <= 5){
+        	vel_vert /= 2;
+        	vel_hori /= 2;
+    	}
+	}
+}
+{% endhighlight%} 
+
 
 **Questão 4:** Considerando a classe definida e implementada na questão 5, pede-se que os seguintes objetos sejam criados a partir do programa principal: 
 
