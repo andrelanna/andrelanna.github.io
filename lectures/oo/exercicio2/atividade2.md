@@ -24,13 +24,22 @@ Prazo para entrega: ~~4/4/2017~~ 10/04/2017, 23:59:59.
 
 Resposta:
 Classe: descreve o comportamento do objeto. É composto por nome (tipo), atributos (propriedades, dados) e comportamento (operações e métodos).
+
 Objeto: Operação resultante de uma classe.
+
 Elementos de classe: nome, atributos e métodos.
+
 Atributos: São as características de um objeto, um conjunto de dados que representará a classe.
+
 Métodos: define o comportamento do objeto.
+
 Método construtor padrão: responsável por alocar memória e inicializar os dados, sendo chamados automaticamente na declaração de um novo objeto.
-Método construtor alternativo: também é responsável por inicializar os dados relacionados ao objeto, porém não de modo automático, pois o programador deve passar o conjunto de dados para o construtor padrão.
+
+Método construtor alternativo: também é responsável por inicializar os dados relacionados ao objeto, porém não de modo automático, pois o 
+programador deve passar o conjunto de dados para o construtor padrão.
+
 Estado de um objeto: define o objeto de acordo com os atributos instanceados na classe.
+
 Retenção de estado: após sua criação, o objeto fica armazenado na memória com as caristicas definidas na classe a espera de alguma ação.
 
 
@@ -808,16 +817,235 @@ TRUE
 TRUE
 
 **Questão 7:**
+Seja o seguinte código em Java. Apresente o que será impresso ao final da execução do método **main** definido na classe **Principal**.
+
+{% highlight java %}
+package questao7;
+public class Principal {
+  public static void main(String[] args) {
+    Curso c1, c2;
+    Aluno a1, a2, a3;
+    c1 = new Curso(1, "Engenharia de Software", 240);
+    c2 = new Curso(2, "Engenharia Eletrônica", 257);
+    
+    a1 = new Aluno("Andre", c1, 13, 23, 02, 1983);
+    a2 = new Aluno("Maria", c2, 5, 27, 5, 1994);
+    a3 = new Aluno("Junior", c1, 70, 16, 11, 1995);
+    
+    System.out.println(a1.obterDetalhes());
+    System.out.println(a2.obterDetalhes());
+    System.out.println(a3.obterDetalhes());
+    a3 = a2;
+    System.out.println(a1 == a2);
+    System.out.println(a1 == a3);
+    System.out.println(a2 == a3);
+  }
+}
+{% endhighlight %}
 
 
-**Questão 8:**
+{% highlight java %}
+package questao7;
+public class Aluno {
+  String nome; 
+  Curso curso;
+  int matricula;
+  int diaNascimento, 
+      mesNascimento, 
+      anoNascimento;
+  
+  public Aluno(String nom, Curso cur, int mat, int dNasc, int mNasc, int aNasc) {
+    nome = nom;
+    curso = cur;
+    matricula = mat;
+    diaNascimento = dNasc; 
+    mesNascimento = mNasc;
+    anoNascimento = aNasc;
+  }
+  
+  public String obterDetalhes() {
+    String resposta = "";
+    resposta += "Nome: " + nome + '\n';
+    resposta += "Curso: " + curso + '\n';
+    resposta += "Data de nascimento: " + diaNascimento + '/' + 
+                                     mesNascimento + '/' + 
+                                     anoNascimento;
+    return resposta; 
+  }
+  
+  protected void finalize() {
+    System.out.println("Esse objeto ALUNO vai ser destruido.");
+    System.out.println("Detalhes do objeto: " + '\n');
+    System.out.println(obterDetalhes());
+  }
+}
+{% endhighlight  %}
+
+{% highlight java %}
+package questao7;
+public class Curso {
+  int codigo;
+  String nomeCurso; 
+  int cargaHoraria;
+  
+  Curso (int cod, String nome, int ch) {
+    codigo = cod;
+    nomeCurso = nome; 
+    cargaHoraria = ch;
+  }
+  
+  public String obterDetalhes() {
+    String resposta = "";
+    resposta += "Nome do curso: " + nomeCurso + '\n';
+    resposta += "Codigo: " + codigo + '\n';
+    resposta += "Carga horaria: " + cargaHoraria;
+    return resposta; 
+  }
+  
+  protected void finalize() {
+    System.out.println("Esse objeto CURSO vai ser destruido.");
+    System.out.println("Detalhes do objeto: " + '\n');
+    System.out.println(obterDetalhes());
+  }
+}
+{% endhighlight  %}
+
+Resposta: Será printada a seguinte mensagem:
+
+Nome : Andre 
+Curso : Endereço de memoria de c1 que referencia o objeto do tipo curso 
+Data de Nascimento : 23/02/1983
+
+Nome : Maria
+Curso : Endereço de memoria de c2 que referencia o objeto do tipo curso 
+Data de Nascimento : 27/05/1994
+
+Nome : Junior
+Curso : Endereço de memoria de c1 que referencia o objeto do tipo curso 
+Data de Nascimento : 16/11/1995
+
+FALSE
+FALSE
+TRUE
 
 
-**Questão 9:**
 
 
-**Questão 10:**
+**Questão 8:** Considerando as classes **Aluno** e **Curso** definidas na questão 7, o que será impresso quando o *garbagge collector* de Java executar momentos antes do método **main()** da classe abaixo terminar sua execução?
 
+{% highlight java %}
+package questao8;
+public class Principal {
+  public static void main(String[] args) {
+    Curso c1, c2;
+    Aluno a1, a2, a3;
+    
+    c1 = new Curso(1, "Engenharia de Software", 240);
+    c2 = new Curso(2, "Engenharia Eletrônica", 257);
+    
+    a1 = new Aluno("Andre", c1, 13, 23, 02, 1983);
+    a2 = new Aluno("Maria", c2, 5, 27, 5, 1994);
+    a3 = new Aluno("Junior", c1, 70, 16, 11, 1995);
+    
+    a3 = a2; 
+    a2 = null;
+    c2 = c1; 
+    c1 = null;
+    c1 = a3.curso;
+    a3 = a1;
+    a1 = nul;
+    
+    //---> GARBAGGE COLLECTOR executa nesse instante
+  }
+}
+{% endhighlight %}
+
+Resposta: O algoritmo irá imprimir a seguinte mensagem na tela antes de se executar o Garbage Collector (no caso dois objetos do tipo Aluno perderam suas referências):
+
+Este Objeto ALUNO vai ser destruido
+Detalhes do Objeto:
+Nome : Andre 
+Curso : Endereço de memoria de c1 que referencia um objeto do tipo curso 
+Data de Nascimento : 23/02/1983
+
+
+
+Este Objeto ALUNO vai ser destruido
+Detalhes do Objeto:
+Nome : Maria 
+Curso : Endereço de memoria de c2 que referencia um objeto do tipo curso 
+Data de Nascimento : 23/02/1983
+
+
+
+
+
+**Questão 9:** as cinco instruções listadas abaixo estão definidas no método **main()** da classe **Principal** e apresentam erros em suas sintaxes. Apresente quais são os erros, justifique-os e altere as instruções de modo a consertá-los. Considere os códigos das classes **Aluno** e **Turma** como sendo os códigos apresentados na questão 7. 
+
+{% highlight java %}
+package questao9;
+public class Principal {
+	public static void main(String[] args) {
+		Curso c1, c2;
+		Aluno a1, a2, a3;
+		
+		c2 = new Curso(2, "Engenharia Eletrônica", 257);
+		
+		a1 = new Aluno("Andre", c1, 13, 23, 02, 1983);
+		a2 = new Aluno("Maria", c2, 5, 27, 5, 1994);
+		
+		Curso.obterDetalhes();
+		c2.matricula = 20; 
+		Curso.nome = "Ciência da computação";
+		c1.codigo = 21;
+		Aluno.obterDetalhes();
+		a3.cargaHoraria() = 220;
+	}
+}
+{% endhighlight %}
+
+Resposta: 
+
+O primeiro erro é encontrado no comando Curso.obterDetalhes(), nessa linha chama-se o método de uma classe, sendo que só se pode chamar atributos e métodos de objetos.
+
+Na linha seguinte (c2.matricula) temos o segundo erro, pois não tem-se o atributo matrícula no objeto referenciado por c2.
+
+Na Terceira linha (Curso.nome = "Ciência da computação")novamente atribui-se valor a classe Curso
+
+Duas linhas depois (Aluno.obterDetalhes()), chama-se um método da classe Aluno, sendo que só se chama métodos de objetos.
+
+Na ultima linha (a3.cargaHoraria() = 220) é chamado um atributo não existente no objeto referenciado por a3.
+
+
+
+**Questão 10:** sabe-se que um curso em é formado por um conjunto de disciplinas, para as quais são definidas as seguintes características: 
+
+* um código da disciplina;
+* um nome;
+* uma carga horária, e
+* um departamento responsável por lecionar tal disciplina.
+
+Sabe-se ainda que para cada disciplina são criadas diversas turmas. Cada turma é descrita através das seguintes características:
+
+* um código da turma; 
+* um número total de vagas; 
+* um número de vagas livres; 
+* um número de vagas ocupadas, e
+* dias/horarios em que ela ocorre.
+
+Além disso, é necessário que os alunos se matriculem nessas turmas. Tal procedimento consiste em associar os alunos em uma turma específica (caso haja vagas) e aumentar o número de vagas ocupadas. 
+
+Considerando o contexto formado pelas classes **Aluno** e **Curso** (vide implementação na questão 7) e a descrição acima, pede-se: 
+
+a) em Java, crie uma classe que seja capaz de representar as características e o comportamento de uma turma.
+
+b) Crie as seguintes turmas: 
+   * turma 1 de Orientação por objetos, com 46 vagas livres, que ocorre todas as 4as e 6as feiras, das 12:00 às 16:00 horas;
+   * turma 1 de Desenvolvimento Avançado de software, com 30 vagas livres, que ocorre todas as 4as. e 6as. feiras, das 16:00 às 18:00 horas.
+
+c) associe ambas turmas recem-criadas ao curso de Engenharia de Software,
+
+d) matricule Andre e Maria na turma de orientação por objetos, e Junior na turma de desenvolvimento avançado de software.
 
 ## Referências:
 \[[OPEN ACCESS][eckDavid]\] Eck, David J. Introduction to Programming Using Java, 6th ed. 2011
@@ -825,10 +1053,12 @@ TRUE
 
 
 ---
-*Última modificação: 3 de abril de 2017, 22:52.*
+*Última modificação: 7 de abril de 2017, 05:12.*
 
 
 
 
 
 [eckDavid]: http://math.hws.edu/javanotes/
+[github]: http://www.github.com/
+[instrucoesSubmissao]: ./instrucoes.md
