@@ -201,6 +201,112 @@ public class Vant{
 
 Desse modo, pede-se nessa questão que seja modelada e implementada em Java a classe que representa as características e o comportamento de um controle remoto, de modo que o drone possa ser comandado a partir do comandos enviados pelo controle remoto.
 
+  **-Principal.java**
+  
+{% highlight java %}
+public class Principal{
+
+ 	public static void main(String []args){
+		Controle c1 = new Controle();
+		Controle c2 = new Controle();
+		Controle c3 = new Controle();
+		Controle c4 = new Controle();
+    	Vant drone1 = new Vant("Hubsan", "X4 mini", 4, "SD", 10, 10, 7, 150);
+    	Vant drone2 = new Vant("Hubsan", "H501S X4 FPV", 4, "HD", 12, 12, 20, 1000);
+    	Vant drone3 = new Vant("DJI", "Mavic Pro", 4, "UHD", 16, 16, 27, 13000);
+    	Vant drone4 = new Vant("DJI", "Spreading Wings", 8, "SUHD", 16, 16, 15, 13000);
+		
+		c1.drone = drone1;
+		c2.drone = drone2;
+		c3.drone = drone3;
+		c4.drone = drone4;
+ 	}
+}
+{% endhighlight%} 
+
+  **-Vant.java**
+  
+{% highlight java %}
+public class Vant{
+	int n_helices;
+	String marca;
+	String modelo;
+	String camera;
+	boolean est_camera;
+	double vel_vert;
+	double ver_hori;
+	double autonomia;
+	double distancia;
+    
+	public Vant(){}
+    
+	public Vant(String ma, String mo, int hl, String cam, double vt, double hr, double auto, double dist){
+    	marca = ma;
+    	modelo = mo;
+    	n_helices = hl;
+    	camera = cam;
+    	vel_vert = vt;
+    	vel_hori = hr;
+    	autonomia = auto;
+    	distancia = dist;
+	}
+    
+	public aumentar_vertical(){}
+    
+	public diminuir_vertical(){}
+    
+	public aumentar_horizontal(){}
+    
+	public diminuir_horizontal(){}
+    
+	public iniciar_gravacao(){}
+    
+	public interromper_gravacao(){}
+    
+	public diminuir_geral(){
+    	if(autonomia <= 5){
+        	vel_vert /= 2;
+        	vel_hori /= 2;
+    	}
+	}
+}
+{% endhighlight%} 
+
+  **-Controle.java**
+  
+{% highlight java %}
+public class Controle{
+	double alcance;
+	double autonomia;
+	Vant v;
+
+	public Controle(){}
+    
+	public aumentar_vertical(){
+    		v.vel_vert += 1;
+	}
+    
+	public diminuir_vertical(){
+    		v.vel_vert -= 1;
+	}
+    
+	public aumentar_horizontal(){
+    		v.vel_hori += 1;
+	}
+    
+	public diminuir_horizontal(){
+    		v.vel_hori -= 1;
+	}    
+    
+	public ativar_camera(){
+    		v.est_camera = true;
+	}
+    
+	public desativar_camera(){
+    		v.est_camera = false;
+	}
+}
+{% endhighlight%} 
 
 **Questão 6:** Sejam os seguintes códigos da *ClasseA* e da aplicação principal escritas em JAVA. 
 
