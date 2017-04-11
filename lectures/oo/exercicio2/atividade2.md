@@ -35,8 +35,7 @@ Métodos: define o comportamento do objeto.
 
 Método construtor padrão: responsável por alocar memória e inicializar os dados, sendo chamados automaticamente na declaração de um novo objeto.
 
-Método construtor alternativo: também é responsável por inicializar os dados relacionados ao objeto, porém não de modo automático, pois o 
-programador deve passar o conjunto de dados para o construtor padrão.
+Método construtor alternativo: também é responsável por inicializar os dados relacionados ao objeto, porém não de modo automático, pois o programador deve passar o conjunto de dados para o construtor padrão.
 
 Estado de um objeto: define o objeto de acordo com os atributos instanceados na classe.
 
@@ -1046,6 +1045,194 @@ b) Crie as seguintes turmas:
 c) associe ambas turmas recem-criadas ao curso de Engenharia de Software,
 
 d) matricule Andre e Maria na turma de orientação por objetos, e Junior na turma de desenvolvimento avançado de software.
+
+
+/////Classe Principal 
+
+public class Principal{
+		
+
+	public static void main(String[]args){
+		Curso c1;
+		Turma t1,t2;
+		Disciplinas d1,d2;
+		Aluno a1,a2,a3;
+	
+		c1 = new Curso(1,"Engenharia de Software",240);
+
+		d1 = new Disciplinas(1,"Orientação a Objetos",4,"FGA");//Letra b
+		d2 = new Disciplinas(2,"Desenvolvimento Avançado de Software",4,"FGA");
+
+		t1 = new Turma(1,d1,46,46,0,"Quartas e Sextas das 14:00 as 16:00",null);
+		t2 = new Turma(1,d2,30,30,0,"Quartas e Sextas das 16:00 as 18:00",null);
+	
+		t1.curso = c1;//Letra c
+		t2.curso = c1;
+	
+		a1 = new Aluno("Andre",c1,t1, 13, 23, 02, 1983);//Letra d
+		a2 = new Aluno("Maria",c1,t1, 5, 27, 5, 1994);
+		a3 = new Aluno("Junior",c1,t2, 70, 16, 11, 1995);
+	
+	}
+
+
+}
+
+//Classe Turma
+
+public class Turma{
+
+	int codigo;
+	Disciplinas d;
+	int total;
+	int livres;
+	int ocupadas;
+	String dias_horarios;
+	Curso curso;
+		
+	public Turma(int cod,Disciplinas di,int tot, int liv, int ocu,String dh,Curso cur ) { 
+		codigo = cod; 
+		d = di;
+		total = tot; 
+		livres = liv;
+		ocupadas = ocu;
+		dias_horarios = dh;
+		curso = cur;
+	}
+	
+	
+	public void matricular(){
+		
+		if (livres > 0){
+			livres = livres - 1;
+			ocupadas += 1;
+		}
+		else
+			System.out.println("Não há vagas");
+	}
+
+	public String obterDetalhes() { 
+		String resposta = ""; 
+		resposta += "Codigo da disciplina: " + codigo + '\n'; 
+		resposta += "Disciplina: " + d + '\n'; 
+		resposta += "Total de Vagas " + total; 
+		resposta += "Vagas Ocupadas: " + ocupadas; 
+		resposta += "Vagas Livres: " + livres; 
+		resposta += "Dias e Horário: " + dias_horarios; 
+		resposta += "Curso: " + curso; 
+		return resposta;
+	}
+
+	protected void finalize() { 
+		System.out.println("Esse objeto TURMA vai ser destruido."); 
+		System.out.println("Detalhes do objeto: " + '\n'); 
+		System.out.println(obterDetalhes()); 
+	} 
+}
+
+//Classe Disciplina
+
+
+public class Disciplinas { 
+	int codigo; 
+	String nomeDisciplina; 
+	int cargaHoraria;
+	String departamento; 
+	
+	public Disciplinas (int cod, String nome, int ch, String dep) { 
+		codigo = cod; 
+		nomeDisciplina = nome; 
+		cargaHoraria = ch;
+		departamento = dep; 
+	}
+
+	public String obterDetalhes() { 
+		String resposta = ""; 
+		resposta += "Nome da disciplina: " + nomeDisciplina + '\n'; 
+		resposta += "Codigo: " + codigo + '\n'; 
+		resposta += "Carga horaria: " + cargaHoraria; 
+		resposta += "Departamento: " + departamento; 
+		return resposta; 
+	}
+
+	protected void finalize() { 
+		System.out.println("Esse objeto DISCIPLINA vai ser destruido."); 
+		System.out.println("Detalhes do objeto: " + '\n'); 
+		System.out.println(obterDetalhes()); 
+	} 
+
+}
+
+//Classe Curso
+
+
+
+public class Curso { 
+	int codigo; 
+	String nomeCurso; 
+	int cargaHoraria;
+
+	Curso (int cod, String nome, int ch) { 
+		codigo = cod; 
+		nomeCurso = nome; 
+		cargaHoraria = ch;
+	}
+
+	public String obterDetalhes() { 
+		String resposta = ""; 
+		resposta += "Nome do curso: " + nomeCurso + '\n'; 
+		resposta += "Codigo: " + codigo + '\n'; 
+		resposta += "Carga horaria: " + cargaHoraria; 
+		return resposta; 
+	}
+
+	protected void finalize() { 
+		System.out.println("Esse objeto CURSO vai ser destruido."); 
+		System.out.println("Detalhes do objeto: " + '\n'); 
+		System.out.println(obterDetalhes()); 
+	} 
+
+}
+
+//Classe Aluno
+
+public class Aluno { 
+	String nome;
+	Curso curso; 
+	Turma turma; 
+	int matricula; 
+	int diaNascimento, mesNascimento, anoNascimento;
+
+	public Aluno(String nom, Curso cur,Turma tur, int mat, int dNasc, int mNasc, int aNasc) { 
+		nome = nom; 
+		curso = cur; 
+		turma = tur;
+		matricula = mat; 
+		diaNascimento = dNasc; 
+		mesNascimento = mNasc; 
+		anoNascimento = aNasc; 
+	}
+
+	public String obterDetalhes() { 
+		String resposta = ""; resposta += "Nome: " + nome + '\n'; 
+		resposta += "Curso: " + curso + '\n'; 
+		resposta += "Data de nascimento: " + diaNascimento + '/' + mesNascimento + '/' + anoNascimento; 
+		return resposta; 
+	}
+
+	public void matricula(){
+		turma.matricular ();
+	}
+	
+	
+	protected void finalize() { 
+		System.out.println("Esse objeto ALUNO vai ser destruido."); 
+		System.out.println("Detalhes do objeto: " + '\n'); 
+		System.out.println(obterDetalhes()); 
+	} 
+
+
+} 
 
 ## Referências:
 \[[OPEN ACCESS][eckDavid]\] Eck, David J. Introduction to Programming Using Java, 6th ed. 2011
