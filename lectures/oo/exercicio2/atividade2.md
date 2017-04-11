@@ -154,7 +154,7 @@ public class Drone {
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
 ```
 <br/>
-Diagrama de Classe- <https://github.com/pedrokelvin/andrelanna.github.io/blob/master/lectures/oo/exercicio2/Captura%20de%20tela%20de%202017-04-10%2015-06-07.png>
+Diagrama de Classe- <https://raw.githubusercontent.com/pedrokelvin/andrelanna.github.io/master/lectures/oo/exercicio2/Captura%20de%20tela%20de%202017-04-10%2015-06-07.png>
 <br/>
 
 **Questão 4:** 
