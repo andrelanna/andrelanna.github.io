@@ -390,6 +390,21 @@ false
 
 **Questão 7:**
 
+Nome: Andre
+Curso: endereço de memória de c1
+Data de nascimento: 23/02/1983
+Nome: Maria
+Curso: endereço de memória de c2
+Data de nascimento: 27/5/1994
+Nome: Junior
+Curso: endereço de memória de c1
+Data de nascimento: 16/11/1995
+False
+False
+True
+
+13/0121801 - Lucas de Castro Bezerra
+13/0028240 - Igor Guimarães Veludo
 
 **Questão 8:**
 
