@@ -276,31 +276,238 @@ public class Principal {
 }
 {% endhighlight %}
 
-(Curso.obterDetalhes();) 
-    Não é possível chamar o método obterDetalhes(), pois Curso é uma classe. O correto seria chamar o método de um objeto.
-Forma correta: c2.obterDetalhes();
 
-(c2.matricula = 20; )
-    O objeto c2 não possui atributo matricula, este atributo pertence aos objetos da classe Aluno.
-Forma correta: a1.matricula = 20;
 
-(Curso.nome = "Ciência da computação";)
-    Além de Curso não possuir o atributo nome, não é permitido definir o valor para o atributo a partir de uma classe, para isso seria necessário a instanciação de um objeto do tipo Curso e corrigir o nome do atributo.
-Forma correta: c2.nomeCurso = "Ciência da computação";
+**Questão 10:** sabe-se que um curso em é formado por um conjunto de disciplinas, para as quais são definidas as seguintes características: 
+ 
+* um código da disciplina;
+* um nome;
+* uma carga horária, e
+* um departamento responsável por lecionar tal disciplina.
 
-(c1.codigo = 21;)
-    O objeto c1 não foi instânciado, portanto não é possível definir valor para atributos de c1.
-Forma correta: c2.codigo = 21;
+Sabe-se ainda que para cada disciplina são criadas diversas turmas. Cada turma é descrita através das seguintes características:
 
-(Aluno.obterDetalhes();)
-    Não é possível chamar o método obterDetalhes(), pois Aluno é uma classe. O correto seria chamar o método de um objeto.
-Forma correta: a1.obterDetalhes();
+* um código da turma; 
+* um número total de vagas; 
+* um número de vagas livres; 
+* um número de vagas ocupadas, e
+* dias/horarios em que ela ocorre.
 
-(a3.cargaHoraria() = 220;)
-    a3 é um objeto da classe Aluno e não pode chamar o método cargaHoraria(), pois não possui um método cargaHoraria definido. Por outro lado existe um atributo cargaHoraria na classe Curso, porém mesmo que fosse alterado de a3 por c2, o codigo ainda estaria errado, pois atributo cargaHoraria está representado como um método. 
-Forma correta: c2.cargaHoraria = 220;
+Além disso, é necessário que os alunos se matriculem nessas turmas. Tal procedimento consiste em associar os alunos em uma turma específica (caso haja vagas) e aumentar o número de vagas ocupadas. 
 
-**Questão 10:**
+Considerando o contexto formado pelas classes **Aluno** e **Curso** (vide implementação na questão 7) e a descrição acima, pede-se: 
+
+a) em Java, crie uma classe que seja capaz de representar as características e o comportamento de uma turma.
+
+b) Crie as seguintes turmas: 
+   * turma 1 de Orientação por objetos, com 46 vagas livres, que ocorre todas as 4as e 6as feiras, das 12:00 às 16:00 horas;
+   * turma 1 de Desenvolvimento Avançado de software, com 30 vagas livres, que ocorre todas as 4as. e 6as. feiras, das 16:00 às 18:00 horas.
+
+c) associe ambas turmas recem-criadas ao curso de Engenharia de Software,
+
+d) matricule Andre e Maria na turma de orientação por objetos, e Junior na turma de desenvolvimento avançado de software.
+ 
+**Resposta**
+
+{% highlight java %}
+
+//Main.java
+
+public class Main {
+
+    public static void main(String[] args) {
+        Disciplina oo,das ;
+        Curso c1, c2;
+        Aluno a1, a2, a3;
+        Turma turmaa, turmab;
+        
+        oo = new Disciplina(195341,"Orientação a Objetos",60,"FGA" );
+        das = new Disciplina(206601,"Desenvolvimento Avançado de Software",60, "FGA" );
+        
+        c1 = new Curso(1, "Engenharia de Software", 240);
+        c2 = new Curso(2, "Engenharia Eletrônica", 257);
+        
+        a1 = new Aluno("Andre", c1, 13, 23, 02, 1983);
+        a2 = new Aluno("Maria", c2, 5, 27, 5, 1994);
+        a3 = new Aluno("Junior", c1, 70, 16, 11, 1995);
+        
+        turmaa = new Turma(oo,'1',46,46,12,16,"Quartas e Sextas");
+        turmab = new Turma(das,'1',30,30,16,18,"Quartas e Sextas");
+        
+        turmaa.curso = c1;
+        turmab.curso = c1;
+        
+        a1.matricular(turmaa);
+        a2.matricular(turmaa);
+        a3.matricular(turmaa);
+    }
+
+}
+
+{% endhighlight %}
+
+//Aluno.java
+
+public class Aluno {
+  String nome; 
+  Curso curso;
+  int matricula;
+  int diaNascimento, 
+      mesNascimento, 
+      anoNascimento;
+  
+  public Aluno(String nom, Curso cur, int mat, int dNasc, int mNasc, int aNasc) {
+    nome = nom;
+    curso = cur;
+    matricula = mat;
+    diaNascimento = dNasc; 
+    mesNascimento = mNasc;
+    anoNascimento = aNasc;
+  }
+  
+  public String obterDetalhes() {
+    String resposta = "";
+    resposta += "Nome: " + nome + '\n';
+    resposta += "Curso: " + curso + '\n';
+    resposta += "Data de nascimento: " + diaNascimento + '/' + 
+                                     mesNascimento + '/' + 
+                                     anoNascimento;
+    return resposta; 
+  }
+  
+  public void matricular(Turma turma){
+      turma.matricular(this.nome);
+  }
+  
+  protected void finalize() {
+    System.out.println("Esse objeto ALUNO vai ser destruido.");
+    System.out.println("Detalhes do objeto: " + '\n');
+    System.out.println(obterDetalhes());
+  }
+}
+
+{% highlight java %}
+
+//Curso.java
+
+public class Curso {
+  int codigo;
+  String nomeCurso; 
+  int cargaHoraria;
+  
+  Curso(){
+      
+  }
+  Curso (int cod, String nome, int ch) {
+    codigo = cod;
+    nomeCurso = nome; 
+    cargaHoraria = ch;
+  }
+  
+  public String obterDetalhes() {
+    String resposta = "";
+    resposta += "Nome do curso: " + nomeCurso + '\n';
+    resposta += "Codigo: " + codigo + '\n';
+    resposta += "Carga horaria: " + cargaHoraria;
+    return resposta; 
+  }
+  
+  protected void finalize() {
+    System.out.println("Esse objeto CURSO vai ser destruido.");
+    System.out.println("Detalhes do objeto: " + '\n');
+    System.out.println(obterDetalhes());
+  }
+}
+
+{% endhighlight %}
+
+{% highlight java %}
+
+//Disciplina.java
+
+public class Disciplina {
+    int codDisciplina;
+    String nome;
+    int cargaHoraria;
+    String departamento;
+    
+    Disciplina(){
+        
+    }
+    Disciplina(int cod, String nome, int carga, String depart){
+        this.codDisciplina = cod;
+        this.nome = nome;
+        this.cargaHoraria = carga;
+        this.departamento = depart;
+    }
+      
+    public String obterDetalhes() {
+        String resposta = "";
+        resposta += "Nome do curso: " + this.nome + '\n';
+        resposta += "Codigo: " + this.codDisciplina + '\n';
+        resposta += "Carga horaria: " + cargaHoraria;
+        return resposta; 
+      }
+      
+      protected void finalize() {
+        System.out.println("Esse objeto DISCIPLINA vai ser destruido.");
+        System.out.println("Detalhes do objeto: " + '\n');
+        System.out.println(obterDetalhes());
+     }
+}
+
+
+{% endhighlight %}
+
+{% highlight java %}
+
+//Turma.java
+
+public class Turma {
+    Curso curso;
+    Disciplina disciplina;
+    char codTurma;
+    int vagasTotal;
+    int vagasLivres;
+    int vagasOcupadas;
+    String horario;
+    
+    Turma(){
+        
+    }
+    Turma(Disciplina d, char cod, int vagas,int livres, int horai, int horaf, String dias){
+        this.disciplina = d;
+        this.codTurma = cod;
+        this.vagasTotal = vagas;
+        this.vagasLivres = livres;
+        this.vagasOcupadas = vagas - livres;
+        this.horario = dias+", das "+horai+" às "+horaf+".";
+    }
+    public void obterDetalhes() {
+        String resposta = "";
+        resposta += "Disciplina: " + disciplina.nome + '\n';
+        resposta += "Turma: " + this.codTurma + '\n';
+        resposta += "Vagas: " + this.vagasTotal + '\n';
+        resposta += "Vagas livres: " + this.vagasLivres+ '\n';
+        resposta += "Vagas ocupadas: " + this.vagasOcupadas + '\n';
+        resposta += "Curso: " + curso.nomeCurso + '\n';
+        resposta += "Horario: " + horario;
+        System.out.println(resposta);
+      }
+    
+    public void matricular(String nome){
+        if(this.vagasLivres > 0){
+            this.vagasOcupadas +=1;
+            this.vagasLivres = this.vagasTotal - this.vagasOcupadas;
+            System.out.println(nome+" foi matrículado em "+disciplina.nome+" na turma "+this.codTurma+".");
+        }else{
+            System.out.println("Impossível efetuar matrícula, a turma "+this.codTurma+" não possui vagas.");
+        }
+    }
+    
+}
+
+{% endhighlight %}
 
 
 ## Referências:
