@@ -510,6 +510,30 @@ Nome: Andre<br>
 Curso: &c1<br>
 Data de nascimento: 23/2/1983<br>
 <br><br>
+**Questão 9:**
+```java
+package questao9;
+public class Principal {
+	public static void main(String[] args) {
+		Curso c1, c2;
+		Aluno a1, a2, a3;
+		
+		c2 = new Curso(2, "Engenharia Eletrônica", 257);
+		
+		a1 = new Aluno("Andre", c1, 13, 23, 02, 1983);
+		a2 = new Aluno("Maria", c2, 5, 27, 5, 1994);
+		
+		/*Errado! Curso é o nome da classe e não do objeto.*/ Curso.obterDetalhes();
+		/*Errado! O objeto c2 não possui o atributo matrícula.*/ c2.matricula = 20; 
+		/*Errado! Curso é o nome da classe e não do objeto.*/ Curso.nome = "Ciência da computação";
+		/*Errado! O identificador c1 não chegou a ser instanciado como um objeto.*/ c1.codigo = 21;
+		/*Errado! Aluno é o nome da classe e não do objeto.*/ Aluno.obterDetalhes();
+		/*Errado! A classe aluno no possui o método carga horária e o a3 não foi instanciado.*/ a3.cargaHoraria() = 220;
+	}
+}
+```
+
+
 ## Referências:
 \[[OPEN ACCESS][eckDavid]\] Eck, David J. Introduction to Programming Using Java, 6th ed. 2011
 
