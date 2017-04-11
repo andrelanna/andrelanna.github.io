@@ -281,6 +281,35 @@ System.out.println(q1.a4 == q3.a4);
 System.out.println(q3 == q2);
 {% endhighlight %}
 
+Respostas:
+
+a-Não
+
+b- Estado do Objeto referenciado por q1:
+  a1=0
+  a2=0.0
+  a3=null
+  a4=false
+  Estado do Objeto referenciado por q2:
+  a1=0
+  a2=0.0
+  a3=null
+  a4=false
+  Estado do Objeto referenciado por q3:
+  a1=1
+  a2=1.0
+  a3=null
+  a4=false
+
+c-
+  System.out.println(q1 == q2); -> imprime : false, pois q1 e q2 referenciam objetos diferentes.
+  System.out.println(q1.a1 == q2.a1); -> imprime : true, pois os atributos a1 dos objetos q1 e q2 são iguais
+  System.out.println(q2.a3 == q3.a3); -> imprime : false, pois em q1 o atributo a3 é nulo, ja em q2, a3 é uma string "null"
+  System.out.println(q1.a2 == q2.a2); -> imprime : true, pois os atributos a2 dos dois objetos acabam sendo iguais, 0.0.
+  System.out.println(q1.a4 == q3.a4); -> imprime : true, pois o padrão do java define q1.a4 como false, igualando ao q3.a4.
+  System.out.println(q3 == q2);       -> imprime : false, pois q2 e q3 referenciam objetos diferentes, logo, tem endereços diferentes.
+
+
 
 **Questão 7:**
 
