@@ -185,6 +185,48 @@ public class Trabalho1 {
 
 Desse modo, pede-se nessa questão que seja modelada e implementada em Java a classe que representa as características e o comportamento de um controle remoto, de modo que o drone possa ser comandado a partir do comandos enviados pelo controle remoto.
 
+{% highlight java %}
+public class ControleRemoto {
+  int autonomiaBateria;
+  int alcance;
+  Drone drone;
+  
+  ControleRemoto(){}
+  
+  ControleRemoto(int aut, int alc, Drone d){
+    autonomiaBateria = aut;
+    alcance = alc;
+    drone = d;
+  }
+  
+  void aumentaVelY(){
+    drone.aumentarVelY(1);
+  }
+  
+  void aumentaVelX(){
+    drone.aumentarVelX(1);
+  }
+  
+  void diminuiVelY(){
+    drone.diminuirVelY(1);
+  }
+  
+  void diminuiVelX(){
+    drone.diminuirVelX(1);
+  }
+  
+  void ativaCamera(){
+    drone.iniciarGrav();
+  }
+  
+  void desativaCamera(){
+    drone.interromperGrav();
+  }
+}
+{% endhighlight%}
+
+150023375 - Vítor Cardoso Xoteslem
+150142218 - Miguel Siqueira Santos
 
 **Questão 6:** Sejam os seguintes códigos da *ClasseA* e da aplicação principal escritas em JAVA. 
 
