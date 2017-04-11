@@ -405,7 +405,25 @@ Curso: @”endereço do objeto na memória”
 Data de nascimento:23/02/1983
 
 **Questão 9:**
-
+R.:
+Linha 12.
+	"Curso" é uma classe e não pode ser utilizada até ser instanciada.
+	Correção: c2.obterDetalhes();
+Linha 13.
+	O objeto c2 não possui o atributo "matricula".
+	Correção: a1.matricula = 20; ou a2.matricula = 20;
+Linha 14.
+	"Curso" é uma classe e não pode ser utilizada até ser instanciada.
+	Correção: c2.nome = "Ciência da computação";
+Linha 15.
+	O objeto "c1" não possui referência.
+	Correção: c2.codigo = 21;
+Linha 16.
+	"Aluno" é uma classe e não pode ser utilizada até ser instanciada.
+	Correção: a1.obterDetalhes(); ou a2.obterDetalhes();
+Linha 17:
+	O objeto "a3" não possui referência.
+	Correção: c2.cargaHoraria() = 220;
 
 **Questão 10:**
 
