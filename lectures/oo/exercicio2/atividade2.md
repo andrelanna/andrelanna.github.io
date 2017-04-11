@@ -103,6 +103,63 @@ Além dessas características, drones possuem as seguintes funções básicas: a
 
 Dado esse cenário, pede-se aos alunos que representem (inicialmente) as características e comportamentos de um drone através de um diagrama de classes e, posteriormente, apresente a implementação dessa classe na linguagem Java. 
 
+package newpackage;
+
+public class Drone {
+    String marca;
+    String modelo;
+    int num_helices;
+    String camera;
+    int vel_vert_max;
+    int vel_hor_max;
+    int autonomia_bat;
+    int distancia_max;
+    
+    public Drone(String m, String mod, int hel, String cam, int velv, int velh, int aut_bat, int dist_max){
+        marca = m;
+        modelo = mod;
+        num_helices = hel;
+        camera = cam;
+        vel_vert_max = velv;
+        vel_hor_max = velh;
+        autonomia_bat = aut_bat;
+        distancia_max = dist_max;
+        
+    }
+    
+    
+    void Aumentar_vel_vert(){   
+    }
+    
+    void Diminuir_vel_vert(){
+    }
+    
+    void Aumentar_vel_hor(){
+    }
+    
+    void Diminuir_vel_hor(){
+    }
+    
+    void Iniciar_grav(){
+        
+    }
+    
+    void Interrromper_grav(){
+    }
+    
+    void Diminuir_velbat_hor(){
+    }
+    
+    void Diminuir_velbat_vert(){
+    }
+    
+    
+}
+
+
+
+
+
 
 **Questão 4:** Considerando a classe definida e implementada na questão 5, pede-se que os seguintes objetos sejam criados a partir do programa principal: 
 
