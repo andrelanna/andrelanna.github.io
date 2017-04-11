@@ -628,16 +628,322 @@ Além disso, é necessário que os alunos se matriculem nessas turmas. Tal proce
 Considerando o contexto formado pelas classes Aluno e Curso (vide implementação na questão 7) e a descrição acima, pede-se:
 
 a) em Java, crie uma classe que seja capaz de representar as características e o comportamento de uma turma.
+package questao10;
+
+
+
+public class Turma {
+
+	int codigoTurma;
+
+    int numerototalVagas;
+
+    int numlivreVagas;
+
+    int numocupadaVagas;
+
+    String dia;
+
+	String horarios;
+
+	String cursoTurma;
+
+	String nomeTurma;
+
+    
+
+public Turma(String nom, String cur, int cod, int numt, int numl, int numoc, String diaa, String hor){
+
+	nomeTurma = nom;
+
+	cursoTurma = cur;
+
+	codigoTurma = cod;
+
+    numerototalVagas = numt;
+
+    numlivreVagas  =  numl;
+
+    numocupadaVagas =  numoc;
+
+    dia = diaa;
+
+    horarios = hor;
+
+    
+
+    
+
+    
+
+}
+
+
+
+public void matricularAluno(int numt, int numl, int numoc){
+
+    numerototalVagas -= 1;
+
+    numlivreVagas -= 1;
+
+    numocupadaVagas += 1;
+
+}
+
+
+
+public String obterDetalhes() {
+
+String resposta = "";
+
+resposta += "Matriculado na turma de " + nomeTurma + '\n';
+
+resposta += "que faz parte do curriculo do curso de " + cursoTurma + '\n';
+
+resposta += "Codigo da turma: " + codigoTurma + '\n';
+
+resposta += "Numero total de vagas: " + numerototalVagas + '\n';
+
+resposta += "Numero total de vagas livres: " + numlivreVagas + '\n';
+
+resposta += "Numero total de vagas ocupadas: " + numocupadaVagas + '\n';
+
+resposta += "Dia das aulas: " + dia + '\n';
+
+resposta += "Horario das aulas: " + horarios + '\n';
+
+return resposta; 
+
+}
+
+
+
+protected void finalize() {
+
+System.out.println("Esse objeto TURMA vai ser destruido.");
+
+System.out.println("Detalhes do objeto: " + '\n');
+
+System.out.println(obterDetalhes());
+
+}
+
+
+
+}
+
+
+
+
+
 
 b) Crie as seguintes turmas:
-
+	
     turma 1 de Orientação por objetos, com 46 vagas livres, que ocorre todas as 4as e 6as feiras, das 12:00 às 16:00 horas;
     turma 1 de Desenvolvimento Avançado de software, com 30 vagas livres, que ocorre todas as 4as. e 6as. feiras, das 16:00 às 18:00 horas.
 
+package questao10;
+
+
+
+public class Principal {
+
+
+
+	public static void main(String[] args) {
+
+        Curso c1, c2;
+
+        Aluno a1, a2, a3;
+
+        Turma t1, t2;
+
+        
+
+    t1 = new Turma("Orientação a objetos", "Engenharia de software", 1, 46,46, 2, "4as e 6as", "das 12:00 às 16:00 horas");
+
+    t2 = new Turma("Desenvolvimento avançado de Software", "Desenvolvimento Avançado de software", 2, 30, 30,1, "4as e 6as","das 16:00 às 18:00 horas");
+
+    
+
+    c1 = new Curso(1, "Engenharia de Software", 240, "Predio 1");
+
+    c2 = new Curso(2, "Engenharia EletrÃ´nica", 257, "Mocap");
+
+    
+
+    a1 = new Aluno("Andre", c1, 13, 23, 02, 1983,t1);
+
+    a2 = new Aluno("Maria", c2, 5, 27, 5, 1994,t1);
+
+    a3 = new Aluno("Junior", c1, 70, 16, 11, 1995,t2);
+
+    
+
+    System.out.println(a1.obterDetalhes());
+
+    System.out.println(a2.obterDetalhes());
+
+    System.out.println(a3.obterDetalhes());
+
+    
+
+    }
+
+}
+
+//turma 1 de Orientação por objetos, com 46 vagas livres, que ocorre todas as 4as e 6as feiras, das 12:00 às 16:00 horas;
+
+//turma 1 de Desenvolvimento Avançado de software, com 30 vagas livres, que ocorre todas as 4as. e 6as. feiras, das 16:00 às 18:00 horas.
+
+
 c) associe ambas turmas recem-criadas ao curso de Engenharia de Software,
+package questao10;
+
+
+
+public class Curso {
+
+	
+
+	int codigo;
+
+    String nomeCurso; 
+
+    int cargaHoraria;
+
+    String departamento;
+
+	
+
+  
+
+  Curso (int cod, String nome, int ch, String dep) {
+
+    codigo = cod;
+
+    nomeCurso = nome; 
+
+    cargaHoraria = ch;
+
+    departamento = dep;
+
+  }
+
+  
+
+  public String obterDetalhes() {
+
+    String resposta = "";
+
+    resposta += " " + nomeCurso + '\n';
+
+    resposta += "Codigo: " + codigo + '\n';
+
+    resposta += "Carga horaria: " + cargaHoraria + '\n';
+
+    resposta += "Departamento: " + departamento;
+
+    return resposta; 
+
+  }
+
+  
+
+  protected void finalize() {
+
+    System.out.println("Esse objeto CURSO vai ser destruido.");
+
+    System.out.println("Detalhes do objeto: " + '\n');
+
+    System.out.println(obterDetalhes());
+
+  }
+
+
+
+}
+
 
 d) matricule Andre e Maria na turma de orientação por objetos, e Junior na turma de desenvolvimento avançado de software.
 
+package questao10;
+
+
+
+public class Aluno {
+
+
+
+	String nome;
+
+	  Turma turma;
+
+	  Curso curso;
+
+	  int matricula;
+
+	  int diaNascimento, 
+
+	      mesNascimento, 
+
+	      anoNascimento;
+
+	  
+
+	  public Aluno(String nom, Curso cur, int mat, int dNasc, int mNasc, int aNasc, Turma tur) {
+
+	    nome = nom;
+
+	    curso = cur;
+
+	    matricula = mat;
+
+	    diaNascimento = dNasc; 
+
+	    mesNascimento = mNasc;
+
+	    anoNascimento = aNasc;
+
+	    turma = tur;
+
+	  }
+
+	  
+
+	  public String obterDetalhes() {
+
+	    String resposta = "";   
+
+	    resposta += "Nome: " + nome + '\n';
+
+	    resposta += "Curso: " + curso.obterDetalhes() + '\n';
+
+	    resposta += "Data de nascimento: " + diaNascimento + '/' + 
+
+	                                         mesNascimento + '/' + 
+
+	                                         anoNascimento + '\n';
+
+	    resposta +="Turmas: \n" + turma.obterDetalhes() +'\n';
+
+	    return resposta; 
+
+	  }
+
+	  
+
+	  protected void finalize() {
+
+	    System.out.println("Esse objeto ALUNO vai ser destruido.");
+
+	    System.out.println("Detalhes do objeto: " + '\n');
+
+	    System.out.println(obterDetalhes());
+
+	  }
+
+}
 
 ## Referências:
 \[[OPEN ACCESS][eckDavid]\] Eck, David J. Introduction to Programming Using Java, 6th ed. 2011
