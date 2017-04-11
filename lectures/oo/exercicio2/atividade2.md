@@ -425,10 +425,18 @@ public class Principal {
 {% endhighlight %}
 Responda as seguintes questões com base nos códigos acima: 
 
-a) As referências a1 e a2 para objetos de *ClasseA* são iguais?
+15/0007182 - Byron Kamal Barreto Correa
 
+15/0016131 - Luciana Ribeiro Lins de Albuquerque
+
+a) As referências a1 e a2 para objetos de *ClasseA* são iguais?
+Não.
 
 b) Qual o estado de cada dos objetos de cada referência? 
+Resposta:
+q1 (0, 0.0f, null, false)
+q2 (0, 0.0f, null, false)
+q3 (1, 1.0f, “null”, false)
 
 c) O que será impresso pela função *main* da classe *Principal* se a linha número *11* for igual a: 
 {% highlight java%}
@@ -439,6 +447,15 @@ System.out.println(q1.a2 == q2.a2);
 System.out.println(q1.a4 == q3.a4);
 System.out.println(q3 == q2);
 {% endhighlight %}
+
+Resposta:
+False
+True
+False
+True
+True
+False    
+
 
 
 **Questão 7:**
