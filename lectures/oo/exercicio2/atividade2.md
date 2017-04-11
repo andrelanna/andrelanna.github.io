@@ -327,7 +327,26 @@ Responda as seguintes questões com base nos códigos acima:
 
 a) As referências a1 e a2 para objetos de *ClasseA* são iguais?
 
+(RESPOSTA)a1 e a2 são variaveis diferentes sendo uma numero inteiro e outra de ponto flutuante, logo suas referencias não serão iguais.
+
+
 b) Qual o estado de cada dos objetos de cada referência? 
+
+(RESPOSTA)
+q1 : a1 = 0
+     a2 = 0.0
+     a3 = null
+     a4 = false
+
+q2 : a1 = 0
+     a2 = 0.0
+     a3 = null
+     a4 = false
+		
+q3 : a1 = 1 
+     a2 = 1.0
+     a3 = "null"
+     a4 = false
 
 c) O que será impresso pela função *main* da classe *Principal* se a linha número *11* for igual a: 
 {% highlight java%}
@@ -338,6 +357,15 @@ System.out.println(q1.a2 == q2.a2);
 System.out.println(q1.a4 == q3.a4);
 System.out.println(q3 == q2);
 {% endhighlight %}
+
+Será impresso:
+	(q1==q2)  = false - q1 e q2 tem endereços diferentes, são duas instancias distintas.
+
+	(q1.a1 == q2.a1) = true - a1 de q1 e a1 de q2 são os mesmos atributos.
+	(q2.a3 == q3.a3) = false - aqui null de q2 representa que este espaço e nulo, e o de q3 é uma string e não uma representação de memoria vazia.
+	(q1.a2 == q2.a2) = true - a2 de q1 e a2 de q2 são os mesmos atributos.
+	(q1.a4 == q3.a4) = true - o a4 de ambos será false, logo a comparação é verdadeira.
+	(q3 == q2) = false - q3 e q2 não são a mesma instancia logo terão valores de memoria diferentes.
 
 
 **Questão 7:**
