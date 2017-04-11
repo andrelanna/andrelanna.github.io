@@ -64,6 +64,65 @@ Além dessas características, drones possuem as seguintes funções básicas: a
 
 Dado esse cenário, pede-se aos alunos que representem (inicialmente) as características e comportamentos de um drone através de um diagrama de classes e, posteriormente, apresente a implementação dessa classe na linguagem Java. 
 
+public class Principal {
+	public static void main(String[] args){
+		Vant drone1 = new Vant(4, "HD", 11, 11, 120, 1200);
+		
+		System.out.println("Numero de helice: "+drone1.numeroHelice);
+		System.out.println("Tipo de camera: "+drone1.modeloCamera);
+		System.out.println("Velocidade vertical maxima: "+drone1.velocidadeVertMax);
+		System.out.println("Velocidade horizontal maxima: "+drone1.velocidadeHorMax);
+		System.out.println("Autonomia da bateria: "+drone1.autonomiaBateria);
+		System.out.println("Distancia maxima:" +drone1.distanciaMax);
+	}
+}
+
+public class Vant {
+	int numeroHelice;
+	String modeloCamera;
+	double velocidadeVertMax;
+	double velocidadeHorMax;
+	double autonomiaBateria;
+	double distanciaMax;
+	
+	public Vant(){}
+	
+	public Vant(int a, String b, double c, double d,
+			double e, double f){
+		numeroHelice = a;
+		modeloCamera = b;
+		velocidadeVertMax = c;
+		velocidadeHorMax = d;
+		autonomiaBateria = e;
+		distanciaMax = f;
+	}
+	
+	public double aumentaVelocidadeVertMax(double valor){
+		return velocidadeVertMax + valor;
+	}
+	
+	public double diminuiVelocidadeVertMax(double valor){
+		return velocidadeVertMax - valor;
+	}
+	
+	public double aumentaVelocidadeHorMax(double valor){
+		return velocidadeHorMax + valor;
+	}
+	
+	public double diminuiVelocidadeHorMax(double valor){
+		return velocidadeHorMax - valor;
+	}
+	
+	public void diminuiVelcidadeTotal(double autonomiaBateria){
+		if(autonomiaBateria < 50.0){
+			velocidadeVertMax -= 50.0;
+			velocidadeHorMax -= 50.0;
+		}			
+	}
+}
+
+13/0121801 - Lucas de Castro Bezerra
+13/0028240 - Igor Guimarães Veludo
 
 **Questão 4:** Considerando a classe definida e implementada na questão 5, pede-se que os seguintes objetos sejam criados a partir do programa principal: 
 
