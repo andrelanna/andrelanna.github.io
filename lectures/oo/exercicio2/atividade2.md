@@ -22,7 +22,48 @@ Prazo para entrega: ~~4/4/2017~~ 10/04/2017, 23:59:59.
 * estado de um objeto
 * retenção de estado
 
-Classe é a estrutura definida pelo programador, contendo atributos e métodos (comportamento) comuns a um conjunto de objetos.
+### RESPOSTAS Q1
+
+  * ### **Classe:**
+
+      A melhor maneira de explicar classes é através de exemplos. As classes determinam as características que um objeto irá conter. Por exemplo: ao montar carros, a fábrica usa uma *blueprint*, que possui todas as características que esses carros devem conter, para fabricar um grande número de carros. Essa blueprint, então, é uma classe chamada Carro, enquanto os carros gerados dela são instâncias dessa classe, ou seja, objetos.
+
+  * ### **Objeto:**
+
+      Objetos são o foco da linguagem Java. Toda vez que instanciamos uma classe estamos criando um objeto dessa classe. Objetos possuem um *estado*, que são suas características e um *comportamento*, que são as atividades que o objeto pode realizar. Usando o exemplo da classe Carro novamente:
+
+      - Estado: cor, marca, modelo, ano, peso, etc.
+      - Comportamento: ligar, desligar, acelerar, frear, buzinar, etc.
+
+  * ### **Elementos de classe:**
+
+      Uma classe é composta de vários elementos, sendo eles atributos ou métodos.
+
+  * ### **Atributos:**
+
+      Os atributos definem o estado da classe(ou objeto instanciado dessa classe)
+
+  * ### **Métodos:**
+
+      Os métodos definem comportamentos.
+
+  * ### **Método construtor padrão:**
+
+      O método construtor padrão é o método chamado na criação padrão de um objeto (sem passagem de parâmetros). Ele cria, caso o método não seja definido pelo programador, um objeto com valores nulos.
+
+  * ### **Método construtor alternativo:**
+
+      O método construtor alternativo é um método de criação de objetos onde são passados parâmetros para já criar um objeto com valores customizados.
+
+  * ### **Estado de um objeto:**
+
+      O estado de um objeto refere se ao conjunto de valores que seus atributos tem no momento.
+
+  * ### **Retenção de estado:**
+
+      Capacidade de um objeto ficar na memória enquanto algo referenciá-lo
+
+
 
 **Questão 2:** Julgue as seguintes frases como verdadeiras ou falsas e explique o motivo delas estarem certas ou erradas. Nos casos em que julgar uma sentença como errada, altere-a de modo a corrigi-la.
 
