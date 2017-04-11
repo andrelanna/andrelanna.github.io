@@ -479,6 +479,15 @@ True<br>
 True<br>
 False<br>
 <br><br>
+
+**Questão 7:**
+<br><br>
+Nome: André<br>Curso: &c1<br>Data de nascimento: 23/2/1983<br><br>
+Nome: Maria<br>Curso: &c2<br>Data de nascimento: 27/5/1994<br><br>
+Nome: Junior<br>Curso: &c1<br>Data de nascimento: 16/11/1995<br><br>
+False<br>False<br>True
+<br><br>
+
 ## Referências:
 \[[OPEN ACCESS][eckDavid]\] Eck, David J. Introduction to Programming Using Java, 6th ed. 2011
 
