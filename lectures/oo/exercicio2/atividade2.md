@@ -612,11 +612,14 @@ b) Crie as seguintes turmas:
 
 Resposta:
 
+	public class Principal {
+		public static void main(String[] args){
+			Turma turma1oo, turma1das;
 
-	Turma turma1oo, turma1das;
-	
-	turma1oo = new Turma(1, 46, "Quartas e Sextas", "12:00 às 16:00 horas");
-	turma1das = new Turma(1, 30, "Quartas e Sextas", "16:00 às 18:00 horas");
+			turma1oo = new Turma(1, 46, "Quartas e Sextas", "12:00 às 16:00 horas");
+			turma1das = new Turma(1, 30, "Quartas e Sextas", "16:00 às 18:00 horas");
+			}
+		}
 	
 
 c) associe ambas turmas recem-criadas ao curso de Engenharia de Software,
@@ -624,9 +627,27 @@ c) associe ambas turmas recem-criadas ao curso de Engenharia de Software,
 Resposta:
 
 
+	public class Principal {
+		    public static void main(String[] args){
+			//Criar disciplinas  antes para poder associar as turmas
+			Disciplina d1, d2;
+			d1 = new Disciplina(1, "Orientação por Objetos", 0, "não informado");
+			d2 = new Disciplina(2, "Desenvolvimento Avançado de software", 0, "não informado");
 
-	turma1oo.curso = c1;
-	turma1das.curso = c1;
+
+			Turma t1, t2;
+			t1 = new Turma(1, 46, "4as e 6as feiras", "das 12:00 às 16:00", d1);
+			t2 = new Turma(2, 30,"4as e 6as feiras", "das 16:00 às 18:00", d2);
+
+			//Criar curso antes para poder associar
+			Curso c1;
+
+			c1 = new Curso(1, "Engenharia de Software", 240);
+			t1.curso = c1;
+			t2.curso = c1;
+			}
+		}
+
 	
 
 
@@ -635,9 +656,29 @@ d) matricule Andre e Maria na turma de orientação por objetos, e Junior na tur
 Resposta:
 
 
-	turma1oo.MatriculaAluno();
-	turma1oo.MatriculaAluno();
-	turma1das.MatriculaAluno();
+	
+	public class Principal {
+	    public static void main(String[] args){
+		//Criar curso antes para poder associar
+		Curso c1;
+
+		c1 = new Curso(1, "Engenharia de Software", 240);
+		t1.curso = c1;
+		t2.curso = c1;
+
+		//Criando alunos pré definidos na questão 7
+		Aluno a1, a2, a3;
+		a1 = new Aluno("Andre", c1, 13, 23, 02, 1983);
+		a2 = new Aluno("Maria", c1, 5, 27, 5, 1994);
+		a3 = new Aluno("Junior", c1, 70, 16, 11, 1995);
+
+		a1.matriculaAluno(t1);
+		a2.matriculaAluno(t1);
+		a3.matriculaAluno(t2);
+
+	    }
+	}
+
 	
 
 
