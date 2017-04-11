@@ -107,7 +107,7 @@ e) Métodos destrutores são aqueles métodos que são chamados explicitamente p
 * ### **(e)**
 
     Errado. Métodos destrutores não são explicitamente chamados pelo algorítimo. Eles são chamados automaticamente pelo garbagge Collector.
-    
+
 ---
 
 **Questão 3:**  Considere o seguinte cenário:
@@ -129,6 +129,59 @@ Além dessas características, drones possuem as seguintes funções básicas: a
 
 Dado esse cenário, pede-se aos alunos que representem (inicialmente) as características e comportamentos de um drone através de um diagrama de classes e, posteriormente, apresente a implementação dessa classe na linguagem Java. 
 
+---
+
+### RESPOSTAS Q3
+
+* Diagrama de classes:
+
+| Drone                |
+|:---------------------|
+| helices : int        |
+| autonomiaBat : int   |
+| velVerMax : float    |
+| velHorMax : float    |
+| distanciaMax : float |
+| camera : String      |
+
+{% highlight java %}
+
+    public class Drone{
+        int helices;
+        int autonomiaBat;
+        float velVerMax;
+        float velHorMax;
+        float distanciaMax;
+        String camera;
+        String marca;
+        String modelo;
+
+        Drone(){
+            helices = 0;
+            autonomiaBat = 0;
+            velVerMax = 0;
+            velHorMax = 0;
+            distanciaMax = 0;
+            camera = "";
+            marca = "";
+            modelo = "";
+        }
+
+        Drone(String mar, String mod, int hel, String cam, float vv, float vh, int auto, float dMax){
+            helices = hel;
+            autonomiaBat = auto;
+            velVerMax = vv;
+            velHorMax = vh;
+            distanciaMax = dMax;
+            camera = cam;
+            marca = mar;
+            modelo = mod;
+        }
+    }
+
+    {% endhighlight %}
+
+---
 
 **Questão 4:** Considerando a classe definida e implementada na questão 5, pede-se que os seguintes objetos sejam criados a partir do programa principal: 
 
