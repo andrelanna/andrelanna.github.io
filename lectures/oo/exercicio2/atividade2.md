@@ -21,7 +21,30 @@ Prazo para entrega: ~~4/4/2017~~ 10/04/2017, 23:59:59.
 * método construtor alternativo
 * estado de um objeto
 * retenção de estado
+Resposta:
+Definições:
+1-Classe: Uma classe é um "molde" que define as caracteristicas usadas para construir objetos pertencentes a esta classe.
+Caracteristicas são os atributos e metodos da classe. Define as variaveis e subrotinas que seus objetos vão ter.
 
+2-Objeto: Objeto é a instancia de uma classe. É usar o molde (Classe) para construir um objeto com determinadas caracteristicas
+presentes na classe.
+
+3-Elementos da Classe: São Atributos e métodos, que possuem tipos de retorno, identificadores, nivel de visibilidade(encapsulamento).
+
+4-Atributo: Atributos são os elementos que fazem parte da estrutura da classe. São dados presentes na classe.
+
+5-Metodos: São subrotinas que podem ser usados por objetos de determinada classe. Metodos possuem uma assinatura composta do tipo de
+retorno, identificador e parametros.
+
+6-Metodo Construtor Padrão: É o metodo chamado no momento de instanciação de um objeto. Este metodo cria o objeto na memoria com valores
+padrão definidos pela linguagem. Não precisa ser declarado caso nao haja outro construtor.
+
+7-Metodo Construtor Alternativo: É um metodo construtor com assinatura diferente do padrão. Pode ser usado para instanciar um objeto
+já recebendo alguns valores para os atributos ou apenas definir padroes de valor para variaveis diferentes dos padroes da linguagem.
+
+8-Estado de um objeto: É o conjunto de determinados valores atribuidos a um objeto.
+
+9-Retenção de estado: É o fato de um objeto permanecer "parado" ou sem uso na memoria até que ele receba um estimulo para alterar algum valor.
 
 **Questão 2:** Julgue as seguintes frases como verdadeiras ou falsas e explique o motivo delas estarem certas ou erradas. Nos casos em que julgar uma sentença como errada, altere-a de modo a corrigi-la.
 
