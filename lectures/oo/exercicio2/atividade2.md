@@ -8,6 +8,7 @@ title: Exercício prático
 layout: default
 ---
 
+------
 ### UnB - Universidade de Brasilia
 ### FGA - Faculdade do Gama
 ### OO - Orientação por objetos
@@ -46,6 +47,26 @@ Ao conjunto de valores que os atributos de um objeto armazena em um instante, d�
 * retenção de estado
 
 Retenção de estados é uma propriedade do paradigma OO que permite aos objetos manterem os valores de seus atributos até o momento em que um estímulo externo ao objeto solicite uma alteração no valor de algum atributo.
+<br/><br/>
+**Questão 2:** 
+<br/><br/>
+a)**F**.
+ "Dois objetos instanciados através do método construtor padrão terão o mesmo estado, entretanto, suas referências não serão iguais."<br/>
+Os objetos serem estanciados através do mesmo método construtor apenas implica em terem o mesmo estado, mas não em referenciarem o mesmo objeto.
+	
+b)**F**.
+ "Uma classe pode ter vários métodos construtores alternativos para instanciação de seus objetos."<br/>
+Uma Classe pode ter quantos métodos construtores alternativos quiser.	
+	
+c)**V**.
+ "Retenção de estados é uma propriedade do paradigma OO que permite aos objetos manterem os valores de seus atributos até o momento em que um estímulo externo ao objeto solicite uma alteração no valor de algum atributo."
+	
+d)**F**.
+ "Em Java, o operador .(ponto) serve para acessar os métodos e os atributos de um objeto".<br/>
+Serve para acessar ambos, atributo e método.
+	
+e)**F**.
+Em Java não existe métodos destrutores, e sim o que acontece é o desreferenciamento de um objeto, e depois o Garbage Collector passa avaliando a memória e é executado, destruindo esse objeto. O método finalize() é implementado em cada Classe e é chamado assim que o GC está quase destruindo o objeto, ai ele executa as ultimas instruções antes de destrui-lo.
 <br/><br/>
 
 
