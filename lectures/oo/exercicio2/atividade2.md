@@ -14,12 +14,14 @@ Prazo para entrega: ~~4/4/2017~~ 10/04/2017, 23:59:59.
 **Questão 1:** Os termos abaixo estão relacionados ao paradigma de *Orientação por Objetos*. Defina cada um dos termos com base no livro-texto (Eck, David J. Introduction to Programming Using Java, 6th ed. 2011).
 
 * classe
+
 As classes são utilizadas para criar objetos. É uma espécie de fábrica para criar os objetos.
 Uma classe é como um novo tipo, assim como int e double, ou seja, o nome da classe pode ser utilizado
 para declarar variáveis (objetos).
 As partes não estáticas da classe descrevem quais variáveis e sub-rotinas os objetos irão conter.
 
 * objeto
+
 Os objetos são um conjunto de variáveis e subrotinas, e são criados pelas classes. Elas descrevem 
 o objeto e o objeto "pertence" à elas, assim, cada objeto possui uma classe associada que informa qual "tipo" o objeto é. 
 Um objeto que pertence à uma classe é uma instância dessa classe. Como os objetos se diferem das classes: 
@@ -28,24 +30,33 @@ com a mesma estrutura se forem criados utilizando a mesma classe.
 Em java, nenhuma variável pode conter um objeto, e sim, a referência de um objeto.
 
 * elementos de classe
+<<<<<<< HEAD
 Atributos, métodos e estado.
+=======
+
+Variáveis estáticas e subrotinas (métodos) que definem o estado e comportamento do objeto.
+>>>>>>> 515977bd5f886c226cac8d307207affc4e2107ed
 
 * atributos
+
 São as variáveis de um objeto, podem ser atribuídas com valores iniciais em sua declaração. Caso não seja necessário
 ter valores inicias na declaração, um valor inicial é fornecido automaticamente dependendo do tipo da variável:
 caso seja numérica (int, double, etc), o valor inicial é zero, caso seja booleana, o valor inicial é false, caso seja
 char, é o caracter com o código do número zero. Uma variável de instância também pode ser do tipo objeto. 
 
 * métodos
+
 Método é uma subrotina que está contida numa classe ou objeto. São um conjunto de ações que determinam o 
 comportamento de um objeto, sendo assim, capazes de alterar o estado dele.
 
 * método construtor padrão
+
 O método construtor é a subrotina (método) que cria os objetos. O construtor é chamado pelo operador "new".
 O processo de construção do objeto significa, primeiramente, a procura de memória não utilizada no heap (área
 de memória mais flexível) para armazenamento do objeto e, segundo, preencher as variáveis do objeto.
 
 * método construtor alternativo
+
 Um método construtor alternativo define os atributos no momento da instanciação. Para usá-lo, é necessário 
 chamar o método construtor naturalmente e definir os atributos como parâmetro na ordem declarada na criação
 do método dentro da classe.
@@ -56,19 +67,25 @@ Maneira em que o objeto está em um exato momento.
 * retenção de estado
 Capacidade do objeto manter suas características até receber novas instruções.
 
-Classe é a estrutura definida pelo programador, contendo atributos e métodos (comportamento) comuns a um conjunto de objetos.
-
 **Questão 2:** Julgue as seguintes frases como verdadeiras ou falsas e explique o motivo delas estarem certas ou erradas. Nos casos em que julgar uma sentença como errada, altere-a de modo a corrigi-la.
 
 a) Dois objetos instanciados através do método construtor padrão terão o mesmo estado e, portanto, suas referências serão iguais. 
+Falso. Dois objetos instanciados através do método construtor padrão terão o mesmo estado, porém, suas referências serão
+diferentes, a não ser que sejam instanciados juntos - carro1 = carro2 = new Carro().
 
 b) Uma classe pode ter apenas um método construtor alternativo para instanciação de seus objetos. 
+Falso. Uma classe pode ter mais de um método construtor alternativo para instanciação de seus objetos. Para 
+diferencia-los na instanciação basta escrever os parâmetros na ordem do método construtor alternativo desejado,
+como por exemplo: carro1 = new Carro("chevrolet", 4, "prata"); e carro2 = new Carro("chevrolet", "celta", 4, "prata");
 
 c) Retenção de estados é uma propriedade do paradigma OO que permite aos objetos manterem os valores de seus atributos até o momento em que um estímulo externo ao objeto solicite uma alteração no valor de algum atributo.
+Verdadeiro.
 
 d) Em Java, o operador . (ponto) serve para acessar somente os métodos de um objeto. 
+Falso. Em Java, o operador . (ponto) serve para acessar os métodos e variáveis de um objeto. 
 
 e) Métodos destrutores são aqueles métodos que são chamados explicitamente pelo algoritmo para destruir objetos e liberar os espaços que eles ocupam em memória. Em Java métodos destrutores são implementos com o nome **finalize()** e definidos em cada classe.
+Falso. Métodos destrutores são chamados automaticamentes.
 
 
 **Questão 3:**  Considere o seguinte cenário:
