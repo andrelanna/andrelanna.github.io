@@ -309,6 +309,8 @@ c-
   System.out.println(q1.a4 == q3.a4); -> imprime : true, pois o padrão do java define q1.a4 como false, igualando ao q3.a4.
   System.out.println(q3 == q2);       -> imprime : false, pois q2 e q3 referenciam objetos diferentes, logo, tem endereços diferentes.
 
+150023375 - Vítor Cardoso Xoteslem
+150142218 - Miguel Siqueira Santos
 
 
 **Questão 7:**
@@ -419,6 +421,8 @@ false
 false
 true
 
+150023375 - Vítor Cardoso Xoteslem
+150142218 - Miguel Siqueira Santos
 
 **Questão 8:** Considerando as classes **Aluno** e **Curso** definidas na questão 7, o que será impresso quando o *garbagge collector* de Java executar momentos antes do método **main()** da classe abaixo terminar sua execução?
 
@@ -461,6 +465,8 @@ Nome:Maria
 Curso:endereço de c2
 Data de nascimento:27/5/1994
 
+150023375 - Vítor Cardoso Xoteslem
+150142218 - Miguel Siqueira Santos
 
 **Questão 9:** as cinco instruções listadas abaixo estão definidas no método **main()** da classe **Principal** e apresentam erros em suas sintaxes. Apresente quais são os erros, justifique-os e altere as instruções de modo a consertá-los. Considere os códigos das classes **Aluno** e **Turma** como sendo os códigos apresentados na questão 7. 
 
@@ -512,6 +518,8 @@ Erro: a3.cargaHoraria() = 220;
 Motivo: cargaHoraria é um atributo, não um metodo, logo não tem parenteses. a3 tambem não foi instanciado, e a classe Aluno não possui atributo chamado cargaHoraria.
 Possível Correção: a3.cargaHoraria = 220;
 
+150023375 - Vítor Cardoso Xoteslem
+150142218 - Miguel Siqueira Santos
 
 **Questão 10:** sabe-se que um curso em é formado por um conjunto de disciplinas, para as quais são definidas as seguintes características: 
 
@@ -542,7 +550,140 @@ c) associe ambas turmas recem-criadas ao curso de Engenharia de Software,
 
 d) matricule Andre e Maria na turma de orientação por objetos, e Junior na turma de desenvolvimento avançado de software.
 
+{% highlight java %}
 
+public class Turma {
+  int codigo;
+  String nome;
+  int vagas;
+  int vagasLivres;
+  int vagasOcupadas;
+  String diasHorarios;
+  
+  Turma(int cod, String nom, int v, int vL, int vO, String dH){
+    codigo=cod;
+    nome=nom;
+    vagas=v;
+    vagasLivres=vL;
+    vagasOcupadas=vO;
+    diasHorarios=dH;
+  }
+  
+  void matriculaAluno(Aluno a, Turma turma){
+    if(vagasOcupadas==vagas){
+      System.out.println("Não há vagas!");
+    }else{
+      a.matricular(turma);
+      vagasOcupadas++;
+    }
+  }
+}
+{% endhighlight %}
+
+
+{% highlight java %}
+public class Curso {
+  int codigo;
+  String nomeCurso; 
+  int cargaHoraria;
+  Turma[] turma;
+    
+  Curso (int cod, String nome, int ch) {
+      codigo = cod;
+      nomeCurso = nome; 
+      cargaHoraria = ch;
+    }
+    
+  public String obterDetalhes() {
+      String resposta = "";
+      resposta += "Nome do curso: " + nomeCurso + '\n';
+      resposta += "Codigo: " + codigo + '\n';
+      resposta += "Carga horaria: " + cargaHoraria;
+      return resposta; 
+    }
+  
+  public void addTurma(Turma tur, int n){
+    turma[n] = tur;
+  }
+    
+  protected void finalize() {
+      System.out.println("Esse objeto CURSO vai ser destruido.");
+      System.out.println("Detalhes do objeto: " + '\n');
+      System.out.println(obterDetalhes());
+    }
+}
+{% endhighlight %}
+
+
+{% highlight java %}
+public class Aluno {
+  String nome; 
+  Curso curso;
+  Turma turma;
+  int matricula;
+  int diaNascimento, 
+      mesNascimento, 
+      anoNascimento;
+  
+  public Aluno(String nom, Curso cur, int mat, int dNasc, int mNasc, int aNasc) {
+    nome = nom;
+    curso = cur;
+    matricula = mat;
+    diaNascimento = dNasc; 
+    mesNascimento = mNasc;
+    anoNascimento = aNasc;
+  }
+  
+  public String obterDetalhes() {
+    String resposta = "";
+    resposta += "Nome: " + nome + '\n';
+    resposta += "Curso: " + curso + '\n';
+    resposta += "Matricula: " + matricula + '\n';
+    resposta += "Data de nascimento: " + diaNascimento + '/' + 
+                                       mesNascimento + '/' + 
+                                       anoNascimento;
+    return resposta; 
+  }
+  
+  public void matricular(Turma tur){
+    turma = tur;
+  }
+  
+  protected void finalize() {
+    System.out.println("Esse objeto ALUNO vai ser destruido.");
+    System.out.println("Detalhes do objeto: " + '\n');
+    System.out.println(obterDetalhes());
+  }
+}
+{% endhighlight %}
+
+
+{% highlight java %}
+public class Principal {
+
+  public static void main(String[] args) {
+    // TODO Auto-generated method stub
+    Turma t1, t2;
+    t1 = new Turma(1, "Orientação por Objetos", 46, 46, 0, "4as e 6as das 12:00 as 16:00");
+    t2 = new Turma(1, "Desenvolvimento Avançado de Software", 30, 30, 0, "4as e 6as das 16:00 as 18:00");
+    Curso c1;
+    c1 = new Curso(1, "Engenharia de Software", 240);
+    c1.addTurma(t1, 0);//0 representa a posição no vetor de turmas
+    c1.addTurma(t2, 1);//1 representa a posição no vetor de turmas
+    Aluno a1,a2,a3;
+    a1 = new Aluno("Andre", c1, 13, 23, 02, 1983);
+    a2 = new Aluno("Maria", c1, 5, 27, 5, 1994);
+    a3 = new Aluno("Junior", c1, 70, 16, 11, 1995);
+    t1.matriculaAluno(a1, t1);
+    t1.matriculaAluno(a2, t1);
+    t2.matriculaAluno(a3, t2);
+  }
+}
+
+{% endhighlight %}
+
+150023375 - Vítor Cardoso Xoteslem
+150142218 - Miguel Siqueira Santos
 
 ## Referências:
 \[[OPEN ACCESS][eckDavid]\] Eck, David J. Introduction to Programming Using Java, 6th ed. 2011
