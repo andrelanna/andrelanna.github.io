@@ -471,6 +471,103 @@ public class Principal {
 }
 {% endhighlight %}
 
+---
+### RESPOSTAS Q8
+
+
+Consideremos as seguintes associeções:
+
+        a1 = aluno1
+        a2 = aluno2
+        a3 = aluno3
+        c1 = cusro1
+        c2 = curso2
+
+Realizando as operações:
+
+* a3 = a2
+
+        a1 = aluno1
+        a2 = aluno2
+        a3 = aluno2
+           = aluno3
+        c1 = cusro1
+        c2 = curso2
+
+* a2 = null
+
+        a1 = aluno1
+        a2 =
+        a3 = aluno2
+           = aluno3
+        c1 = cusro1
+        c2 = curso2
+
+* c2 = c1
+
+        a1 = aluno1
+        a2 =
+        a3 = aluno2
+           = aluno3
+        c1 = cusro1
+        c2 = curso1
+           = curso2
+
+* c1 = null
+
+        a1 = aluno1
+        a2 =
+        a3 = aluno2
+           = aluno3
+        c1 =
+        c2 = curso1
+           = curso2
+
+* c1 = a3.curso ---> a3.curso = aluno2.curso = curso2
+
+        a1 = aluno1
+        a2 =
+        a3 = aluno2
+           = aluno3
+        c1 = curso2
+        c2 = curso1
+
+* a3 = a1
+
+        a1 = aluno1
+        a2 =
+        a3 = aluno1
+           = aluno2
+           = aluno3
+        c1 = curso2
+        c2 = curso1
+
+* a1 = null
+
+        a1 =
+        a2 =
+        a3 = aluno1
+           = aluno2
+           = aluno3
+        c1 = curso2
+        c2 = curso1
+
+Ao passar o Garbagge Collector, os objetos aluno2 e aluno3, que no incío eram a2 e a3, irão ser levados para o lixo, chamando seus respectivos métodos finalize(). O output, então, será:
+
+    Output:
+
+        Esse objeto ALUNO vai ser destruído.
+        Detalhes do objeto:
+        Nome: Maria
+        Curso: #endereço
+        Data de nascimento: 27/5/1994
+        Esse objeto ALUNO vai ser destruído.
+        Detalhes do objeto:
+        Nome: Junior
+        Curso: #endereço
+        Data de nascimento: 16/11/1995
+
+---
 
 **Questão 9:** as cinco instruções listadas abaixo estão definidas no método **main()** da classe **Principal** e apresentam erros em suas sintaxes. Apresente quais são os erros, justifique-os e altere as instruções de modo a consertá-los. Considere os códigos das classes **Aluno** e **Turma** como sendo os códigos apresentados na questão 7. 
 
