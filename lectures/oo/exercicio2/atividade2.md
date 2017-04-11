@@ -12,14 +12,47 @@ Atividade para realizar em dupla e entregar via GitHub. Uma entrega por dupla.
 Prazo para entrega: ~~4/4/2017~~ 10/04/2017, 23:59:59.
 
 **Questão 1:** Os termos abaixo estão relacionados ao paradigma de *Orientação por Objetos*. Defina cada um dos termos com base no livro-texto (Eck, David J. Introduction to Programming Using Java, 6th ed. 2011).
+
 * classe
+As classes são utilizadas para criar objetos. É uma espécie de fábrica para criar os objetos.
+Uma classe é como um novo tipo, assim como int e double, ou seja, o nome da classe pode ser utilizado
+para declarar variáveis (objetos).
+As partes não estáticas da classe descrevem quais variáveis e sub-rotinas os objetos irão conter.
+
 * objeto
+Os objetos são um conjunto de variáveis e subrotinas, e são criados pelas classes. Elas descrevem 
+o objeto e o objeto "pertence" à elas, assim, cada objeto possui uma classe associada que informa qual "tipo" o objeto é. 
+Um objeto que pertence à uma classe é uma instância dessa classe. Como os objetos se diferem das classes: 
+os objetos são criados e destruídos enquanto o programa é executado, assim, podem haver vários objetos 
+com a mesma estrutura se forem criados utilizando a mesma classe.
+Em java, nenhuma variável pode conter um objeto, e sim, a referência de um objeto.
+
 * elementos de classe
+Variáveis estáticas e subrotinas (métodos) que definem o estado e comportamento do objeto.
+
 * atributos
+São as variáveis de um objeto, podem ser atribuídas com valores iniciais em sua declaração. Caso não seja necessário
+ter valores inicias na declaração, um valor inicial é fornecido automaticamente dependendo do tipo da variável:
+caso seja numérica (int, double, etc), o valor inicial é zero, caso seja booleana, o valor inicial é false, caso seja
+char, é o caracter com o código do número zero. Uma variável de instância também pode ser do tipo objeto. 
+
 * métodos
+Método é uma subrotina que está contida numa classe ou objeto. São um conjunto de ações que determinam o 
+comportamento de um objeto, sendo assim, capazes de alterar o estado dele.
+
 * método construtor padrão
+O método construtor é a subrotina (método) que cria os objetos. O construtor é chamado pelo operador "new".
+O processo de construção do objeto significa, primeiramente, a procura de memória não utilizada no heap (área
+de memória mais flexível) para armazenamento do objeto e, segundo, preencher as variáveis do objeto.
+
 * método construtor alternativo
+Um método construtor alternativo define os atributos no momento da instanciação. Para usá-lo, é necessário 
+chamar o método construtor naturalmente e definir os atributos como parâmetro na ordem declarada na criação
+do método dentro da classe.
+
 * estado de um objeto
+
+
 * retenção de estado
 
 Classe é a estrutura definida pelo programador, contendo atributos e métodos (comportamento) comuns a um conjunto de objetos.
