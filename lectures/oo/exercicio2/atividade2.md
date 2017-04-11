@@ -204,6 +204,121 @@ public class Vant {
 
 Desse modo, pede-se nessa questão que seja modelada e implementada em Java a classe que representa as características e o comportamento de um controle remoto, de modo que o drone possa ser comandado a partir do comandos enviados pelo controle remoto.
 
+public class Principal {
+
+	public static void main(String[] args){
+		
+		ControleRemoto n1 = new ControleRemoto();
+		ControleRemoto n2 = new ControleRemoto();
+		ControleRemoto n3 = new ControleRemoto();
+		ControleRemoto n4 = new ControleRemoto();
+		Vant d1 = new Vant();
+		Vant d2 = new Vant();
+		Vant d3 = new Vant();
+		Vant d4 = new Vant();
+		
+		n1.c1 = d1;
+		n2.c2 = d2;
+		n3.c3 = d3;
+		n4.c4 = d4;
+		
+		n1.diminuiVelocidadeVertDrone();
+	}
+
+}
+
+public class Vant {
+	int numeroHelice;
+	String modeloCamera;
+	double velocidadeVertMax;
+	double velocidadeHorMax;
+	double autonomiaBateria;
+	double distanciaMax;
+	boolean ativaCamera;
+	
+	public Vant(){}
+	
+	public Vant(int a, String b, double c, double d,
+			double e, double f){
+		numeroHelice = a;
+		modeloCamera = b;
+		velocidadeVertMax = c;
+		velocidadeHorMax = d;
+		autonomiaBateria = e;
+		distanciaMax = f;
+		ativaCamera = false;
+	}
+	
+	public void aumentaVelocidadeVertMax(){
+		velocidadeVertMax += 1;
+	}
+	
+	public void diminuiVelocidadeVertMax(){
+		velocidadeVertMax -= 1;
+	}
+	
+	public void aumentaVelocidadeHorMax(){
+		velocidadeHorMax += 1;
+	}
+	
+	public void diminuiVelocidadeHorMax(){
+		velocidadeHorMax -= 1;
+	}
+	
+	public void diminuiVelcidadeTotal(double autonomiaBateria){
+		//Como nÃ£o ficou claro o quanto era pra diminuir, colocamos
+		//um valor arbitrÃ¡rio.
+		if(autonomiaBateria < 50.0){
+			velocidadeVertMax -= 50.0;
+			velocidadeHorMax -= 50.0;
+		}			
+	}
+	
+	public void ligaCamera(){
+		ativaCamera = true;
+	}
+	
+	public void desligaCamera(){
+		ativaCamera = false;
+	}
+}//fim da classe
+
+public class ControleRemoto {
+	double bateria;
+	double alcance;
+	
+	Vant c1;
+	Vant c2;
+	Vant c3;
+	Vant c4;
+	
+	ControleRemoto(){}
+	
+	ControleRemoto(double bateria, double alcance){
+		this.bateria = bateria;
+		this.alcance = alcance;
+	}
+	
+	public void diminuiVelocidadeVertDrone(){
+		c1.diminuiVelocidadeVertMax();
+	}
+	
+	public void aumentaVelocidadeVertDrone(){
+		c1.aumentaVelocidadeHorMax();
+	}
+	
+	public void ativaCamera(){
+		c1.desligaCamera();
+	}
+	
+	public void desligaCamera(){
+		c1.desligaCamera();
+	}
+}
+
+
+13/0121801 - Lucas de Castro Bezerra
+13/0028240 - Igor Guimarães Veludo
 
 **Questão 6:** Sejam os seguintes códigos da *ClasseA* e da aplicação principal escritas em JAVA. 
 
