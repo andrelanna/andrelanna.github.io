@@ -306,6 +306,28 @@ System.out.println(q1.a4 == q3.a4);
 System.out.println(q3 == q2);
 {% endhighlight %}
 
+---
+### RESPOSTAS Q6
+
+
+* ### (a)
+    As referencias a1 e a2 são para atributos da classe e não são iguais.
+
+* ### (b)
+
+    * q1 => (0, 0f, null, falso)
+    * q2 => (0, 0.0f, null, false)
+    * q3 => (0, 0.0f, null, false)
+
+* ### (c)
+    falso
+    verdadeiro
+    falso
+    verdadeiro
+    verdadeiro
+    falso
+
+---
 
 **Questão 7:**
 Seja o seguinte código em Java. Apresente o que será impresso ao final da execução do método **main** definido na classe **Principal**.
