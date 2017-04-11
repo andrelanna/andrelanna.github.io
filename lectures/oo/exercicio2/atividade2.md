@@ -15,6 +15,7 @@ Prazo para entrega: ~~4/4/2017~~ 10/04/2017, 23:59:59.
 **Questão 1:** Os termos abaixo estão relacionados ao paradigma de *Orientação por Objetos*. Defina cada um dos termos com base no livro-texto (Eck, David J. Introduction to Programming Using Java, 6th ed. 2011).
 
 15/0007182 - Byron Kamal Barreto Correa
+
 15/0016131 - Luciana Ribeiro Lins de Albuquerque
 
 *Classes: segundo David J. Eck, são nas classes que os objetos são construídos. Nelas são instanciados os objetos e criados os métodos.
@@ -40,15 +41,22 @@ Prazo para entrega: ~~4/4/2017~~ 10/04/2017, 23:59:59.
 
 **Questão 2:** Julgue as seguintes frases como verdadeiras ou falsas e explique o motivo delas estarem certas ou erradas. Nos casos em que julgar uma sentença como errada, altere-a de modo a corrigi-la.
 
-a) Dois objetos instanciados através do método construtor padrão terão o mesmo estado e, portanto, suas referências serão iguais. 
+15/0007182 - Byron Kamal Barreto Correa
 
-b) Uma classe pode ter apenas um método construtor alternativo para instanciação de seus objetos. 
+15/0016131 - Luciana Ribeiro Lins de Albuquerque
 
-c) Retenção de estados é uma propriedade do paradigma OO que permite aos objetos manterem os valores de seus atributos até o momento em que um estímulo externo ao objeto solicite uma alteração no valor de algum atributo.
+a)	A sentença está incorreta. Quando as referências (apontar pra um objeto na memoria) são iguais, trata-se do mesmo objeto. Eles podem ter o mesmo estado, mas não a mesma referência.
+Forma correta: Dois objetos instanciados através do método construtor padrão terão o mesmo estado, porém suas referências podem não ser iguais.
 
-d) Em Java, o operador . (ponto) serve para acessar somente os métodos de um objeto. 
+b)	A sentença está incorreta. Uma classe pode ter mais de um método construtor alternativo. 
+Forma Correta: Uma classe pode ter mais de um método construtor alternativo para instanciação de seus objetos.
 
-e) Métodos destrutores são aqueles métodos que são chamados explicitamente pelo algoritmo para destruir objetos e liberar os espaços que eles ocupam em memória. Em Java métodos destrutores são implementos com o nome **finalize()** e definidos em cada classe.
+c) A sentença está correta, pois é necessário um novo estímulo externo ao objeto para que haja alteração no valor de um atributo. 
+
+c)	A sentença está incorreta. Em Java, o operador . (ponto) serve para acessar os métodos e atributos de um objeto.
+Forma correta: Em Java, o operador . (ponto) serve para acessar os métodos e atributos de um objeto.
+
+e) A sentença está incorreta. O método finalize() não trata-se de um método destrutor.
 
 
 **Questão 3:**  Considere o seguinte cenário:
