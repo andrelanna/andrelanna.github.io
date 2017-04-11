@@ -46,14 +46,17 @@ Prazo para entrega: ~~4/4/2017~~ 10/04/2017, 23:59:59.
 15/0016131 - Luciana Ribeiro Lins de Albuquerque
 
 a)	A sentença está incorreta. Quando as referências (apontar pra um objeto na memoria) são iguais, trata-se do mesmo objeto. Eles podem ter o mesmo estado, mas não a mesma referência.
+
 Forma correta: Dois objetos instanciados através do método construtor padrão terão o mesmo estado, porém suas referências podem não ser iguais.
 
 b)	A sentença está incorreta. Uma classe pode ter mais de um método construtor alternativo. 
+
 Forma Correta: Uma classe pode ter mais de um método construtor alternativo para instanciação de seus objetos.
 
 c) A sentença está correta, pois é necessário um novo estímulo externo ao objeto para que haja alteração no valor de um atributo. 
 
 c)	A sentença está incorreta. Em Java, o operador . (ponto) serve para acessar os métodos e atributos de um objeto.
+
 Forma correta: Em Java, o operador . (ponto) serve para acessar os métodos e atributos de um objeto.
 
 e) A sentença está incorreta. O método finalize() não trata-se de um método destrutor.
@@ -78,6 +81,64 @@ Além dessas características, drones possuem as seguintes funções básicas: a
 
 Dado esse cenário, pede-se aos alunos que representem (inicialmente) as características e comportamentos de um drone através de um diagrama de classes e, posteriormente, apresente a implementação dessa classe na linguagem Java. 
 
+15/0007182 - Byron Kamal Barreto Correa
+
+15/0016131 - Luciana Ribeiro Lins de Albuquerque
+
+{% highlight java %}
+
+public class Drone {
+	String marca;
+	String modelo;
+	int numHelices;
+	String camera;
+	float velVertical;
+	float velHorizontal;
+	int autonomiaBateria;
+	int distMax;
+	
+	Drone () {}
+	
+	Drone (String m, String mo, int nh, String c, float vv, float vh, int bat, int d) {
+		marca = m;
+		modelo = mo;
+		numHelices = nh;
+		camera = c;
+		velVertical = vv;
+		velHorizontal = vh;
+		autonomiaBateria = bat;
+		distMax = d;
+	
+	}
+	
+	
+	public float aumentarVelVertical () {
+		return velVertical = velVertical+1; }
+	
+	public float diminuirVelVertical () {
+		return velVertical = velVertical-1  ; }
+	
+	public float aumentarVelHorizontal () {
+		return velHorizontal = velHorizontal+1; }
+	
+	public float diminuirVelHorizontal () {
+		return velHorizontal = velHorizontal-1; }
+	
+	public float metadeVelHorizontal () {
+		if (autonomiaBateria <= 5) 
+		{ velHorizontal = (float) (velHorizontal*0.5); }
+		return  velHorizontal;
+	}
+	
+	public float metadeVelVertical () {
+		if (autonomiaBateria <= 5) 
+		{ velVertical = (float) (velVertical*0.5); }
+		return  velVertical;
+	}
+	
+	
+}
+{% endhighlight %}
 
 **Questão 4:** Considerando a classe definida e implementada na questão 5, pede-se que os seguintes objetos sejam criados a partir do programa principal: 
 
