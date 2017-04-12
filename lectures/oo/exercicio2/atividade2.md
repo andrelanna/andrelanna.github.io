@@ -9,7 +9,8 @@ layout: default
 
 ------
 
-Atividade para realizar em dupla e entregar via GitHub. Uma entrega por dupla.
+Atividade para realizar em dupla e entregar via [GitHub][github]. Uma entrega por dupla. As entregas deverão ser feitas através de *pull-requests* no repositório principal, sendo um pull para cada questão. Instruções de como realizar a entrega estão disponíveis **[aqui][instrucoesSubmissao]**.
+
 Prazo para entrega: ~~4/4/2017~~ 10/04/2017, 23:59:59.
 
 ---
@@ -723,3 +724,5 @@ d) matricule Andre e Maria na turma de orientação por objetos, e Junior na tur
 
 
 [eckDavid]: http://math.hws.edu/javanotes/
+[github]: http://www.github.com/
+[instrucoesSubmissao]: ./instrucoes.md
