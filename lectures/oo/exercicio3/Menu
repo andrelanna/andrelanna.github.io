@@ -1,3 +1,4 @@
+```java
 package Questao1;
 
 import java.awt.FlowLayout;
@@ -28,3 +29,4 @@ public class Menu extends JFrame{
 		
 	}
 }
+```
