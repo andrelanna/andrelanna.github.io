@@ -1,0 +1,21 @@
+```java
+package Questao2;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+public class CalcularListener implements ActionListener {
+	Janela j;
+	public CalcularListener(Janela janela){
+		j = janela;
+	}
+	public void actionPerformed(ActionEvent arg0) {
+		float juros = Float.parseFloat(j.txtJuros.getText());
+		float deposito_regular = Float.parseFloat(j.txtDeposito.getText());
+		float tempo = Float.parseFloat(j.txtTempo.getText());
+		float ValorFinal = (float)((1+(juros/100.0))*((Math.pow(1 + (juros/100.0), tempo))-1)/(juros/100.0)*deposito_regular);
+		j.lblVazio.setText(Float.toString(ValorFinal));
+	}
+
+}
+```
