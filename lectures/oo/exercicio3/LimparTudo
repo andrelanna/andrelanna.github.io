@@ -1,0 +1,23 @@
+```java
+package Questao1;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+public class LimparTudo implements ActionListener {
+
+	Janela j;
+	public LimparTudo(Janela janela)
+	{
+		j = janela;
+	}
+	public void actionPerformed(ActionEvent e) {
+		j.txtJuros.setText("");
+		j.txtTempo.setText("");
+		j.txtValorAtual.setText("");
+		j.txtValorFuturo.setText("");
+
+	}
+
+}
+```
