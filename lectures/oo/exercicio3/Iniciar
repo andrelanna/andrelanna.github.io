@@ -1,0 +1,20 @@
+package Questao1;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JFrame;
+
+public class Iniciar implements ActionListener {
+
+	Menu m, sair;
+	JFrame comecar;
+	public Iniciar(Menu menu) {
+		m = menu;
+	}
+
+	public void actionPerformed(ActionEvent arg0) {
+		comecar = new Janela();			
+		}
+}
+
