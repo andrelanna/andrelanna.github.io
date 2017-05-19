@@ -1,0 +1,68 @@
+ ```java
+package Questao2;
+
+import java.awt.GridLayout;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+
+@SuppressWarnings("serial")
+public class Janela extends JFrame{
+	JLabel lblValorFinal,
+		   lblJuros,
+		   lblDeposito,
+		   lblVazio,
+		   lblTempo;
+	
+	JTextField txtValorFinal,
+			   txtJuros,
+			   txtDeposito,
+			   txtTempo;
+	
+	JButton Calcular, Limpar;
+	
+	public Janela(){
+		setTitle("APLICACAO COM DEPOSITOS REGULARES");
+		setSize(300,300);
+		setLayout(new GridLayout(5,2));
+		
+		lblValorFinal = new JLabel("VALOR OBTIDO");
+		lblValorFinal.setToolTipText("Valor Obtido ao Final");
+		lblJuros = new JLabel("JUROS");
+		lblJuros.setToolTipText("Taxa de Juros Mensal");
+		lblDeposito = new JLabel("DEPOSITO");
+		lblDeposito.setToolTipText("Valor do Depósito Regular");
+		lblTempo = new JLabel("TEMPO");
+		lblTempo.setToolTipText("Nº de Meses");
+		lblVazio = new JLabel("");
+		
+		txtValorFinal = new JTextField();
+		txtJuros = new JTextField();
+		txtDeposito = new JTextField();
+		txtTempo = new JTextField();
+		
+		Calcular = new JButton("CALCULAR");
+		Calcular.setToolTipText("Calcular Saldo Final Obtido");
+		Limpar = new JButton("LIMPAR");
+		Limpar.setToolTipText("Limpar");
+		
+		
+		add(lblJuros);
+		add(txtJuros);
+		add(lblDeposito);
+		add(txtDeposito);
+		add(lblTempo);
+		add(txtTempo);
+		add(lblValorFinal);
+		add(lblVazio);
+		add(Calcular);
+		add(Limpar);
+		
+		Calcular.addActionListener(new CalcularListener(this));
+		Limpar.addActionListener(new LimparListener(this));
+		setVisible(true);
+	}
+}
+``` 
