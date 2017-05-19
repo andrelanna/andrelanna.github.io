@@ -1,0 +1,30 @@
+package Questao1;
+
+import java.awt.FlowLayout;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+
+@SuppressWarnings("serial")
+public class Menu extends JFrame{
+	JButton btnIniciar,
+			btnSair;
+	
+	public Menu(){
+		setTitle("MENU");
+		setSize(200,75);
+		setLayout(new FlowLayout());
+				
+		btnIniciar = new JButton("INICIAR");
+		btnSair = new JButton("SAIR");
+		btnIniciar.setSize(150,150);
+		btnSair.setSize(150,150);
+			
+		add(btnIniciar);
+		add(btnSair);
+		
+		btnIniciar.addActionListener(new Iniciar(this));
+		btnSair.addActionListener(new Sair(this));
+		setVisible(true);
+		
+	}
+}
