@@ -1,0 +1,24 @@
+```java
+package Questao1;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+public class CalcularTempo implements ActionListener {
+
+	Janela j;
+	public CalcularTempo(Janela janela)
+	{
+		j = janela; 
+	}
+	public void actionPerformed(ActionEvent e) {
+		float ValorFuturo = Float.parseFloat(j.txtValorFuturo.getText());
+		float ValorAtual = Float.parseFloat(j.txtValorAtual.getText());
+		float juros = Float.parseFloat(j.txtJuros.getText());
+		float tempo = (float)((Math.log((ValorFuturo/ValorAtual))/(Math.log(1 + (juros/100.0)))));
+		j.txtTempo.setText(Float.toString(tempo)); 
+
+	}
+
+}
+```
