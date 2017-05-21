@@ -197,3 +197,197 @@ onde:
 
 
 Os valores finais de cada mês deverão ser informados através de objetos JLabel. 
+
+Resposta:
+
+Principal.java
+```java
+public class Principal {
+	static menu janela;
+	
+	public static void main(String[] args) {
+		janela = new menu();
+	}
+}
+```
+
+menu.java
+```java
+import java.awt.GridLayout;
+import java.util.LinkedList;
+import java.util.List;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+
+public class menu extends JFrame {
+	JLabel lblValorObtido,
+		   lblResultado,
+		   lblJuros,
+		   lblDeposito,
+		   lblTempo;
+		   
+	JTextField txtJuros,
+			   txtDeposito,
+			   txtTempo;
+	
+	JButton bntCalcular,
+			bntLimpar;
+	
+	List<JLabel> listaLabel = new LinkedList<JLabel>(),
+			 listaResultado = new LinkedList<JLabel>();
+	
+	public menu(){
+		
+		setTitle("menu");
+		setSize(400, 180);
+		setLayout(new GridLayout(5, 2));
+		
+		lblJuros = new JLabel("Taxa de Juros (%):");
+		lblJuros.setSize(0, 0);
+		lblTempo = new JLabel("Tempo (em meses):");
+		lblDeposito = new JLabel("Valor do depósito regular:");
+		lblValorObtido = new JLabel("Valor obtido em cada mês:");
+		lblResultado = new JLabel();
+		
+		txtJuros = new JTextField();
+		txtTempo = new JTextField();
+		txtDeposito = new JTextField();
+		
+		bntCalcular = new JButton("Calcular");
+		bntLimpar = new JButton("Limpar");
+		
+		bntCalcular.addActionListener(new CalcularListener(this));
+		bntLimpar.addActionListener(new LimparListener(this));
+		
+		add(lblJuros);
+		add(txtJuros);
+		add(lblTempo);
+		add(txtTempo);
+		add(lblDeposito);
+		add(txtDeposito);
+		add(lblValorObtido);
+		add(lblResultado);
+		add(bntCalcular);
+		add(bntLimpar);
+		
+		setVisible(true);
+	}
+}
+```
+
+CalcularListener.java
+```java
+import java.awt.Dimension;
+import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.JLabel;
+
+public class CalcularListener implements ActionListener {
+
+	menu m;
+	
+	public CalcularListener(menu menu) {
+		m = menu;
+	}
+	
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		int i;
+		
+		float Juros = Float.parseFloat(m.txtJuros.getText()),
+			  Tempo = Float.parseFloat(m.txtTempo.getText()),
+			  Deposito = Float.parseFloat(m.txtDeposito.getText()),
+			  ResultadoConta;
+		
+		String Label1;
+		Dimension size;
+		
+		/*Caso clique no botão de calcular novamente, temos que retirar todos os labels criados definir
+		 a interface com os valores iniciais*/
+		if (m.listaLabel.isEmpty() != true || m.listaResultado.isEmpty() != true) { 
+			for (JLabel label : m.listaLabel) {
+				m.remove(label);
+			}
+			for (JLabel result : m.listaResultado) {
+				m.remove(result);
+			}
+			
+			m.listaLabel.clear();
+			m.listaResultado.clear();
+			
+			m.setLayout(new GridLayout(5, 2));
+			m.setSize(400,180);
+		}
+	
+		for (i = 1; i <= Tempo; i++) {
+			ResultadoConta = (float) ((1 + Juros/100) * ((Math.pow(1+Juros/100, i)-1)/(Juros/100)) * Deposito);
+			Label1 = "Mês " + i + ": ";
+			JLabel newlabel = new JLabel(Label1); //Cria a cada iteração um JLabel com o texto acima
+			JLabel labelResult = new JLabel(String.format("%.2f", ResultadoConta));//Cria a cada iteração um JLabel com o resultado
+			
+			//Atualiza o numero de linhas do layout a cada iteração
+			m.setLayout(new GridLayout(5 + i,2)); 
+			
+			//Adiciona os labels nas listas
+			m.listaLabel.add(newlabel);
+			m.listaResultado.add(labelResult);
+			
+			//Adiciona os labels na interface
+			m.add(m.listaLabel.get(i-1));
+			m.add(m.listaResultado.get(i-1));
+			
+			//Redimenciona a altura da interface a cada iteração
+			size = m.getSize();
+			size.height += 15; 
+			m.setSize(size.width, size.height);
+		}
+		//Recoloca os butões no final da interface
+		m.add(m.bntCalcular);
+		m.add(m.bntLimpar);	
+	}
+}
+```
+LimparListener.java
+```java
+import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JLabel;
+
+public class LimparListener implements ActionListener {
+
+	menu m;
+	
+	public LimparListener(menu menu) {
+		m = menu;
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent arg0) {
+		
+	m.txtJuros.setText("");
+	m.txtTempo.setText("");
+	m.txtDeposito.setText("");
+	
+	if (m.listaLabel.isEmpty() != true || m.listaResultado.isEmpty() != true) { 
+		for (JLabel label : m.listaLabel) {
+			m.remove(label);
+		}
+		for (JLabel result : m.listaResultado) {
+			m.remove(result);
+		}
+		
+		m.listaLabel.clear();
+		m.listaResultado.clear();
+		
+		m.setLayout(new GridLayout(5, 2));
+		m.setSize(400,180);
+	}
+	}
+}
+```
