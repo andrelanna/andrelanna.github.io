@@ -31,6 +31,241 @@ O usuário deverá entrar com 3 valores, em campos de texto. O quarto valor deve
 |R$2000,00    |  R$1000,00  |0.80      |**87**    |
 
 
+* Classe JanelaPrincipal
+```java
+
+public class Exer1_JanelaPrincipal {
+
+	static CriarJanela janela;
+	
+	public static void main(String[] args) {
+		janela = new CriarJanela();
+	}
+
+}
+```
+* Classe CriarJanela
+```java
+import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+
+public class CriarJanela extends JFrame {
+	
+	private static final long serialVersionUID = 1L;
+	
+	  //Cria variaveis de referencia
+		JLabel PV, FV, taxa, tempo, aviso, aviso2, resultado, exibeResultado;
+		JButton btnCalcular, btnLimpar;
+		JTextField txtPV, txtFV, txtTaxa, txtTempo;
+		
+		public CriarJanela(){
+			
+			//Definir propriedades
+			setTitle("Calculo Monetario");
+			setSize(500, 250);
+			
+			//Gerar organizador de layout
+			setLayout(new GridLayout(7,2));
+					
+		
+			//Cria os objetos
+			aviso = new JLabel("Prencha apenas 3 valores");
+			aviso2 = new JLabel("O sistema calculara o campo vazio");
+			resultado = new JLabel("Resultado:");
+			PV = new JLabel("Valor Presente:");
+			FV = new JLabel("Valor futuro:");
+			taxa = new JLabel("Taxa (%):");
+			tempo = new JLabel("Tempo (meses):");
+			btnCalcular = new JButton("Calcular");
+			btnLimpar = new JButton("Limpar");
+			txtPV = new JTextField("");
+			txtFV = new JTextField("");
+			txtTaxa = new JTextField("");
+			txtTempo = new JTextField("");
+			exibeResultado = new JLabel("");
+			//Adiciona os objetos
+			add(aviso);
+			add(aviso2);
+			add(FV);
+			add(txtFV);
+			add(PV);
+			add(txtPV);
+			add(taxa);
+			add(txtTaxa);
+			add(tempo);
+			add(txtTempo);
+			add(btnCalcular);
+			add(btnLimpar);
+			add(resultado);
+			add(exibeResultado);
+			
+			
+			btnCalcular.addActionListener(new ActionListener() {
+				
+				@Override
+				public void actionPerformed(ActionEvent e) {
+					CalcularValores calculadora = new CalcularValores();
+					String resultado = calculadora.calcular(txtPV.getText(),
+															txtFV.getText(),
+															txtTaxa.getText(),
+															txtTempo.getText());
+					
+					
+					exibeResultado.setText(resultado);
+					pack();
+					repaint();
+				}
+			});
+			
+			
+			btnLimpar.addActionListener(new ActionListener() {
+				
+				@Override
+				public void actionPerformed(ActionEvent e) {
+					txtPV.setText("");
+					txtFV.setText("");
+					txtTaxa.setText("");
+					txtTempo.setText("");
+					
+					
+					
+					repaint();
+				}
+			});
+			
+			
+			
+			//Tornar janela visível
+			setVisible(true);
+		
+		}
+}
+
+```
+* Classe CalcularValores
+```java
+import java.text.DecimalFormat;
+
+public class CalcularValores {
+		
+	public String calcular(String txtPV, String txtFV,
+						   String txtTaxa, String txtTempo){
+		
+		String resultado = "";
+		
+		// Verificar se apenas 1 está vazio
+		String validacao = validaTresPreenchidos(txtPV,txtFV, txtTaxa, txtTempo);
+		if (!validacao.equals("")){
+			return validacao;
+		}
+		
+		// Chama o respectivo metodo de calculo
+		switch (identificaValorVazio(txtPV,txtFV, txtTaxa, txtTempo)) {
+		case 1:
+			resultado = calcularPV(txtFV, txtTaxa, txtTempo);
+			break;
+		case 2:
+			resultado = calcularFV(txtPV, txtTaxa, txtTempo);
+			break;
+		case 3:
+			resultado = calcularTaxa(txtPV,txtFV, txtTempo);
+			break;
+		case 4:
+			resultado = calcularTempo(txtPV,txtFV, txtTaxa);
+			break;
+		default:
+			resultado = "Nenhum campo vazio";
+			break;
+		}
+		
+		return resultado;
+	}
+
+	private String validaTresPreenchidos(String txtPV, String txtFV,
+			   							 String txtTaxa, String txtTempo) {
+		
+		int cont = 0;
+		if (txtPV != null && !txtPV.trim().equals("")) { cont++; }
+		if (txtFV != null && !txtFV.trim().equals("")) { cont++; }
+		if (txtTaxa != null && !txtTaxa.trim().equals("")) { cont++; }
+		if (txtTempo != null && !txtTempo.trim().equals("")) { cont++; }
+		
+		if (cont == 3) {
+			return "";
+		} else {
+			return "Você deve preencher 3 campos e deixar um vazio";
+		}
+	}
+	
+	private int identificaValorVazio(String txtPV, String txtFV,
+			   						 String txtTaxa, String txtTempo) {
+		if (txtPV == null || txtPV.trim().equals("")) { return 1; }
+		if (txtFV == null || txtFV.trim().equals("")) { return 2; }
+		if (txtTaxa == null || txtTaxa.trim().equals("")) { return 3; }
+		if (txtTempo == null || txtTempo.trim().equals("")) { return 4; }
+		
+		return 0;
+	}
+	
+	private String calcularPV(String txtFV,String txtTaxa, String txtTempo) {
+		
+		float FV = Float.parseFloat(txtFV);
+		float taxa = Float.parseFloat(txtTaxa);
+		float tempo = Float.parseFloat(txtTempo);
+		
+		float PV = (float)(FV / Math.pow((1 + (taxa/100)), tempo));
+		
+		DecimalFormat formatador = new DecimalFormat("0.00");
+		
+		return "O Valor presente é R$" + formatador.format(PV);
+	}
+	
+	private String calcularFV(String txtPV, String txtTaxa, String txtTempo) {
+		
+		float PV = Float.parseFloat(txtPV);
+		float taxa = Float.parseFloat(txtTaxa);
+		float tempo = Float.parseFloat(txtTempo);
+		
+		float FV = (float)(PV * Math.pow((1 + (taxa/100)), tempo));
+		
+		DecimalFormat formatador = new DecimalFormat("0.00");
+		
+		return "O Valor futuro é R$" + formatador.format(FV);
+		
+	}
+	
+	private String calcularTaxa(String txtPV, String txtFV, String txtTempo) {
+		
+		float FV = Float.parseFloat(txtFV);
+		float PV = Float.parseFloat(txtPV);
+		float tempo = Float.parseFloat(txtTempo);
+		
+		float taxa = (float)(((Math.pow((FV/PV), 1/tempo))-1)*100);
+		
+		DecimalFormat formatador = new DecimalFormat("0.00");
+		
+		return "A taxa é " + formatador.format(taxa) + "%";
+	}
+	
+	private String calcularTempo(String txtPV, String txtFV, String txtTaxa) {
+		
+		float FV = Float.parseFloat(txtFV);
+		float PV = Float.parseFloat(txtPV);
+		float taxa = Float.parseFloat(txtTaxa);
+		
+		float tempo = (float)(Math.log(FV/PV) / Math.log((1 + (taxa/100))));
+		
+		return "O tempo é " + Math.round(tempo)+ " meses";
+	}
+}
+```
+
+
 
 
 **Exercício 2:** Crie uma interface gráfica para cálculo dos valores obtidos ao final de cada mês para uma aplicação mensal de umdeterminado valoor e uma determinada taxa de juros. O cálculo do valor obtido ao final é dado pela seguinte fórmula: 
