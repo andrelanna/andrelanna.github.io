@@ -30,6 +30,166 @@ O usuário deverá entrar com 3 valores, em campos de texto. O quarto valor deve
 |R$2000,00    |  R$1000,00  |**5,95**  |12        |
 |R$2000,00    |  R$1000,00  |0.80      |**87**    |
 
+* Criar a classe principal:
+```java
+
+public class Principal {
+	public static void main(String[] args) {
+		Janela j = new Janela();
+	}
+}
+
+```
+
+* Criar a Janela:
+```java
+import java.awt.GridLayout;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+
+
+public class Janela extends JFrame{
+	JLabel lbVf, lbVa, lbI, lbN;
+	JTextField txtVf, txtVa, txtI, txtN;
+	JButton btnCalcular, btnLimpar;
+	
+	public Janela(){
+		this.setTitle("Calculadora Financeira");
+		this.setSize(300, 400);
+		setLayout(new GridLayout(5,2));
+	
+		lbVf = new JLabel("Valor Futuro: ");
+		
+		lbVa = new JLabel("Valor Atual: ");
+		lbI = new JLabel("Juros: ");
+		lbN = new JLabel("Tempo: ");
+		
+		txtVf = new JTextField("");
+		txtVa = new JTextField("");
+		txtI = new JTextField("");
+		txtN = new JTextField("");
+		
+		btnCalcular = new JButton("Calcular");
+		btnLimpar = new JButton("Limpar");
+		
+		add(lbVf);
+		add(txtVf);
+		add(lbVa);
+		add(txtVa);
+		add(lbI);
+		add(txtI);
+		add(lbN);
+		add(txtN);
+		add(btnCalcular);
+		add(btnLimpar);
+		
+		btnCalcular.addActionListener(new CalcularListener(this));
+		btnLimpar.addActionListener(new LimparListener(this));
+		
+		setVisible(true);
+	}
+	
+}
+```
+
+* Criar uma classe para realizar os cálculos
+```java
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JOptionPane;
+
+public class CalcularListener implements ActionListener{
+
+	Janela j;
+	double vf, va, i, n;
+	String sVf, sVa, si, sn;
+	
+	
+	public CalcularListener(Janela ja){
+		j = ja;
+	}
+	
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		
+		if(j.txtVf.getText().equals("") 
+				&& !j.txtVa.getText().equals("") && !j.txtN.getText().equals("") && !j.txtI.getText().equals("")){
+			
+			va = Double.parseDouble(j.txtVa.getText());
+			i = Double.parseDouble(j.txtI.getText())/100;
+			n = Double.parseDouble(j.txtN.getText());
+			vf = (va * Math.pow((1+i),n));
+			String Svf = String.format("%.2f", vf);
+			Svf = Svf.replaceAll(",", ".");
+			j.txtVf.setText(Svf);
+			
+		}else if(j.txtVa.getText().equals("") 
+					&& !j.txtVf.getText().equals("") && !j.txtN.getText().equals("") && !j.txtI.getText().equals("")){
+
+			vf = Double.parseDouble(j.txtVf.getText());
+			i = Double.parseDouble(j.txtI.getText())/100;
+			n = Double.parseDouble(j.txtN.getText());
+			va = (vf / Math.pow((1+i),n));
+			String Sva = String.format("%.2f", va);
+			Sva = Sva.replaceAll(",", ".");
+			j.txtVa.setText(Sva);
+			
+		}else if(j.txtN.getText().equals("")
+					&& !j.txtVa.getText().equals("") && !j.txtVf.getText().equals("") && !j.txtI.getText().equals("")){
+
+			vf = Double.parseDouble(j.txtVf.getText());
+			i = Double.parseDouble(j.txtI.getText())/100;
+			va = Double.parseDouble(j.txtVa.getText());
+			n = (Math.log(vf/va)/ Math.log(1+i));
+			String Sn = String.format("%.0f", n);
+			Sn = Sn.replaceAll(",", ".");
+			j.txtN.setText(Sn);
+			
+		}else if(j.txtI.getText().equals("")
+					&& !j.txtVa.getText().equals("") && !j.txtN.getText().equals("") && !j.txtVf.getText().equals("")){
+			
+			vf = Double.parseDouble(j.txtVf.getText());
+			n = Double.parseDouble(j.txtN.getText());
+			va = Double.parseDouble(j.txtVa.getText());
+			i = (Math.pow(vf/va, 1/n)-1)*100;
+			String Si = String.format("%.1f", i);
+			Si = Si.replaceAll(",", ".");
+			j.txtI.setText(Si);
+			
+		}else{
+			JOptionPane.showMessageDialog(null, "Você deve preencher três dentre os campos");
+		}
+	}
+
+}
+
+```
+
+* Criar um limpador de tela
+```java
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+
+public class LimparListener implements ActionListener{
+	Janela j;
+	public LimparListener(Janela ja){
+		j = ja;
+	}
+	
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		j.txtVf.setText("");
+		j.txtVa.setText("");
+		j.txtN.setText("");
+		j.txtI.setText("");
+	}
+
+}
 
 
 
