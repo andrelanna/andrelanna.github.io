@@ -28,6 +28,7 @@ github_username: andrelanna
 
 # Build settings
 markdown: kramdown
+#markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, autolink: true) 
 theme: jekyll-theme-minimal
 gems:
   - jekyll-feed
