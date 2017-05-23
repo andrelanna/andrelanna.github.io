@@ -158,3 +158,117 @@ onde:
 
 
 Os valores finais de cada mês deverão ser informados através de objetos JLabel. 
+
+
+
+public class Principal {
+	
+	static Janela janela;
+	
+	public static void main(String[] args) {
+		janela = new Janela();
+
+	}
+
+}
+
+
+import java.awt.GridLayout;
+import javax.swing.JFrame;
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+
+public class Janela extends JFrame{
+	
+	JLabel lblSn, lblj, lblp, lbln, lblResposta;
+	JTextField txtj, txtp, txtn;
+	JButton btnCalcular, btnLimpar;
+	
+	public Janela() {
+		setTitle("Aplicacao");
+		setSize(800, 600);
+		
+		GridLayout grdLyt = new GridLayout(5,2);
+		setLayout(grdLyt);
+		
+		lblSn = new JLabel("Valor Final");
+		lblj = new JLabel("Juros");
+		lblp = new JLabel("Deposito Regular");
+		lbln = new JLabel("Meses");
+		lblResposta = new JLabel();
+		txtj = new JTextField();
+		txtp = new JTextField();
+		txtn = new JTextField();
+		btnCalcular = new JButton("Calcular");
+		btnLimpar = new JButton("Limpar");
+		
+		btnCalcular.addActionListener(new Calcular(this));
+		btnLimpar.addActionListener(new Limpar(this));
+		
+		add(lblj);
+		add(txtj);
+		add(lblp);
+		add(txtp);
+		add(lbln);
+		add(txtn);
+		add(lblSn);
+		add(lblResposta);
+		add(btnCalcular);
+		add(btnLimpar);
+		
+		setVisible(true);
+	}
+
+}
+
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+public class Calcular implements ActionListener {
+	
+	Janela j;
+
+	public Calcular(Janela janela) {
+		j = janela;
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent arg0) {
+		float juros = Float.parseFloat(j.txtj.getText());
+		float p = Float.parseFloat(j.txtp.getText());
+		float n = Float.parseFloat(j.txtn.getText());
+		double Sn;
+		for (int aux=0; aux<=n; aux++) {
+			Sn = (1+juros)*((Math.pow((1+juros),n)-1)/juros)*p;
+			j.lblResposta.setText(Double.toString(Sn));
+		}
+		
+
+	}
+
+}
+
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+public class Limpar implements ActionListener {
+	
+	Janela j;
+
+	public Limpar(Janela janela) {
+		j = janela;
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent arg0) {
+		j.txtj.setText("");
+		j.txtn.setText("");
+		j.txtp.setText("");
+		j.lblResposta.setText("");
+
+	}
+
+}
