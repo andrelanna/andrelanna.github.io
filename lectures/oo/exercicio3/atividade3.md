@@ -189,3 +189,132 @@ onde:
 
 
 Os valores finais de cada mês deverão ser informados através de objetos JLabel.
+
+
+
+public class Principal {
+
+	static JanelaPrincipal janela;
+
+	public static void main(String[] args) {
+		janela = new JanelaPrincipal();
+	}
+}
+
+
+import java.awt.FlowLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.text.DecimalFormat;
+import javax.swing.*;
+
+public class JanelaPrincipal extends JFrame implements ActionListener {
+
+	JLabel	lValorTotal,
+			lJuros,
+			lDeposito,
+			lTempo;
+	JTextField	tfValorTotal,
+				tfJuros,
+				tfDeposito,
+				tfTempo;
+	JButton	bCalcular;
+
+	public double	valorTotal,
+					juros,
+					deposito;
+	public int 	tempo,
+				cont;
+
+	DecimalFormat 	df,
+					intf;
+
+	public JanelaPrincipal() {
+		this.setTitle("Calculadora financeira");
+		this.setSize(300, 200);
+		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
+
+		lValorTotal = new JLabel("Valor Total");
+		lJuros = new JLabel("Juros (em %)");
+		lDeposito = new JLabel("Depositos");
+		lTempo = new JLabel("Tempo (meses)");
+
+		tfValorTotal = new JTextField("0", 15);
+		tfJuros = new JTextField("0", 15);
+		tfDeposito = new JTextField("0", 15);
+		tfTempo = new JTextField("0", 15);
+
+		bCalcular = new JButton("Calcular");
+
+		getContentPane().setLayout(new FlowLayout(FlowLayout.LEFT));
+
+		getContentPane().add(lValorTotal);
+		getContentPane().add(tfValorTotal);
+
+		getContentPane().add(lJuros);
+		getContentPane().add(tfJuros);
+
+		getContentPane().add(lDeposito);
+		getContentPane().add(tfDeposito);
+
+		getContentPane().add(lTempo);
+		getContentPane().add(tfTempo);
+
+		getContentPane().add(bCalcular);
+		bCalcular.addActionListener(this);
+
+		JOptionPane.showMessageDialog(null, "Preencha os campos de juros, depositos e tempo!");
+
+		this.setVisible(true);
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		try {
+			valorTotal = Double.parseDouble(tfValorTotal.getText());
+			juros = Double.parseDouble(tfJuros.getText())/100;
+			deposito = Double.parseDouble(tfDeposito.getText());
+			tempo = Integer.parseInt(tfTempo.getText());
+			df = new DecimalFormat("#,##0.00");
+			intf = new DecimalFormat("#");
+			cont = 0;
+
+			if (valorTotal == 0)
+				cont++;
+			if (juros == 0)
+				cont++;
+			if (deposito == 0)
+				cont++;
+			if (tempo == 0)
+				cont++;
+
+			if (e.getSource() == bCalcular) {
+				tfValorTotal.setText("0");
+				tfJuros.setText("0");
+				tfDeposito.setText("0");
+				tfTempo.setText("0");
+
+				if (valorTotal == 0 && cont == 1) {
+					JOptionPane.showMessageDialog(null, "Valor Total: " + df.format((1 + juros) * ((Math.pow((1 + juros), tempo) - 1) / juros) * deposito)
+						+ "\nJuros: " + df.format(juros*100)
+						+ "\nDepósitos: " + df.format(deposito)
+						+ "\nTempo: " + intf.format(tempo));
+				} else {
+					tfValorTotal.setText("0");
+					tfJuros.setText("0");
+					tfDeposito.setText("0");
+					tfTempo.setText("0");
+				}
+
+				JOptionPane.showMessageDialog(null, "Preencha os campos de juros, depositos e tempo!");
+
+			}
+		} catch (Exception e2) {
+				JOptionPane.showMessageDialog(null, "Preencha os campos de juros, depositos e tempo com valores válidos!");
+				tfValorTotal.setText("0");
+				tfJuros.setText("0");
+				tfDeposito.setText("0");
+				tfTempo.setText("0");
+		}
+	}
+}
