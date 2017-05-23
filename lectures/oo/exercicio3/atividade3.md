@@ -32,7 +32,9 @@ O usuário deverá entrar com 3 valores, em campos de texto. O quarto valor deve
 
 ---------------------------------------------------------------------
 ---------------------------------------------------------------------
+
 {% highlight java %}
+
 public class Principal {
 	
 	public static void main(String[] args){
@@ -40,10 +42,13 @@ public class Principal {
 		Janela j = new Janela();
 	}
 }
+
 {% endhighlight%}
 
 ----------------------------------------------------------------------
+
 {% highlight java %}
+
 import java.awt.*;
 import javax.swing.*;
 public class Janela extends JFrame {
@@ -114,6 +119,7 @@ public class Janela extends JFrame {
 		
 		}	
 }
+
 {% endhighlight%}
 ----------------------------------------------------------------
 {% highlight java %}
@@ -172,7 +178,9 @@ public class Calculos implements ActionListener {
 }
 {% endhighlight%}
 --------------------------------------------------------------------
+
 {% highlight java %}
+
 import java.awt.event.*;
 
 public class LimparBotoes implements ActionListener {
@@ -194,7 +202,9 @@ public class LimparBotoes implements ActionListener {
 			j.txtValorFuturo.setText(null);
 			j.lblErro.setText(null); }
 }
+
 {% endhighlight%}
+
 --------------------------------------------------------------
 --------------------------------------------------------------
 
@@ -216,7 +226,9 @@ Os valores finais de cada mês deverão ser informados através de objetos JLabe
 
 -------------------------------------------------------------------
 -------------------------------------------------------------------
+
 {% highlight java %}
+
 public class Principal {
 
 	public static void main(String[] args) {
@@ -224,9 +236,13 @@ public class Principal {
 
 	}
 }
+
 {% endhighlight%}
+
 --------------------------------------------------------------------
+
 {% highlight java %}
+
 import java.awt.*;
 import javax.swing.*;
 
@@ -310,9 +326,13 @@ public class Janela extends JFrame {
 		this.setVisible(true);
 	}
 }
+
 {% endhighlight%}
+
 -----------------------------------------------------
+
 {% highlight java %}
+
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -359,6 +379,8 @@ public class Listener implements ActionListener {
 		j.painel.add(resultado, gbc);
 	}
 }
+
 {% endhighlight%}
+
 -----------------------------------------------------
 -----------------------------------------------------
