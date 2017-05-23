@@ -1,49 +1,146 @@
----
-title: Atividade 2 - Interfaces gráficas em Java Swing
-layout: default
----
-
-### UnB - Universidade de Brasilia
-### FGA - Faculdade do Gama
-### OO - Orientação por objetos
-------
-
-Atividade extra-classe **individual** em substituição à aula de 19/05/2017.  
-**Data de entrega:** 22/05/2017, 23:59:59.  
-Entrega via GitHub.  
-WindowBuilder **não** deve ser utilizado. 
+```java
+package Exercício1;
 
 
-**Exercício 1:** Crie uma interface gráfica para cálculo de valores presente, futuro, juros e taxa de juros de acordo com a seguinte fórmula: 
-$$V_{F} = V_{A} \times (1 + i)^{n}$$, em que 
-* $$V_{F}$$ representa o valor futuro de uma aplicação,
-* $$V_{A}$$ representa o valor atual (no momento) da aplicação, 
-* $$i$$ é a taxa de juros e 
-* $$n$$ é o tempo da aplicação, em meses.
+public class Janela {
 
-O usuário deverá entrar com 3 valores, em campos de texto. O quarto valor deverá ter seu campo de texto vazio e será calculado pela aplicação conforme a fórmula acima. Veja os exemplos na tabela abaixo, em que os valores em negrito representam a resposta da fórmula:
+	static NovaJanela janela;
+	
+	public static void main(String[] args) {
+			
+		janela = new NovaJanela();
+		
+	}
+	
+}
+```
 
-|$$V_{F}$$    |$$V_{A}$$    |$$i$$     |$$n$$     |
-|:-----------:|:-----------:|:--------:|:--------:|
-|**R$1100,34**|R$1000,00    |0.80      |12        |
-|R$2000,00    |**R$1817,62**|0.80      |12        |
-|R$2000,00    |  R$1000,00  |**5,95**  |12        |
-|R$2000,00    |  R$1000,00  |0.80      |**87**    |
-
-
+```java
+package Exercício1;
 
 
-**Exercício 2:** Crie uma interface gráfica para cálculo dos valores obtidos ao final de cada mês para uma aplicação mensal de umdeterminado valoor e uma determinada taxa de juros. O cálculo do valor obtido ao final é dado pela seguinte fórmula: 
+import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-\\[S_{n}=(1+j) \times \frac{(1+j)^{n}-1}{j} \times p\\]
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
 
+public class NovaJanela extends JFrame implements ActionListener{
 
-onde: 
+private static final long serialVersionUID = 1L;//Nao entendi muito bem para o que ele serve.
+	
+	JLabel valorPresente, valorFuturo, tempo, taxa, resultado, mostrarResultado;
+	JButton btnCalcular, btnLimpar;
+	JTextField txtValorPresente, txtValorFuturo, txtTaxa, txtTempo;
+	
+	public NovaJanela (){
+		
+		setTitle ("Calculo");
+		setSize (500, 250);
+		
+		setLayout (new GridLayout (7,2));
+		
+		resultado = new JLabel ("Resultado: ");
+		valorFuturo = new JLabel ("Valor Futuro: ");
+		valorPresente = new JLabel ("Valor Atual: ");
+		taxa = new JLabel ("Juros %: ");
+		tempo = new JLabel ("Tempo (meses): ");
+		mostrarResultado = new JLabel ("");
+		
+		txtValorFuturo = new JTextField("");
+		txtValorPresente = new JTextField("");
+		txtTaxa = new JTextField("");
+		txtTempo = new JTextField("");
+		
+		btnCalcular = new JButton("Calcular");
+		btnLimpar = new JButton("Limpar");
+		
+		
+		add(valorFuturo);
+		add(txtValorFuturo);
+		add(valorPresente);
+		add(txtValorPresente);
+		add(taxa);
+		add(txtTaxa);
+		add(tempo);
+		add(txtTempo);
+		add(btnCalcular);
+		add(btnLimpar);
 
-* $$S_{n}$$ é o valor obtido ao final, 
-* $$j$$ é a taxa de juros mensal, 
-* $$p$$ é o valor de depósito regular e 
-* $$n$$ é o número de meses.
+		
+		
+		btnCalcular.addActionListener(new ActionListener(){
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				
+				
+				if(txtValorFuturo.getText().equals("")){
+					
+					double dvalorPresente = Double.parseDouble(txtValorPresente.getText());
+					double dtaxa = Double.parseDouble(txtTaxa.getText())/100;
+					double dtempo = Double.parseDouble(txtTempo.getText());
+					double dvalorFuturo = (dvalorPresente * Math.pow((1+dtaxa),dtempo));
+					String Svf = String.format("%.2f", dvalorFuturo);
+					txtValorFuturo.setText(Svf);
+					
+				}else if(txtValorPresente.getText().equals("") ){
 
+					double dvalorFuturo = Double.parseDouble(txtValorFuturo.getText());
+					double dtaxa = Double.parseDouble(txtTaxa.getText())/100;
+					double dtempo = Double.parseDouble(txtTempo.getText());
+					double dvalorPresente = (dvalorFuturo / Math.pow((1+dtaxa),dtempo));
+					String Sva = String.format("%.2f", dvalorPresente);
+					txtValorPresente.setText(Sva);
+					
+				}else if(txtTempo.getText().equals("")){
 
-Os valores finais de cada mês deverão ser informados através de objetos JLabel. 
+					double dvalorFuturo = Double.parseDouble(txtValorFuturo.getText());
+					double dtaxa = Double.parseDouble(txtTaxa.getText())/100;
+					double dvalorPresente = Double.parseDouble(txtValorPresente.getText());
+					double dtempo = (Math.log(dvalorFuturo/dvalorPresente)/ Math.log(1+dtaxa));
+					String Sn = String.format("%.0f", dtempo);
+					txtTempo.setText(Sn);
+					
+				}else {
+					
+					double dvalorFuturo = Double.parseDouble(txtValorFuturo.getText());
+					double dtempo = Double.parseDouble(txtTempo.getText());
+					double dvalorPresente = Double.parseDouble(txtValorPresente.getText());
+					double dtaxa = (Math.pow(dvalorFuturo/dvalorPresente, 1/dtempo)-1)*100;
+					String Si = String.format("%.1f", dtaxa);
+					txtTaxa.setText(Si);
+					
+				}
+			}
+			
+		});
+		
+				
+		setVisible(true);
+		
+		
+	
+	
+		btnLimpar.addActionListener(new ActionListener(){
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			txtValorFuturo.setText("");
+			txtValorPresente.setText("");
+			txtTempo.setText("");
+			txtTaxa.setText("");
+			
+		}
+	});
+	
+}
+
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			// TODO Auto-generated method stub
+		}
+	}
+  ```
