@@ -1,146 +1,218 @@
 ```java
-
-package Exercício1;
-
+package Exercício2;
 
 public class Janela {
 
 	static NovaJanela janela;
 	
-	public static void main(String[] args) {
+	public static void main(String[] args){
+		
+			janela = new NovaJanela();
+	}
+	
+}
+```
+
+```java
+package Exercício2;
+
+import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+
+public class NovaJanela extends JFrame{
+
+	private static final long serialVersionUID = 1L;
+	
+	JLabel taxa, depositoRegular, tempo, resultado, mostrarResultado;
+	JButton btnCalcular, btnLimpar;
+	JTextField txtDeposito, txtTaxa, txtTempo;
+	
+	public NovaJanela(){
+		
+		setTitle ("Calculo");
+		setSize (500, 250);
+		
+		setLayout(new GridLayout(4,2));
+		
+		depositoRegular = new JLabel ("Valor do deposito: ");
+		taxa = new JLabel ("Taxa %: ");
+		tempo = new JLabel ("Tempo (meses): ");
+		btnCalcular = new JButton ("Calcular");
+		btnLimpar = new JButton ("Limpar");
+		txtDeposito = new JTextField ("");
+		txtTaxa = new JTextField ("");
+		txtTempo = new JTextField ("");
+		
+		
+		add(taxa);
+		add(txtTaxa);
+		add(depositoRegular);
+		add(txtDeposito);
+		add(tempo);
+		add(txtTempo);
+		add(btnCalcular);
+		add(btnLimpar);
+		
+		btnCalcular.addActionListener(new ActionListener(){
 			
-		janela = new NovaJanela();
+			@Override
+			public void actionPerformed(ActionEvent e){
+				new JanelaResultado(txtDeposito.getText(), txtTaxa.getText(), txtTempo.getText());
+			}
+			
+		});
+		
+		btnLimpar.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				
+				txtDeposito.setText("");
+				txtTaxa.setText("");
+				txtTempo.setText("");
+				
+				repaint();
+				
+			}
+			
+		});
+		
+		setVisible(true);
 		
 	}
 	
 }
 ```
 ```java
-package Exercício1;
+package Exercício2;
 
+import java.util.ArrayList;
+import java.util.List;
+
+public class CalcularValores {
+
+	private static final float UM = 1F;
+	
+	public List<ResultadoAplicacao> calcular(String txtDeposito, String txtTaxa, String txtTempo){
+		
+		float deposito = Float.parseFloat(txtDeposito);
+		float taxa = Float.parseFloat(txtTaxa) / 100;
+		float tempo = Float.parseFloat(txtTempo);
+		
+		List<ResultadoAplicacao> listaResultado = new ArrayList<ResultadoAplicacao>();
+		
+		for (int i=1; i <= tempo; i++){
+		
+			float resultado = (float)((UM + taxa) * ((Math.pow(UM + taxa, i) - UM) / taxa) * deposito);
+		
+			listaResultado.add(new ResultadoAplicacao(i, resultado));
+		}
+		
+		return listaResultado;
+		
+	}
+	
+}
+```
+
+
+```java
+package Exercício2;
+
+public class ResultadoAplicacao {
+	
+	private int mes;
+	private float valor;
+	
+	public ResultadoAplicacao(int mes, float valor){
+		
+		this.mes = mes;
+		this.valor = valor;
+		
+	}
+	
+	public int getMes(){
+			return mes;
+	}
+	
+	public void setMes(int mes){
+		this.mes = mes;
+	}
+	
+	public float getValor(){
+		return valor;
+	}
+	
+	public void getValor(float valor){
+		this.valor = valor;
+	}
+
+}
+```
+
+```java
+package Exercício2;
 
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
+import java.text.DecimalFormat;
+import java.util.List;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-import javax.swing.JTextField;
 
-public class NovaJanela extends JFrame implements ActionListener{
 
-private static final long serialVersionUID = 1L;//Nao entendi muito bem para o que ele serve.
+
+public class JanelaResultado extends JFrame {
+
+	private static final long serialVersionUID = 1L;//Novamente peguei de um código e não entendi muito bem para o que serve.
 	
-	JLabel valorPresente, valorFuturo, tempo, taxa, resultado, mostrarResultado;
-	JButton btnCalcular, btnLimpar;
-	JTextField txtValorPresente, txtValorFuturo, txtTaxa, txtTempo;
+	JLabel mes, valor;
+	JButton btnFechar;
 	
-	public NovaJanela (){
+	public JanelaResultado(String txtDeposito, String txtTaxa, String txtTempo){
 		
 		setTitle ("Calculo");
 		setSize (500, 250);
 		
-		setLayout (new GridLayout (7,2));
-		
-		resultado = new JLabel ("Resultado: ");
-		valorFuturo = new JLabel ("Valor Futuro: ");
-		valorPresente = new JLabel ("Valor Atual: ");
-		taxa = new JLabel ("Juros %: ");
-		tempo = new JLabel ("Tempo (meses): ");
-		mostrarResultado = new JLabel ("");
-		
-		txtValorFuturo = new JTextField("");
-		txtValorPresente = new JTextField("");
-		txtTaxa = new JTextField("");
-		txtTempo = new JTextField("");
-		
-		btnCalcular = new JButton("Calcular");
-		btnLimpar = new JButton("Limpar");
+		CalcularValores calculadora = new CalcularValores();
+		List<ResultadoAplicacao> listaResultado = calculadora.calcular(txtDeposito,txtTaxa,txtTempo);
+		setLayout(new GridLayout(listaResultado.size()+2,2));
 		
 		
-		add(valorFuturo);
-		add(txtValorFuturo);
-		add(valorPresente);
-		add(txtValorPresente);
-		add(taxa);
-		add(txtTaxa);
-		add(tempo);
-		add(txtTempo);
-		add(btnCalcular);
-		add(btnLimpar);
-
+		btnFechar = new JButton("Fechar");
 		
+		add(new JLabel("Mes"));
+		add(new JLabel("Valor"));
 		
-		btnCalcular.addActionListener(new ActionListener(){
+		DecimalFormat formatador = new DecimalFormat("0.00");
+		
+		for (ResultadoAplicacao res: listaResultado) {
 			
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				
-				
-				if(txtValorFuturo.getText().equals("")){
-					
-					double dvalorPresente = Double.parseDouble(txtValorPresente.getText());
-					double dtaxa = Double.parseDouble(txtTaxa.getText())/100;
-					double dtempo = Double.parseDouble(txtTempo.getText());
-					double dvalorFuturo = (dvalorPresente * Math.pow((1+dtaxa),dtempo));
-					String Svf = String.format("%.2f", dvalorFuturo);
-					txtValorFuturo.setText(Svf);
-					
-				}else if(txtValorPresente.getText().equals("") ){
-
-					double dvalorFuturo = Double.parseDouble(txtValorFuturo.getText());
-					double dtaxa = Double.parseDouble(txtTaxa.getText())/100;
-					double dtempo = Double.parseDouble(txtTempo.getText());
-					double dvalorPresente = (dvalorFuturo / Math.pow((1+dtaxa),dtempo));
-					String Sva = String.format("%.2f", dvalorPresente);
-					txtValorPresente.setText(Sva);
-					
-				}else if(txtTempo.getText().equals("")){
-
-					double dvalorFuturo = Double.parseDouble(txtValorFuturo.getText());
-					double dtaxa = Double.parseDouble(txtTaxa.getText())/100;
-					double dvalorPresente = Double.parseDouble(txtValorPresente.getText());
-					double dtempo = (Math.log(dvalorFuturo/dvalorPresente)/ Math.log(1+dtaxa));
-					String Sn = String.format("%.0f", dtempo);
-					txtTempo.setText(Sn);
-					
-				}else {
-					
-					double dvalorFuturo = Double.parseDouble(txtValorFuturo.getText());
-					double dtempo = Double.parseDouble(txtTempo.getText());
-					double dvalorPresente = Double.parseDouble(txtValorPresente.getText());
-					double dtaxa = (Math.pow(dvalorFuturo/dvalorPresente, 1/dtempo)-1)*100;
-					String Si = String.format("%.1f", dtaxa);
-					txtTaxa.setText(Si);
-					
-				}
-			}
-			
-		});
-		
-				
-		setVisible(true);
-		
-		
-	
-	
-		btnLimpar.addActionListener(new ActionListener(){
-		@Override
-		public void actionPerformed(ActionEvent e) {
-			txtValorFuturo.setText("");
-			txtValorPresente.setText("");
-			txtTempo.setText("");
-			txtTaxa.setText("");
+			add(new JLabel(String.valueOf(res.getMes())));
+			add(new JLabel(formatador.format(res.getValor())));
 			
 		}
-	});
+		
+		add(btnFechar);
+			
+			btnFechar.addActionListener(new ActionListener() {
+				
+				@Override
+				public void actionPerformed(ActionEvent e) {
+					dispose();
+				}
+			});
+		
+			setVisible(true);
+			
+	}
 	
 }
-
-		@Override
-		public void actionPerformed(ActionEvent e) {
-			// TODO Auto-generated method stub
-		}
-	}
-  ```
+```
