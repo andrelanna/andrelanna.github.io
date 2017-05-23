@@ -422,3 +422,1159 @@ onde:
 
 
 Os valores finais de cada mês deverão ser informados através de objetos JLabel. 
+
+
+// Resposta
+
+
+//Código Principal
+
+
+
+public class Exercício3_e2 {
+
+
+
+    
+
+    public static void main(String[] args) {
+
+        
+
+        Janela j= new Janela();
+
+    }
+
+    
+
+}
+
+
+
+
+
+//Classe Janela
+
+
+
+import java.awt.GridLayout;
+
+import javax.swing.JFrame;
+
+import javax.swing.JLabel;
+
+import javax.swing.JTextField;
+
+
+
+
+
+public class Janela extends JFrame{
+
+    
+
+    JLabel lblApf,lblApa, lbljuros, lbltmp;
+
+    JLabel lblm1,lblm2,lblm3,lblm4,lblm5,lblm6,lblm7,lblm8,lblm9,lblm10,lblm11,lblm12; 
+
+    
+
+    JTextField txtApf,txtApa, txtjuros, txttmp;
+
+    JTextField txtm1,txtm2,txtm3,txtm4,txtm5,txtm6,txtm7,txtm8,txtm9,txtm10,txtm11,txtm12; 
+
+    
+
+    public Janela(){
+
+        
+
+        setTitle("Juros Compostoo");
+
+        setSize(550,200);
+
+        
+
+        setLayout (new GridLayout(8,4));
+
+        
+
+         ////Configurando os Lables:
+
+        lblApf= new JLabel("Aplicação final (R$)");
+
+        lblApa= new JLabel("Aplicação Regular (R$)");
+
+        lbljuros= new JLabel ("Juros mensal");
+
+        lbltmp= new JLabel("Tempo (MÊS)");
+
+        
+
+        lblm1= new JLabel("Mes 1=");
+
+        lblm2= new JLabel("Mes 2=");
+
+        lblm3= new JLabel("Mes 3=");
+
+        lblm4= new JLabel("Mes 4=");
+
+        lblm5= new JLabel("Mes 5=");
+
+        lblm6= new JLabel("Mes 6=");
+
+        lblm7= new JLabel("Mes 7=");
+
+        lblm8= new JLabel("Mes 8=");
+
+        lblm9= new JLabel("Mes 9=");
+
+        lblm10= new JLabel("Mes 10=");
+
+        lblm11= new JLabel("Mes 11=");
+
+        lblm12= new JLabel("Mes 12=");
+
+        
+
+        
+
+        txtApf= new JTextField();
+
+        txtApa= new JTextField();
+
+        txtjuros= new JTextField();
+
+        txttmp= new JTextField();
+
+        
+
+        txtm1= new JTextField();
+
+        txtm2= new JTextField();
+
+        txtm3= new JTextField();
+
+        txtm4= new JTextField();
+
+        txtm5= new JTextField();
+
+        txtm6= new JTextField();
+
+        txtm7= new JTextField();
+
+        txtm8= new JTextField();
+
+        txtm9= new JTextField();
+
+        txtm10= new JTextField();
+
+        txtm11= new JTextField();
+
+        txtm12= new JTextField();
+
+        
+
+        
+
+        
+
+        ////Adicionando as camadas na interface
+
+        add(lblApf);
+
+        add(lblApa);
+
+        add(lbljuros);
+
+        add(lbltmp);
+
+        
+
+        add(txtApf);
+
+        add(txtApa);
+
+        add(txtjuros);
+
+        add(txttmp);
+
+        
+
+        add(lblm1);
+
+        add(txtm1);
+
+        add(lblm2);
+
+        add(txtm2);
+
+        
+
+        add(lblm3);
+
+        add(txtm3);
+
+        add(lblm4);
+
+        add(txtm4);
+
+        
+
+        add(lblm5);
+
+        add(txtm5);
+
+        add(lblm6);
+
+        add(txtm6);
+
+        
+
+        add(lblm7);
+
+        add(txtm7);
+
+        add(lblm8);
+
+        add(txtm8);
+
+        
+
+        add(lblm9);
+
+        add(txtm9);
+
+        add(lblm10);
+
+        add(txtm10);
+
+        
+
+        add(lblm11);
+
+        add(txtm11);
+
+        add(lblm12);
+
+        add(txtm12);
+
+        
+
+        setVisible(true);
+
+        
+
+        
+
+        txttmp.addActionListener(new CalcularListener(this));
+
+        
+
+    }
+
+
+
+    
+
+}
+
+
+
+
+
+//ActionListener
+
+
+
+import java.awt.event.ActionEvent;
+
+import java.awt.event.ActionListener;
+
+
+
+public class CalcularListener implements ActionListener {
+
+
+
+    Janela J;
+
+    
+
+    public CalcularListener(Janela janela) {
+
+        J=janela;
+
+    }
+
+
+
+    @Override
+
+    public void actionPerformed(ActionEvent e) {
+
+        
+
+        float VP= Float.parseFloat(J.txtApa.getText());
+
+        float i= (Float.parseFloat(J.txtjuros.getText()))/100;
+
+        int n= Integer.parseInt(J.txttmp.getText());
+
+        //float resultado= (float)(Math.pow((1+(i)), n)-1);
+
+        //J.txtApf.setText( Float.toString(VP*(1+(i))/resultado));
+
+        //float res= VP*(1+(i))/resultado;
+
+        
+
+        
+
+        
+
+        //int j=1;
+
+        
+
+        
+
+       
+
+        
+
+        if(n<=1){
+
+            float resultado1= (float)(Math.pow((1+(i)), 1+1)-1)/i -1;
+
+            float res1= VP*resultado1;
+
+            
+
+            J.txtm1.setText(Float.toString (res1));
+
+            //j=2;
+
+        }
+
+        else if(n<=2){
+
+            float resultado1= (float)(Math.pow((1+(i)), 1+1)-1)/i -1;
+
+            float res1= VP*resultado1;
+
+            
+
+            J.txtm1.setText(Float.toString (res1));
+
+        
+
+            float resultado2= (float)(Math.pow((1+(i)), 2+1)-1)/i -1;
+
+            float res2= VP*resultado2;
+
+            
+
+            J.txtm2.setText(Float.toString(res2));
+
+            //j+=1;
+
+        }
+
+        else if(n<=3){
+
+            float resultado1= (float)(Math.pow((1+(i)), 1+1)-1)/i -1;
+
+            float res1= VP*resultado1;
+
+            
+
+            J.txtm1.setText(Float.toString (res1));
+
+        
+
+            float resultado2= (float)(Math.pow((1+(i)), 2+1)-1)/i -1;
+
+            float res2= VP*resultado2;
+
+            
+
+            J.txtm2.setText(Float.toString(res2));
+
+            
+
+            float resultado3= (float)(Math.pow((1+(i)), 3+1)-1)/i -1;
+
+            float res3= VP*resultado3;
+
+            
+
+            J.txtm3.setText(Float.toString(res3));
+
+            //j+=1;
+
+        }
+
+        else if(n<=4){
+
+            float resultado1= (float)(Math.pow((1+(i)), 1+1)-1)/i -1;
+
+            float res1= VP*resultado1;
+
+            
+
+            J.txtm1.setText(Float.toString (res1));
+
+        
+
+            float resultado2= (float)(Math.pow((1+(i)), 2+1)-1)/i -1;
+
+            float res2= VP*resultado2;
+
+            
+
+            J.txtm2.setText(Float.toString(res2));
+
+            
+
+            float resultado3= (float)(Math.pow((1+(i)), 3+1)-1)/i -1;
+
+            float res3= VP*resultado3;
+
+            
+
+            J.txtm3.setText(Float.toString(res3));
+
+            
+
+            float resultado4= (float)(Math.pow((1+(i)), 4+1)-1)/i -1;
+
+            float res4= VP*resultado4;
+
+            
+
+            J.txtm4.setText(Float.toString(res4));
+
+            //j+=1;
+
+        }
+
+        else if(n<=5){
+
+            float resultado1= (float)(Math.pow((1+(i)), 1+1)-1)/i -1;
+
+            float res1= VP*resultado1;
+
+            
+
+            J.txtm1.setText(Float.toString (res1));
+
+        
+
+            float resultado2= (float)(Math.pow((1+(i)), 2+1)-1)/i -1;
+
+            float res2= VP*resultado2;
+
+            
+
+            J.txtm2.setText(Float.toString(res2));
+
+            
+
+            float resultado3= (float)(Math.pow((1+(i)), 3+1)-1)/i -1;
+
+            float res3= VP*resultado3;
+
+            
+
+            J.txtm3.setText(Float.toString(res3));
+
+            
+
+            float resultado4= (float)(Math.pow((1+(i)), 4+1)-1)/i -1;
+
+            float res4= VP*resultado4;
+
+            
+
+            J.txtm4.setText(Float.toString(res4));
+
+            
+
+            float resultado5= (float)(Math.pow((1+(i)), 5+1)-1)/i -1;
+
+            float res5= VP*resultado5;
+
+            
+
+            J.txtm5.setText(Float.toString (res5));
+
+            //j+=1;
+
+        }
+
+        else if(n<=6){
+
+            float resultado1= (float)(Math.pow((1+(i)), 1+1)-1)/i -1;
+
+            float res1= VP*resultado1;
+
+            
+
+            J.txtm1.setText(Float.toString (res1));
+
+        
+
+            float resultado2= (float)(Math.pow((1+(i)), 2+1)-1)/i -1;
+
+            float res2= VP*resultado2;
+
+            
+
+            J.txtm2.setText(Float.toString(res2));
+
+            
+
+            float resultado3= (float)(Math.pow((1+(i)), 3+1)-1)/i -1;
+
+            float res3= VP*resultado3;
+
+            
+
+            J.txtm3.setText(Float.toString(res3));
+
+            
+
+            float resultado4= (float)(Math.pow((1+(i)), 4+1)-1)/i -1;
+
+            float res4= VP*resultado4;
+
+            
+
+            J.txtm4.setText(Float.toString(res4));
+
+            
+
+            float resultado5= (float)(Math.pow((1+(i)), 5+1)-1)/i -1;
+
+            float res5= VP*resultado5;
+
+            
+
+            J.txtm5.setText(Float.toString (res5));
+
+        
+
+            float resultado6= (float)(Math.pow((1+(i)), 6+1)-1)/i -1;
+
+            float res6= VP*resultado6;
+
+            
+
+            J.txtm6.setText(Float.toString (res6));
+
+            //j+=1;
+
+        }
+
+        else if(n<=7){
+
+            float resultado1= (float)(Math.pow((1+(i)), 1+1)-1)/i -1;
+
+            float res1= VP*resultado1;
+
+            
+
+            J.txtm1.setText(Float.toString (res1));
+
+        
+
+            float resultado2= (float)(Math.pow((1+(i)), 2+1)-1)/i -1;
+
+            float res2= VP*resultado2;
+
+            
+
+            J.txtm2.setText(Float.toString(res2));
+
+            
+
+            float resultado3= (float)(Math.pow((1+(i)), 3+1)-1)/i -1;
+
+            float res3= VP*resultado3;
+
+            
+
+            J.txtm3.setText(Float.toString(res3));
+
+            
+
+            float resultado4= (float)(Math.pow((1+(i)), 4+1)-1)/i -1;
+
+            float res4= VP*resultado4;
+
+            
+
+            J.txtm4.setText(Float.toString(res4));
+
+            
+
+            float resultado5= (float)(Math.pow((1+(i)), 5+1)-1)/i -1;
+
+            float res5= VP*resultado5;
+
+            
+
+            J.txtm5.setText(Float.toString (res5));
+
+        
+
+            float resultado6= (float)(Math.pow((1+(i)), 6+1)-1)/i -1;
+
+            float res6= VP*resultado6;
+
+            
+
+            J.txtm6.setText(Float.toString (res6));
+
+        
+
+            float resultado7= (float)(Math.pow((1+(i)), 7+1)-1)/i -1;
+
+            float res7= VP*resultado7;
+
+            
+
+            J.txtm7.setText(Float.toString(res7));
+
+            //j+=1;
+
+        }
+
+        else if(n<=8){
+
+            float resultado1= (float)(Math.pow((1+(i)), 1+1)-1)/i -1;
+
+            float res1= VP*resultado1;
+
+            
+
+            J.txtm1.setText(Float.toString (res1));
+
+        
+
+            float resultado2= (float)(Math.pow((1+(i)), 2+1)-1)/i -1;
+
+            float res2= VP*resultado2;
+
+            
+
+            J.txtm2.setText(Float.toString(res2));
+
+            
+
+            float resultado3= (float)(Math.pow((1+(i)), 3+1)-1)/i -1;
+
+            float res3= VP*resultado3;
+
+            
+
+            J.txtm3.setText(Float.toString(res3));
+
+            
+
+            float resultado4= (float)(Math.pow((1+(i)), 4+1)-1)/i -1;
+
+            float res4= VP*resultado4;
+
+            
+
+            J.txtm4.setText(Float.toString(res4));
+
+            
+
+            float resultado5= (float)(Math.pow((1+(i)), 5+1)-1)/i -1;
+
+            float res5= VP*resultado5;
+
+            
+
+            J.txtm5.setText(Float.toString (res5));
+
+        
+
+            float resultado6= (float)(Math.pow((1+(i)), 6+1)-1)/i -1;
+
+            float res6= VP*resultado6;
+
+            
+
+            J.txtm6.setText(Float.toString (res6));
+
+        
+
+            float resultado7= (float)(Math.pow((1+(i)), 7+1)-1)/i -1;
+
+            float res7= VP*resultado7;
+
+            
+
+            J.txtm7.setText(Float.toString(res7));
+
+        
+
+            float resultado8= (float)(Math.pow((1+(i)), 8+1)-1)/i -1;
+
+            float res8= VP*resultado8;
+
+            
+
+            J.txtm8.setText(Float.toString (res8));
+
+            //j+=1;
+
+        }
+
+        else if(n<=9){
+
+            float resultado1= (float)(Math.pow((1+(i)), 1+1)-1)/i -1;
+
+            float res1= VP*resultado1;
+
+            
+
+            J.txtm1.setText(Float.toString (res1));
+
+        
+
+            float resultado2= (float)(Math.pow((1+(i)), 2+1)-1)/i -1;
+
+            float res2= VP*resultado2;
+
+            
+
+            J.txtm2.setText(Float.toString(res2));
+
+            
+
+            float resultado3= (float)(Math.pow((1+(i)), 3+1)-1)/i -1;
+
+            float res3= VP*resultado3;
+
+            
+
+            J.txtm3.setText(Float.toString(res3));
+
+            
+
+            float resultado4= (float)(Math.pow((1+(i)), 4+1)-1)/i -1;
+
+            float res4= VP*resultado4;
+
+            
+
+            J.txtm4.setText(Float.toString(res4));
+
+            
+
+            float resultado5= (float)(Math.pow((1+(i)), 5+1)-1)/i -1;
+
+            float res5= VP*resultado5;
+
+            
+
+            J.txtm5.setText(Float.toString (res5));
+
+        
+
+            float resultado6= (float)(Math.pow((1+(i)), 6+1)-1)/i -1;
+
+            float res6= VP*resultado6;
+
+            
+
+            J.txtm6.setText(Float.toString (res6));
+
+        
+
+            float resultado7= (float)(Math.pow((1+(i)), 7+1)-1)/i -1;
+
+            float res7= VP*resultado7;
+
+            
+
+            J.txtm7.setText(Float.toString(res7));
+
+        
+
+            float resultado8= (float)(Math.pow((1+(i)), 8+1)-1)/i -1;
+
+            float res8= VP*resultado8;
+
+            
+
+            J.txtm8.setText(Float.toString (res8));
+
+        
+
+            float resultado9= (float)(Math.pow((1+(i)), 9+1)-1)/i -1;
+
+            float res9= VP*resultado9;
+
+            
+
+            J.txtm9.setText(Float.toString (res9));
+
+            //j+=1;
+
+        }
+
+        else if(n<=10){
+
+            float resultado1= (float)(Math.pow((1+(i)), 1+1)-1)/i -1;
+
+            float res1= VP*resultado1;
+
+            
+
+            J.txtm1.setText(Float.toString (res1));
+
+        
+
+            float resultado2= (float)(Math.pow((1+(i)), 2+1)-1)/i -1;
+
+            float res2= VP*resultado2;
+
+            
+
+            J.txtm2.setText(Float.toString(res2));
+
+            
+
+            float resultado3= (float)(Math.pow((1+(i)), 3+1)-1)/i -1;
+
+            float res3= VP*resultado3;
+
+            
+
+            J.txtm3.setText(Float.toString(res3));
+
+            
+
+            float resultado4= (float)(Math.pow((1+(i)), 4+1)-1)/i -1;
+
+            float res4= VP*resultado4;
+
+            
+
+            J.txtm4.setText(Float.toString(res4));
+
+            
+
+            float resultado5= (float)(Math.pow((1+(i)), 5+1)-1)/i -1;
+
+            float res5= VP*resultado5;
+
+            
+
+            J.txtm5.setText(Float.toString (res5));
+
+        
+
+            float resultado6= (float)(Math.pow((1+(i)), 6+1)-1)/i -1;
+
+            float res6= VP*resultado6;
+
+            
+
+            J.txtm6.setText(Float.toString (res6));
+
+        
+
+            float resultado7= (float)(Math.pow((1+(i)), 7+1)-1)/i -1;
+
+            float res7= VP*resultado7;
+
+            
+
+            J.txtm7.setText(Float.toString(res7));
+
+        
+
+            float resultado8= (float)(Math.pow((1+(i)), 8+1)-1)/i -1;
+
+            float res8= VP*resultado8;
+
+            
+
+            J.txtm8.setText(Float.toString (res8));
+
+        
+
+            float resultado9= (float)(Math.pow((1+(i)), 9+1)-1)/i -1;
+
+            float res9= VP*resultado9;
+
+            
+
+            J.txtm9.setText(Float.toString (res9));
+
+        
+
+            float resultado10= (float)(Math.pow((1+(i)), 10+1)-1)/i -1;
+
+            float res10= VP*resultado10;
+
+            
+
+            J.txtm10.setText(Float.toString (res10));
+
+            //j+=1;
+
+        }
+
+        else if (n<=11) {
+
+            float resultado1= (float)(Math.pow((1+(i)), 1+1)-1)/i -1;
+
+            float res1= VP*resultado1;
+
+            
+
+            J.txtm1.setText(Float.toString (res1));
+
+        
+
+            float resultado2= (float)(Math.pow((1+(i)), 2+1)-1)/i -1;
+
+            float res2= VP*resultado2;
+
+            
+
+            J.txtm2.setText(Float.toString(res2));
+
+            
+
+            float resultado3= (float)(Math.pow((1+(i)), 3+1)-1)/i -1;
+
+            float res3= VP*resultado3;
+
+            
+
+            J.txtm3.setText(Float.toString(res3));
+
+            
+
+            float resultado4= (float)(Math.pow((1+(i)), 4+1)-1)/i -1;
+
+            float res4= VP*resultado4;
+
+            
+
+            J.txtm4.setText(Float.toString(res4));
+
+            
+
+            float resultado5= (float)(Math.pow((1+(i)), 5+1)-1)/i -1;
+
+            float res5= VP*resultado5;
+
+            
+
+            J.txtm5.setText(Float.toString (res5));
+
+        
+
+            float resultado6= (float)(Math.pow((1+(i)), 6+1)-1)/i -1;
+
+            float res6= VP*resultado6;
+
+            
+
+            J.txtm6.setText(Float.toString (res6));
+
+        
+
+            float resultado7= (float)(Math.pow((1+(i)), 7+1)-1)/i -1;
+
+            float res7= VP*resultado7;
+
+            
+
+            J.txtm7.setText(Float.toString(res7));
+
+        
+
+            float resultado8= (float)(Math.pow((1+(i)), 8+1)-1)/i -1;
+
+            float res8= VP*resultado8;
+
+            
+
+            J.txtm8.setText(Float.toString (res8));
+
+        
+
+            float resultado9= (float)(Math.pow((1+(i)), 9+1)-1)/i -1;
+
+            float res9= VP*resultado9;
+
+            
+
+            J.txtm9.setText(Float.toString (res9));
+
+        
+
+            float resultado10= (float)(Math.pow((1+(i)), 10+1)-1)/i -1;
+
+            float res10= VP*resultado10;
+
+            
+
+            J.txtm10.setText(Float.toString (res10));
+
+        
+
+            float resultado11= (float)(Math.pow((1+(i)), 11+1)-1)/i -1;
+
+            float res11= VP*resultado11;
+
+            
+
+            J.txtm11.setText(Float.toString (res11));
+
+            //j+=1;
+
+        }
+
+        else{
+
+             float resultado1= (float)(Math.pow((1+(i)), 1)-1);
+
+            float res1= VP*resultado1;
+
+            
+
+            J.txtm1.setText(Float.toString (res1));
+
+        
+
+            float resultado2= (float)(Math.pow((1+(i)), 2)-1);
+
+            float res2= VP*resultado2;
+
+            
+
+            J.txtm2.setText(Float.toString(res2));
+
+            
+
+            float resultado3= (float)(Math.pow((1+(i)), 3)-1);
+
+            float res3= VP*resultado3;
+
+            
+
+            J.txtm3.setText(Float.toString(res3));
+
+            
+
+            float resultado4= (float)(Math.pow((1+(i)), 4)-1);
+
+            float res4= VP*resultado4;
+
+            
+
+            J.txtm4.setText(Float.toString(res4));
+
+            
+
+            float resultado5= (float)(Math.pow((1+(i)), 5)-1);
+
+            float res5= VP*resultado5;
+
+            
+
+            J.txtm5.setText(Float.toString (res5));
+
+        
+
+            float resultado6= (float)(Math.pow((1+(i)), 6)-1);
+
+            float res6= VP*resultado6;
+
+            
+
+            J.txtm6.setText(Float.toString (res6));
+
+        
+
+            float resultado7= (float)(Math.pow((1+(i)), 7)-1);
+
+            float res7= VP*resultado7;
+
+            
+
+            J.txtm7.setText(Float.toString(res7));
+
+        
+
+            float resultado8= (float)(Math.pow((1+(i)), 8)-1);
+
+            float res8= VP*resultado8;
+
+            
+
+            J.txtm8.setText(Float.toString (res8));
+
+        
+
+            float resultado9= (float)(Math.pow((1+(i)), 9)-1);
+
+            float res9= VP*resultado9;
+
+            
+
+            J.txtm9.setText(Float.toString (res9));
+
+        
+
+            float resultado10= (float)(Math.pow((1+(i)), 10)-1);
+
+            float res10= VP*resultado10;
+
+            
+
+            J.txtm10.setText(Float.toString (res10));
+
+        
+
+            float resultado11= (float)(Math.pow((1+(i)), 11)-1);
+
+            float res11= VP*resultado11;
+
+            
+
+            J.txtm11.setText(Float.toString (res11));
+
+        
+
+            float resultado12= (float)(Math.pow((1+(i)), 12)-1);
+
+            float res12= VP*resultado12;
+
+            
+
+            J.txtm12.setText(Float.toString(res12));
+
+            
+
+        }
+
+    
+
+    }
+
+    
+
+}
