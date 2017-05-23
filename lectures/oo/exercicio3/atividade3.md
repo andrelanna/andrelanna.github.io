@@ -142,6 +142,7 @@ public class Limpar implements ActionListener {
 
 }
 
+Lucas de Castro Bezerra - 13/0121801
 
 
 **Exercício 2:** Crie uma interface gráfica para cálculo dos valores obtidos ao final de cada mês para uma aplicação mensal de umdeterminado valoor e uma determinada taxa de juros. O cálculo do valor obtido ao final é dado pela seguinte fórmula: 
@@ -272,3 +273,5 @@ public class Limpar implements ActionListener {
 	}
 
 }
+
+Lucas de Castro Bezerra - 13/0121801
