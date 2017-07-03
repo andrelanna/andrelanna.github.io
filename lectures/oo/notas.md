@@ -55,8 +55,11 @@ layout: default
 
 Avaliação 1
 
-Atividade 2 - Lista de exercícios sobre classes e objetos, entregues via GitHub em 10/4/2017.
+[Atividade 2][atividade2] - Lista de exercícios sobre classes e objetos, entregues via GitHub em 10/4/2017.
 
 Atividade 3 - Exercício sobre interfaces gráficas
 
 Atividade 4 - Projeto Final
+
+
+[atividade2]:exercicio2/atividade2.html
