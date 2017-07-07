@@ -6,7 +6,7 @@ layout: default
 
 Notas e frequencias - DAS 2017/1
 
-*Atualizado em 5/7/2017, 12:35hs.*
+*Atualizado em 7/7/2017, 11:20hs.*
 
 **Legenda e observações:**
 
