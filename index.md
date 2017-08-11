@@ -6,7 +6,7 @@
 layout: default
 ---
 
-# Disciplinas - 2017-1
+# Disciplinas - 2017-2
 
 [DAS - Desenvolvimento Avançado de Software][das_page]
 
