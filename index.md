@@ -14,5 +14,5 @@ layout: default
 
 
 
-[das_page]: /plano_das_2017_1.html
+[das_page]: /plano_das_2017_2.html
 [oo_page]: /plano_oo_2017_2.html
