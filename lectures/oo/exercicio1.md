@@ -3,7 +3,7 @@ title: Exercicio 1 - Orientação por Objetos
 permalink: /lectures/oo/exercicio1.html 
 layout: default 
 ---
-{% assign atualizaca = "11 de agosto de 2017."%}
+{% assign atualizacao = "11 de agosto de 2017."%}
 
 
 
