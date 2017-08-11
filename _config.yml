@@ -32,6 +32,8 @@ markdown: kramdown
 theme: jekyll-theme-minimal
 gems:
   - jekyll-feed
+  - jemoji
+  - jekyll-last-modified-at
 exclude:
   - Gemfile
   - Gemfile.lock
