@@ -6,25 +6,25 @@
 
 - aula: 2  
   data: 11-ago-17
-  topico: Dedetização FGA 
+  topico: Revisão de estruturas de linguagens de programação. 
   atividade:  
   material:  
 
 - aula: 3  
   data: 16-ago-17
-  topico: Paralização 
+  topico: Evolução das linguagens de programação / Classes e objetos 
   atividade:  
   material:  
 
 - aula: 4  
   data: 18-ago-17
-  topico: Revisão de estruturas de linguagens de programação. 
+  topico:  
   atividade:  
   material:  
 
 - aula: 5  
   data: 23-ago-17
-  topico: Evolução das linguagens de programação /Classes e objetos 
+  topico: 
   atividade:  
   material:  Introdução OO 
 
@@ -54,7 +54,7 @@
 
 - aula: 10 
   data: 8-set-17 
-  topico: Avaliação 1 Data alterada para próxima aula. Vide abaixo
+  topico: Avaliação 1 
   atividade:  
   material:  
 
@@ -66,7 +66,7 @@
 
 - aula: 12 
   data: 15-set-17
-  topico: FERIADO - Sexta-feira da Paixão 
+  topico: 
   atividade:  
   material:  
 
@@ -78,7 +78,7 @@
 
 - aula: 14 
   data: 22-set-17
-  topico: FERIADO - Tiradentes 
+  topico: 
   atividade:  
   material:  
 
@@ -114,7 +114,7 @@
 
 - aula: 20 
   data: 13-out-17
-  topico: Atividade em laboratório em dupla (T2) 
+  topico: 
   atividade:  
   material:  
 
@@ -150,7 +150,7 @@
 
 - aula: 26 
   data: 3-nov-17 
-  topico: Herença - Herança simples / herança múltipla 
+  topico: Herança - Herança simples / herança múltipla 
   atividade:  
   material:  
 
@@ -198,7 +198,7 @@
 
 - aula: 34 
   data: 31-nov-17
-  topico: Avaliação 3Trabalho Final 
+  topico: Avaliação 3
   atividade:  
   material:  
 
