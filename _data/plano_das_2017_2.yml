@@ -2,203 +2,203 @@
   data: 9-ago-17 
   topico: Apresentação da disciplina 
   atividade:  
-  material:  
+  material: 
 
 - aula: 2  
   data: 11-ago-17
-  topico: Revisão de estruturas de linguagens de programação. 
-  atividade:  
-  material:  
+  topico: Revisão framework xUnit- projeto estrutural do framework, asserções, casos de teste, suítes de testes.
+  atividade: /lectures/das/atividade1.html
+  material: Framework xUnit  
 
 - aula: 3  
   data: 16-ago-17
-  topico: Evolução das linguagens de programação / Classes e objetos 
-  atividade:  
-  material:  
+  topico: Revisão framework xUnit- testes parametrizados.
+  atividade: atividade1 
+  material: testesParametrizados 
 
 - aula: 4  
   data: 18-ago-17
-  topico:  
+  topico:  Introducao a refatoração / princípios de refatoracao.
   atividade:  
-  material:  
+  material:  sl1 sl2
 
 - aula: 5  
   data: 23-ago-17
-  topico: 
+  topico: Oportunidades em refatoração (maus-cheiros de código) / grupos de refatoração.
   atividade:  
-  material:  Introdução OO 
+  material: sl3 
 
 - aula: 6  
   data: 25-ago-17
-  topico: Atributos, métodos e identificadores. 
+  topico: Composição de métodos.
   atividade: 
-  material:  
+  material:  cat1
 
 - aula: 7  
   data: 30-ago-17
-  topico: Construtores e destrutores, referências a objetos. 
+  topico: Movendo características entre objetos.
   atividade:  
-  material:   
+  material: cat2  
 
 - aula: 8  
   data: 1-set-17
-  topico: Atividade em laboratório em dupla (T1) 
+  topico: Organizando dados.
   atividade: 
-  material:  
+  material: cat3
 
 - aula: 9  
   data: 6-set-17 
-  topico: Revisão de conteúdo 
+  topico: Simplificando expressões condicionais.
   atividade:  
-  material:  
+  material: cat4 
 
 - aula: 10 
   data: 8-set-17 
-  topico: Avaliação 1 
+  topico: Fazendo as chamadas de métodos mais simples.
   atividade:  
   material:  
 
 - aula: 11 
   data: 13-set-17
-  topico: Avaliação 1 
+  topico: Lidando com generalização.
   atividade:  
   material:  
 
 - aula: 12 
   data: 15-set-17
-  topico: 
+  topico: Introdução ao desenvolvimento orientado a testes; TDD *vs.* teste tradicional.
   atividade:  
   material:  
 
 - aula: 13 
   data: 20-set-17
-  topico: Tipos de dados e operadores 
+  topico: Conduzindo um desenvolvimento orientado a testes.
   atividade:  
-  material:  sl8sl8 
+  material:  
 
 - aula: 14 
   data: 22-set-17
-  topico: 
+  topico: Padrões para TDD - red bar patterns, testing patterns, green patterns.
   atividade:  
   material:  
 
 - aula: 15 
   data: 27-set-17
-  topico: Arranjos e coleções 
-  atividade:  
-  material:  list1list1list2list2list3list3 
-
-- aula: 16 
-  data: 29-set-17
-  topico: Arquitetura de eventos, swing 
-  atividade:  
-  material:  JLabelJLabelJTextFieldJTextFieldJButtonJButton 
-
-- aula: 17 
-  data: 4-out-17 
-  topico: Arquitetura de eventos, swing 
+  topico: Padrões para TDD - red bar patterns, testing patterns, green patterns.
   atividade:  
   material:  
 
+- aula: 16 
+  data: 29-set-17
+  topico: Introdução ao reuso de software, técnicas de reuso de software.
+  atividade:  
+  material: introducaoReuso
+
+- aula: 17 
+  data: 4-out-17 
+  topico: Frameworks de componentes
+  atividade:  
+  material:  introducaoFramework
+
 - aula: 18 
   data: 6-out-17 
-  topico: Threads e exceções 
-  atividade: codigoExcecoes 
-  material:  slides excecoesslidesExcecoes 
+  topico: Taxonomia e modelo de componentes.
+  atividade: 
+  material: 
 
 - aula: 19 
   data: 11-out-17
-  topico: Threads e exceções 
-  atividade: excecoes2 
+  topico: Detalhamento de um framework horizontal.
+  atividade: 
   material:  
 
 - aula: 20 
   data: 13-out-17
-  topico: 
-  atividade:  
+  topico: Construção de um framework de componentes.
+  atividade: [trabalho3]
   material:  
 
 - aula: 21 
   data: 18-out-17
-  topico: Encapsulamento - introdução 
+  topico: 
   atividade:  
   material:  
 
 - aula: 22 
   data: 20-out-17
-  topico: Encapsulamento - interfaces 
+  topico:
   atividade: Atividade 3Atividade 3 
   material:  
 
 - aula: 23 
   data: 25-out-17
-  topico: Encapsulamento - Pacotes / níveis de acesso 
+  topico: 
   atividade:  
   material:  
 
 - aula: 24 
   data: 27-out-17
-  topico: Encapsulamento - Escopo de elementos. 
+  topico: 
   atividade:  
   material:  
 
 - aula: 25 
   data: 1-nov-17
-  topico: Herança - introdução 
+  topico: 
   atividade:  
   material:  
 
 - aula: 26 
   data: 3-nov-17 
-  topico: Herança - Herança simples / herança múltipla 
+  topico: 
   atividade:  
   material:  
 
 - aula: 27 
   data: 8-nov-17 
-  topico: Herança - agregação / delegação 
+  topico: 
   atividade:  
   material:  
 
 - aula: 28 
   data: 10-nov-17 
-  topico: Herança - sobrescrita de métodos 
+  topico: 
   atividade:  conceitosOO 
   material:  
 
 - aula: 29 
   data: 15-nov-17
-  topico: Polimorfismo - tipos de polimorfismo 
+  topico: 
   atividade:  
   material:  
 
 - aula: 30 
   data: 17-nov-17
-  topico: Polimorfismo - inclusão, sobrecarga de métodos, paramétrico 
+  topico: 
   atividade:  
   material:  
 
 - aula: 31 
   data: 22-nov-17
-  topico: Polimorfismo - Interfaces e classes internas 
+  topico: 
   atividade:  
   material:  
 
 - aula: 32 
   data: 24-nov-17
-  topico: Desenvolvimento de aplicações OO 
+  topico: 
   atividade:  
   material:  
 
 - aula: 33 
   data: 29-nov-17
-  topico: Revisão de conteúdo 
+  topico: 
   atividade:  
   material:  
 
 - aula: 34 
   data: 31-nov-17
-  topico: Avaliação 3
+  topico: 
   atividade:  
   material:  
 
