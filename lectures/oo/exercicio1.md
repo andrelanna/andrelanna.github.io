@@ -3,6 +3,9 @@ title: Exercicio 1 - Orientação por Objetos
 permalink: /lectures/oo/exercicio1.html 
 layout: default 
 ---
+{% assign atualizaca = "11 de agosto de 2017."%}
+
+
 
 ## Aula 1 - Revisão de estruturas de linguagens de programação / Introdução à linguagem Java.
 
@@ -11,10 +14,7 @@ Faça um programa em Java, que seja capaz de calcular os $$n$$ primeiros termos 
 
 
 **Exercício 2:**
-<<<<<<< HEAD
 Faça um programa em Java que seja capaz de calcular todos os números primos inteiros $$x$$ dentro do intervalo $$1 \leq x \leq n$$, usando as três estruturas de repetição vistas em sala de aula.
 
 ---
 <sup>_Última atualização: {{ atualizacao }}_</sup>
-=======
->>>>>>> 35691701a039d1ec74115f5f02a7d36317e2e560
