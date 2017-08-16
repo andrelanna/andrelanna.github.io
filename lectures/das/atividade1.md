@@ -3,8 +3,8 @@ title: Atividade 1 - Desenvolvimento Avançado de Software
 permalink: /lectures/das/atividade1.html 
 layout: default 
 ---
-{% assign atualizacao="11 de agosto de 2017."%}
-## Aula 1 - Revisão de estruturas de linguagens de programação / Introdução à linguagem Java.
+{% assign atualizacao="16 de agosto de 2017."%}
+## Aula 1 - Introdução ao framework JUnit4.
 
 Para responder às questões abaixo, considere o framework de testes JUnit4.
 
