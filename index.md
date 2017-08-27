@@ -8,7 +8,8 @@ layout: default
 
 # Disciplinas - 2017-2
 
-[DAS - Desenvolvimento Avançado de Software][das_page] :new:
+[DAS - Desenvolvimento Avançado de Software][das_page] :new:  
+*(Atualizado em 26 de agosto de 2017)*
 
 [OO - Orientação por objetos][oo_page] :new:
 
