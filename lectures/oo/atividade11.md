@@ -34,8 +34,30 @@ Após criar cada um desses veículos, o programa deverá informar:
 
 
 
+:smiley: **Exercício 2**: Considerando o seguinte cenário de uma turma de alunos de orientação por objetos.
 
-:smiley: **Exercício 2**:
+_Um professor de uma turma de Orientação por Objetos deseja um sistema que calcule as menções finais de seus alunos com base nas avaliações que estes fizeram ao longo do semestre. Para cada aluno basta informar seu nome completo e número de matrícula. Para cada avaliação (sempre avaliada em 10), é informada a nota que o aluno tirou. O valor final a ser considerado para o cálculo da menção é dado pela média aritmética das avaliações. As mencções são definidas através dos seguintes intervalos:_  
+
+$$ media < 0.01 \rightarrow SR$$  
+$$ 0.01 \leq media < 2.0 \rightarrow II$$  
+$$ 2.00 \leq media < 5.0 \rightarrow MI $$  
+$$ 5.00 \leq media < 7.0 \rightarrow MM $$  
+$$ 7.00 \leq media < 9.0 \rightarrow MS $$  
+$$ 9.00 \leq media \rightarrow SS $$
+
+Pede-se ao aluno que iniciamente modele, através de um diagrama de classes, os elementos necessários para que tal cenário seja considerado. Em seguida:
+- implemente em Java um programa que seja capaz de ler os dados e as avaliações de 5 alunos.
+- Uma vez que todos os dados tiverem sido lidos imprima, para cada aluno, o valor de suas avaliações, a média e sua menção final. 
+- Imprima ainda, qual avaliação teve a maior nota e os dados do aluno que a realizou.
+
+
+[comment]: <> Exercitar
+[comment]: <> Criação de objetos
+[comment]: <> Associacao entre objetos
+[comment]: <> comunicacao entre objetos
+[comment]: <> Entrada de dados via teclado
+[comment]: <> Estruturas de dados compostas
+[comment]: <> Escrita de dados em arquivo. 
 
 
 :fearful: **Exercício 3**:
