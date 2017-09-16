@@ -25,6 +25,10 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 google_analytics: UA-96343238-1
 twitter_username: andreperon
 github_username: andrelanna
+linkedin_username: https://www.linkedin.com/in/andre-luiz-peron-martins-lanna-5735179 
+aboutme_username:
+instagram_username:
+flickr_username: andreperon
 
 # Build settings
 markdown: kramdown
@@ -37,3 +41,5 @@ gems:
 exclude:
   - Gemfile
   - Gemfile.lock
+
+
