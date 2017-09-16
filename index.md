@@ -5,6 +5,8 @@
 # layout: home
 layout: default
 ---
+[das_page]: /lectures/das/plano_das_2017_2.html
+[oo_page]: /plano_oo_2017_2.html
 
 # Disciplinas - 2017-2
 
@@ -13,7 +15,8 @@ layout: default
 
 [OO - Orientação por objetos][oo_page] :new:
 
+--------------------------------------------------------------------------------
+# Updates:  
 
-
-[das_page]: /lectures/das/plano_das_2017_2.html
-[oo_page]: /plano_oo_2017_2.html
+* Sep. $$12^{th.}$$, 2017: the PhD thesis' text was sent to the examining
+  board.:+1:
