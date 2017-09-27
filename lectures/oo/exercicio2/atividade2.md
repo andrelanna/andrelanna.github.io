@@ -6,11 +6,20 @@ layout: default
 ### UnB - Universidade de Brasilia
 ### FGA - Faculdade do Gama
 ### OO - Orientação por objetos
+
 ------
 
 Atividade para realizar em dupla e entregar via [GitHub][github]. Uma entrega por dupla. As entregas deverão ser feitas através de *pull-requests* no repositório principal, sendo um pull para cada questão. Instruções de como realizar a entrega estão disponíveis **[aqui][instrucoesSubmissao]**.
 
 Prazo para entrega: ~~4/4/2017~~ 10/04/2017, 23:59:59.
+
+---
+# Resolvido por:
+    Gustavo Soares Inácio - 160123771
+    Lucas Kishima dos Santos - 160133581
+    Natália Maria Rodrigues Queiroz - 160015839
+
+---
 
 **Questão 1:** Os termos abaixo estão relacionados ao paradigma de *Orientação por Objetos*. Defina cada um dos termos com base no livro-texto (Eck, David J. Introduction to Programming Using Java, 6th ed. 2011).
 * classe
@@ -23,7 +32,47 @@ Prazo para entrega: ~~4/4/2017~~ 10/04/2017, 23:59:59.
 * estado de um objeto
 * retenção de estado
 
-Classe é a estrutura definida pelo programador, contendo atributos e métodos (comportamento) comuns a um conjunto de objetos.
+### RESPOSTAS Q1
+
+  * ### **Classe:**
+
+      A melhor maneira de explicar classes é através de exemplos. As classes determinam as características que um objeto irá conter. Por exemplo: ao montar carros, a fábrica usa uma *blueprint*, que possui todas as características que esses carros devem conter, para fabricar um grande número de carros. Essa blueprint, então, é uma classe chamada Carro, enquanto os carros gerados dela são instâncias dessa classe, ou seja, objetos.
+
+  * ### **Objeto:**
+
+      Objetos são o foco da linguagem Java. Toda vez que instanciamos uma classe estamos criando um objeto dessa classe. Objetos possuem um *estado*, que são suas características e um *comportamento*, que são as atividades que o objeto pode realizar. Usando o exemplo da classe Carro novamente:
+
+      - Estado: cor, marca, modelo, ano, peso, etc.
+      - Comportamento: ligar, desligar, acelerar, frear, buzinar, etc.
+
+  * ### **Elementos de classe:**
+
+      Uma classe é composta de vários elementos, sendo eles atributos ou métodos.
+
+  * ### **Atributos:**
+
+      Os atributos definem o estado da classe(ou objeto instanciado dessa classe)
+
+  * ### **Métodos:**
+
+      Os métodos definem comportamentos.
+
+  * ### **Método construtor padrão:**
+
+      O método construtor padrão é o método chamado na criação padrão de um objeto (sem passagem de parâmetros). Ele cria, caso o método não seja definido pelo programador, um objeto com valores nulos.
+
+  * ### **Método construtor alternativo:**
+
+      O método construtor alternativo é um método de criação de objetos onde são passados parâmetros para já criar um objeto com valores customizados.
+
+  * ### **Estado de um objeto:**
+
+      O estado de um objeto refere se ao conjunto de valores que seus atributos tem no momento.
+
+  * ### **Retenção de estado:**
+
+      Capacidade de um objeto ficar na memória enquanto algo referenciá-lo
+
 
 **Questão 2:** Julgue as seguintes frases como verdadeiras ou falsas e explique o motivo delas estarem certas ou erradas. Nos casos em que julgar uma sentença como errada, altere-a de modo a corrigi-la.
 
@@ -37,6 +86,30 @@ d) Em Java, o operador . (ponto) serve para acessar somente os métodos de um ob
 
 e) Métodos destrutores são aqueles métodos que são chamados explicitamente pelo algoritmo para destruir objetos e liberar os espaços que eles ocupam em memória. Em Java métodos destrutores são implementos com o nome **finalize()** e definidos em cada classe.
 
+### RESPOSTAS Q2
+
+
+* ### **(a)**
+
+    Errado. Os objetos terão o mesmo estado, mas não terão a mesma referência. Uma referência só pode atribuída a um objeto.
+
+* ### **(b)**
+
+    Errado. Uma classe pode ter tantos construtores alternativos quanto forem necessários, porém só pode ter um construtor padrão.
+
+* ### **(c)**
+
+    Verdadeiro.
+
+* ### **(d)**
+
+    Errado. O ponto serve para acessar tanto métodos quanto atributos de um objeto.
+
+* ### **(e)**
+
+    Errado. Métodos destrutores não são explicitamente chamados pelo algorítimo. Eles são chamados automaticamente pelo garbagge Collector.
+
+---
 
 **Questão 3:**  Considere o seguinte cenário:
 
@@ -57,6 +130,59 @@ Além dessas características, drones possuem as seguintes funções básicas: a
 
 Dado esse cenário, pede-se aos alunos que representem (inicialmente) as características e comportamentos de um drone através de um diagrama de classes e, posteriormente, apresente a implementação dessa classe na linguagem Java. 
 
+---
+
+### RESPOSTAS Q3
+
+* Diagrama de classes:
+
+| Drone                |
+|:---------------------|
+| helices : int        |
+| autonomiaBat : int   |
+| velVerMax : float    |
+| velHorMax : float    |
+| distanciaMax : float |
+| camera : String      |
+
+{% highlight java %}
+
+    public class Drone{
+        int helices;
+        int autonomiaBat;
+        float velVerMax;
+        float velHorMax;
+        float distanciaMax;
+        String camera;
+        String marca;
+        String modelo;
+
+        Drone(){
+            helices = 0;
+            autonomiaBat = 0;
+            velVerMax = 0;
+            velHorMax = 0;
+            distanciaMax = 0;
+            camera = "";
+            marca = "";
+            modelo = "";
+        }
+
+        Drone(String mar, String mod, int hel, String cam, float vv, float vh, int auto, float dMax){
+            helices = hel;
+            autonomiaBat = auto;
+            velVerMax = vv;
+            velHorMax = vh;
+            distanciaMax = dMax;
+            camera = cam;
+            marca = mar;
+            modelo = mod;
+        }
+    }
+
+    {% endhighlight %}
+
+---
 
 **Questão 4:** Considerando a classe definida e implementada na questão 5, pede-se que os seguintes objetos sejam criados a partir do programa principal: 
 
@@ -71,12 +197,63 @@ Dado esse cenário, pede-se aos alunos que representem (inicialmente) as caracte
 | Autonomia bateria| 7 minutos      | 20 minutos     | 27 minutos        | 15 minutos        |
 | Distância máxima | até 150 metros | até 1 kilometro| até 13 kilometros | até 13 kilometros |
 
+---
+
+### RESPOSTAS Q4
+{% highlight java %}
+
+    public class Questao4{
+        public static void main(String[] args){
+            Drone drone1,
+                drone2,
+                drone3,
+                drone4;
+
+            drone1 = new Drone("Hubsan", "X4 mini", 4, "SD", 10, 10, 7, 150);
+            drone2 = new Drone("Hubsan", "H501S X4 FPV", 4, "HD", 12, 12, 20, 1000);
+            drone3 = new Drone("DJI", "Mavic Pro", 4, "UHD", 16, 16, 27, 13000);
+            drone4 = new Drone("DJI", "Spreading Wings", 8, "SUHD", 16, 16, 15, 13000);
+        }
+    }
+
+{% endhighlight %}
+
+---
 
 **Questão 5:** Ainda levando em consideração o cenário descrito nas questões 3 e 4, é necessário fazer com que os comandos realizados pelo usuário no controle remoto sejam enviados ao drone. Para isso, é necessário que o controle remoto estabeleça uma conexão com o drone. A partir desse momento é possível enviar os seguintes comandos ao drone: a) aumentar ou diminuir a velocidade vertical em passos de 1 m/s; b) aumentar ou diminuir a velocidade horizontal em passos de 1m/s e, c) ativar ou desativar a câmera. É importante ressaltar que um controle remoto só pode estar conectado a um drone apenas. Por fim, controles remotos possuem baterias com autonomia entre 60 e 90 minutos e alcance entre 20 metros e 20 kilometros.  
 
 Desse modo, pede-se nessa questão que seja modelada e implementada em Java a classe que representa as características e o comportamento de um controle remoto, de modo que o drone possa ser comandado a partir do comandos enviados pelo controle remoto.
 
+---
+### Respostas Q5
 
+{% highligh java %}
+
+    public class Questao5{
+      public static void main(String[] args){
+          ControleRemoto cr1, cr2, cr3, cr4;
+          Drone drone1, drone2, drone3, drone4;
+
+          cr1 = new ControleRemoto(20000, 90);
+          cr2 = new ControleRemoto(20000, 90);
+          cr3 = new ControleRemoto(20000, 90);
+          cr4 = new ControleRemoto(20000, 90);
+
+          drone1 = new Drone("Hubsan", "X4 mini", 4, "SD", 10, 10, 7, 150);
+          drone2 = new Drone("Hubsan", "H501S X4 FPV", 4, "HD", 12, 12, 20, 1000);
+          drone3 = new Drone("DJI", "Mavic Pro", 4, "UHD", 16, 16, 27, 13000);
+          drone4 = new Drone("DJI", "Spreading Wings", 8, "SUHD", 16, 16, 15, 13000);
+
+          cr1.drone = drone1;
+          cr2.drone = drone2;
+          cr3.drone = drone3;
+          cr4.drone = drone4;
+      }
+    }
+
+{% endhighlight %}
+
+---
 **Questão 6:** Sejam os seguintes códigos da *ClasseA* e da aplicação principal escritas em JAVA. 
 
 Questao6.java
@@ -130,6 +307,28 @@ System.out.println(q1.a4 == q3.a4);
 System.out.println(q3 == q2);
 {% endhighlight %}
 
+---
+### RESPOSTAS Q6
+
+
+* ### (a)
+    As referencias a1 e a2 são para atributos da classe e não são iguais.
+
+* ### (b)
+
+    * q1 => (0, 0f, null, falso)
+    * q2 => (0, 0.0f, null, false)
+    * q3 => (0, 0.0f, null, false)
+
+* ### (c)
+    falso
+    verdadeiro
+    falso
+    verdadeiro
+    verdadeiro
+    falso
+
+---
 
 **Questão 7:**
 Seja o seguinte código em Java. Apresente o que será impresso ao final da execução do método **main** definido na classe **Principal**.
@@ -225,6 +424,24 @@ public class Curso {
 }
 {% endhighlight  %}
 
+---
+### RESPOSTAS Q7
+
+    Nome: Andre
+    Curso: #endereço
+    Data de nascimento: 23/02/1983
+    Nome: Maria
+    Curso: #endereço
+    Data de nascimento: 27/5/1994
+    Nome: Junior
+    Curso: #endereço
+    Data de nascimento: 16/11/1995
+    false
+    false
+    true
+
+---
+
 
 **Questão 8:** Considerando as classes **Aluno** e **Curso** definidas na questão 7, o que será impresso quando o *garbagge collector* de Java executar momentos antes do método **main()** da classe abaixo terminar sua execução?
 
@@ -255,6 +472,103 @@ public class Principal {
 }
 {% endhighlight %}
 
+---
+### RESPOSTAS Q8
+
+
+Consideremos as seguintes associeções:
+
+        a1 = aluno1
+        a2 = aluno2
+        a3 = aluno3
+        c1 = cusro1
+        c2 = curso2
+
+Realizando as operações:
+
+* a3 = a2
+
+        a1 = aluno1
+        a2 = aluno2
+        a3 = aluno2
+           = aluno3
+        c1 = cusro1
+        c2 = curso2
+
+* a2 = null
+
+        a1 = aluno1
+        a2 =
+        a3 = aluno2
+           = aluno3
+        c1 = cusro1
+        c2 = curso2
+
+* c2 = c1
+
+        a1 = aluno1
+        a2 =
+        a3 = aluno2
+           = aluno3
+        c1 = cusro1
+        c2 = curso1
+           = curso2
+
+* c1 = null
+
+        a1 = aluno1
+        a2 =
+        a3 = aluno2
+           = aluno3
+        c1 =
+        c2 = curso1
+           = curso2
+
+* c1 = a3.curso ---> a3.curso = aluno2.curso = curso2
+
+        a1 = aluno1
+        a2 =
+        a3 = aluno2
+           = aluno3
+        c1 = curso2
+        c2 = curso1
+
+* a3 = a1
+
+        a1 = aluno1
+        a2 =
+        a3 = aluno1
+           = aluno2
+           = aluno3
+        c1 = curso2
+        c2 = curso1
+
+* a1 = null
+
+        a1 =
+        a2 =
+        a3 = aluno1
+           = aluno2
+           = aluno3
+        c1 = curso2
+        c2 = curso1
+
+Ao passar o Garbagge Collector, os objetos aluno2 e aluno3, que no incío eram a2 e a3, irão ser levados para o lixo, chamando seus respectivos métodos finalize(). O output, então, será:
+
+    Output:
+
+        Esse objeto ALUNO vai ser destruído.
+        Detalhes do objeto:
+        Nome: Maria
+        Curso: #endereço
+        Data de nascimento: 27/5/1994
+        Esse objeto ALUNO vai ser destruído.
+        Detalhes do objeto:
+        Nome: Junior
+        Curso: #endereço
+        Data de nascimento: 16/11/1995
+
+---
 
 **Questão 9:** as cinco instruções listadas abaixo estão definidas no método **main()** da classe **Principal** e apresentam erros em suas sintaxes. Apresente quais são os erros, justifique-os e altere as instruções de modo a consertá-los. Considere os códigos das classes **Aluno** e **Turma** como sendo os códigos apresentados na questão 7. 
 
@@ -279,6 +593,36 @@ public class Principal {
 	}
 }
 {% endhighlight %}
+
+---
+### RESPOSTAS Q9
+
+{% highlight java %}
+
+    public class Principal {
+        public static void main(String[] args) {
+            Curso c1, c2;
+            Aluno a1, a2, a3;
+
+            c2 = new Curso(2, "Engenharia Eletrônica", 257);
+
+            a1 = new Aluno("Andre", c1, 13, 23, 02, 1983);
+            a2 = new Aluno("Maria", c2, 5, 27, 5, 1994);
+
+            Curso.obterDetalhes(); // Método obter detalhes sendo chamado de uma classe, quando deveria ser chamado de um objeto
+            c2.matricula = 20; // c2 é um objeto curso que não possui atributo 'matricula'
+            Curso.nome = "Ciência da computação"; // Novamente, algo (um atributo nesse caso) sendo chamado direto de classe ao invés de um de seus objetos
+            c1.codigo = 21; // Objeto c1 não foi instanciado
+            Aluno.obterDetalhes(); // Método sendo chamado da Classe ao invés de um de seus objetos
+            a3.cargaHoraria() = 220; // Objeto a3 não foi instanciado e a classe Aluno não possui método 'cargaHoraria()'
+        }
+    }
+
+{% endhighlight %}
+
+---
+
+
 **Questão 10:** sabe-se que um curso em é formado por um conjunto de disciplinas, para as quais são definidas as seguintes características: 
 
 * um código da disciplina;
@@ -307,6 +651,65 @@ b) Crie as seguintes turmas:
 c) associe ambas turmas recem-criadas ao curso de Engenharia de Software,
 
 d) matricule Andre e Maria na turma de orientação por objetos, e Junior na turma de desenvolvimento avançado de software.
+
+---
+### RESPOSTA Q10
+
+### **a)**
+
+        public class Turma {
+        int codigo,
+            totalVagas,
+            vagasLivres,
+            vagasOcupadas;
+        String nome, diaHora;
+        Curso curso;
+
+        Turma(String n, int cod, int vl, int vo, String dh, Curso c){
+            nome = n;
+            codigo = cod;
+            totalVagas = vl + vo;
+            vagasLivres = vl;
+            vagasOcupadas = vo;
+            diaHora = dh;
+            curso = c;
+        }
+
+        void matricular(Aluno aluno){
+            vagasLivres -= 1;
+            vagasOcupadas += 1;
+            System.out.println("-------------------------------------------------");
+
+            System.out.println("| " + aluno.nome + " matriculado(a) em " + this.nome + "\t|");
+            System.out.println("| Vagas ocupadas: " + vagasOcupadas + "\t\t\t\t|");
+            System.out.println("| Vagas livres: " + vagasLivres + "\t\t\t\t|");
+            System.out.println("-------------------------------------------------");
+        }
+
+    }
+
+### **b), c), d)**
+
+        public class Questao10 {
+            public static void main(String[] args){
+                Curso c1;
+                Turma t1, t2;
+                Aluno a1, a2, a3;
+
+                c1 = new Curso(1, "Engenharia de Software", 240);
+
+                t1 = new Turma("Orientacao a Objetos", 1, 46, 0, "Quarta/Sexta, 14h-16h", c1);
+                t2 = new Turma("Desen. Avancado Soft", 2, 30, 0, "Quarta/Sexta, 16h-18h", c1);
+
+                a1 = new Aluno("Andre ", c1, 13, 23, 02, 1983);
+                a2 = new Aluno("Maria ", c1, 05, 27, 05, 1994);
+                a3 = new Aluno("Junior", c1, 16, 27, 02, 1994);
+
+                t1.matricular(a1);
+                t1.matricular(a2);
+                t2.matricular(a3);
+            }
+        }
 
 ## Referências:
 \[[OPEN ACCESS][eckDavid]\] Eck, David J. Introduction to Programming Using Java, 6th ed. 2011
