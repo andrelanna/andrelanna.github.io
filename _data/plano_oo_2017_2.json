@@ -130,7 +130,7 @@
 	{
 		"aula": 17,
 		"data": "4-out-17",
-		"topico": "Arquitetura de eventos, swing",
+		"topico": "Interfaces",
 		"atividade": "",
 		"material": "",
 		"codigo": ""
@@ -138,23 +138,23 @@
 	{
 		"aula": 18,
 		"data": "6-out-17",
-		"topico": "Threads e exceções",
-		"atividade": "codigoExcecoes",
-		"material": "slides excecoesslidesExcecoes",
+		"topico": "Arranjos e coleções",
+		"atividade": "",
+		"material": "",
 		"codigo": null
 	},
 	{
 		"aula": 19,
 		"data": "11-out-17",
-		"topico": "Threads e exceções",
-		"atividade": "excecoes2",
+		"topico": "Revisão para avaliação 1",
+		"atividade": "URL_lista_1",
 		"material": "",
 		"codigo": ""
 	},
 	{
 		"aula": 20,
 		"data": "13-out-17",
-		"topico": null,
+		"topico": "Avaliação 1",
 		"atividade": "",
 		"material": "",
 		"codigo": ""
@@ -162,7 +162,7 @@
 	{
 		"aula": 21,
 		"data": "18-out-17",
-		"topico": "Encapsulamento - introdução",
+		"topico": "Threads",
 		"atividade": "",
 		"material": "",
 		"codigo": ""
@@ -170,15 +170,15 @@
 	{
 		"aula": 22,
 		"data": "20-out-17",
-		"topico": "Encapsulamento - interfaces",
-		"atividade": "Atividade 3Atividade 3",
+		"topico": "Threads",
+		"atividade": "",
 		"material": "",
 		"codigo": ""
 	},
 	{
 		"aula": 23,
 		"data": "25-out-17",
-		"topico": "Encapsulamento - Pacotes / níveis de acesso",
+		"topico": "Exceções",
 		"atividade": "",
 		"material": "",
 		"codigo": ""
@@ -186,7 +186,7 @@
 	{
 		"aula": 24,
 		"data": "27-out-17",
-		"topico": "Encapsulamento - Escopo de elementos.",
+		"topico": "Exceções",
 		"atividade": "",
 		"material": "",
 		"codigo": ""
@@ -194,7 +194,7 @@
 	{
 		"aula": 25,
 		"data": "1-nov-17",
-		"topico": "Herança - introdução",
+		"topico": "Exceções",
 		"atividade": "",
 		"material": "",
 		"codigo": ""
@@ -202,7 +202,7 @@
 	{
 		"aula": 26,
 		"data": "3-nov-17",
-		"topico": "Herança - Herança simples / herança múltipla",
+		"topico": "Revisão para avaliação 2",
 		"atividade": "",
 		"material": "",
 		"codigo": ""
@@ -210,7 +210,7 @@
 	{
 		"aula": 27,
 		"data": "8-nov-17",
-		"topico": "Herança - agregação / delegação",
+		"topico": "Avaliação 2",
 		"atividade": "",
 		"material": "",
 		"codigo": ""
@@ -218,15 +218,15 @@
 	{
 		"aula": 28,
 		"data": "10-nov-17",
-		"topico": "Herança - sobrescrita de métodos",
-		"atividade": "conceitosOO",
+		"topico": "Arquitetura de eventos, Swing",
+		"atividade": "",
 		"material": "",
 		"codigo": ""
 	},
 	{
 		"aula": 29,
 		"data": "15-nov-17",
-		"topico": "Polimorfismo - tipos de polimorfismo",
+		"topico": "Arquitetura de eventos, Swing",
 		"atividade": "",
 		"material": "",
 		"codigo": ""
@@ -234,7 +234,7 @@
 	{
 		"aula": 30,
 		"data": "17-nov-17",
-		"topico": "Polimorfismo - inclusão, sobrecarga de métodos, paramétrico",
+		"topico": "Arquitetura de eventos, Swing",
 		"atividade": "",
 		"material": "",
 		"codigo": ""
@@ -242,7 +242,7 @@
 	{
 		"aula": 31,
 		"data": "22-nov-17",
-		"topico": "Polimorfismo - Interfaces e classes internas",
+		"topico": "Arquitetura de eventos, Swing",
 		"atividade": "",
 		"material": "",
 		"codigo": ""
@@ -250,7 +250,7 @@
 	{
 		"aula": 32,
 		"data": "24-nov-17",
-		"topico": "Desenvolvimento de aplicações OO",
+		"topico": "Desenvolvimento de aplicações Java",
 		"atividade": "",
 		"material": "",
 		"codigo": ""
@@ -258,14 +258,14 @@
 	{
 		"aula": 33,
 		"data": "29-nov-17",
-		"topico": "Revisão de conteúdo",
+		"topico": "Desenvolvimento de aplicações Java",
 		"atividade": "",
 		"material": "",
 		"codigo": ""
 	},
 	{
 		"aula": 34,
-		"data": "31-nov-17",
+		"data": "1-dez-17",
 		"topico": "Avaliação 3",
 		"atividade": "",
 		"material": "",
@@ -273,7 +273,7 @@
 	},
 	{
 		"aula": 35,
-		"data": "1-dez-17",
+		"data": "6-dez-17",
 		"topico": "Entrega / revisão de menção final",
 		"atividade": "",
 		"material": "",
@@ -281,7 +281,7 @@
 	},
 	{
 		"aula": 36,
-		"data": "6-dez-17",
+		"data": "8-dez-17",
 		"topico": "Entrega / revisão de menção final",
 		"atividade": "",
 		"material": "",
