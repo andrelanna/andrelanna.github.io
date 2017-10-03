@@ -18,12 +18,17 @@ layout: default
 --------------------------------------------------------------------------------
 ## Selected publications:
 
-* :new: Andre Lanna, Thiago Castro, Vander Alves, Genaina Rodrigues, Pierre-Yves Schobbens, and Sven Apel. _[Feature-Family-Based Reliability Analysis of Software Product Lines][ist2017]._ Information and Software Technology, 2017. To appear.   
+* :new: Andre Lanna, Thiago Castro, Vander Alves, Genaina Rodrigues,
+  Pierre-Yves Schobbens, and Sven Apel. _[Feature-Family-Based Reliability
+Analysis of Software Product Lines][ist2017]._ Information and Software
+Technology, 2017. To appear.   
 
 --------------------------------------------------------------------------------
 ## Updates:  
 
-* Oct. $$ 1^{st.}$$, 2017: Paper _Feature-family-based reliability analysis _
+* Oct. $$ 1^{st.}$$, 2017: Paper _Feature-Family-Based Reliability Analysis for
+  Software Product Lines_ accepted for publication at [Information and
+Software Technology][ist] Journal. 
 * Sep. $$29^{th.}$$, 2017: the PhD thesis was approved by the examining board.
   :mortar_board:
 * Sep. $$12^{th.}$$, 2017: the PhD thesis' text was sent to the examining
@@ -32,4 +37,5 @@ layout: default
 
 
 
+[ist]: https://www.journals.elsevier.com/information-and-software-technology/
 [ist2017]: http://ow.ly/DZeZ30fBFcF
