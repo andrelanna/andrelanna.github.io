@@ -8,7 +8,7 @@ layout: default
 [das_page]: /lectures/das/plano_das_2017_2.html
 [oo_page]: /plano_oo_2017_2.html
 
-# Disciplinas - 2017-2
+## Disciplinas - 2017-2
 
 [DAS - Desenvolvimento Avançado de Software][das_page] :new:  
 *(Atualizado em 26 de agosto de 2017)*
@@ -16,7 +16,20 @@ layout: default
 [OO - Orientação por objetos][oo_page] :new:
 
 --------------------------------------------------------------------------------
-# Updates:  
+## Selected publications:
 
+* :new: Andre Lanna, Thiago Castro, Vander Alves, Genaina Rodrigues, Pierre-Yves Schobbens, and Sven Apel. _[Feature-Family-Based Reliability Analysis of Software Product Lines][ist2017]._ Information and Software Technology, 2017. To appear.   
+
+--------------------------------------------------------------------------------
+## Updates:  
+
+* Oct. $$ 1^{st.}$$, 2017: Paper _Feature-family-based reliability analysis _
+* Sep. $$29^{th.}$$, 2017: the PhD thesis was approved by the examining board.
+  :mortar_board:
 * Sep. $$12^{th.}$$, 2017: the PhD thesis' text was sent to the examining
   board.:+1:
+
+
+
+
+[ist2017]: http://ow.ly/DZeZ30fBFcF
