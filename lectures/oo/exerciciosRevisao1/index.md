@@ -49,3 +49,6 @@ Termos:
 * Sobrecarga de métodos
 * Sobrescrita de métodos
 * Static
+
+
+**Exercício 2:** Utilizando mapas conceituais relacione os termos do paradigma de Orientação por Objetos apresentados no exercício 1. Um breve resumo sobre mapas conceituais pode ser encontrado nesse [link](http://www2.pelotas.ifsul.edu.br/glaucius/mpet_mcpf/material_apoio/apres_Mapas_Conceituais.pdf). 
