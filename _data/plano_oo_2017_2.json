@@ -146,23 +146,23 @@
 	{
 		"aula": 19,
 		"data": "11-out-17",
-		"topico": "Revisão para avaliação 1",
-		"atividade": "/lectures/oo/exerciciosRevisao1/index.html",
+		"topico": "Threads",
+		"atividade": "",
 		"material": "",
 		"codigo": ""
 	},
 	{
 		"aula": 20,
 		"data": "13-out-17",
-		"topico": "Avaliação 1",
-		"atividade": "",
+		"topico": "(**ENTREGA**) Revisão para avaliação 1",
+		"atividade": "/lectures/oo/exerciciosRevisao1/index.html",
 		"material": "",
 		"codigo": ""
 	},
 	{
 		"aula": 21,
 		"data": "18-out-17",
-		"topico": "Threads",
+		"topico": "Avaliação 1",
 		"atividade": "",
 		"material": "",
 		"codigo": ""
