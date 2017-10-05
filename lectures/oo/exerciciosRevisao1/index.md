@@ -89,3 +89,15 @@ extensão pode ter vários alunos (incluindo a possibilidade de não ter nenhum
 aluno).    
   d) Considerando as classes do projeto, apresente *todos* os métodos polimórficos por *sobrescrita de métodos*.
   e) Considerando as classes do projeto, apresente aquelas que não são capazes de gerar objeto algum. 
+
+
+
+**Exercício 5:** Considerando o diagrama de classes do Exercício 3 apresente, para cada classe, quais os elementos (atributos e métodos) das demais classes estão visíveis, conforme o exemplo abaixo:
+
+| Classe | Aluno  | AlunoExtensao   | Graduação   | ... |
+|:------:|:------:|:---------------:|:-----------:|:---:|
+|Aluno   |  ---   | setIdade(), ... | graduacao(),| ... |
+|AlunoExt|nome,...|      ---        | graduacao(),| ... |
+|  ...   |  ...   |      ...        |   ...       | ... |
+|Mundo   |  ...   |      ...        |   ...       | ... |
+
