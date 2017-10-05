@@ -51,4 +51,25 @@ Termos:
 * Static
 
 
-**Exercício 2:** Utilizando mapas conceituais relacione os termos do paradigma de Orientação por Objetos apresentados no exercício 1. Um breve resumo sobre mapas conceituais pode ser encontrado nesse [link](http://www2.pelotas.ifsul.edu.br/glaucius/mpet_mcpf/material_apoio/apres_Mapas_Conceituais.pdf). 
+**Exercício 2:** Utilizando mapas conceituais relacione os termos do paradigma
+de Orientação por Objetos apresentados no exercício 1. Um breve resumo sobre
+mapas conceituais pode ser encontrado nesse
+[link](http://www2.pelotas.ifsul.edu.br/glaucius/mpet_mcpf/material_apoio/apres_Mapas_Conceituais.pdf). 
+
+**Exercício 3:** Dado o seguinte diagrama de classes informe quais são as
+classes ou elementos conforme os itens a seguir:
+
+![](/lectures/oo/exerciciosRevisao1/exercise3.png)
+
+* Atributo de classe
+* Atributo de objeto
+* Classes abstratas
+* Classes concretas
+* Construtores alternativos
+* Construtores padrão
+* Métodos abstratos
+* Métodos concretos
+* Métodos de classe
+* Métodos de objeto
+* Pacotes
+
