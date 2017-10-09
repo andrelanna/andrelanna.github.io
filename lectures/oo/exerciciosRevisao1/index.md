@@ -135,3 +135,22 @@ Restrição: Todos os dados de cada entidade em sua solução não poderão ser 
 tipos de dados primitivos.  Dica: despreze as diferenças entre letras maiúsculas
 e minúsculas na pesquisa do pintor.
 
+
+**Exercício 7:** Empresa:   
+Uma empresa contrata pessoas registrando seu nome, CPF e data de nascimento,
+onde todas recebem o mesmo piso salarial de R$932,00.  Elabore um programa que
+permita o cadastramento de várias pessoas como funcionário regular, prestação de
+serviços ou gerencia de equipe.  O que difere cada uma destas pessoas é a forma
+de calcular o salário
+  * Para funcionário regular o calculo do salário deverá fornecer o piso
+    salarial acrescido de 10%
+  * Para prestação de serviço será calculado o pagamento através da quantidade
+    de horas trabalhadas multiplicada por dois acrescido do próprio piso
+salarial.
+  * Para gerencia de equipe o salário a ser pago será obtido pela quantidade de
+    projetos vezes 50% do piso salarial acrescido do próprio piso.
+
+Após o usuário encerrar o cadastro apresente um menu que possibilite ao usuário
+ter acesso ao total de funcionários cadastrados em cada uma das três categorias
+e o total salarial a ser pago para mesma. Permaneça neste menu até que o usuário
+escolha a opção que encerre o programa.
