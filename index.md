@@ -14,7 +14,7 @@ layout: default
 *(Atualizado em 26 de agosto de 2017)*
 
 [OO - Orientação por objetos][oo_page] :new:   
-*(Atualizado em 03 de outubro de 2017)*
+*(Atualizado em 09 de outubro de 2017)*
 
 --------------------------------------------------------------------------------
 ## Selected publications:
