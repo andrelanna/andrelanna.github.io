@@ -154,3 +154,39 @@ Após o usuário encerrar o cadastro apresente um menu que possibilite ao usuár
 ter acesso ao total de funcionários cadastrados em cada uma das três categorias
 e o total salarial a ser pago para mesma. Permaneça neste menu até que o usuário
 escolha a opção que encerre o programa.
+
+
+**Exercício 8:** Financeiro:   
+Deseja-se realizar o controle de saques, pagamentos e depósitos uma instituição
+financiera. A instituição possui diferentes tipos de contas. Um cliente desta
+instituição pode possuir apenas um tipo de conta. As contas existentes são:
+  *  Conta de débito: Realiza saques e depósitos.
+  *  Conta de crédito: Realiza pagamentos baseado no limite de crédito e
+     pagamento da própria fatura.
+  *  Conta de crédito e débito: Possibilita o saque e depósito de valores, além
+     de pagamentos baseados no limite de crédito.
+  *  Conta de cŕedito especial: Semelhante ao crédito, mas possibilita o saque
+     de valores de acordo com o limite de crédito.  
+
+Implemente a solução de um sistema que recebe requisições para as operações
+financeiras de um cliente e determina se aquela operação pode ou não ocorrer. Se
+a operação puder ser executada, ela deve ocorrer.  Paca o cadastro de um
+cliente, é necessário data de nascimento, nome, o número da conta deve ser
+gerado de forma incremental começando do 1; Para remover um cliente é necessário
+que ele realize o saque de todo o valor depositádo, caso tenha conta débito ou
+zere o valor da fatura, caso seja conta crédito.
+
+Faça todas as validações possíveis para garantir que os dados são concistentes.
+Validações: 
+  * nome: palavra não vazia, somente com caracteres alfabéticos;
+  * conta: não pode ter saldo negativo;
+  * data de nascimento: não aceita idade maior do que 120 anos e menor do que
+    16;
+  * não pode existir limite negativo no crédito;
+  * saques não podem ser superiores aos valores: saldo e limite;
+  * conta crédito não deve permitir pagamento que exceda limite;
+  * conta débito não deve permitir pagamento maior do que saldo;
+  * adicione outras validações que achar necessário;
+
+Dica: organize adequadamente as classes em pacotes para as modelos, requisições,
+validações e outros que julgar necessário.
