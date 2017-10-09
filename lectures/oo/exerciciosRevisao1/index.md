@@ -75,7 +75,8 @@ classes ou elementos conforme os itens a seguir:
 
 
 
-**Exercício 4:** Considerando ainda o diagrama de classes apresentado no exercício 3, responda às seguintes questões:
+**Exercício 4:** Considerando ainda o diagrama de classes apresentado no
+exercício 3, responda às seguintes questões:
 
   a) Por que os métodos set/getUniversidade na classe **Aluno** são estáticos?
   b) A associação de **AlunoExtensao** para **Projeto** mostra que um aluno de
@@ -87,12 +88,16 @@ define tal associação.
 associação entre **Projeto** e **AlunoExtensao**, sabendo que um projeto de
 extensão pode ter vários alunos (incluindo a possibilidade de não ter nenhum
 aluno).    
-  d) Considerando as classes do projeto, apresente *todos* os métodos polimórficos por *sobrescrita de métodos*.
-  e) Considerando as classes do projeto, apresente aquelas que não são capazes de gerar objeto algum. 
+  d) Considerando as classes do projeto, apresente *todos* os métodos
+polimórficos por *sobrescrita de métodos*.
+  e) Considerando as classes do projeto, apresente aquelas que não são capazes
+de gerar objeto algum. 
 
 
 
-**Exercício 5:** Considerando o diagrama de classes do Exercício 3 apresente, para cada classe, quais os elementos (atributos e métodos) das demais classes estão visíveis, conforme o exemplo abaixo:
+**Exercício 5:** Considerando o diagrama de classes do Exercício 3 apresente,
+para cada classe, quais os elementos (atributos e métodos) das demais classes
+estão visíveis, conforme o exemplo abaixo:
 
 | Classe | Aluno  | AlunoExtensao   | Graduação   | ... |
 |:------:|:------:|:---------------:|:-----------:|:---:|
@@ -100,4 +105,33 @@ aluno).
 |AlunoExt|nome,...|      ---        | graduacao(),| ... |
 |  ...   |  ...   |      ...        |   ...       | ... |
 |Mundo   |  ...   |      ...        |   ...       | ... |
+
+---
+
+*Para os exercícios 6 a 10, pede-se que o aluno represente, através de uma
+diagrama de classes, as classes (com seus atributos e métodos) e suas
+associações de modo a atender o cenário descrito. Implemente as classes e seus
+métodos em Java.* 
+
+
+**Exercício 6:** Sistema de Arte:
+
+Elabore um programa que permita o controle de uma coleção de quadros e de seus
+pintores. Para cada quadro será fornecido um código de identificação, a
+identificação do pintor, preço e ano de aquisição do mesmo.  Para cada pintor
+será cadastrado o nome, seu código de identificação pessoal e o ano de
+nascimento.  Faça um programa que apresente um menu simples as opções de:
+  * cadastramento de um novo quadro; 
+  * cadastramento de um novo pintor; 
+  * listagem de todas as telas de um pintor informado, com o valor total da soma
+    dos valores dos mesmos;
+  * apresentação de todos os quadros cadastrados até o momento no programa; 
+  * opção de encerrar o programa.
+
+Implemente as validações para os tipos de dados: Codigo: deve ser presente
+somente numeros Date: Não deve haver datas no futuro
+
+Restrição: Todos os dados de cada entidade em sua solução não poderão ser de
+tipos de dados primitivos.  Dica: despreze as diferenças entre letras maiúsculas
+e minúsculas na pesquisa do pintor.
 
