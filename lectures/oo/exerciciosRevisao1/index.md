@@ -190,3 +190,212 @@ Validações:
 
 Dica: organize adequadamente as classes em pacotes para as modelos, requisições,
 validações e outros que julgar necessário.
+
+
+---
+**Exercício 9:** Uma fatura de uma companhia energética é calculada levando em
+consideração três fatores: o valor do consumo do cliente ($$KwH \times
+R$/KwH$$), o valor adicional devido à bandeira tarifária ($$KwH \times
+adicional$$) e o valor do ICMS calculado sobre a soma dos valores consumidos. A
+classe _Fatura_ apresentada abaixo implementa os atributos e métodos necessários
+para o cálculo da fatura de um cliente. 
+
+Considerando a implementação da classe _Fatura_ pede-se:
+
+a) Crie o diagrama de classes de modo a representar a classe, seus atributos e
+métodos. Atente-se ao pacote em que a classe está definida (represente-o).   
+b) Quais são os elementos cujo escopo é de objeto? E quais são os elementos
+cujo escopo é de classe?   
+c) No método construtor alternativo da classe _Fatura_ há duas utilizações
+distintas para o operador _this_. Quais são elas e qual a diferença entre elas?   
+d) Quais os elementos (atributos e métodos) de _Fatura_ visíveis para classes
+que eventualmente sejam definidas dentro do pacote em que ela se encontra? E
+quais são os elementos visíveis para classes que forem definidas fora do pacote?
+
+
+```java 
+package ceb;
+
+public class Fatura {
+    
+    protected static final float adcBandeiraVerde = 0.0f;
+    protected static final float adcBandeiraAmarela = 0.02f;
+    protected static final float adcBandeiraVermelha1 = 0.03f;
+    protected static final float adcBandeiraVermelha2 = 0.035f;
+    
+    
+    private static int bandeira;
+    public static final int VERDE = 1; 
+    public static final int AMARELA = 2;
+    public static final int VERMELHA1 = 3;
+    public static final int VERMELHA2 = 4;
+    
+    public static final float custoKwH = 0.512629f;
+    public static final float txICMS = 0.0f;
+    
+    private int medicaoAnterior;
+    private int medicaoAtual;
+    private String mes;
+    private int ano;
+    private int consumoKwh;
+    private float totalFatura;
+    private float valorBase;
+    private float valorAdicional;
+    private float valorImpostos;
+    
+    
+    
+    public Fatura() {
+        System.out.println("Executando construtor padrão.");
+    }
+    
+    public Fatura(int medicaoAnterior, int medicaoAtual, String mes, int ano) {
+        this();
+        System.out.println("Atribuindo valores aos atributos.");
+        this.medicaoAnterior = medicaoAnterior;
+        this.medicaoAtual = medicaoAtual;
+        this.mes = mes;
+        this.ano = ano;
+    }
+    
+    public float calcularValorTotalFatura() {
+        if (medicaoAnterior == 0 || medicaoAtual == 0) {
+            System.out.println("Valor de medicao está zerado. ");
+            totalFatura = -1;
+        }
+        //Calculo da fatura
+        calcularConsumoKwH();
+        calcularValorBase();
+        calcularAdicional();
+        calcularICMS();
+        
+        totalFatura = valorBase + valorAdicional + valorImpostos;
+        return totalFatura;
+    }
+
+    private float calcularICMS() {
+        valorImpostos = valorBase * txICMS;
+        return valorImpostos;
+    }
+
+    private float calcularAdicional() {
+        switch (bandeira) {
+        case VERDE:
+            valorAdicional = consumoKwh * adcBandeiraVerde;
+            break;
+        case AMARELA:
+            valorAdicional = consumoKwh * adcBandeiraAmarela;
+            break;
+        case VERMELHA1:
+            valorAdicional = consumoKwh * adcBandeiraVermelha1;
+            break;
+        case VERMELHA2:
+            valorAdicional = consumoKwh * adcBandeiraVermelha2;
+            break;
+
+        default:
+            System.out.println("Bandeira invalida ou não-selecionada.");
+            valorAdicional = 0;
+            break;
+        }
+        return valorAdicional;
+    }
+
+    private float calcularValorBase() {
+        valorBase = consumoKwh * custoKwH;
+        return valorBase;
+    }
+
+    private void calcularConsumoKwH() {
+        consumoKwh = medicaoAtual - medicaoAnterior;
+    }
+
+    public static void setBandeira(int b) {
+        bandeira = b;
+    }
+    
+    public String imprimirFatura() {
+        String resposta = "";
+        
+        resposta = imprimirCabecalho(resposta);
+        resposta = imprimirCorpoFatura(resposta);
+        resposta = imprimirRodape(resposta);
+        
+        return resposta;
+    }
+
+    private String imprimirRodape(String resposta) {
+        for (int i=0; i<40; i++) {
+            resposta += "-";
+        }
+        resposta += "\n\n\n";
+        return resposta;
+    }
+
+    private String imprimirCorpoFatura(String resposta) {
+        resposta += "KwH consumidos: " + consumoKwh + '\n';
+        resposta += "Valor base: " + valorBase + '\n';
+        resposta += "Adicional bandeira: " + valorAdicional + '\n';
+        resposta += "ICMS: " + valorImpostos + '\n';
+        resposta += "VALOR TOTAL: " + totalFatura + '\n';
+        return resposta;
+    }
+
+    private String imprimirCabecalho(String resposta) {
+        resposta += "FATURA - " + getMes() + '/' + getAno() + '\n';
+        for (int i=0; i <= 40; i++) {
+            resposta += '-';
+        }
+        resposta += '\n';
+        return resposta;
+    }
+
+    public String getMes() {
+        return mes;
+    }
+
+    public int getAno() {
+        return ano;
+    }
+}
+```
+
+
+
+e) Considerando a implementação da classe _Principal_ ocorreu fora do pacote em
+que _Fatura_ está implementada, responda às seguintes questões. A implementação
+de _Principal_ está apresentada abaixo.
+
+* O que as seguintes instruções abaixo estão fazendo? 
+```java
+    Fatura.setBandeira(Fatura.VERDE);
+```
+```java
+    Fatura[] faturas = new Fatura[4];
+```
+```java
+    faturas[1] = new Fatura(10,20, "Agosto", 2017);
+```
+
+```java 
+import ceb.Fatura;
+
+public class Principal {
+
+    public static void main(String[] args) {
+        Fatura.setBandeira(Fatura.VERDE);
+        
+        Fatura[] faturas = new Fatura[4];
+        
+        faturas[0] = new Fatura(0, 20, "Agosto", 2017);
+        faturas[1] = new Fatura(10,20, "Agosto", 2017);
+        faturas[2] = new Fatura(25,55, "Agosto", 2017);
+        faturas[3] = new Fatura(15, 20, "Agosto", 2017);
+        
+        for (Fatura f : faturas) {
+            f.calcularValorTotalFatura();
+            System.out.println(f.imprimirFatura());
+        }
+    }
+}
+```
