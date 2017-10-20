@@ -27,6 +27,9 @@ Technology, 2017. To appear.
 --------------------------------------------------------------------------------
 ## Updates:  
 
+* Oct. $$20^{th}$$, 2017: Paper _All Roads Lead to Rome: Commuting Strategies for
+  Product-Line Reliability Analysis_ accepted for publication at [Science of
+Computer Programming][scp] Journal.
 * Oct. $$ 1^{st.}$$, 2017: Paper _Feature-Family-Based Reliability Analysis for
   Software Product Lines_ accepted for publication at [Information and
 Software Technology][ist] Journal. 
@@ -39,4 +42,5 @@ Software Technology][ist] Journal.
 
 
 [ist]: https://www.journals.elsevier.com/information-and-software-technology/
+[scp]: https://www.journals.elsevier.com/science-of-computer-programming/
 [ist2017]: http://ow.ly/DZeZ30fBFcF
