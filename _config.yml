@@ -29,6 +29,7 @@ linkedin_username: https://www.linkedin.com/in/andre-luiz-peron-martins-lanna-57
 aboutme_username:
 instagram_username:
 flickr_username: andreperon
+dblp: http://dblp.org/pid/159/0743
 
 # Build settings
 markdown: kramdown
