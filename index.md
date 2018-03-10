@@ -19,10 +19,14 @@ layout: default
 --------------------------------------------------------------------------------
 ## Selected publications:
 
-* :new: Andre Lanna, Thiago Castro, Vander Alves, Genaina Rodrigues,
+* Andre Lanna, Thiago Castro, Vander Alves, Genaina Rodrigues,
   Pierre-Yves Schobbens, and Sven Apel. _[Feature-Family-Based Reliability
 Analysis of Software Product Lines][ist2017]._ Information and Software
-Technology, 2017. To appear.   
+Technology, Volume 94, February 2018.  
+* Thiago Castro, Andre Lanna, Vander Alves, Leopoldo Teixeira, Sven Apel and
+  Pierre-Yves Schobbens. _[All roads lead to Rome: Commuting strategies for
+  product-line reliability analysis][scp2018]._ Science of Computer Programming,
+  Volume 152, February 2018.
 
 --------------------------------------------------------------------------------
 ## Updates:  
@@ -44,3 +48,4 @@ Software Technology][ist] Journal.
 [ist]: https://www.journals.elsevier.com/information-and-software-technology/
 [scp]: https://www.journals.elsevier.com/science-of-computer-programming/
 [ist2017]: http://ow.ly/DZeZ30fBFcF
+[scp2018]: https://www.sciencedirect.com/science/article/pii/S0167642317302253
