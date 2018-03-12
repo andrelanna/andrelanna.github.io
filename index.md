@@ -13,7 +13,7 @@ layout: default
 [DAS - Desenvolvimento Avançado de Software][das_page] :new:  
 *(Atualizado em 26 de agosto de 2017)*
 
-[OO - Orientação por objetos][oo_page] :new:   
+[OO - Orientação por objetos (turmas A e C)][oo_page] :new:   
 *(Atualizado em 09 de outubro de 2017)*
 
 --------------------------------------------------------------------------------
