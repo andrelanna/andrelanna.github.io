@@ -5,16 +5,17 @@
 # layout: home
 layout: default
 ---
-[das_page]: /lectures/das/plano_das_2017_2.html
-[oo_page]: /lectures/oo/plano_oo_2018_1.html
+[das_page]: /lectures/das/planoDeAulas.html
+[oo_page]: /lectures/oo/planoDeAulas.html
 
-## Disciplinas - 2018-1
+## Disciplinas - 2018-1  
+(_Content in_ <span>&#x1f1e7;&#x1f1f7;</span>)
 
-[//]: [DAS - Desenvolvimento Avançado de Software][das_page] :new:  
-[//]: *(Atualizado em 26 de agosto de 2017)*
+[DAS - Desenvolvimento Avançado de Software][das_page] :new:  
+*(Atualizado em 16 de março de 2018)*
 
 [OO - Orientação por objetos (turmas A e C)][oo_page] :new:   
-*(Atualizado em 09 de outubro de 2017)*
+*(Atualizado em 16 de março de 2018)*
 
 --------------------------------------------------------------------------------
 ## Selected publications:
