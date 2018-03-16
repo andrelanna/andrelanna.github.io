@@ -11,8 +11,11 @@ layout: default
 
 {% assign semestre = "2018/2" %}
 {% assign atualizacao = "16 de março de 2018." %}
+{% assign formAddress = "https://docs.google.com/forms/d/e/1FAIpQLSc2V_YiHt2U4OYIPBhs49l4llNEMU7isRdwXs2km78F_0ut9g/viewform" %}
 
 ### Plano de ensino - {{ semestre }}
+
+<span style="background-color:red">***Cadastre [AQUI]({{ formAddress }}) seu nome, matricula e email***</span>
 
 #### Ementa da disciplina: 
 * Reuso de software
