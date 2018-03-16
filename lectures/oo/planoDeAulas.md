@@ -1,6 +1,6 @@
 ---
 title: Plano de ensino - 2017/1
-permalink: /lectures/oo/plano_oo_2018_1.html
+permalink: /lectures/oo/planoDeAulas.html
 layout: default 
 ---
 
@@ -165,7 +165,9 @@ precisarem.
 * As atividades que forem consideradas cópias receberão nota zero sem a
   possibilidade de revisão. 
 * Na última semana do semestre, os alunos poderão revisar suas notas finais com
-  o professor.
+  o professor.   
+
+[//]:<> Não haverá prova ou atividade de recuperação.
 
 ---
 
