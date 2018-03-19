@@ -6,7 +6,7 @@ layout: default
 
 
 {% assign semestre = "2018/1" %}
-{% assign atualizacao = "16 de março de 2018." %}
+{% assign atualizacao = "19 de março de 2018." %}
 {% assign formAddress = "https://docs.google.com/forms/d/e/1FAIpQLSehZ3AgsqhywgcU4-O8LCokcucqAoChhIYXnso7cwEt-66D1g/viewform" %}
 ### UnB - Universidade de Brasilia
 ### FGA - Faculdade do Gama
@@ -96,17 +96,17 @@ $$NF = \frac{ {{av1}} \times {{ pAv1 }} + {{ av2 }} \times {{ pAv2 }} + {{ av3
 
 ---
 
-[//]: <> #### Cronograma da disciplina
-[//]: <> 
-[//]: <> {% for au in site.data.plano_oo_2017_2 %}
-[//]: <> {% assign a = au %}
-[//]: <> **{{ a.aula }} -- {{ a.data }}**  
-[//]: <> **Tópico:** {{ a.topico }}  
-[//]: <> **Atividade:**{% if a.atividade != "" %}[atividade]({{ a.atividade }}){% else %} -- {% endif %}   
-[//]: <> **Material:** {% if a.material != "" %}[material]({{ a.material }}){% else %} -- {% endif %}   
-[//]: <> **Codigo:** {% if a.codigo != "" %}[src]({{ a.codigo }}){% else %} -- {% endif %}   
-[//]: <> {% endfor %}
-[//]: <> 
+#### Cronograma da disciplina
+
+ {% for au in site.data.plano_oo_2018_1 %}
+ {% assign a = au %}
+ **{{ a.aula }} -- {{ a.data }}**  
+ **Tópico:** {{ a.topico }}  
+ **Atividade:**{% if a.atividade != "" %}[atividade]({{ a.atividade }}){% else %} -- {% endif %}   
+ **Material:** {% if a.material != "" %}[ slides ]({{ a.material }}){% else %} -- {% endif %}   
+ **Codigo:** {% if a.codigo != "" %}[src]({{ a.codigo }}){% else %} -- {% endif %}   
+ {% endfor %}
+
 [//]: <> [//]: # [BorderLAyout.tar.gz][BorderLAyout.tar.gz]|
 [//]: <> [//]: # [BoxLayout.tar.gz][BoxLayout.tar.gz]|
 [//]: <> [//]: # [JButton.tar.gz][JButton.tar.gz]|
