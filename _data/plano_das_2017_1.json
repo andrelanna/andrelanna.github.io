@@ -1,0 +1,66 @@
+[
+	{
+		"aula": 1,
+		"data": "7-mar-18",
+		"topico": "Apresentação da disciplina",
+		"atividade": "",
+		"material": "",
+		"codigo": ""
+	},
+	{
+		"aula": 2,
+		"data": "9-mar-18",
+		"topico": "Revisão de estruturas de linguagens de programação.",
+		"atividade": "",
+		"material": "",
+		"codigo": ""
+	},
+	{
+		"aula": 3,
+		"data": "14-mar-18",
+		"topico": "Introdução à linguagem Java",
+		"atividade": "",
+		"material": "",
+		"codigo": ""
+	},
+	{
+		"aula": 4,
+		"data": "16-mar-18",
+		"topico": "Introdução à linguagem Java",
+		"atividade": "",
+		"material": "",
+		"codigo": ""
+	},
+	{
+		"aula": 5,
+		"data": "21-mar-18",
+		"topico": null,
+		"atividade": "",
+		"material": "Introdução OO",
+		"codigo": ""
+	},
+	{
+		"aula": 6,
+		"data": "23-mar-18",
+		"topico": "Atributos, métodos e identificadores.",
+		"atividade": "",
+		"material": "",
+		"codigo": ""
+	},
+	{
+		"aula": 7,
+		"data": "28-mar-18",
+		"topico": "Construtores e destrutores, referências a objetos.",
+		"atividade": "",
+		"material": "",
+		"codigo": ""
+	},
+	{
+		"aula": 8,
+		"data": "30-mar-18",
+		"topico": "Atividade em laboratório em dupla (T1)",
+		"atividade": "",
+		"material": "",
+		"codigo": null
+	}, 
+]

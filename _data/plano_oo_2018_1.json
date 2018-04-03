@@ -74,7 +74,7 @@
 	{
 		"aula": 10,
 		"data": "11-abr-18(A) / 02-abr-18(C)",
-		"topico": "",
+		"topico": "Classes e objetos - Instanciação, utilização de memória, id de objetos.",
 		"atividade": "",
 		"material": "",
 		"codigo": ""
@@ -82,7 +82,7 @@
 	{
 		"aula": 11,
 		"data": "13-abr-18(A) / 09-abr-18(C)",
-		"topico": "",
+		"topico": "Classes e objetos - Associações entre classes e objetos - associações nomeadas e anônimas",
 		"atividade": "",
 		"material": "",
 		"codigo": ""
@@ -90,7 +90,7 @@
 	{
 		"aula": 12,
 		"data": "18-abr-18(A) / 09-abr-18(C)",
-		"topico": "",
+		"topico": "Classes e objetos - Associações entre classes e objetos - associações direcionais e bi-direcionais",
 		"atividade": "",
 		"material": "",
 		"codigo": ""
@@ -98,7 +98,7 @@
 	{
 		"aula": 13,
 		"data": "20-abr-18(A) / 16-abr-18(C)",
-		"topico": "",
+		"topico": "Exercicio de revisão",
 		"atividade": "",
 		"material": "",
 		"codigo": ""
@@ -106,7 +106,7 @@
 	{
 		"aula": 14,
 		"data": "25-abr-18(A) / 16-abr-18(C)",
-		"topico": "",
+		"topico": "__Avaliação 2 - Classes e Objetos__",
 		"atividade": "",
 		"material": "",
 		"codigo": ""
@@ -114,7 +114,7 @@
 	{
 		"aula": 15,
 		"data": "27-abr-18(A) / 23-abr-18(C)",
-		"topico": "",
+		"topico": "Encapsulamento - Pacotes, representação gráfica de pacotes, aninhamento de pacotes",
 		"atividade": "",
 		"material": "",
 		"codigo": ""
@@ -122,7 +122,7 @@
 	{
 		"aula": 16,
 		"data": "02-mai-18(A) / 23-abr-18(C)",
-		"topico": "",
+		"topico": "Encapsulamento - Modificadores de acesso, níveis de visibilidade dos elementos",
 		"atividade": "",
 		"material": "",
 		"codigo": ""
@@ -130,7 +130,7 @@
 	{
 		"aula": 17,
 		"data": "04-mai-18(A) / 30-abr-18(C)",
-		"topico": "",
+		"topico": "Encapsulamento - Modificadores de acesso, public, private, protected",
 		"atividade": "",
 		"material": "",
 		"codigo": ""
@@ -138,7 +138,7 @@
 	{
 		"aula": 18,
 		"data": "09-mai-18(A) / 30-abr-18(C)",
-		"topico": "",
+		"topico": "Encapsulamento - Modificadores de escopo, elementos de classe e elementos de objetos",
 		"atividade": "",
 		"material": "",
 		"codigo": ""
@@ -146,7 +146,7 @@
 	{
 		"aula": 19,
 		"data": "11-mai-18(A) / 07-mai-18(C)",
-		"topico": "",
+		"topico": "Encapsulamento - Modificadores de escopo, static",
 		"atividade": "",
 		"material": "",
 		"codigo": ""
@@ -162,7 +162,7 @@
 	{
 		"aula": 21,
 		"data": "18-mai-18(A) / 14-mai-18(C)",
-		"topico": "",
+		"topico": "Exercicio de revisão",
 		"atividade": "",
 		"material": "",
 		"codigo": ""
@@ -170,7 +170,7 @@
 	{
 		"aula": 22,
 		"data": "23-mai-18(A) / 14-mai-18(C)",
-		"topico": "",
+		"topico": "__Avaliação 3 - Encapsulamento__",
 		"atividade": "",
 		"material": "",
 		"codigo": ""
@@ -178,7 +178,7 @@
 	{
 		"aula": 23,
 		"data": "25-mai-18(A) / 21-mai-18(C)",
-		"topico": "",
+		"topico": "Herança - Herança simples, herança composta",
 		"atividade": "",
 		"material": "",
 		"codigo": ""
@@ -186,7 +186,7 @@
 	{
 		"aula": 24,
 		"data": "25-mai-18(A) / 21-mai-18(C)",
-		"topico": "",
+		"topico": "Herança - Herança vs. Encapsulamento, níveis de visibilidade dos elementos herdados.",
 		"atividade": "",
 		"material": "",
 		"codigo": ""
@@ -194,7 +194,7 @@
 	{
 		"aula": 25,
 		"data": "30-mai-18(A) / 28-mai-18(C)",
-		"topico": "",
+		"topico": "Polimorfismo - Sobrescrita de métodos, sobrecarga de métodos",
 		"atividade": "",
 		"material": "",
 		"codigo": ""
@@ -202,7 +202,7 @@
 	{
 		"aula": 26,
 		"data": "01-jun-18(A) / 28-mai-18(C)",
-		"topico": "",
+		"topico": "Polimorfismo - Interfaces",
 		"atividade": "",
 		"material": "",
 		"codigo": ""
@@ -210,7 +210,7 @@
 	{
 		"aula": 27,
 		"data": "06-jun-18(A) / 04-jun-18(C)",
-		"topico": "",
+		"topico": "Polimorfismo - Interfaces vs. Herança",
 		"atividade": "",
 		"material": "",
 		"codigo": ""
@@ -218,7 +218,7 @@
 	{
 		"aula": 28,
 		"data": "08-jun-18(A) / 04-jun-18(C)",
-		"topico": "",
+		"topico": "__Avaliação 4 - Herança e Polimorfismo__",
 		"atividade": "",
 		"material": "",
 		"codigo": ""
@@ -226,7 +226,7 @@
 	{
 		"aula": 29,
 		"data": "13-jun-18(A) / 11-jun-18(C)",
-		"topico": "",
+		"topico": "Coleções de objetos - Filas, Pilhas, Conjuntos",
 		"atividade": "",
 		"material": "",
 		"codigo": ""
@@ -234,7 +234,7 @@
 	{
 		"aula": 30,
 		"data": "15-jun-18(A) / 11-jun-18(C)",
-		"topico": "",
+		"topico": "Coleções de objetos - Ordenamento de objetos",
 		"atividade": "",
 		"material": "",
 		"codigo": ""
@@ -242,7 +242,7 @@
 	{
 		"aula": 31,
 		"data": "20-jun-18(A) / 18-jun-18(C)",
-		"topico": "",
+		"topico": "Persistência de objetos - gravação e leitura em arquivos",
 		"atividade": "",
 		"material": "",
 		"codigo": ""
@@ -250,7 +250,7 @@
 	{
 		"aula": 32,
 		"data": "22-jun-18(A) / 18-jun-18(C)",
-		"topico": "",
+		"topico": "Interfaces gráficas - Objetos container, Frame, Pane.",
 		"atividade": "",
 		"material": "",
 		"codigo": ""
@@ -258,7 +258,7 @@
 	{
 		"aula": 33,
 		"data": "27-jun-18(A) / 25-jun-18(C)",
-		"topico": "",
+		"topico": "Interfaces gráficas - Objetos container, Frame, Pane.",
 		"atividade": "",
 		"material": "",
 		"codigo": ""
@@ -266,7 +266,7 @@
 	{
 		"aula": 34,
 		"data": "29-jun-18(A) / 25-jun-18(C)",
-		"topico": "",
+		"topico": "Objetos gráficos - JLabel, JButton, JTextField, JTable, etc...",
 		"atividade": "",
 		"material": "",
 		"codigo": ""
@@ -274,7 +274,7 @@
 	{
 		"aula": 35,
 		"data": "04-jul-18(A) / 02-jul-18(C)",
-		"topico": "",
+		"topico": "Gerenciadores de Containers Gráficos",
 		"atividade": "",
 		"material": "",
 		"codigo": ""

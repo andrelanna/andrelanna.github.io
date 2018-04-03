@@ -15,7 +15,7 @@ layout: default
 *(Atualizado em 16 de março de 2018)*
 
 [OO - Orientação por objetos (turmas A e C)][oo_page] :new:   
-*(Atualizado em 20 de março de 2018)*
+*(Atualizado em 03 de abril de 2018)*
 
 --------------------------------------------------------------------------------
 ## Selected publications:

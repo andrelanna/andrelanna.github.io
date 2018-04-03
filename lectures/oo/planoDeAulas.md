@@ -6,7 +6,7 @@ layout: default
 
 
 {% assign semestre = "2018/1" %}
-{% assign atualizacao = "19 de março de 2018." %}
+{% assign atualizacao = "03 de abril de 2018." %}
 {% assign formAddress = "https://docs.google.com/forms/d/e/1FAIpQLSehZ3AgsqhywgcU4-O8LCokcucqAoChhIYXnso7cwEt-66D1g/viewform" %}
 ### UnB - Universidade de Brasilia
 ### FGA - Faculdade do Gama
