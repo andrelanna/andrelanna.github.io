@@ -1,5 +1,5 @@
 ---
-title: Plano de ensino - 2017/1
+title: Plano de ensino - 2018/1
 permalink: /lectures/das/planoDeAulas.html
 layout: default 
 ---
@@ -93,14 +93,25 @@ $$NF = \frac{ {{av1}} \times {{ pAv1 }} + {{ av2 }} \times {{ pAv2 }} + {{ av3
 }} \times {{ pAv3 }} + {{ av4 }} \times {{ pAv4 }} +  {{ tr1 }} \times {{ pTr1
 }} +  {{ tr2 }} \times {{ pTr2 }} +  {{ at }} \times {{ pAt }}  }{ 10 }$$
 
-[//]: <> #### Cronograma da disciplina
-[//]: <> {% for class in site.data.plano_das_2017_2 %}
-[//]: <> {{ class.aula}} -- {{ class.data }}  
-[//]: <> **Tópico:** {{ class.topico}}  
-[//]: <> **Material:**{% for material in class.material %} [[slides]({{ material }})] {% endfor %}  
-[//]: <> **Código:**{% for codigo in class.codigo %} [[codigo]({{ codigo }})] {% endfor %}  
-[//]: <> **Atividade:**{% for atividade in class.atividade %} [[atividade]({{ atividade }})] {% endfor %}
-[//]: <> {% endfor %}
+
+
+#### Material didático
+##### Refatoração
+[Slides de introducao a refatoracao][sl1]  
+[Principios em refatoracao][sl2]  
+[Oportunidades de refatoração][sl3]  
+[Grupo 1 - Composição de métodos][cat1]  
+[Grupo 2 - Movendo caracteristicas entre classes / objetos][cat2]  
+
+
+#### Cronograma da disciplina
+{% for class in site.data.plano_das_2018_1 %}
+{{ class.aula}} -- {{ class.data }}  
+**Tópico:** {{ class.topico}}  
+**Material:**{% for material in class.material %} [[slides]({{ material }})] {% endfor %}  
+**Código:**{% for codigo in class.codigo %} [[codigo]({{ codigo }})] {% endfor %}  
+**Atividade:**{% for atividade in class.atividade %} [[atividade]({{ atividade }})] {% endfor %}
+{% endfor %}
 
 
 
@@ -148,7 +159,6 @@ Meszaros, G., xUnit Test Patterns: Refactoring Test Code, Addison-Wesley,
   o professor.   
 
 [//]:<> Não haverá prova ou atividade de recuperação.
-
 
 
 
