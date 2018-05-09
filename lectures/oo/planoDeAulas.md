@@ -10,11 +10,14 @@ layout: default
 {% assign formAddress = "https://docs.google.com/forms/d/e/1FAIpQLSehZ3AgsqhywgcU4-O8LCokcucqAoChhIYXnso7cwEt-66D1g/viewform" %}
 ### UnB - Universidade de Brasilia
 ### FGA - Faculdade do Gama
-### DAS - Desenvolvimento Avançado de Software
+### OO - Orientação a objetos
 ------
 ### Plano de ensino - {{semestre}} 
 
 <span style="background-color:red">***Cadastre [AQUI]({{ formAddress }}) seu nome, matricula e email***</span>
+
+[***Notas e freqüencias - turma A***][notasFrequenciasTurmaA]  
+[***Notas e freqüencias - turma C***][notasFrequenciasTurmaC]
 
 #### Ementa da disciplina
 * Conceitos básicos de orientação a objetos.
@@ -178,7 +181,8 @@ precisarem.
 [eckDavid]: http://math.hws.edu/javanotes/
 [oracle]: http://docs.oracle.com/javase/specs/
 
-[notas]: notas.md
+[notasFrequenciasTurmaA]: notasFrequenciasTurmaA.html
+[notasFrequenciasTurmaC]: notasFrequenciasTurmaC.html
 [Atividade 1]: atividade1.md
 [Atividade 2]: /exercicio2/atividade2.md
 [Atividade 3]: /exercicio3/atividade3.md
