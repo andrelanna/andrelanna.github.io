@@ -105,6 +105,7 @@ $$NF = \frac{ {{av1}} \times {{ pAv1 }} + {{ av2 }} \times {{ pAv2 }} + {{ av3
 
 
 #### Cronograma da disciplina
+[Enunciado trabalho de Refatoracao][enunciadoRefatoracao]
 {% for class in site.data.plano_das_2018_1 %}
 {{ class.aula}} -- {{ class.data }}  
 **Tópico:** {{ class.topico}}  
@@ -163,6 +164,7 @@ Meszaros, G., xUnit Test Patterns: Refactoring Test Code, Addison-Wesley,
 
 
 
+[enunciadoRefatoracao]: enunciadoRefatoracao
 
 [sl1]: /lectures/das/sl1.pdf
 [sl2]: /lectures/das/sl2.pdf
