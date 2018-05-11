@@ -147,7 +147,7 @@
 		"aula": 19,
 		"data": "11-mai-18(A) / 07-mai-18(C)",
 		"topico": "Encapsulamento - Modificadores de escopo, static",
-		"atividade": "/lectures/oo/exercicioFixacaoEncapsulamento.html",
+		"atividade": "exercicioFixacaoEncapsulamento",
 		"material": "",
 		"codigo": ""
 	},

@@ -23,3 +23,32 @@ Para cada um dos cenários descritos abaixo faça o que se pede abaixo:
 | Depósito      | R$ 0,00        |
 | Saque         | R$ 4,00        |
 | Transferencia | R$ 8,00        |
+
+
+------
+
+**Cenário 2:** Considere as figuras geométricas: 
+
+* quadrado; 
+* retangulo;
+* triangulo equilátero; 
+* trapézio e, 
+* círculo. 
+
+Crie um programa que seja capaz de calcular o perímetro e a área de cada uma dessas figuras de modo que, para cada cálculo você deverá criar um objeto específico. Por exemplo: dados dois círculos de raios 2 e 3cm, respectivamente. Para calcular o perímetro e área de cada um deles, você deverá criar dois objetos do tipo Círculo, cada um mantendo a sua própria medida de raio. Para cada um desses objetos você deverá executar os métodos de cálculo. Nível de dificuldade: :relaxed:
+
+
+
+-----
+
+**Cenário 3:** Deseja-se criar uma aplicação capaz de calcular o valor de prestações a serem pagas para um dado empréstimo. Para realizar o cálculo da prestação, inicialmente é necessário calcular o Coeficiente de Financiamento (CF) dado pela seguinte fórmula: 
+
+$$CF = \frac{1}{1-\frac{1}{(1+i)^n}} $$
+onde $$i$$ representa a taxa de juros e $$n$$ o número de parcelas em meses.
+
+Uma vez que $$CF$$ foi calculado pode-se calcular o valor de cada parcela pela seguinte fórmula:
+$$PMT = PV \times CF$$,
+onde $$PV$$ corresponde ao valor financiado e $$PMT$$ corresponde ao valor de cada uma das prestações.
+
+Cada empréstimo está associado a um cidadão. Esse cidadão pode simular vários financiamentos, variando o número de parcelas e a taxa de juros. Para cada uma dessas simulações, informe ao cidadão o quanto ele vai pagar de juros ao final do financiamento.
+Nível de dificultade: :confused:
