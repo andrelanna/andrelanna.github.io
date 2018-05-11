@@ -6,7 +6,7 @@ layout: default
 
 
 {% assign semestre = "2018/1" %}
-{% assign atualizacao = "03 de abril de 2018." %}
+{% assign atualizacao = "09 de maio de 2018." %}
 {% assign formAddress = "https://docs.google.com/forms/d/e/1FAIpQLSehZ3AgsqhywgcU4-O8LCokcucqAoChhIYXnso7cwEt-66D1g/viewform" %}
 ### UnB - Universidade de Brasilia
 ### FGA - Faculdade do Gama
@@ -16,8 +16,8 @@ layout: default
 
 <span style="background-color:red">***Cadastre [AQUI]({{ formAddress }}) seu nome, matricula e email***</span>
 
-[***Notas e freqüencias - turma A***][notasFrequenciasTurmaA]  
-[***Notas e freqüencias - turma C***][notasFrequenciasTurmaC]
+:new:[***Notas e freqüencias - turma A***][notasFrequenciasTurmaA]  
+:new:[***Notas e freqüencias - turma C***][notasFrequenciasTurmaC]
 
 #### Ementa da disciplina
 * Conceitos básicos de orientação a objetos.
