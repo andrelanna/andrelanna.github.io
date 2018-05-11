@@ -24,7 +24,6 @@ Para cada um dos cenários descritos abaixo faça o que se pede abaixo:
 | Saque         | R$ 4,00        |
 | Transferencia | R$ 8,00        |
 
-
 ------
 
 **Cenário 2:** Considere as figuras geométricas: 
