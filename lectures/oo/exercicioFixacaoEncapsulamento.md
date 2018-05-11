@@ -49,3 +49,25 @@ onde $$PV$$ corresponde ao valor financiado e $$PMT$$ corresponde ao valor de ca
 
 Cada empréstimo está associado a um cidadão. Esse cidadão pode simular vários financiamentos, variando o número de parcelas e a taxa de juros. Para cada uma dessas simulações, informe ao cidadão o quanto ele vai pagar de juros ao final do financiamento.
 Nível de dificultade: :confused:
+
+-----
+
+**Cenário 4:** Deseja-se criar um sistema gerenciador de menções para turmas da FGA. Sabe-se a princípio que uma turma possui vários alunos. Para cada aluno deseja-se armazenar seu nome, matrícula e endereço de email. Uma turma tem um número máximo de vagas e um número de vagas livres, calculadas pela diferença entre o máximo de vagas e o número de alunos matriculados nela. A cada turma são aplicadas 3 avaliações, 2 trabalhos e há ainda uma nota relativa à participação do aluno em sala. Para efeito de cálculo da menção as avaliações e os trabalhos possuem um peso associado à nota (o peso para participação em sala de aula é sempre igual a 0.5). 
+ 
+Portanto, o cálculo da menção para cada aluno é dado pela seguinte fórmula:
+
+$$ Nota = \frac{\sum av_i \times p_{av_i} + \sum tr_i \times p_{tr_i} + part \times 0.5}{\sum p_{av_i} + \sum p_{tr_i} + 0.5} $$
+
+
+Com base no valor de $Nota$, a menção final é calculada de acordo com a tabela abaixo:
+
+| Menção | Nota |
+|:-------|:-----|
+| SR     | 0.1 < Nota |
+| II     | 0.1 $$\leq$$ Nota < 3.0 |
+| MI     | 0.1 $$\leq$$ Nota < 5.0 |
+| MM     | 0.1 $$\leq$$ Nota < 7.0 |
+| MS     | 0.1 $$\leq$$ Nota < 9.0 |
+| SS     | Nota $$\gt$$ 9.0 |
+
+Nível de dificuldade: :confused:
