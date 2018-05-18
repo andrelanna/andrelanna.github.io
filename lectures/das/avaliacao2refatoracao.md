@@ -21,6 +21,7 @@ layout: default
 * Prazo final de entrega: 18/05/2018, 17:50hs.
 * Boa sorte!
 
+** Avaliação encerrada às: 17:55 hs. 32 Pull-requests realizados. Pull-requests após esse horário serão desconsiderados. **
 ----
 
 
