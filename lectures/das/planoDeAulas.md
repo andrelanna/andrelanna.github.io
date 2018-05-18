@@ -94,6 +94,8 @@ $$NF = \frac{ {{av1}} \times {{ pAv1 }} + {{ av2 }} \times {{ pAv2 }} + {{ av3
 }} +  {{ tr2 }} \times {{ pTr2 }} +  {{ at }} \times {{ pAt }}  }{ 10 }$$
 
 
+[Avaliação 2 - Refatoração][avaliacao2Refatoracao]
+
 
 #### Material didático
 ##### Refatoração
@@ -163,7 +165,7 @@ Meszaros, G., xUnit Test Patterns: Refactoring Test Code, Addison-Wesley,
 
 
 
-
+[avaliacao2Refatoracao]: /lectures/das/avaliacao2refatoracao.html
 [enunciadoRefatoracao]: enunciadoRefatoracao
 
 [sl1]: /lectures/das/sl1.pdf
