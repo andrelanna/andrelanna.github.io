@@ -75,9 +75,70 @@ Nível de dificuldade: :confused:
 
 -----
 
-Para os exercícios abaixo, considere o seguinte diagrama de classes. Obs.: O diagrama de classes está incompleto propositalmente. 
-
-_Clique sobre a figura para exibi-la no tamanho original_
-
+Para os exercícios abaixo, considere o seguinte diagrama de classes. Obs.: O
+diagrama de classes está incompleto propositalmente.   
+_Clique sobre a figura para exibi-la no tamanho original_  
 [![Diagrama de classes](diagClasses.png)](diagClasses.png)
 
+**Modificadores de acesso:** Considerando o diagrama de classes anterior, verifique se as seguintes instruções abaixo estão corretas. Caso não estejam, _justifique_ o motivo pelo qual ela está errada.
+
+Considere as seguintes implementações do método _m2()_ definido na _ClasseA_:
+```java
+void m2() {
+   //Substitua aqui as instruções abaixo e verifique se elas estão corretos ou não
+}
+```
+
+```java
+//instrucao 1
+atrib2 = "foo";
+
+//instrucao 2
+clse = new ClasseE();
+clse.atrib3 = 4.0;
+clse.m3();
+clse.m4();
+clse.atrib4 = true;
+```
+
+Considere as seguintes implementações do método _m8()_ da _ClasseD_:
+```java
+void m8() {
+   //Substitua aqui as instruções abaixo e verifique se elas estão corretos ou não
+}
+```
+
+```java
+//conjunto de instruçoes 1
+clsb = new ClasseB();
+clsb.atrib5 = false;
+clsb.atrib7 = "foo";
+clsb.atrib6 = 3.14f;
+clsb.m5();
+clsb.m7();
+```
+
+```java
+//conjunto de instruções 2
+new ClasseC().m6();
+```
+
+```java
+//conjunto de instruções 3
+atrib9 = clsb.atrib6;
+```
+
+
+
+Considere as seguintes implementações do método _main()_ da _Principal_:
+```java
+static void main(String[] args) {
+   //Substitua aqui as instruções abaixo e verifique se elas estão corretos ou não
+}
+```
+
+```java
+ClasseA a = new ClasseA();
+a.m2();
+a.atrib2 = "foo";
+```
