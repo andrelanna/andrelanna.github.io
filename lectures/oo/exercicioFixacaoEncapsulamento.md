@@ -71,3 +71,10 @@ Com base no valor de $Nota$, a menção final é calculada de acordo com a tabel
 | SS     | Nota $$\gt$$ 9.0 |
 
 Nível de dificuldade: :confused:
+
+
+-----
+
+Para os exercícios abaixo, considere o seguinte diagrama de classes. Obs.: O diagrama de classes está incompleto propositalmente. 
+
+![Diagrama de classes](diagClasses.png)
