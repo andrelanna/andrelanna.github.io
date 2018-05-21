@@ -142,3 +142,24 @@ ClasseA a = new ClasseA();
 a.m2();
 a.atrib2 = "foo";
 ```
+
+```java
+ClasseD d = new ClasseD();
+a.m6();
+a.atrib8 = 2.71;
+a.clsb = new ClasseB();
+Classe B b = a.clsb();
+b.m5();
+a.clsb.atrib6 = 3.1415f;
+```
+
+```java
+ClasseB b = new ClasseB();
+a.m5();
+a.m6();
+a.atrib5 = true;
+a.atrib6 = 3.1415f;
+a.atrib7 = "foo";
+```
+
+
