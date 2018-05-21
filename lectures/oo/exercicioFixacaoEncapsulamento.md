@@ -78,3 +78,5 @@ Nível de dificuldade: :confused:
 Para os exercícios abaixo, considere o seguinte diagrama de classes. Obs.: O diagrama de classes está incompleto propositalmente. 
 
 ![Diagrama de classes](diagClasses.png)
+=======
+
