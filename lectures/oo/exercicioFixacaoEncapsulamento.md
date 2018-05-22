@@ -80,7 +80,7 @@ diagrama de classes está incompleto propositalmente.
 _Clique sobre a figura para exibi-la no tamanho original_  
 [![Diagrama de classes](diagClasses.png)](diagClasses.png)
 
-**Modificadores de acesso:** Considerando o diagrama de classes anterior, verifique se as seguintes instruções abaixo estão corretas. Caso não estejam, _justifique_ o motivo pelo qual ela está errada.
+**Modificadores de acesso:** Considerando o diagrama de classes anterior, verifique se as seguintes instruções abaixo estão corretas. Caso não estejam, _justifique_ o motivo pelo qual ela está errada. Dica: desenhe a tabela de modificadores de acesso apresentada em sala de aula e consulte-a durante a resolução dos exercícios.
 
 Considere as seguintes implementações do método _m2()_ definido na _ClasseA_:
 ```java
