@@ -163,3 +163,87 @@ a.atrib7 = "foo";
 ```
 
 
+**Modificadores de escopo:** Considerando o diagrama de classes apresentado anteriormente,
+verifique se as seguintes instruções abaixo estão corretas. Caso não estejam,
+_justifique_ o motivo pelo qual ela está errada. 
+
+Considere as seguintes implementações do método _m3()_ da classe _ClasseE_:
+```java
+ClasseE {
+    ...
+    m3(){
+       //Substitua aqui as instruções abaixo e verifique se 
+       //elas estão corretas ou não
+    }
+}
+```
+
+```java
+ClasseA.m1();
+```
+
+```java
+ClasseA.m2();
+```
+
+
+```java
+ClasseA a = new ClasseA();
+a.m1();
+```
+
+Considere as seguintes implementações do método _m6()_ da classe _ClasseC_:
+```java
+ClasseE {
+    ...
+    m6(){
+       //Substitua aqui as instruções abaixo e verifique se 
+       //elas estão corretas ou não
+    }
+}
+```
+
+```java
+ClasseC.atrib8 = 5.0;
+```
+
+
+Considere as seguintes implementações do método _m6()_ da classe _ClasseC_:
+```java
+ClasseE {
+    ...
+    m6(){
+       //Substitua aqui as instruções abaixo e verifique se 
+       //elas estão corretas ou não
+    }
+}
+```
+
+```java
+ClasseC.atrib8 = 5.0;
+```
+
+```java
+atrib8 = 5.0;
+```
+
+Considere as seguintes implementações do método _m8()_ da classe _ClasseD_:
+```java
+ClasseD {
+    ...
+    m8(){
+       //Substitua aqui as instruções abaixo e verifique se 
+       //elas estão corretas ou não
+    }
+}
+```
+
+```java
+ClasseC.atrib8 = 4.0;
+```
+
+```java
+ClasseC c = new Classe C();
+c.atrib8 = 4.0;
+```
+
