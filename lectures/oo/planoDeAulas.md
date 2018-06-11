@@ -98,6 +98,15 @@ $$NF = \frac{ {{av1}} \times {{ pAv1 }} + {{ av2 }} \times {{ pAv2 }} + {{ av3
 }} +  {{ tr2 }} \times {{ pTr2 }} +  {{ at }} \times {{ pAt }}  }{ 10 }$$
 
 ---
+#### Trabalho
+
+[Enunciado do trabalho](https://docs.google.com/document/d/1WoSHGsw5WO_0hByLk5sry4I12ZiGmkx-SDOSanO7PB0/edit?usp=sharing)
+
+--- 
+
+
+
+
 
 #### Cronograma da disciplina
 
