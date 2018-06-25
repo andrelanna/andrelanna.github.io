@@ -16,8 +16,10 @@ layout: default
 
 <span style="background-color:red">***Cadastre [AQUI]({{ formAddress }}) seu nome, matricula e email***</span>
 
-:new:[***Notas e freqüencias - turma A***][notasFrequenciasTurmaA]  
-:new:[***Notas e freqüencias - turma C***][notasFrequenciasTurmaC]
+:new:[***Notas e freqüencias - turmas A e C***][notasFrequenciasTurmaAeC]   
+
+[//]: <> :new:[***Notas e freqüencias - turma A***][notasFrequenciasTurmaA]  
+[//]: <> :new:[***Notas e freqüencias - turma C***][notasFrequenciasTurmaC]
 
 #### Ementa da disciplina
 * Conceitos básicos de orientação a objetos.
@@ -190,6 +192,7 @@ precisarem.
 [eckDavid]: http://math.hws.edu/javanotes/
 [oracle]: http://docs.oracle.com/javase/specs/
 
+[notasFrequenciasTurmaAeC]: https://docs.google.com/spreadsheets/d/1e-4eDsYkHavtxTmayVUh1tHzrg1NFn0dihdGeVXwAoE/edit?usp=sharing 
 [notasFrequenciasTurmaA]: notasFrequenciasTurmaA.html
 [notasFrequenciasTurmaC]: notasFrequenciasTurmaC.html
 [Atividade 1]: atividade1.md
