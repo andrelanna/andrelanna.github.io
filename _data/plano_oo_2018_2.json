@@ -1,0 +1,413 @@
+[
+    {
+        "aula": "1",
+        "codigo": {
+            "label": "",
+            "link": ""
+        },
+        "data": "15/08/2018",
+        "material": {
+            "label": "Slides Aulas 1 e 2",
+            "link": "https://docs.google.com/presentation/d/1H_KjpxMxfElST8KYIRUkVwwg3_2rCWDr1wXyNzgFz-Q/edit?usp=sharing"
+        },
+        "topico": " Apresenta\u00e7\u00e3o da disciplina   Revis\u00e3o de computa\u00e7\u00e3o b\u00e1sica "
+    },
+    {
+        "aula": "2",
+        "codigo": {
+            "label": "",
+            "link": ""
+        },
+        "data": "17/08/2018",
+        "material": {
+            "label": "Slides Aulas 1 e 2",
+            "link": "https://docs.google.com/presentation/d/1H_KjpxMxfElST8KYIRUkVwwg3_2rCWDr1wXyNzgFz-Q/edit?usp=sharing"
+        },
+        "topico": "Revis\u00e3o de computa\u00e7\u00e3o b\u00e1sica Introdu\u00e7\u00e3o \u00e0 linguagem Java"
+    },
+    {
+        "aula": "3",
+        "codigo": {
+            "label": "",
+            "link": ""
+        },
+        "data": "22/08/2018",
+        "material": {
+            "label": "Slides Aulas 3 e 4",
+            "link": "https://docs.google.com/presentation/d/15NSQ7EQKTEX6BkLl9hnfnbpU4OF9Ps7NqMqgN0YObxs/edit?usp=sharing"
+        },
+        "topico": " Introdu\u00e7\u00e3o a orienta\u00e7\u00e3o por objetos Atributos, m\u00e9todos e identificadores "
+    },
+    {
+        "aula": "4",
+        "codigo": {
+            "label": "",
+            "link": ""
+        },
+        "data": "24/08/2018",
+        "material": {
+            "label": "Slides Aulas 3 e 4",
+            "link": "https://docs.google.com/presentation/d/15NSQ7EQKTEX6BkLl9hnfnbpU4OF9Ps7NqMqgN0YObxs/edit?usp=sharing"
+        },
+        "topico": " Introdu\u00e7\u00e3o a orienta\u00e7\u00e3o por objetos   Atributos, m\u00e9todos e identificadores "
+    },
+    {
+        "aula": "5",
+        "codigo": {
+            "label": "",
+            "link": ""
+        },
+        "data": "29/08/2018",
+        "material": "  Slides Aulas 5 e 6",
+        "topico": " Introdu\u00e7\u00e3o a orienta\u00e7\u00e3o por objetos   Construtores, operador new, referencias a objetos, destrutores, coletor de lixo "
+    },
+    {
+        "aula": "6",
+        "codigo": {
+            "label": "",
+            "link": ""
+        },
+        "data": "31/08/2018",
+        "material": "  Slides Aulas 5 e 6",
+        "topico": " Introdu\u00e7\u00e3o a orienta\u00e7\u00e3o por objetos   Construtores, operador new, referencias a objetos, destrutores, coletor de lixo "
+    },
+    {
+        "aula": "7",
+        "codigo": {
+            "label": "",
+            "link": ""
+        },
+        "data": "05/09/2018",
+        "material": "  ",
+        "topico": " Avalia\u00e7\u00e3o 1    Conte\u00fado: Conceitos de orienta\u00e7\u00e3o a objetos "
+    },
+    {
+        "aula": "8",
+        "codigo": {
+            "label": "",
+            "link": ""
+        },
+        "data": "07/09/2018",
+        "material": "  -- FERIADO --",
+        "topico": " -- FERIADO -- "
+    },
+    {
+        "aula": "9",
+        "codigo": {
+            "label": "",
+            "link": ""
+        },
+        "data": "12/09/2018",
+        "material": "  Slide aula 9",
+        "topico": " Introdu\u00e7\u00e3o a linguagem Java:   Arranjos e cole\u00e7\u00f5es "
+    },
+    {
+        "aula": "10",
+        "codigo": {
+            "label": "",
+            "link": ""
+        },
+        "data": "14/09/2018",
+        "material": "  Slide aula 10",
+        "topico": " Introdu\u00e7\u00e3o a linguagem Java:   Arquitetura de eventos / Swing "
+    },
+    {
+        "aula": "11",
+        "codigo": {
+            "label": "",
+            "link": ""
+        },
+        "data": "19/09/2018",
+        "material": "  Slides aulas 11 e 12",
+        "topico": " Introdu\u00e7\u00e3o a linguagem Java:   Threads e exce\u00e7\u00f5es "
+    },
+    {
+        "aula": "12",
+        "codigo": {
+            "label": "",
+            "link": ""
+        },
+        "data": "21/09/2018",
+        "material": "  Slides aulas 11 e 12",
+        "topico": " Introdu\u00e7\u00e3o a linguagem Java:   Threads e exce\u00e7\u00f5es "
+    },
+    {
+        "aula": "13",
+        "codigo": {
+            "label": "",
+            "link": ""
+        },
+        "data": "26/09/2018",
+        "material": "  -- SEMANA UNIVERSITARIA --",
+        "topico": " -- SEMANA UNIVERSITARIA -- "
+    },
+    {
+        "aula": "14",
+        "codigo": {
+            "label": "",
+            "link": ""
+        },
+        "data": "28/09/2018",
+        "material": "  -- SEMANA UNIVERSITARIA --",
+        "topico": " -- SEMANA UNIVERSITARIA -- "
+    },
+    {
+        "aula": "15",
+        "codigo": {
+            "label": "",
+            "link": ""
+        },
+        "data": "03/10/2018",
+        "material": "  Slides aula 15, 16 e 17",
+        "topico": " Encapsulamento:    Pacotes, Interfaces, Ocultamento de informa\u00e7\u00e3o "
+    },
+    {
+        "aula": "16",
+        "codigo": {
+            "label": "",
+            "link": ""
+        },
+        "data": "05/10/2018",
+        "material": "  Slides aula 15, 16 e 17",
+        "topico": " Encapsulamento:   Modificadores de acesso public, protected, private "
+    },
+    {
+        "aula": "17",
+        "codigo": {
+            "label": "",
+            "link": ""
+        },
+        "data": "10/10/2018",
+        "material": "  Slides aula 15, 16 e 17",
+        "topico": " Encapsulamento:    Modificador de escopo static "
+    },
+    {
+        "aula": "18",
+        "codigo": {
+            "label": "",
+            "link": ""
+        },
+        "data": "12/10/2018",
+        "material": "  -- FERIADO --",
+        "topico": " -- FERIADO -- "
+    },
+    {
+        "aula": "19",
+        "codigo": {
+            "label": "",
+            "link": ""
+        },
+        "data": "17/10/2018",
+        "material": "  ",
+        "topico": " Avalia\u00e7\u00e3o 2   Conte\u00fado: Threads e exce\u00e7\u00f5es,    pacotes, interfaces, modificadores de acesso / escopo "
+    },
+    {
+        "aula": "20",
+        "codigo": {
+            "label": "",
+            "link": ""
+        },
+        "data": "19/10/2018",
+        "material": "  Slides aula 20 e 21",
+        "topico": " Deriva\u00e7\u00e3o de classes / interfaces:   Abstra\u00e7\u00e3o, agrega\u00e7\u00e3o e composi\u00e7\u00e3o, defini\u00e7\u00e3o de Interfaces "
+    },
+    {
+        "aula": "21",
+        "codigo": {
+            "label": "",
+            "link": ""
+        },
+        "data": "24/10/2018",
+        "material": "  Slides aula 20 e 21",
+        "topico": " Deriva\u00e7\u00e3o de classes / interfaces:   Classes virtuais / abstratas, m\u00e9todos virtuais / abstratos "
+    },
+    {
+        "aula": "22",
+        "codigo": {
+            "label": "",
+            "link": ""
+        },
+        "data": "26/10/2018",
+        "material": "  Slides aula 22 e 23",
+        "topico": " Heran\u00e7a simples e m\u00faltipla "
+    },
+    {
+        "aula": "23",
+        "codigo": {
+            "label": "",
+            "link": ""
+        },
+        "data": "31/10/2018",
+        "material": "  Slides aula 22 e 23",
+        "topico": " Heran\u00e7a simples e m\u00faltipla "
+    },
+    {
+        "aula": "24",
+        "codigo": {
+            "label": "",
+            "link": ""
+        },
+        "data": "02/11/2018",
+        "material": "  -- FERIADO --",
+        "topico": " -- FERIADO -- "
+    },
+    {
+        "aula": "25",
+        "codigo": {
+            "label": "",
+            "link": ""
+        },
+        "data": "07/11/2018",
+        "topico": " Avalia\u00e7\u00e3o 3   Conte\u00fado: Abstra\u00e7\u00e3o, agrega\u00e7\u00e3o/composi\u00e7\u00e3o, defini\u00e7\u00e3o de interfaces,    heran\u00e7as simples e m\u00faltipla."
+    },
+    {
+        "aula": "26",
+        "codigo": {
+            "label": "",
+            "link": ""
+        },
+        "data": "09/11/2018",
+        "material": "  Slides aula 26, 27, 28 e 29",
+        "topico": " Polimorfismo:    Convers\u00e3o de tipos "
+    },
+    {
+        "aula": "27",
+        "codigo": {
+            "label": "",
+            "link": ""
+        },
+        "data": "14/11/2018",
+        "material": "  Slides aula 26, 27, 28 e 29",
+        "topico": " Polimorfismo:    Sobrecarga de m\u00e9todos / Sobrescrita de m\u00e9todos "
+    },
+    {
+        "aula": "28",
+        "codigo": {
+            "label": "",
+            "link": ""
+        },
+        "data": "16/11/2018",
+        "material": "  Slides aula 26, 27, 28 e 29",
+        "topico": " Polimorfismo:   Sobrescrita de m\u00e9todos / Sobrescrita de m\u00e9todos "
+    },
+    {
+        "aula": "29",
+        "codigo": {
+            "label": "",
+            "link": ""
+        },
+        "data": "21/11/2018",
+        "material": "  Slides aula 26, 27, 28 e 29",
+        "topico": " Polimorfismo:   Sobrescrita de m\u00e9todos / Sobrescrita de m\u00e9todos "
+    },
+    {
+        "aula": "30",
+        "codigo": {
+            "label": "",
+            "link": ""
+        },
+        "data": "23/11/2018",
+        "material": "  ",
+        "topico": " Avalia\u00e7\u00e3o 4:   Conte\u00fado: Polimorfismo "
+    },
+    {
+        "aula": "31",
+        "codigo": {
+            "label": "",
+            "link": ""
+        },
+        "data": "28/11/2018",
+        "material": "  ",
+        "topico": " Avalia\u00e7\u00e3o do trabalho desenvolvido em grupo "
+    },
+    {
+        "aula": "32",
+        "codigo": {
+            "label": "",
+            "link": ""
+        },
+        "data": "30/11/2018",
+        "material": "  ",
+        "topico": " Avalia\u00e7\u00e3o do trabalho desenvolvido em grupo "
+    },
+    {
+        "aula": "33",
+        "codigo": {
+            "label": "",
+            "link": ""
+        },
+        "data": "05/12/2018",
+        "material": "  ",
+        "topico": " Revis\u00e3o de notas "
+    },
+    {
+        "aula": "34",
+        "codigo": {
+            "label": "",
+            "link": ""
+        },
+        "data": "07/12/2018",
+        "material": "  ",
+        "topico": " Revis\u00e3o de notas "
+    },
+    {
+        "aula": "35",
+        "codigo": {
+            "label": "",
+            "link": ""
+        },
+        "data": "07/12/2018",
+        "material": "  Slides aula extra 1",
+        "topico": " Introdu\u00e7\u00e3o a Git "
+    },
+    {
+        "aula": "36",
+        "codigo": {
+            "label": "",
+            "link": ""
+        },
+        "data": "07/12/2018",
+        "material": "  Slides aula extra 2",
+        "topico": " Introdu\u00e7\u00e3o a testes unit\u00e1rios "
+    },
+    {
+        "aula": "37",
+        "codigo": {
+            "label": "",
+            "link": ""
+        },
+        "data": "07/12/2018",
+        "material": "  ",
+        "topico": "  "
+    },
+    {
+        "aula": "38",
+        "codigo": {
+            "label": "",
+            "link": ""
+        },
+        "data": "07/12/2018",
+        "material": "  ",
+        "topico": "  "
+    },
+    {
+        "aula": "39",
+        "codigo": {
+            "label": "",
+            "link": ""
+        },
+        "data": "07/12/2018",
+        "material": "  ",
+        "topico": "  "
+    },
+    {
+        "aula": "40",
+        "codigo": {
+            "label": "",
+            "link": ""
+        },
+        "data": "07/12/2018",
+        "material": "  ",
+        "topico": "  "
+    }
+]

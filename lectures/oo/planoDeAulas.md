@@ -1,12 +1,12 @@
 ---
-title: Plano de ensino - 2017/1
+title: Plano de ensino - 2018/2
 permalink: /lectures/oo/planoDeAulas.html
 layout: default 
 ---
 
 
-{% assign semestre = "2018/1" %}
-{% assign atualizacao = "09 de maio de 2018." %}
+{% assign semestre = "2018/2" %}
+{% assign atualizacao = "09 de setembro de 2018." %}
 {% assign formAddress = "https://docs.google.com/forms/d/e/1FAIpQLSehZ3AgsqhywgcU4-O8LCokcucqAoChhIYXnso7cwEt-66D1g/viewform" %}
 ### UnB - Universidade de Brasilia
 ### FGA - Faculdade do Gama
@@ -16,10 +16,6 @@ layout: default
 
 <span style="background-color:red">***Cadastre [AQUI]({{ formAddress }}) seu nome, matricula e email***</span>
 
-:new:[***Notas e freqüencias - turmas A e C***][notasFrequenciasTurmaAeC]   
-
-[//]: <> :new:[***Notas e freqüencias - turma A***][notasFrequenciasTurmaA]  
-[//]: <> :new:[***Notas e freqüencias - turma C***][notasFrequenciasTurmaC]
 
 #### Ementa da disciplina
 * Conceitos básicos de orientação a objetos.
@@ -48,10 +44,11 @@ poderão ser utilizados pelo professor como forma de avaliação do conteúdo.
 
 #### Critérios de avaliação:
 
-Ao longo do semestre serão realizadas 6 atividades para avaliação do conteúdo,
-sendo 4 provas e 2 trabalhos em dupla. As atividades realizadas em sala de aula
-também serão avaliadas e terão efeito na nota final do aluno. Para cada uma das
-atividades avaliativas será atribuído um peso no cálculo da nota final, a saber:
+Ao longo do semestre serão realizadas 5 atividades para avaliação do conteúdo,
+sendo 4 provas e 1 trabalhos em trio. As atividades realizadas em sala de aula
+também serão avaliadas mas não terão efeito na nota final do aluno. Para cada
+uma das atividades avaliativas será atribuído um peso no cálculo da nota final,
+a saber:
 
 
 {% assign av1 = "A_1"  %}
@@ -64,15 +61,15 @@ atividades avaliativas será atribuído um peso no cálculo da nota final, a sab
 
 {% assign av3 = "A_3"  %}
 {% assign lblAv3 = "Avaliação 3"  %}
-{% assign pAv3 = 1.5  %}
+{% assign pAv3 = 2.0  %}
 
 {% assign av4 = "A_4"  %}
 {% assign lblAv4 = "Avaliação 4"  %}
 {% assign pAv4 = 2.0  %}
 
 {% assign tr1 = "T_1"  %}
-{% assign lblTr1 = "Trabalho 1"  %}
-{% assign pTr1 = 1.0  %}
+{% assign lblTr1 = "Trabalho "  %}
+{% assign pTr1 = 3.5  %}
 
 {% assign tr2 = "T_2"  %}
 {% assign lblTr2 = "Trabalho 2"  %}
@@ -88,8 +85,10 @@ $${{ av2 }}$$ - {{ lblAv2 }} - peso {{ pAv2 }}
 $${{ av3 }}$$ - {{ lblAv3 }} - peso {{ pAv3 }}    
 $${{ av4 }}$$ - {{ lblAv4 }} - peso {{ pAv4 }}    
 $${{ tr1 }}$$ - {{ lblTr1 }} - peso {{ pTr1 }}   
-$${{ tr2 }}$$ - {{ lblTr2 }} - peso {{ pTr2 }}   
-$${{ at  }}$$ - {{ lblAt  }} - peso {{ pAt  }}   
+
+[//]:<> $${{ at  }}$$ - {{ lblAt  }} - peso {{ pAt  }}   
+[//]:<> $${{ tr2 }}$$ - {{ lblTr2 }} - peso {{ pTr2 }}
+
 
 
 O cálculo da menção final será definido através dos valores obtidos pelo aluno
@@ -97,14 +96,14 @@ ao longo do semestre de acordo com a seguinte expressão:
 
 $$NF = \frac{ {{av1}} \times {{ pAv1 }} + {{ av2 }} \times {{ pAv2 }} + {{ av3
 }} \times {{ pAv3 }} + {{ av4 }} \times {{ pAv4 }} +  {{ tr1 }} \times {{ pTr1
-}} +  {{ tr2 }} \times {{ pTr2 }} +  {{ at }} \times {{ pAt }}  }{ 10 }$$
+}}  }{ 10 }$$
 
 ---
-#### Trabalho
-
-[Enunciado do trabalho](https://docs.google.com/document/d/1WoSHGsw5WO_0hByLk5sry4I12ZiGmkx-SDOSanO7PB0/edit?usp=sharing)
-
---- 
+[//]:<> #### Trabalho
+[//]:<> 
+[//]:<> [Enunciado do trabalho](https://docs.google.com/document/d/1WoSHGsw5WO_0hByLk5sry4I12ZiGmkx-SDOSanO7PB0/edit?usp=sharing)
+[//]:<> 
+[//]:<> --- 
 
 
 
@@ -112,13 +111,14 @@ $$NF = \frac{ {{av1}} \times {{ pAv1 }} + {{ av2 }} \times {{ pAv2 }} + {{ av3
 
 #### Cronograma da disciplina
 
- {% for au in site.data.plano_oo_2018_1 %}
+ {% for au in site.data.plano_oo_2018_2 %}
  {% assign a = au %}
  **{{ a.aula }} -- {{ a.data }}**  
  **Tópico:** {{ a.topico }}  
  **Atividade:**{% if a.atividade != "" %}[atividade]({{ a.atividade }}){% else %} -- {% endif %}   
- **Material:** {% if a.material != "" %}[ slides ]({{ a.material }}){% else %} -- {% endif %}   
- **Codigo:** {% if a.codigo != "" %}[src]({{ a.codigo }}){% else %} -- {% endif %}   
+ **Material:** {% if a.material != "" %}[ {{ a.material.label }} ]({{
+a.material.link }}){% else %} -- {% endif %}   
+ **Codigo:** {% if a.codigo != "" %}[ {{ a.codigo.label }}]({{ a.codigo.link }}){% else %} -- {% endif %}   
  {% endfor %}
 
 [//]: <> [//]: # [BorderLAyout.tar.gz][BorderLAyout.tar.gz]|
