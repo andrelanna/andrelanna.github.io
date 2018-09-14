@@ -112,6 +112,7 @@
         "topico": " Introdu\u00e7\u00e3o a linguagem Java:   Arquitetura de eventos / Swing "
     },
     {
+        "atividade": { "label": "Exercicios de fixacao", "link": "https://docs.google.com/document/d/1QF5NgD_zO4FFQuyQ2ViVt5CntrBWgkx21anWuARyoH4/edit?usp=sharing"},
         "aula": "11",
         "codigo": {
             "label": "",
@@ -119,7 +120,7 @@
         },
         "data": "19/09/2018",
         "material": "  Slides aulas 11 e 12",
-        "topico": " Introdu\u00e7\u00e3o a linguagem Java:   Threads e exce\u00e7\u00f5es "
+        "topico": " **Avalia\u00e7\u00e3o 1 - Conceitos b\u00e1sicos de OO** ~~Introdu\u00e7\u00e3o a linguagem Java:   Threads e exce\u00e7\u00f5es~~"
     },
     {
         "aula": "12",

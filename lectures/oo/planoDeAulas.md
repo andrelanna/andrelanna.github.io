@@ -114,8 +114,8 @@ $$NF = \frac{ {{av1}} \times {{ pAv1 }} + {{ av2 }} \times {{ pAv2 }} + {{ av3
  {% for au in site.data.plano_oo_2018_2 %}
  {% assign a = au %}
  **{{ a.aula }} -- {{ a.data }}**  
- **Tópico:** {{ a.topico }}  
- **Atividade:**{% if a.atividade != "" %}[atividade]({{ a.atividade }}){% else %} -- {% endif %}   
+ **Tópico:** {{ a.topico }}   
+ **Atividade:**[{{ a.atividade.label }}]({{ a.atividade.link }})     
  **Material:** {% if a.material != "" %}[ {{ a.material.label }} ]({{
 a.material.link }}){% else %} -- {% endif %}   
  **Codigo:** {% if a.codigo != "" %}[ {{ a.codigo.label }}]({{ a.codigo.link }}){% else %} -- {% endif %}   
