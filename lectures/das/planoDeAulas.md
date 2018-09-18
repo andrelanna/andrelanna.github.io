@@ -18,7 +18,7 @@ layout: default
 
 <span style="background-color:red">***Cadastre [AQUI]({{ formAddress }}) seu nome, matricula e email***</span>
 
-<span style="background-color:yellow">***[Notas e frequencias]({{ sheetAddress }})***</span>
+[//]:<> <span style="background-color:yellow">***[Notas e frequencias]({{ sheetAddress }})***</span>
 
 #### Ementa da disciplina: 
 * Reuso de software
@@ -111,7 +111,7 @@ $$NF = \frac{ {{av1}} \times {{ pAv1 }} + {{ av2 }} \times {{ pAv2 }} + {{ av3
 
 #### Cronograma da disciplina
 [Enunciado trabalho de Refatoracao][enunciadoRefatoracao]
-{% for class in site.data.plano_das_2018_1 %}
+{% for class in site.data.plano_das_2018_2 %}
 {{ class.aula}} -- {{ class.data }}  
 **Tópico:** {{ class.topico}}  
 **Material:**{% for material in class.material %} [[slides]({{ material }})] {% endfor %}  

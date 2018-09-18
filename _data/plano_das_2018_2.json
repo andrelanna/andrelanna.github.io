@@ -1,0 +1,172 @@
+[
+    {
+        "aula": "1",
+        "data": "15/08/2018",
+        "topico": "Apresenta\u00e7\u00e3o da disciplina "
+    },
+    {
+        "aula": "2",
+        "data": "17/08/2018",
+        "topico": "Introdu\u00e7\u00e3o a testes unit\u00e1rios   Apresenta\u00e7\u00e3o do framework JUnit   Fundamentos JUnit   Arquitetura JUnit"
+    },
+    {
+        "aula": "3",
+        "data": "22/08/2018",
+        "topico": "Introdu\u00e7\u00e3o a testes unit\u00e1rios: organiza\u00e7\u00e3o de testes   Asser\u00e7\u00f5es, testes, casos de testes, suites de testes"
+    },
+    {
+        "aula": "4",
+        "data": "24/08/2018",
+        "topico": "TestRunners:   Suite, Parameterized, Order, Categories, Ignore,    TimeOut, Assumptions, Rules, Mock,    Multithreaded e Concurrency. "
+    },
+    {
+        "aula": "5",
+        "data": "29/08/2018",
+        "topico": "TestRunners:   Suite, Parameterized, Order, Categories, Ignore,    TimeOut, Assumptions, Rules, Mock,    Multithreaded e Concurrency. "
+    },
+    {
+        "aula": "6",
+        "data": "31/08/2018",
+        "topico": "TestRunners:   Suite, Parameterized, Order, Categories, Ignore,    TimeOut, Assumptions, Rules, Mock,    Multithreaded e Concurrency. "
+    },
+    {
+        "aula": "7",
+        "data": "05/09/2018",
+        "topico": "Avalia\u00e7\u00e3o 1: Testes Unit\u00e1rios "
+    },
+    {
+        "aula": "8",
+        "data": "07/09/2018",
+        "topico": "-- FERIADO -- "
+    },
+    {
+        "aula": "9",
+        "data": "12/09/2018",
+        "topico": "TDD - Desenvolvimento orientado a testes "
+    },
+    {
+        "aula": "10",
+        "data": "14/09/2018",
+        "topico": "TDD - Padr\u00f5es de desenvolvimento  "
+    },
+    {
+        "aula": "11",
+        "data": "19/09/2018",
+        "topico": "TDD - TDD na pr\u00e1tica "
+    },
+    {
+        "aula": "12",
+        "data": "21/09/2018",
+        "topico": "Avalia\u00e7\u00e3o 2: TDD "
+    },
+    {
+        "aula": "13",
+        "data": "26/09/2018",
+        "topico": "-- SEMANA UNIVERSITARIA -- "
+    },
+    {
+        "aula": "14",
+        "data": "28/09/2018",
+        "topico": "-- SEMANA UNIVERSITARIA -- "
+    },
+    {
+        "aula": "15",
+        "data": "03/10/2018",
+        "topico": "Refatora\u00e7\u00e3o   Contextualiza\u00e7\u00e3o, maus cheiros de c\u00f3digo. "
+    },
+    {
+        "aula": "16",
+        "data": "05/10/2018",
+        "topico": "Refatora\u00e7\u00e3o:   Extrair m\u00e9todo, extrair classe, extrair super-classe, extrair sub-classe, extrair m\u00e9todo-objeto   Mover m\u00e9todo, mover atributo, encapsular atributo,"
+    },
+    {
+        "aula": "17",
+        "data": "10/10/2018",
+        "topico": "Refatora\u00e7\u00e3o:   Extrair m\u00e9todo, extrair classe, extrair super-classe, extrair sub-classe, extrair m\u00e9todo-objeto   Mover m\u00e9todo, mover atributo, encapsular atributo,"
+    },
+    {
+        "aula": "18",
+        "data": "12/10/2018",
+        "topico": "-- FERIADO -- "
+    },
+    {
+        "aula": "19",
+        "data": "17/10/2018",
+        "topico": "Refatora\u00e7\u00e3o:   Extrair m\u00e9todo, extrair classe, extrair super-classe, extrair sub-classe, extrair m\u00e9todo-objeto   Mover m\u00e9todo, mover atributo, encapsular atributo,"
+    },
+    {
+        "aula": "20",
+        "data": "19/10/2018",
+        "topico": "Refatora\u00e7\u00e3o:   Extrair m\u00e9todo, extrair classe, extrair super-classe, extrair sub-classe, extrair m\u00e9todo-objeto   Mover m\u00e9todo, mover atributo, encapsular atributo,"
+    },
+    {
+        "aula": "21",
+        "data": "24/10/2018",
+        "topico": "Avalia\u00e7\u00e3o 3: Refatora\u00e7\u00e3o "
+    },
+    {
+        "aula": "22",
+        "data": "26/10/2018",
+        "topico": "Introdu\u00e7\u00e3o ao reuso de software "
+    },
+    {
+        "aula": "23",
+        "data": "31/10/2018",
+        "topico": "Reuso   Contextualiza\u00e7\u00e3o, benef\u00edcios, obst\u00e1culos   Fatores de sucesso e de fracasso"
+    },
+    {
+        "aula": "24",
+        "data": "02/11/2018",
+        "topico": "-- FERIADO -- "
+    },
+    {
+        "aula": "25",
+        "data": "07/11/2018",
+        "topico": "Tipos de reuso de software:   Padr\u00f5es de projeto   Bibliotecas"
+    },
+    {
+        "aula": "26",
+        "data": "09/11/2018",
+        "topico": "Tipos de reuso de software:   Padr\u00f5es de projeto   Bibliotecas"
+    },
+    {
+        "aula": "27",
+        "data": "14/11/2018",
+        "topico": "Tipos de reuso de software:   Componentes de software   Frameworks de software"
+    },
+    {
+        "aula": "28",
+        "data": "16/11/2018",
+        "topico": "Tipos de reuso de software:   Componentes de software   Frameworks de software"
+    },
+    {
+        "aula": "29",
+        "data": "21/11/2018",
+        "topico": "Tipos de reuso de software:   Modelos de componentes"
+    },
+    {
+        "aula": "30",
+        "data": "23/11/2018",
+        "topico": "Tipos de reuso de software:   Constru\u00e7\u00e3o de um framework"
+    },
+    {
+        "aula": "31",
+        "data": "28/11/2018",
+        "topico": "Tipos de reuso de software:   Constru\u00e7\u00e3o de um framework"
+    },
+    {
+        "aula": "32",
+        "data": "30/11/2018",
+        "topico": "Avalia\u00e7\u00e3o 4: Reuso de software "
+    },
+    {
+        "aula": "33",
+        "data": "05/12/2018",
+        "topico": "Revis\u00e3o de notas "
+    },
+    {
+        "aula": "34",
+        "data": "07/12/2018",
+        "topico": "Revis\u00e3o de notas "
+    }
+]
