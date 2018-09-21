@@ -76,41 +76,39 @@ atividades avaliativas será atribuído um peso no cálculo da nota final, a sab
 {% assign lblTr2 = "Trabalho 2"  %}
 {% assign pTr2 = 2.5  %}
 
-{% assign at = "A_s"  %}
-{% assign lblAt = "Atividades em sala"  %}
-{% assign pAt = 0.5  %}
-
 
 $${{ av1 }}$$ - {{ lblAv1 }} - peso {{ pAv1 }}    
 $${{ av2 }}$$ - {{ lblAv2 }} - peso {{ pAv2 }}    
 $${{ av3 }}$$ - {{ lblAv3 }} - peso {{ pAv3 }}    
 $${{ av4 }}$$ - {{ lblAv4 }} - peso {{ pAv4 }}    
 $${{ tr1 }}$$ - {{ lblTr1 }} - peso {{ pTr1 }}   
-$${{ tr2 }}$$ - {{ lblTr2 }} - peso {{ pTr2 }}   
-$${{ at  }}$$ - {{ lblAt  }} - peso {{ pAt  }}   
+$${{ tr2 }}$$ - {{ lblTr2 }} - peso {{ pTr2 }}  
+
+[//]:  $${{ at  }}$$ - {{ lblAt  }} - peso {{ pAt  }}   
 
 O cálculo da menção final será definido através dos valores obtidos pelo aluno
 ao longo do semestre de acordo com a seguinte expressão: 
 
 $$NF = \frac{ {{av1}} \times {{ pAv1 }} + {{ av2 }} \times {{ pAv2 }} + {{ av3
 }} \times {{ pAv3 }} + {{ av4 }} \times {{ pAv4 }} +  {{ tr1 }} \times {{ pTr1
-}} +  {{ tr2 }} \times {{ pTr2 }} +  {{ at }} \times {{ pAt }}  }{ 10 }$$
+}} +  {{ tr2 }} \times {{ pTr2 }}  }{ 10 }$$
 
 
-[Avaliação 2 - Refatoração][avaliacao2Refatoracao]
+[//]: [Avaliação 2 - Refatoração][avaliacao2Refatoracao]
 
 
 #### Material didático
-##### Refatoração
-[Slides de introducao a refatoracao][sl1]  
-[Principios em refatoracao][sl2]  
-[Oportunidades de refatoração][sl3]  
-[Grupo 1 - Composição de métodos][cat1]  
-[Grupo 2 - Movendo caracteristicas entre classes / objetos][cat2]  
+[//]:  ##### Refatoração
+[//]:  [Slides de introducao a refatoracao][sl1]  
+[//]:  [Principios em refatoracao][sl2]  
+[//]:  [Oportunidades de refatoração][sl3]  
+[//]:  [Grupo 1 - Composição de métodos][cat1]  
+[//]:  [Grupo 2 - Movendo caracteristicas entre classes / objetos][cat2]  
 
 
 #### Cronograma da disciplina
-[Enunciado trabalho de Refatoracao][enunciadoRefatoracao]
+[//]:  [Enunciado trabalho de Refatoracao][enunciadoRefatoracao]
+
 {% for class in site.data.plano_das_2018_2 %}
 {{ class.aula}} -- {{ class.data }}  
 **Tópico:** {{ class.topico}}  

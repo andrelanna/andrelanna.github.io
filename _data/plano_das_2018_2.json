@@ -32,7 +32,7 @@
     {
         "aula": "7",
         "data": "05/09/2018",
-        "topico": "Avalia\u00e7\u00e3o 1: Testes Unit\u00e1rios "
+        "topico": "_Avalia\u00e7\u00e3o 1: Testes Unit\u00e1rios_"
     },
     {
         "aula": "8",
@@ -57,7 +57,7 @@
     {
         "aula": "12",
         "data": "21/09/2018",
-        "topico": "Avalia\u00e7\u00e3o 2: TDD "
+        "topico": "_Avalia\u00e7\u00e3o 2: TDD_"
     },
     {
         "aula": "13",
@@ -102,7 +102,7 @@
     {
         "aula": "21",
         "data": "24/10/2018",
-        "topico": "Avalia\u00e7\u00e3o 3: Refatora\u00e7\u00e3o "
+        "topico": "_Avalia\u00e7\u00e3o 3: Refatora\u00e7\u00e3o_"
     },
     {
         "aula": "22",
@@ -157,7 +157,7 @@
     {
         "aula": "32",
         "data": "30/11/2018",
-        "topico": "Avalia\u00e7\u00e3o 4: Reuso de software "
+        "topico": "_Avalia\u00e7\u00e3o 4: Reuso de software_"
     },
     {
         "aula": "33",
