@@ -72,11 +72,31 @@
     {
         "aula": "15",
         "data": "03/10/2018",
+        "material": [
+            {
+                "label": "Refatora\u00e7\u00e3o: uma introdu\u00e7\u00e3o",
+                "link": "https://github.com/andrelanna/andrelanna.github.io/raw/master/lectures/das/sl1.pdf"
+            },
+            {
+                "label": "Princ\u00edpios em refatora\u00e7\u00e3o",
+                "link": "https://github.com/andrelanna/andrelanna.github.io/raw/master/lectures/das/sl2.pdf"
+            },
+            {
+                "label": "Oportunidades de refatora\u00e7\u00e3o",
+                "link": "https://github.com/andrelanna/andrelanna.github.io/raw/master/lectures/das/sl3-oportRefatoracao.pdf"
+            }
+        ],
         "topico": "Refatora\u00e7\u00e3o   Contextualiza\u00e7\u00e3o, maus cheiros de c\u00f3digo. "
     },
     {
         "aula": "16",
         "data": "05/10/2018",
+        "material": [
+            {
+                "label": "Compondo m\u00e9todos",
+                "link": "https://github.com/andrelanna/andrelanna.github.io/raw/master/lectures/das/Catalogo_Refatoracao_Compondo_metodos.pdf"
+            }
+        ],
         "topico": "Refatora\u00e7\u00e3o:   Extrair m\u00e9todo, extrair classe, extrair super-classe, extrair sub-classe, extrair m\u00e9todo-objeto   Mover m\u00e9todo, mover atributo, encapsular atributo,"
     },
     {

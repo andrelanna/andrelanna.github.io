@@ -109,12 +109,13 @@ $$NF = \frac{ {{av1}} \times {{ pAv1 }} + {{ av2 }} \times {{ pAv2 }} + {{ av3
 #### Cronograma da disciplina
 [//]:  [Enunciado trabalho de Refatoracao][enunciadoRefatoracao]
 
-{% for class in site.data.plano_das_2018_2 %}
-{{ class.aula}} -- {{ class.data }}  
-**Tópico:** {{ class.topico}}  
-**Material:**{% for material in class.material %} [[slides]({{ material }})] {% endfor %}  
-**Código:**{% for codigo in class.codigo %} [[codigo]({{ codigo }})] {% endfor %}  
-**Atividade:**{% for atividade in class.atividade %} [[atividade]({{ atividade }})] {% endfor %}
+{% for a in site.data.plano_das_2018_2 %}
+ **{{ a.aula }} -- {{ a.data }}**  
+ **Tópico:** {{ a.topico }}   
+ **Atividade:**[{{ a.atividade.label }}]({{ a.atividade.link }})     
+ **Material:** {% for m in a.material %} [ {{ m.label }} ]({{
+m.link }}), {% endfor %}  
+ **Codigo:** {% if a.codigo != "" %}[ {{ a.codigo.label }}]({{ a.codigo.link }}){% else %} -- {% endif %}   
 {% endfor %}
 
 
