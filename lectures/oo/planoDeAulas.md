@@ -6,7 +6,7 @@ layout: default
 
 
 {% assign semestre = "2018/2" %}
-{% assign atualizacao = "09 de setembro de 2018." %}
+{% assign atualizacao = "16 de outubro de 2018." %}
 {% assign formAddress = "https://docs.google.com/forms/d/e/1FAIpQLSehZ3AgsqhywgcU4-O8LCokcucqAoChhIYXnso7cwEt-66D1g/viewform" %}
 ### UnB - Universidade de Brasilia
 ### FGA - Faculdade do Gama
@@ -14,7 +14,8 @@ layout: default
 ------
 ### Plano de ensino - {{semestre}} 
 
-<span style="background-color:red">***Cadastre [AQUI]({{ formAddress }}) seu nome, matricula e email***</span>
+<span style="background-color:red">***Cadastre [AQUI]({{ formAddress }}) seu nome, matricula e email***</span>   
+<span style="background-color:green">***Notas e frequencias [AQUI]({{ notasFrequencias }})***</span>
 
 
 #### Ementa da disciplina
@@ -192,7 +193,7 @@ precisarem.
 [eckDavid]: http://math.hws.edu/javanotes/
 [oracle]: http://docs.oracle.com/javase/specs/
 
-[notasFrequenciasTurmaAeC]: https://docs.google.com/spreadsheets/d/1e-4eDsYkHavtxTmayVUh1tHzrg1NFn0dihdGeVXwAoE/edit?usp=sharing 
+[notasFrequencias]: https://docs.google.com/spreadsheets/d/1YkVh3kuyJcg1eeHvop-rEIRnpmVVXmBBaN45FTMEXbE/edit?usp=sharing 
 [notasFrequenciasTurmaA]: notasFrequenciasTurmaA.html
 [notasFrequenciasTurmaC]: notasFrequenciasTurmaC.html
 [Atividade 1]: atividade1.md
