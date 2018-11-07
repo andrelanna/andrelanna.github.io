@@ -132,7 +132,9 @@
     {
         "aula": "23",
         "data": "31/10/2018",
-        "topico": "Reuso   Contextualiza\u00e7\u00e3o, benef\u00edcios, obst\u00e1culos   Fatores de sucesso e de fracasso"
+        "topico": "Reuso   Contextualiza\u00e7\u00e3o, benef\u00edcios, obst\u00e1culos   Fatores de sucesso e de fracasso",
+	"atividade": { "label": "Enunciado trabalho",
+                      "link": "../../lectures/das/trabalhoDAS_2018_2"}
     },
     {
         "aula": "24",
