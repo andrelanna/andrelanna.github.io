@@ -74,9 +74,9 @@ durante 4 aulas (2 grupos por aula). Cada aula haverá um sorteio de quais grupo
 apresentarão naquela aula. *Se o grupo não estiver em sala de aula no momento do
 sorteio, será atribuída nota zero à apresentação para todo o grupo.*
 
-Data de entrega da parte escrita e dos slides de apresentação: 16/11/2018,
+Data de entrega da parte escrita e dos slides de apresentação: 21/11/2018,
 16:15 horas.  
-Datas de apresentação dos trabalhos: 16, 21, 23 e 28 de novembro.
+Datas de apresentação dos trabalhos: 21, 23 e 28 de novembro.
 
 **Observações:**
 * Somente serão considerados entregues os trabalhos enviados dentro do período
