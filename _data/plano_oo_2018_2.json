@@ -261,7 +261,8 @@
             "link": ""
         },
         "data": "07/11/2018",
-        "topico": " Avalia\u00e7\u00e3o 3   Conte\u00fado: Abstra\u00e7\u00e3o, agrega\u00e7\u00e3o/composi\u00e7\u00e3o, defini\u00e7\u00e3o de interfaces,    heran\u00e7as simples e m\u00faltipla."
+        "topico": " Avalia\u00e7\u00e3o 3   Conte\u00fado: Abstra\u00e7\u00e3o, agrega\u00e7\u00e3o/composi\u00e7\u00e3o, defini\u00e7\u00e3o de interfaces,    heran\u00e7as simples e m\u00faltipla.", 
+	"atividade": {"label": "Enunciado do trabalho final", "link": "../../lectures/oo/trabalhoFinal_OO_2018_2" } 
     },
     {
         "aula": "26",
