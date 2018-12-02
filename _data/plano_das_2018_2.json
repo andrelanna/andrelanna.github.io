@@ -130,11 +130,13 @@
         "topico": "Introdu\u00e7\u00e3o ao reuso de software "
     },
     {
+        "atividade": {
+            "label": "Enunciado trabalho",
+            "link": "../../lectures/das/trabalhoDAS_2018_2"
+        },
         "aula": "23",
         "data": "31/10/2018",
-        "topico": "Reuso   Contextualiza\u00e7\u00e3o, benef\u00edcios, obst\u00e1culos   Fatores de sucesso e de fracasso",
-	"atividade": { "label": "Enunciado trabalho",
-                      "link": "../../lectures/das/trabalhoDAS_2018_2"}
+        "topico": "Reuso   Contextualiza\u00e7\u00e3o, benef\u00edcios, obst\u00e1culos   Fatores de sucesso e de fracasso"
     },
     {
         "aula": "24",
@@ -177,6 +179,10 @@
         "topico": "Tipos de reuso de software:   Constru\u00e7\u00e3o de um framework"
     },
     {
+        "atividade": {
+            "label": "Enunciado da avalia\u00e7\u00e3o",
+            "link": "../../lectures/das/avaliacao4"
+        },
         "aula": "32",
         "data": "30/11/2018",
         "topico": "_Avalia\u00e7\u00e3o 4: Reuso de software_"
@@ -184,7 +190,7 @@
     {
         "aula": "33",
         "data": "05/12/2018",
-        "topico": "Revis\u00e3o de notas "
+        "topico": "~~Revis\u00e3o de notas~~ Entrega da avalia\u00e7\u00e3o 4 via github / Avalia\u00e7\u00e3o de reposi\u00e7\u00e3o para quem perdeu alguma avalia\u00e7\u00e3o "
     },
     {
         "aula": "34",
