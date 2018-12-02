@@ -26,3 +26,7 @@ SPAGNOLI, Luciana de Araujo; BECKER, Karin. **Um Estudo Sobre o Desenvolvimento 
 
 
 **Questão 1:** O Desenvolvimento Baseado em Componentes (DBC) é um método de desenvolvimento de software voltado para a reutilização de elementos previamente implementados e testados. Busca-se, com a utilização de tal método, aumentar a qualidade do software produzido e reduzir seu tempo de entrega. Para promover uma reutilização de componentes de maneira mais direta alguns elementos foram definidos de modo a guiar tanto a implementação dos componentes reutilizáveis quanto o desenvolvimento da aplicação com base na reutilização de tais componentes. Dentre esses elementos destacam-se o *framework de componentes*, o *modelo de componentes* e o próprio *componente de software*. A Figura 1 apresentada na página 11 de Spagnoli e Becker(2003) apresenta como esses elementos estão dispostos e relacionados em uma aplicação DBC. Para cada um desses elementos apresente claramente a) uma definição do elemento e b) seu papel (função) na abordagem DBC. Valor: 30 pontos, 10 pontos cada elemento.
+
+Obs.: Apresente a resposta em um arquivo texto chamado *questao1.txt*.
+
+**Questão 2:**
