@@ -29,4 +29,8 @@ SPAGNOLI, Luciana de Araujo; BECKER, Karin. **Um Estudo Sobre o Desenvolvimento 
 
 Obs.: Apresente a resposta em um arquivo texto chamado *questao1.txt*.
 
-**Questão 2:**
+**Questão 2:** Java Remote Method Invocation (JavaRMI) é uma biblioteca de Java utilizada para desenvolver aplicações que utilizam métodos distribuídos de maneira similar à aplicações não distribuídas. Apesar de não ser definida explicitamente como um _framework_, JavaRMI define um conjunto de elementos arquiteturais que devem ser considerados durante o desenvolvimento da aplicação pelo desenvolvedor, a saber: a) _stub_, b) _skeleton_, c) registro e d) serialização (_marshalling_ e _unmarshalling_) e invocação remota de métodos. Para maiores detalhes vide o tutorial presente em <https://www.oracle.com/technetwork/java/javase/tech/index-jsp-138781.html>.
+
+Apresentados os elementos arquiteturais de JavaRMI, relacione-os aos elementos arquiteturais apresentados na Figura 1 do texto de Spagnoli e Becker (2003). Justifique sua resposta de modo a identificar claramente a similaridade entre as definições de Spagnoli e Becker (2003) e o papel desempenhado pelos elementos de JavaRMI. Valor: 40 pontos, 10 pontos cada elemento. 
+
+Obs.: Apresente a resposta em um arquivo texto chamado *questao2.txt*.
