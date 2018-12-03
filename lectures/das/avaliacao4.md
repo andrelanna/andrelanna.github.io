@@ -34,3 +34,7 @@ Obs.: Apresente a resposta em um arquivo texto chamado *questao1.txt*.
 Apresentados os elementos arquiteturais de JavaRMI, relacione-os aos elementos arquiteturais apresentados na Figura 1 do texto de Spagnoli e Becker (2003). Justifique sua resposta de modo a identificar claramente a similaridade entre as definições de Spagnoli e Becker (2003) e o papel desempenhado pelos elementos de JavaRMI. Valor: 40 pontos, 10 pontos cada elemento. 
 
 Obs.: Apresente a resposta em um arquivo texto chamado *questao2.txt*.
+
+**Questão 3:** Considere uma aplicação de trocas de mensagens entre diferentes pessoas. Cada pessoa que utiliza essa aplicação se registra a um servidor utilizando um identificador que o distingue das demais pessoas. Cada cliente poderá enviar dois tipos de mensagens: a) uma mensagem direta para um outro cliente e b) uma mensagem para todos os clientes (_broadcast_). Em ambos os casos a mensagem enviada deverá ser apresentada na tela do usuário destinatário. 
+
+Com base no cenário descrito acima implemente em JavaRMI uma aplicação composta de objetos remotos e objeto servidor que seja capaz de permitir a comunicação entre diversos clientes. Através de comentários em código apresente, claramente, quem são os elementos arquiteturais de JavaRMI. Valor: 30 pontos.
