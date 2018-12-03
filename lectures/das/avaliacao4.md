@@ -13,7 +13,7 @@ DAS - Desenvolvimento Avançado de Software
 
 Instruções para a prova:
 
-* Avaliação individual. 
+* ~~Avaliação individual.~~ Avaliação em dupla.  
 * Entrega da avaliação via pull-request em repositório do GitHub. 
 * Data e horário limites para entrega: 5 de dezembro de 2018, 18:00 horas. **Pull-requests enviados após esse horário não serão aceitos e, consequentemente, a avaliação será zerada.** 
 * Formato da mensagem do pull-request:  
