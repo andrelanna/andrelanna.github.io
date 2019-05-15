@@ -1,0 +1,94 @@
+[
+    {
+        "aula": "1",
+        "codigo": {
+            "label": "",
+            "link": ""
+        },
+        "data": "17/05/2019",
+        "material": {
+            "label": "",
+            "link": ""
+        },
+        "topico": "Apresentação da Disciplina, Plano de Ensino. Conceitos Básicos de Requisitos de Software. Definição dos Grupos de Trabalho e temas dos artigos."
+    },
+    {
+        "aula": "2",
+        "codigo": {
+            "label": "",
+            "link": ""
+        },
+        "data": "24/05/2019",
+        "material": {
+            "label": "",
+            "link": ""
+        },
+        "topico": ""
+    },
+    {
+        "aula": "3",
+        "codigo": {
+            "label": "",
+            "link": ""
+        },
+        "data": "31/05/2019",
+        "material": {
+            "label": "",
+            "link": ""
+        },
+        "topico": "Atividade extra-classe: leitura de artigo científico e elaboração do trabalho."
+    },
+    {
+        "aula": "4",
+        "codigo": {
+            "label": "",
+            "link": ""
+        },
+        "data": "07/06/2019",
+        "material": {
+            "label": "",
+            "link": ""
+        },
+        "topico": ""
+    },
+    {
+        "aula": "5",
+        "codigo": {
+            "label": "",
+            "link": ""
+        },
+        "data": "14/06/2019",
+        "material": "",
+        "topico": ""
+    },
+    {
+        "aula": "6",
+        "codigo": {
+            "label": "",
+            "link": ""
+        },
+        "data": "21/06/2019",
+        "material": "",
+        "topico": "Atividade extra-classe."
+    },
+    {
+        "aula": "7",
+        "codigo": {
+            "label": "",
+            "link": ""
+        },
+        "data": "28/06/2019",
+        "material": "",
+        "topico": ""
+    },
+    {
+        "aula": "8",
+        "codigo": {
+            "label": "",
+            "link": ""
+        },
+        "data": "05/07/2019",
+        "material": "",
+        "topico": ""
+    }
+]

@@ -7,15 +7,16 @@ layout: default
 ---
 [das_page]: /lectures/das/planoDeAulas.html
 [oo_page]: /lectures/oo/planoDeAulas.html
+[ersw_page]: /lectures/ersw/planoDeAulas
 
-## Disciplinas - 2018-1  
+## Disciplinas - 2019-1  
 (_Content in_ <span>&#x1f1e7;&#x1f1f7;</span>)
 
 [DAS - Desenvolvimento Avançado de Software][das_page] :new:  
-*(Atualizado em 16 de março de 2018)*
 
 [OO - Orientação por objetos (turmas A e C)][oo_page] :new:   
-*(Atualizado em 16 de outubro de 2018)*
+
+[RSw - Requisitos de software][ersw_page] :new:
 
 --------------------------------------------------------------------------------
 ## Selected publications:
