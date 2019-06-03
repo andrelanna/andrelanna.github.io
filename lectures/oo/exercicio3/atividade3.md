@@ -47,3 +47,90 @@ onde:
 
 
 Os valores finais de cada mês deverão ser informados através de objetos JLabel. 
+
+public class principal {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Janela j = new Janela();
+	}
+
+}
+---------------------------------------------------------------------------------------------------------------
+import java.awt.GridLayout;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+
+public class Janela extends JFrame{
+
+	JLabel lblJuros,lblDeposito,lblMeses, lblResultado, lblResultadoMensal;
+	JTextField txtJuros,txtDeposito, txtMeses;
+	JButton btnCalcular,btnLimpar;
+	
+	public Janela(){
+		//definir propriedade interface
+		setTitle("Exemplo Interface Swing");
+		setSize(500,500);
+		setLayout(new GridLayout(5,1));
+		
+		//criar componentes graficos
+		lblDeposito = new JLabel("Deposito regular: ");
+		lblJuros = new JLabel ("Taxa de Juros mensal: ");
+		lblMeses = new JLabel("Numero de meses: ");
+		lblResultado = new JLabel("Resultado: ");
+		lblResultadoMensal = new JLabel("");
+		txtDeposito= new JTextField();
+		txtJuros = new JTextField();
+		txtMeses = new JTextField();
+		
+		btnCalcular = new JButton("Calcular");
+		
+		
+		//adicionar elementos na interface;
+		add(lblDeposito);
+		add(txtDeposito);
+		add(lblJuros);
+		add(txtJuros);
+		add(lblMeses);
+		add(txtMeses);
+		add(lblResultado);
+		add(lblResultadoMensal);
+		add(btnCalcular);
+		
+		
+		btnCalcular.addActionListener(new CalcularListener(this));
+		
+		//mostrar janela
+		setVisible(true);
+	}
+}
+--------------------------------------------------------------------------------------------
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+public class CalcularListener implements ActionListener{
+
+	Janela j;
+	
+	public CalcularListener(Janela janela){
+		j = janela;
+	}
+	
+	public void actionPerformed(ActionEvent e){
+		float juros = Float.parseFloat(j.txtJuros.getText());
+		float deposito = Float.parseFloat(j.txtDeposito.getText());
+		float meses = Float.parseFloat(j.txtJuros.getText());
+		float resultado;
+		String resultadoMensal = "";
+				for(int j = 1;j<=meses;j++){
+					resultado = (float) ((1+juros/100) * (java.lang.Math.pow(1+juros, j)-1)/juros * deposito);
+					resultadoMensal += String.format("Mês %.1f: %.2f\n", meses, resultado);
+				}
+				j.lblResultadoMensal.setText(resultadoMensal);
+		
+	}
+}
+
