@@ -1,14 +1,14 @@
 ---
-title: Plano de ensino - 2018/2
+title: Plano de ensino - 2019/2
 permalink: /lectures/oo/planoDeAulas.html
 layout: default 
 ---
 
 
-{% assign semestre = "2018/2" %}
-{% assign atualizacao = "16 de outubro de 2018." %}
+{% assign semestre = "2019/1" %}
+{% assign atualizacao = "17 de junho de 2019." %}
 {% assign formAddress = "https://docs.google.com/forms/d/e/1FAIpQLSehZ3AgsqhywgcU4-O8LCokcucqAoChhIYXnso7cwEt-66D1g/viewform" %}
-{% assign notasFrequencias = "https://docs.google.com/spreadsheets/d/1Tk7rRK-I3CpOqCZbKNIP8g1GhPI3JRNLc2EjMI79Oj4/edit?usp=sharing" %} 
+{% assign notasFrequencias = "https://docs.google.com/spreadsheets/d/1kBtVaFy1wcj2Y3yPjUPz2dgMiKOveZFoZnC5XXPn5OY/edit?usp=sharing" %} 
 ### UnB - Universidade de Brasilia
 ### FGA - Faculdade do Gama
 ### OO - Orientação a objetos
