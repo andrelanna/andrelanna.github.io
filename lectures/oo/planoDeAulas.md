@@ -5,18 +5,17 @@ layout: default
 ---
 
 
-{% assign semestre = "2019/1" %}
-{% assign atualizacao = "17 de junho de 2019." %}
+{% assign semestre = "2019/2" %}
+{% assign atualizacao = "27 de agosto de 2019." %}
 {% assign formAddress = "https://docs.google.com/forms/d/e/1FAIpQLSehZ3AgsqhywgcU4-O8LCokcucqAoChhIYXnso7cwEt-66D1g/viewform" %}
-{% assign notasFrequencias = "https://docs.google.com/spreadsheets/d/1kBtVaFy1wcj2Y3yPjUPz2dgMiKOveZFoZnC5XXPn5OY/edit?usp=sharing" %} 
 ### UnB - Universidade de Brasilia
 ### FGA - Faculdade do Gama
-### OO - Orientação a objetos
+### OO - Orientação a objet
 ------
 ### Plano de ensino - {{semestre}} 
 
-<span style="background-color:red">***Cadastre [AQUI]({{ formAddress }}) seu nome, matricula e email***</span>   
-<span style="background-color:green">***Notas e frequencias [AQUI]({{ notasFrequencias }})***</span>
+<span style="background-color:red">***Cadastre [AQUI]({{ formAddress }}) seu
+nome, matricula e email***</span>   
 
 
 #### Ementa da disciplina
@@ -36,56 +35,39 @@ objetivos a serem cumpridos durante esse semestre:
 * Relacionar os elementos constituintes da linguagem Java aos conceitos básicos
   de POO;
 * Apresentar o tratamento de exceções em Java,
-* Apresentar a biblioteca gráfica Swing e seus componentes.
+* Apresentar o uso de _threads_ em Java, 
+* Apresentar a biblioteca gráfica_ Swing_ e seus componentes.
 
 #### Metodologias de ensino: 
 
 Todas as aulas serão expositivas, com exercícios para fixação do conteúdo.
-Eventualmente recursos como mapas mentais, oficinais e estudos dirigidos
+Eventualmente recursos como mapas mentais, oficinas e estudos dirigidos
 poderão ser utilizados pelo professor como forma de avaliação do conteúdo.
 
 #### Critérios de avaliação:
 
-Ao longo do semestre serão realizadas 5 atividades para avaliação do conteúdo,
-sendo 4 provas e 1 trabalhos em trio. As atividades realizadas em sala de aula
-também serão avaliadas mas não terão efeito na nota final do aluno. Para cada
-uma das atividades avaliativas será atribuído um peso no cálculo da nota final,
-a saber:
+Ao longo do semestre serão realizadas35 atividades para avaliação
+conteúdo, sendo 2 provas e 1 trabalhos em grupos de 4 componentes. A
+atividades realizadas em sala de aula também serão avaliadas mas não te
+efeito na nota final do aluno. Para cada uma das atividades avaliativas será
+atribuído um peso no cálculo da nota final, a saber:
 
 
 {% assign av1 = "A_1"  %}
 {% assign lblAv1 = "Avaliação 1"  %}
-{% assign pAv1 = 1.0  %}
+{% assign pAv1 = 2.0  %}
 
 {% assign av2 = "A_2"  %}
 {% assign lblAv2 = "Avaliação 2"  %}
-{% assign pAv2 = 1.5  %}
-
-{% assign av3 = "A_3"  %}
-{% assign lblAv3 = "Avaliação 3"  %}
-{% assign pAv3 = 2.0  %}
-
-{% assign av4 = "A_4"  %}
-{% assign lblAv4 = "Avaliação 4"  %}
-{% assign pAv4 = 2.0  %}
+{% assign pAv2 = 3.0  %}
 
 {% assign tr1 = "T_1"  %}
 {% assign lblTr1 = "Trabalho "  %}
-{% assign pTr1 = 3.5  %}
-
-{% assign tr2 = "T_2"  %}
-{% assign lblTr2 = "Trabalho 2"  %}
-{% assign pTr2 = 2.5  %}
-
-{% assign at = "A_s"  %}
-{% assign lblAt = "Atividades em sala"  %}
-{% assign pAt = 0.5  %}
+{% assign pTr1 = 5.0  %}
 
 
 $${{ av1 }}$$ - {{ lblAv1 }} - peso {{ pAv1 }}    
 $${{ av2 }}$$ - {{ lblAv2 }} - peso {{ pAv2 }}    
-$${{ av3 }}$$ - {{ lblAv3 }} - peso {{ pAv3 }}    
-$${{ av4 }}$$ - {{ lblAv4 }} - peso {{ pAv4 }}    
 $${{ tr1 }}$$ - {{ lblTr1 }} - peso {{ pTr1 }}   
 
 [//]:<> $${{ at  }}$$ - {{ lblAt  }} - peso {{ pAt  }}   
@@ -96,16 +78,17 @@ $${{ tr1 }}$$ - {{ lblTr1 }} - peso {{ pTr1 }}
 O cálculo da menção final será definido através dos valores obtidos pelo aluno
 ao longo do semestre de acordo com a seguinte expressão: 
 
-$$NF = \frac{ {{av1}} \times {{ pAv1 }} + {{ av2 }} \times {{ pAv2 }} + {{ av3
-}} \times {{ pAv3 }} + {{ av4 }} \times {{ pAv4 }} +  {{ tr1 }} \times {{ pTr1
-}}  }{ 10 }$$
+$$NF = \frac{ {{av1}} \times {{ pAv1 }} + {{ av2 }} \times {{ pAv2 }} + {{ tr1 }}
+ \times {{ pTr1 }}  }{ 10 }$$
 
 ---
-[//]:<> #### Trabalho
-[//]:<> 
+#### Trabalho
+
+Em construção, mais informes serão disponibilizadas em breve
+
 [//]:<> [Enunciado do trabalho](https://docs.google.com/document/d/1WoSHGsw5WO_0hByLk5sry4I12ZiGmkx-SDOSanO7PB0/edit?usp=sharing)
-[//]:<> 
-[//]:<> --- 
+ 
+ --- 
 
 
 
@@ -113,7 +96,7 @@ $$NF = \frac{ {{av1}} \times {{ pAv1 }} + {{ av2 }} \times {{ pAv2 }} + {{ av3
 
 #### Cronograma da disciplina
 
- {% for au in site.data.plano_oo_2018_2 %}
+ {% for au in site.data.plano_oo_2019_2 %}
  {% assign a = au %}
  **{{ a.aula }} -- {{ a.data }}**  
  **Tópico:** {{ a.topico }}   
@@ -171,15 +154,15 @@ Virtual Machine Specification, 2012.
   Esse horário é reservado para vocês portanto utilizem-no sempre que
 precisarem. 
 * Horário de atendimento POO:
-  - 4as feiras, das 13:00 às 14:00 horas. 
-  - 6as feiras, das 13:00 às 14:00 horas.
+  - 2as feiras, das 11:00 às 12:00 horas. 
+  - 4as feiras, das 13:00 às 14:00 horas.
 * Salvo em casos excepcionais as provas serão entregues aos alunos na aula
   seguinte à sua aplicação. Nessa aula as questões serão discutidas em sala.
   Revisões de avaliação somente poderão ser realizadas nessa aula. 
-* Entregas de trabalhos serão sempre entregues através de meio eletrônico salvo
+* Entregas de trabalhos serão sempre através de meio eletrônico salvo
   quando outra maneira for definida explicitamente pelo professor. 
-* As atividades que forem consideradas cópias receberão nota zero sem a
-  possibilidade de revisão. 
+* As atividades avaliativas que forem consideradas cópias receberão nota zero
+  sem a possibilidade de revisão. 
 * Na última semana do semestre, os alunos poderão revisar suas notas finais com
   o professor.   
 
@@ -187,7 +170,7 @@ precisarem.
 
 ---
 
-<sup>Última atualização: _{{ atualizacao }}_</sup>
+<sup>Ultima atualização: _{{ atualizacao }}_</sup>
 
 
 
