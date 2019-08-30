@@ -5,18 +5,16 @@
 # layout: home
 layout: default
 ---
-[das_page]: /lectures/das/planoDeAulas.html
+[das_page]: /lectures/tppe/planoDeAula
 [oo_page]: /lectures/oo/planoDeAulas.html
-[ersw_page]: /lectures/ersw/planoDeAulas
 
-## Disciplinas - 2019-1  
+## Disciplines - 2019-2  
 (_Content in_ <span>&#x1f1e7;&#x1f1f7;</span>)
 
-[DAS - Desenvolvimento Avançado de Software][das_page] :new:  
+[DAS - Desenvolvimento Avançado de Softwae][das_page] :new:
 
-[OO - Orientação por objetos (turmas A e C)][oo_page] :new:   
+[OO - Orientação por objeto (turma C)][oo_page] :new:
 
-[RSw - Requisitos de software][ersw_page] :new:
 
 --------------------------------------------------------------------------------
 ## Selected publications:
