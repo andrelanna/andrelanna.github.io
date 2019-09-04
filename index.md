@@ -5,13 +5,13 @@
 # layout: home
 layout: default
 ---
-[das_page]: /lectures/tppe/planoDeAula
+[tppe_page]: /lectures/tppe/planoDeAulas
 [oo_page]: /lectures/oo/planoDeAulas.html
 
 ## Disciplines - 2019-2  
 (_Content in_ <span>&#x1f1e7;&#x1f1f7;</span>)
 
-[DAS - Desenvolvimento Avançado de Softwae][das_page] :new:
+[TPPE - Técnicas de Programação para Plataformas Emergentes][tppe_page] :new:
 
 [OO - Orientação por objeto (turma C)][oo_page] :new:
 
