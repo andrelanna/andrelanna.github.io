@@ -104,8 +104,7 @@ $$NF = \frac{ {{av1}} \times {{ pAv1 }} + {{ av2 }} \times {{ pAv2 }}  +  {{ tr1
  **{{ a.aula }} -- {{ a.data }}**  
  **Tópico:** {{ a.topico }}   
  **Atividade:**[{{ a.atividade.label }}]({{ a.atividade.link }})     
- **Material:** {% if a.material != "" %}[ {{ a.material.label }} ]({{
-a.material.link }}){% else %} -- {% endif %}   
+ **Material:** {% if a.material != "" %}[{{ a.material.label }}]({{a.material.link }}){% else %} -- {% endif %}   
  **Codigo:** {% if a.codigo != "" %}[ {{ a.codigo.label }}]({{ a.codigo.link }}){% else %} -- {% endif %}   
 {% endfor %}
 
