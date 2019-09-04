@@ -1,0 +1,457 @@
+[
+    {
+        "aula": "1",
+        "codigo": {
+            "label": "",
+            "link": ""
+        },
+        "data": "12/08/2019",
+        "material": {
+            "label": "",
+            "link": ""
+        },
+        "topico": "Apresenta\u00e7\u00e3o da disciplina Revis\u00e3o de conceitos de OO. <br/> - Classes e objetos<br/> - Estado de objetos<br/> - Encapsulamento<br/> - Heran\u00e7a<br/> - Polimorfismo"
+    },
+    {
+        "aula": "2",
+        "codigo": {
+            "label": "",
+            "link": ""
+        },
+        "data": "14/08/2019",
+        "material": {
+            "label": "",
+            "link": ""
+        },
+        "topico": "Frameworks de Teste Unit\u00e1rio<br/> - Estrutura de uma Framework (JUnit), Design Patterns utilizados<br/> - Asser\u00e7\u00f5es<br/> - Casos de teste<br/> - Suites de teste"
+    },
+    {
+        "aula": "3",
+        "codigo": {
+            "label": "",
+            "link": ""
+        },
+        "data": "19/08/2019",
+        "material": {
+            "label": "",
+            "link": ""
+        },
+        "topico": "Frameworks de Teste Unit\u00e1rio<br/> - Test runners<br/> - Ordenamento da execu\u00e7\u00e3o de testes<br/> - Testes com timeout<br/> - Ignorando testes<br/> - Categorias de teste"
+    },
+    {
+        "aula": "4",
+        "codigo": {
+            "label": "",
+            "link": ""
+        },
+        "data": "21/08/2019",
+        "material": {
+            "label": "",
+            "link": ""
+        },
+        "topico": "Frameworks de Teste Unit\u00e1rio<br/> - Regras (Rules)<br/> - Teorias (Theories)<br/> - Testando algoritmos multithread ou concorrentes<br/> - Continuous testing"
+    },
+    {
+        "aula": "5",
+        "codigo": {
+            "label": "",
+            "link": ""
+        },
+        "data": "26/08/2019",
+        "material": {
+            "label": "",
+            "link": ""
+        },
+        "topico": "Refatora\u00e7\u00e3o<br/> - Defini\u00e7\u00f5es<br/> - Maus cheiros de c\u00f3digo<br/> - Grupos de refatora\u00e7\u00e3o<br/> - Propriedades de refatora\u00e7\u00e3o"
+    },
+    {
+        "aula": "6",
+        "codigo": {
+            "label": "",
+            "link": ""
+        },
+        "data": "28/08/2019",
+        "material": {
+            "label": "",
+            "link": ""
+        },
+        "topico": "Refatora\u00e7\u00e3o:<br/> - Extrair m\u00e9todo<br/> - Mover m\u00e9todo<br/> - Mover atributo<br/> - Extrair classe<br/> - Encapsular atributo<br/> - Extrair sub-classe<br/> - Extrair super-classe"
+    },
+    {
+        "aula": "7",
+        "codigo": {
+            "label": "",
+            "link": ""
+        },
+        "data": "02/09/2019",
+        "material": {
+            "label": "",
+            "link": ""
+        },
+        "topico": "Refatora\u00e7\u00e3o:<br/> - Substituir m\u00e9todo por m\u00e9todo objeto<br/> - Oper. adicional 1<br/> - Oper. adicional 2"
+    },
+    {
+        "aula": "8",
+        "codigo": {
+            "label": "",
+            "link": ""
+        },
+        "data": "04/09/2019",
+        "material": {
+            "label": "",
+            "link": ""
+        },
+        "topico": "Exercicios de fixa\u00e7\u00e3o"
+    },
+    {
+        "aula": "9",
+        "codigo": {
+            "label": "",
+            "link": ""
+        },
+        "data": "09/09/2019",
+        "material": {
+            "label": "",
+            "link": ""
+        },
+        "topico": "~~Avalia\u00e7\u00e3o 1~~ Exercícios de fixação"
+    },
+    {
+        "aula": "10",
+        "codigo": {
+            "label": "",
+            "link": ""
+        },
+        "data": "11/09/2019",
+        "material": {
+            "label": "",
+            "link": ""
+        },
+        "topico": ""
+    },
+    {
+        "aula": "11",
+        "codigo": {
+            "label": "",
+            "link": ""
+        },
+        "data": "16/09/2019",
+        "material": {
+            "label": "",
+            "link": ""
+        },
+        "topico": "Avaliação 1 - Refatoração"
+    },
+    {
+        "aula": "12",
+        "codigo": {
+            "label": "",
+            "link": ""
+        },
+        "data": "18/09/2019",
+        "material": {
+            "label": "",
+            "link": ""
+        },
+        "topico": ""
+    },
+    {
+        "aula": "13",
+        "codigo": {
+            "label": "",
+            "link": ""
+        },
+        "data": "23/09/2019",
+        "material": {
+            "label": "",
+            "link": ""
+        },
+        "topico": "Semana Universit\u00e1ria"
+    },
+    {
+        "aula": "14",
+        "codigo": {
+            "label": "",
+            "link": ""
+        },
+        "data": "25/09/2019",
+        "material": {
+            "label": "",
+            "link": ""
+        },
+        "topico": "Semana Universit\u00e1ria"
+    },
+    {
+        "aula": "15",
+        "codigo": {
+            "label": "",
+            "link": ""
+        },
+        "data": "30/09/2019",
+        "material": {
+            "label": "",
+            "link": ""
+        },
+        "topico": ""
+    },
+    {
+        "aula": "16",
+        "codigo": {
+            "label": "",
+            "link": ""
+        },
+        "data": "02/10/2019",
+        "material": {
+            "label": "",
+            "link": ""
+        },
+        "topico": ""
+    },
+    {
+        "aula": "17",
+        "codigo": {
+            "label": "",
+            "link": ""
+        },
+        "data": "07/10/2019",
+        "material": {
+            "label": "",
+            "link": ""
+        },
+        "topico": ""
+    },
+    {
+        "aula": "18",
+        "codigo": {
+            "label": "",
+            "link": ""
+        },
+        "data": "09/10/2019",
+        "material": {
+            "label": "",
+            "link": ""
+        },
+        "topico": ""
+    },
+    {
+        "aula": "19",
+        "codigo": {
+            "label": "",
+            "link": ""
+        },
+        "data": "14/10/2019",
+        "material": {
+            "label": "",
+            "link": ""
+        },
+        "topico": ""
+    },
+    {
+        "aula": "20",
+        "codigo": {
+            "label": "",
+            "link": ""
+        },
+        "data": "16/10/2019",
+        "material": {
+            "label": "",
+            "link": ""
+        },
+        "topico": ""
+    },
+    {
+        "aula": "21",
+        "codigo": {
+            "label": "",
+            "link": ""
+        },
+        "data": "21/10/2019",
+        "material": {
+            "label": "",
+            "link": ""
+        },
+        "topico": ""
+    },
+    {
+        "aula": "22",
+        "codigo": {
+            "label": "",
+            "link": ""
+        },
+        "data": "23/10/2019",
+        "material": {
+            "label": "",
+            "link": ""
+        },
+        "topico": ""
+    },
+    {
+        "aula": "23",
+        "codigo": {
+            "label": "",
+            "link": ""
+        },
+        "data": "28/10/2019",
+        "material": {
+            "label": "",
+            "link": ""
+        },
+        "topico": ""
+    },
+    {
+        "aula": "24",
+        "codigo": {
+            "label": "",
+            "link": ""
+        },
+        "data": "30/10/2019",
+        "material": {
+            "label": "",
+            "link": ""
+        },
+        "topico": ""
+    },
+    {
+        "aula": "25",
+        "codigo": {
+            "label": "",
+            "link": ""
+        },
+        "data": "04/11/2019",
+        "material": {
+            "label": "",
+            "link": ""
+        },
+        "topico": ""
+    },
+    {
+        "aula": "26",
+        "codigo": {
+            "label": "",
+            "link": ""
+        },
+        "data": "06/11/2019",
+        "material": {
+            "label": "",
+            "link": ""
+        },
+        "topico": ""
+    },
+    {
+        "aula": "27",
+        "codigo": {
+            "label": "",
+            "link": ""
+        },
+        "data": "11/11/2019",
+        "material": {
+            "label": "",
+            "link": ""
+        },
+        "topico": ""
+    },
+    {
+        "aula": "28",
+        "codigo": {
+            "label": "",
+            "link": ""
+        },
+        "data": "13/11/2019",
+        "material": {
+            "label": "",
+            "link": ""
+        },
+        "topico": ""
+    },
+    {
+        "aula": "29",
+        "codigo": {
+            "label": "",
+            "link": ""
+        },
+        "data": "18/11/2019",
+        "material": {
+            "label": "",
+            "link": ""
+        },
+        "topico": ""
+    },
+    {
+        "aula": "30",
+        "codigo": {
+            "label": "",
+            "link": ""
+        },
+        "data": "20/11/2019",
+        "material": {
+            "label": "",
+            "link": ""
+        },
+        "topico": ""
+    },
+    {
+        "aula": "31",
+        "codigo": {
+            "label": "",
+            "link": ""
+        },
+        "data": "25/11/2019",
+        "material": {
+            "label": "",
+            "link": ""
+        },
+        "topico": ""
+    },
+    {
+        "aula": "32",
+        "codigo": {
+            "label": "",
+            "link": ""
+        },
+        "data": "27/11/2019",
+        "material": {
+            "label": "",
+            "link": ""
+        },
+        "topico": "Entrega de notas finais"
+    },
+    {
+        "aula": "33",
+        "codigo": {
+            "label": "",
+            "link": ""
+        },
+        "data": "02/12/2019",
+        "material": {
+            "label": "",
+            "link": ""
+        },
+        "topico": "Revis\u00e3o de notas"
+    },
+    {
+        "aula": "34",
+        "codigo": {
+            "label": "",
+            "link": ""
+        },
+        "data": "04/12/2019",
+        "material": {
+            "label": "",
+            "link": ""
+        },
+        "topico": "Lan\u00e7amento de men\u00e7\u00f5es"
+    },
+    {
+        "aula": "35",
+        "codigo": {
+            "label": "",
+            "link": ""
+        },
+        "data": "09/12/2019",
+        "material": {
+            "label": "",
+            "link": ""
+        },
+        "topico": "Lan\u00e7amento de men\u00e7\u00f5es"
+    }
+]
