@@ -20,8 +20,8 @@
         },
         "data": "14/08/2019",
         "material": {
-            "label": "",
-            "link": ""
+            "label": "Slides frameworks xUnits",
+            "link": "https://docs.google.com/presentation/d/1cA1Sae4qgXidI7ZyVGhI-r9l5o0TMBrj5Yl0qyj2xfU/edit?usp=sharing"
         },
         "topico": "Frameworks de Teste Unit\u00e1rio<br/> - Estrutura de uma Framework (JUnit), Design Patterns utilizados<br/> - Asser\u00e7\u00f5es<br/> - Casos de teste<br/> - Suites de teste"
     },
@@ -33,8 +33,8 @@
         },
         "data": "19/08/2019",
         "material": {
-            "label": "",
-            "link": ""
+            "label": "Slides frameworks xUnits",
+            "link": "https://docs.google.com/presentation/d/1cA1Sae4qgXidI7ZyVGhI-r9l5o0TMBrj5Yl0qyj2xfU/edit?usp=sharing"
         },
         "topico": "Frameworks de Teste Unit\u00e1rio<br/> - Test runners<br/> - Ordenamento da execu\u00e7\u00e3o de testes<br/> - Testes com timeout<br/> - Ignorando testes<br/> - Categorias de teste"
     },
@@ -46,7 +46,7 @@
         },
         "data": "21/08/2019",
         "material": {
-            "label": "",
+            "label": "A ser apresentado",
             "link": ""
         },
         "topico": "Frameworks de Teste Unit\u00e1rio<br/> - Regras (Rules)<br/> - Teorias (Theories)<br/> - Testando algoritmos multithread ou concorrentes<br/> - Continuous testing"
