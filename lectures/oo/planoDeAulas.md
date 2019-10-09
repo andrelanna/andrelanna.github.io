@@ -84,7 +84,19 @@ $$NF = \frac{ {{av1}} \times {{ pAv1 }} + {{ av2 }} \times {{ pAv2 }} + {{ tr1 }
 ---
 #### Trabalho
 
-Em construção, mais informes serão disponibilizadas em breve
+O trabalho deverá ser realizado em grupos de **5 alunos no máximo**. A
+participação de **todos** os elementos do grupo é imprescindível e será
+avaliada pelo professor durante a entrega. 
+
+A avaliação do trabalho será feita de dois modos. Todos os artefatos produzidos
+pela equipe serão entregues via repositório de versionamento de arquivos (a ser
+definido ainda). Através desse repositório serão avaliadas as participações de
+cada um dos membros do grupo na elaboração do trabalho. Na data de entrega
+estabelecida pelo cronograma da disciplina os grupos serão avaliados oralmente
+pelo professor. A distribuição dos pesos das avaliações de artefatos e oral
+está estabelecida no enunciado do trabalho. 
+
+[Enunciado do trabalho](enunciadoTrabalho)
 
 [//]:<> [Enunciado do trabalho](https://docs.google.com/document/d/1WoSHGsw5WO_0hByLk5sry4I12ZiGmkx-SDOSanO7PB0/edit?usp=sharing)
  
