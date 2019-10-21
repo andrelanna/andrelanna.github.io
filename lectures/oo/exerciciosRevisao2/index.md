@@ -1,6 +1,6 @@
 ---
 title: Trabalho prático - 2019/2
-permalink: /lectures/oo/exerciciosRevisao2
+permalink: /lectures/oo/exerciciosRevisao2/
 layout: default 
 ---
 [diagClasses]: ExercicioRevisao_Encap_Her_Polimor.jpg
