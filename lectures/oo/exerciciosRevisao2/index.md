@@ -29,3 +29,47 @@ cls6.atrib11 = "casa";  //executado em Principal.main()
 * ```java
 cls6.m7(); //executado em Principal.main()
 ```
+* ```java
+atrib2 = "bola"; //executado em Classe5.m7()
+```
+* ```java
+cls4.m8();  //executado em Classe5.m7() 
+```
+
+* ```java
+cls6.m1();  //executado em Principal.main()
+```
+
+* ```java
+cls6.atrib2 = "bala";  //executado em Principal.main()
+```
+
+* ```java
+cls6.atrib5 = 4.0;  //executado em Principal.main() 
+```
+
+* ```java
+cls6.cls2.m4();  //executado em Principal.main 
+```
+
+* ```java
+cls6.cls2.atrib4 = 3.14;  //executado em Principal.main
+```
+
+* ```java
+Classe6.atrib13 = 3;  //executado em Principal.main
+```
+
+* ```java
+Classe6.m11();  //executado em Principal.main
+```
+
+* ```java
+m6();  //executado em Classe6.m11() 
+```
+
+* ```java
+m6();  //executado em Classe6.m10() 
+```
+
+
