@@ -23,6 +23,18 @@ layout: default
 
 Com base no diagrama apresentado, avalie cada uma das instruções a seguir como *correta* ou *incorreta* considerando seus modificadores de visibilidade e de escopo. Para as instruções avaliadas como incorretas, justifique o motivo do erro. A localização da instrução está apresentada na forma de comentário logo após a instrução.
 
+<span style="color:red">_Respostas dos itens apresentadas em vermelho._</span>
+
+
+<span style="color:red"> Considerando o modo como a linguagem Java define os conceitos básicos de OO, quais sejam Encapsulamento, Herança e Polimorfismo. Em linhas gerais Java defineque:    
+\* elementos _privados_ só estão acessíveis dentro da própria classe;  
+\* elementos _default_ (visibilidade de pacote) são acessíveis apenas por elementos da própria classe ou de outras classes do mesmo pacote;  
+\* elementos *protegidos* são acessíveis por elementos da própria classe, de classes do mesmo pacote ou por elementos de subclasses da classe que está definida, ainda que a subclasse esteja fora do pacote da superclasse. Elementos protegidos não são visualizados por classes que não estejam na hierarquia de classes definida pelas relações de herança;    
+\* elementos *públicos* são acessíveis em qualquer ponto do projeto (i.e., qualquer membro de qualquer classe do projeto); 
+\* elementos estáticos podem ser acessados pelo nome da classe em que estão definidos ou por algum objeto instanciado a partir dessa classe e, por fim, 
+\* elementos dinâmicos estão definidos para cada um dos objetos instanciados a partir da classe em que estão definidos. Elementos dinâmicos não podem ser acessados pela Classe em que está definido.
+ </span>
+
 1. ```java
 cls6.atrib11 = "casa";  //executado em Principal.main()
 ```
