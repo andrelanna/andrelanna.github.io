@@ -38,48 +38,61 @@ Com base no diagrama apresentado, avalie cada uma das instruções a seguir como
 1. ```java
 cls6.atrib11 = "casa";  //executado em Principal.main()
 ```
+<span style="color:red"> _cls6.atrib11 não é acessível, seu modificador de acesso é privado._ </span>
 2. ```java
 cls6.m7(); //executado em Principal.main()
 ```
+<span style="color:red"> _cls6.m7 não é acessível, classe **Principal** não pertence a hierarquia de classes da qual **Classe6** é parte._ </span>
 3. ```java
 atrib2 = "bola"; //executado em Classe5.m7()
 ```
+<span style="color:red"> _Correto, m7() é um elemento dinâmico tentando acessando atrib5 (elemento estático) definido como público na mesma classe em que m7() está definido. Um elemento dinâmico pode acessar um elemento estático desde que seus modificadores de acesso lhe permitam tal visibilidade._ </span>
 4. ```java
 cls4.m8();  //executado em Classe5.m7() 
 ```
+<span style="color:red"> _cls4.m8() é acessível_ </span>
 
 5. ```java
 cls6.m1();  //executado em Principal.main()
 ```
+<span style="color:red"> _cls6.m1() é acessível, ele está definido como público por todas as classes que compõem a hierarquia de classes, incluindo **Classe6**. Um elemento público pode ser acessado por qualquer outra classe do projeto._ </span>
 
 6. ```java
 cls6.atrib2 = "bala";  //executado em Principal.main()
 ```
+<span style="color:red">  </span>
 
 7. ```java
 cls6.atrib5 = 4.0;  //executado em Principal.main() 
 ```
+<span style="color:red">  </span>
 
 8. ```java
 cls6.cls2.m4();  //executado em Principal.main 
 ```
+<span style="color:red">  </span>
 
 9. ```java
 cls6.cls2.atrib4 = 3.14;  //executado em Principal.main
 ```
+<span style="color:red">  </span>
 
 10. ```java
 Classe6.atrib13 = 3;  //executado em Principal.main
 ```
+<span style="color:red">  </span>
 
 11. ```java
 Classe6.m11();  //executado em Principal.main
 ```
+<span style="color:red">  </span>
 
 12. ```java
 m6();  //executado em Classe6.m11() 
 ```
+<span style="color:red">  </span>
 
 13. ```java
 m6();  //executado em Classe6.m10() 
 ```
+<span style="color:red">  </span>
