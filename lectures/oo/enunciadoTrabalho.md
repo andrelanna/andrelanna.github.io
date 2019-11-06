@@ -19,3 +19,13 @@ A taxa de ocupação de uma sala é dada pelo quociente entre o número de perí
 Dado o cenário acima faça o que se pede: 
 
 1. Crie um diagrama de classes UML que represente o cenário acima. O diagrama deverá mostrar, claramente, quais são as classes que compõem o cenário, seus atributos, e os relacionamentos entre classes. **Observação:** certamente haverá classes e atributos que não estão descritos no cenário, mas que são necessários para o desenvolvimento do projeto.
+2. Crie um programa, em uma linguagem OO à sua escolha, que seja capaz de:
+   * cadastrar os prédios de uma instituição de ensino e suas salas de aula incluindo, necessariamente, o nome da sala, a sua capacidade máxima e os recursos que estão disponíveis;  
+   * cadastrar turmas para as disciplinas da instituição de ensino. As turmas deverão, portanto, ter necessariamente um vínculo com sua disciplina. 
+   * cadastrar todos os períodos de aula da instituição de ensino.
+
+3. Os seguintes casos de erro deverão ser tratados pela aplicação:
+   * se uma turma for cadastrada sem uma disciplina associada, uma exceção do tipo **DisciplinaNaoInformadaException** deverá ser lançada e tratada. 
+   * se uma turma for cadastrada sem um professor associado a ela, uma exceção do tipo **ProfessorNaoAtribuidoException** deverá ser lançada e tratada.
+   * se nao for atribuido pelo menos um tipo de aulas para uma sala, uma excecao do tipo **TipoDeAulaNaoAtribuidoException** deverá ser lançada e tratada.
+   * 
