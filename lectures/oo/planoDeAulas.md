@@ -8,6 +8,7 @@ layout: default
 {% assign semestre = "2019/2" %}
 {% assign atualizacao = "30 de agosto de 2019." %}
 {% assign formAddress = "https://docs.google.com/forms/d/e/1FAIpQLSehZ3AgsqhywgcU4-O8LCokcucqAoChhIYXnso7cwEt-66D1g/viewform" %}
+{% assign sheetAddress = "https://docs.google.com/spreadsheets/d/1S_U6V-dQHXkEgHzv7y0RmtODWndypXtJMArscgYukok/edit?usp=sharing" %}
 ### UnB - Universidade de Brasilia
 ### FGA - Faculdade do Gama
 ### OO - Orientação a objet
@@ -17,6 +18,7 @@ layout: default
 <span style="background-color:red">***Cadastre [AQUI]({{ formAddress }}) seu
 nome, matricula e email***</span>   
 
+<span style="background-color:yellow">***Notas e frequencias --> [AQUI]({{ sheetAddress }})***</span>   
 
 #### Ementa da disciplina
 * Conceitos básicos de orientação a objetos.
