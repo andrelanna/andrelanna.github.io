@@ -13,14 +13,32 @@ Atividade para realizar em dupla e entregar via [GitHub][github]. Uma entrega po
 Prazo para entrega: ~~4/4/2017~~ 10/04/2017, 23:59:59.
 
 **Questão 1:** Os termos abaixo estão relacionados ao paradigma de *Orientação por Objetos*. Defina cada um dos termos com base no livro-texto (Eck, David J. Introduction to Programming Using Java, 6th ed. 2011).
+
 * classe
+
+	Classe é a estrutura definida pelo programador, contendo atributos e métodos(comportamento) comuns a um conjunto de objetos.
+
 * objeto
+
+
 * elementos de classe
+
+
 * atributos
+
+
 * métodos
+
+
 * método construtor padrão
+
+
 * método construtor alternativo
+
+
 * estado de um objeto
+
+
 * retenção de estado
 
 Classe é a estrutura definida pelo programador, contendo atributos e métodos (comportamento) comuns a um conjunto de objetos.
