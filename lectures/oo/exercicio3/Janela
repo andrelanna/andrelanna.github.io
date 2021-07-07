@@ -1,0 +1,82 @@
+```java
+package Questao1;
+
+//import java.awt.Color;
+import java.awt.GridLayout;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+
+	@SuppressWarnings("serial")
+	public class Janela extends JFrame{
+			JLabel lblValorFuturo,
+				   lblValorAtual,
+				   lblJuros,
+				   lblTempo;
+			
+			JTextField txtValorFuturo,
+					   txtValorAtual,
+					   txtJuros,
+					   txtTempo;
+			
+			JButton btnValorFuturo,
+					btnValorAtual,
+					btnJuros,
+					btnTempo,
+					btnLimpar;
+		
+		public Janela(){
+			setTitle("QUESTÃO 1");
+			setSize(300,250);
+			setLayout(new GridLayout(6,2));
+			
+			lblValorFuturo = new JLabel("VALOR FUTURO");
+			lblValorAtual = new JLabel("VALOR ATUAL");
+			lblJuros = new JLabel("JUROS");
+			lblTempo = new JLabel("TEMPO");
+			
+			txtValorFuturo = new JTextField();
+			txtValorFuturo.setToolTipText("Valor Futuro");
+			txtValorAtual = new JTextField();
+			txtValorAtual.setToolTipText("Valor Atual");
+			txtJuros = new JTextField();
+			txtJuros.setToolTipText("Juros da aplicação");
+			txtTempo = new JTextField();
+			txtTempo.setToolTipText("Tempo da aplicação");
+			
+			btnValorFuturo = new JButton("VALOR FUTURO");
+			btnValorFuturo.setToolTipText("Calcular o Valor Futuro da aplicação");
+			//btnValorFuturo.setBackground(Color.BLACK);	
+			btnValorAtual = new JButton("VALOR ATUAL");
+			btnValorAtual.setToolTipText("Calcular o Valor Atual da aplicação");
+			btnJuros = new JButton("JUROS");
+			btnJuros.setToolTipText("Calcular o Juros da Aplicação");
+			btnTempo = new JButton("TEMPO");
+			btnTempo.setToolTipText("Calcular o Tempo da aplicação");
+			
+			add(lblValorFuturo);
+			add(txtValorFuturo);
+			add(lblValorAtual);
+			add(txtValorAtual);
+			add(lblJuros);
+			add(txtJuros);
+			add(lblTempo);
+			add(txtTempo);
+			add(btnValorFuturo);
+			add(btnValorAtual);
+			add(btnJuros);
+			add(btnTempo);
+			
+			
+			btnValorFuturo.addActionListener(new CalcularValorFuturo(this));
+			btnValorAtual.addActionListener(new CalcularValorAtual(this));
+			btnJuros.addActionListener(new CalcularJuros(this));
+			btnTempo.addActionListener(new CalcularTempo(this));
+			
+			
+			setVisible(true);
+		}
+}
+```

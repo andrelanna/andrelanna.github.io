@@ -1,0 +1,23 @@
+```java
+package Questao1;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+public class CalcularValorFuturo implements ActionListener {
+
+	Janela j;
+	public CalcularValorFuturo(Janela janela) {
+		j = janela;
+	}
+	public void actionPerformed(ActionEvent arg0) {
+		float ValorAtual = Float.parseFloat(j.txtValorAtual.getText());
+		float juros = Float.parseFloat(j.txtJuros.getText());
+		float tempo = Float.parseFloat(j.txtTempo.getText());
+		float ValorFuturo = (float)(ValorAtual*(Math.pow((1 + (juros/100.0)),tempo)));
+		j.txtValorFuturo.setText(Float.toString(ValorFuturo));
+		
+	}
+
+}
+```

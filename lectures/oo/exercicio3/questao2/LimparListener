@@ -1,0 +1,20 @@
+```java
+package Questao2;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+public class LimparListener implements ActionListener {
+	Janela j;
+	public LimparListener(Janela janela){
+			j = janela;
+		}
+	public void actionPerformed(ActionEvent e) {
+		j.txtDeposito.setText("");
+		j.txtJuros.setText("");
+		j.txtTempo.setText("");
+		j.lblVazio.setText("");
+	}
+
+}
+```

@@ -1,0 +1,18 @@
+```java
+package Questao1;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+public class Sair implements ActionListener {
+
+	Menu m;
+		public Sair(Menu menu){
+			m = menu;
+		}
+	public void actionPerformed(ActionEvent e) {
+		System.exit(0);
+	}
+
+}
+```
