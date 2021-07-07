@@ -47,3 +47,129 @@ onde:
 
 
 Os valores finais de cada mês deverão ser informados através de objetos JLabel. 
+
+RESPOSTA 
+
+
+public class Main {
+
+	public static void main(String[] args) {
+		Janela j = new Janela();
+		
+	}
+
+}
+
+public class Janela extends JFrame {
+
+		JLabel lblVF,		    
+			   lblI,
+			   lblPMT,
+			   lblN,
+			   lblResultado,
+			   lblResposta;
+		
+		JTextField txtVF,
+				   txtI,
+				   txtPMT,
+				   txtN;
+		
+		JButton btnCalcular,
+				btnLimpar;
+		
+		List<JLabel> listaVF = new LinkedList<JLabel>(),
+					 listaResultado = new LinkedList<JLabel>();
+	
+	public Janela(){
+		
+		setTitle("Exercício 2");
+		setSize(300,400);
+		setLayout(new GridLayout(6,2));
+		
+		lblVF = new JLabel();
+		lblI = new JLabel("Taxa de juros: ");
+		lblPMT = new JLabel("Depósito Regular: ");
+		lblN = new JLabel("Tempo: ");
+		lblResultado = new JLabel();
+		lblResposta = new JLabel();
+		
+		txtVF = new JTextField();
+		txtI = new JTextField();
+		txtPMT = new JTextField();
+		txtN = new JTextField();
+		
+		btnCalcular = new JButton("Calcular");
+		btnLimpar = new JButton("Limpar");
+
+		add(lblI);
+		add(txtI);
+		add(lblPMT);
+		add(txtPMT);
+		add(lblN);
+		add(txtN);
+		add(btnCalcular);
+		add(btnLimpar);	
+		
+		btnCalcular.addActionListener(new CalcularListener(this));	
+		btnLimpar.addActionListener(new LimparListener(this));
+		
+		
+		setVisible(true);
+	}
+}
+
+public class CalcularListener implements ActionListener {
+
+	Janela j;
+	
+	public CalcularListener(Janela janela){
+		 j = janela;
+	}
+	
+	public void actionPerformed(ActionEvent e) {
+		float i = Float.parseFloat(j.txtI.getText());
+		float PMT = Float.parseFloat(j.txtPMT.getText());
+		float tempo = Float.parseFloat(j.txtN.getText());
+		String mes;
+		
+		for (int n=1; n <= tempo; n++){
+		Float VF = (float) ((1+(i/100)) *(((Math.pow((1+(i/100)),n))-1)/(i/100)) * PMT);
+		mes = "Mês " + n ;
+		JLabel lblmes = new JLabel(mes);
+		JLabel lblresultado = new JLabel(Float.toString(VF));
+		
+		j.setLayout(new GridLayout (5+n,2));
+		j.listaVF.add(lblmes);
+		j.listaResultado.add(lblresultado);
+		j.add(j.listaVF.get(n));
+		j.add(j.listaResultado.get(n));
+		
+		Dimension tamanho = j.getSize();
+		tamanho.height +=10;
+		j.setSize(tamanho.width,tamanho.height);
+		
+		}
+		
+		j.add(j.btnCalcular);
+		j.add(j.btnLimpar);
+	}
+
+}
+
+
+public class LimparListener implements ActionListener {
+
+		Janela j;
+		
+		public LimparListener(Janela janela){
+			j = janela;
+		}
+		
+	public void actionPerformed(ActionEvent e) {
+		j.txtPMT.setText("");
+		j.txtN.setText("");
+		j.txtI.setText("");
+
+	}
+
+}
