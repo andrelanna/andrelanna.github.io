@@ -30,6 +30,156 @@ O usuário deverá entrar com 3 valores, em campos de texto. O quarto valor deve
 |R$2000,00    |  R$1000,00  |**5,95**  |12        |
 |R$2000,00    |  R$1000,00  |0.80      |**87**    |
 
+RESPOSTA (Maria Luiza Ferreira - 160014433)
+
+public class Principal {
+
+	public static void main(String[] args) {
+		Janela j = new Janela();
+
+	}
+
+}
+
+public class Janela extends JFrame {
+			
+		JLabel lblI,
+			   lblN,
+			   lblFV,
+			   lblPV,
+			   lblResultado,
+			   lblResposta;
+		
+		JTextField txtI,
+				   txtN,
+				   txtFV,
+				   txtPV;
+		
+		JButton btnCalcular,
+				btnLimpar;		
+		
+		
+	public Janela(){
+		
+		setTitle("Exercício 1");
+		setSize(300,400);
+		setLayout(new GridLayout(6,2));
+		
+		lblI = new JLabel("Taxa de juros: ");
+		lblN = new JLabel("Tempo da aplicação: ");
+		lblFV = new JLabel("Valor futuro: ");
+		lblPV = new JLabel("Valor presente: ");
+		lblResultado = new JLabel ();
+		lblResposta = new JLabel ();
+		
+		txtI = new JTextField();
+		txtN = new JTextField();
+		txtFV = new JTextField();
+		txtPV = new JTextField();
+		
+		btnCalcular = new JButton("Calcular");
+		btnLimpar = new JButton("Limpar");
+		
+		add(lblFV);
+		add(txtFV);
+		add(lblPV);
+		add(txtPV);
+		add(lblI);
+		add(txtI);
+		add(lblN);
+		add(txtN);
+		add(lblResultado);
+		add(lblResposta);
+		add(btnCalcular);
+		add(btnLimpar);
+		
+		btnCalcular.addActionListener(new CalcularListener(this));
+		btnLimpar.addActionListener(new LimparListener(this));
+		
+		setVisible (true);
+	}
+}
+
+
+public class CalcularListener implements ActionListener  {
+
+	Janela j;
+	
+	public CalcularListener (Janela janela){
+			j= janela;
+	}
+	
+	public void actionPerformed(ActionEvent e){
+		
+			if (j.txtFV.getText().isEmpty()){
+				float PV = Float.parseFloat(j.txtPV.getText());
+				float i = Float.parseFloat(j.txtI.getText());
+				float n= Float.parseFloat(j.txtN.getText());
+				float FV = (float) (PV*(Math.pow((1+(i*0.001)),n)));
+				
+				j.lblResultado.setText("Valor Futuro");
+				j.lblResposta.setText(Float.toString(FV));
+				
+			}
+			
+			if (j.txtPV.getText().isEmpty()){
+				float FV = Float.parseFloat(j.txtFV.getText());
+				float i = Float.parseFloat(j.txtI.getText());
+				float n= Float.parseFloat(j.txtN.getText());
+				float PV = (float) (FV/(Math.pow((1+(i*0.001)),n)));
+				
+				j.lblResultado.setText("Valor Presente");
+				j.lblResposta.setText(Float.toString(PV));
+				
+			}
+			
+			if (j.txtI.getText().isEmpty()){
+				float PV = Float.parseFloat(j.txtPV.getText());
+				float FV = Float.parseFloat(j.txtFV.getText());
+				float n= Float.parseFloat(j.txtN.getText());
+				float i = (float) ((Math.pow((FV/PV),(1/n)) - 1) *100);
+				
+				j.lblResultado.setText("Taxa de Juros");
+				j.lblResposta.setText(Float.toString(i));
+				
+			}
+			
+			if (j.txtN.getText().isEmpty()){
+				float PV = Float.parseFloat(j.txtPV.getText());
+				float FV = Float.parseFloat(j.txtFV.getText());
+				float i= Float.parseFloat(j.txtI.getText());
+				float n = (float) Math.abs(((Math.log(PV/FV))/ (Math.log(1+(i/100)))));
+				
+				j.lblResultado.setText("Tempo da aplicação");
+				j.lblResposta.setText(Float.toString(n));
+				
+			}
+		
+			
+		
+			
+	}
+}
+
+
+public class LimparListener implements ActionListener {
+		Janela j;
+		
+		public LimparListener(Janela janela){
+			j = janela;
+			}
+	public void actionPerformed(ActionEvent e) {
+		
+		j.txtFV.setText("");
+		j.txtPV.setText("");
+		j.txtI.setText("");
+		j.txtN.setText("");
+	}
+
+}
+
+
+
 
 
 
